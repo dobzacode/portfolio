@@ -1,6 +1,4 @@
 import { cn } from '@/lib/utils';
-import { mdiWeb } from '@mdi/js';
-import Icon from '@mdi/react';
 import { useLocale } from 'next-intl';
 import { usePathname, useRouter } from '../../../navigation';
 import Button from '../button/button';
@@ -17,8 +15,7 @@ export default function LangageSwitch() {
 
   return (
     <div className="fadeIn flex items-center gap-extra-small  ">
-      <Icon path={mdiWeb} color="white" size={1.5}></Icon>
-      <span className="body flex gap-2 text-white">
+      <span className="body flex gap-2 text-primary90">
         <Button
           onClick={() => (locale !== 'en' ? switchLangage('en') : '')}
           className={cn(locale !== 'en' && 'opacity-50', 'hover:opacity-100')}

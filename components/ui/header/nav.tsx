@@ -4,10 +4,10 @@ import Icon from '@mdi/react';
 import { AnimatePresence, motion } from 'framer-motion';
 import React, { FC, HTMLProps, useRef, useState } from 'react';
 
-import { mdiClose, mdiMenu } from '@mdi/js';
 import { CSSTransition } from 'react-transition-group';
 import Logo from '../branding/logo';
 
+import { mdilMenu, mdilPlus } from '@mdi/light-js';
 import { useTranslations } from 'next-intl';
 import LangageSwitch from './langage-switch';
 import NavLink from './nav-link';
@@ -49,7 +49,7 @@ const Nav: FC<NavProps> = ({ className, linkSize, intent }) => {
           textType={'heading--large'}
           href="/"
           intent={intent}
-          className={cn(' relative z-[100] text-white')}
+          className={cn(' relative z-[100] ')}
         >
           CK
         </Logo>
@@ -68,8 +68,8 @@ const Nav: FC<NavProps> = ({ className, linkSize, intent }) => {
                   onClick={() => setShowMenu(true)}
                 >
                   <Icon
-                    path={mdiMenu}
-                    className="  text-white duration-fast hover:scale-105"
+                    path={mdilMenu}
+                    className="  text-primary90 duration-fast hover:scale-105"
                     size={2.5}
                   ></Icon>
                 </motion.button>
@@ -83,8 +83,8 @@ const Nav: FC<NavProps> = ({ className, linkSize, intent }) => {
                   onClick={() => setShowMenu(false)}
                 >
                   <Icon
-                    path={mdiClose}
-                    className="  text-white duration-fast hover:scale-105"
+                    path={mdilPlus}
+                    className="  rotate-45 text-primary90 duration-fast hover:scale-105"
                     size={2.5}
                   ></Icon>
                 </motion.button>
