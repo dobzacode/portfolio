@@ -1,25 +1,9 @@
 {
   "navigation": {
     "primaryNavigation": {
-      "event": "evenements",
-      "artists": "artistes",
-      "values": "valeurs",
-      "shop": "boutique",
-      "contact": "contact",
-
-      "gallery": "galerie",
-      "label": "label",
-      "about us": "A propos",
-      "abject act": "Abject Act",
-      "newsletter": "Newsletter",
-      "join us": "Rejoins-nous",
-      "partnership": "Partenariat",
-      "sizing": "Guide des Tailles",
-      "terms & conditions": "Termes & Conditions",
-      "legal": "Légal",
-      "legal-mention": "Mentions légales",
-      "privacy": "Confidentialité"
-    }
+    "about": "a propos",
+    "work": "projets",
+    "contact": "contact"}
   },
   "form": {
     "firstname": "Prénom",
