@@ -44,50 +44,54 @@ const Nav: FC<NavProps> = ({ className, linkSize, intent }) => {
 
   return (
     <header className={cn(className)}>
-      <div className=" absolute top-0 z-30 flex w-full items-center justify-between">
-        <AnimatePresence>
-          {!showMenu ? (
-            <motion.button
-              key="menu"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1, transition: { duration: 1 } }}
-              exit={{ opacity: 0 }}
-              className="absolute left-small h-fit w-fit  laptop:left-large"
-              onClick={() => setShowMenu(true)}
-            >
-              <Icon
-                path={mdiMenu}
-                className=" text-white duration-fast hover:scale-105"
-                size={2.5}
-              ></Icon>
-            </motion.button>
-          ) : (
-            <motion.button
-              key="close"
-              initial={{ opacity: 0, rotate: 360 }}
-              animate={{ opacity: 1, rotate: 0, transition: { duration: 1, ease: 'easeOut' } }}
-              exit={{ opacity: 0, transition: { duration: 0.4 } }}
-              className="absolute left-small h-fit w-fit  laptop:left-large"
-              onClick={() => setShowMenu(false)}
-            >
-              <Icon
-                path={mdiClose}
-                className=" text-white duration-fast hover:scale-105"
-                size={2.5}
-              ></Icon>
-            </motion.button>
-          )}
-        </AnimatePresence>
+      <div className=" absolute top-0 z-30 flex w-full items-center justify-between px-large">
+        <Logo
+          textType={'heading--large'}
+          href="/"
+          intent={intent}
+          className={cn(' relative z-[100] text-white')}
+        >
+          CK
+        </Logo>
 
-        <div className={'fadeIn absolute  left-1/2 -translate-x-1/2 transform'}>
-          <Logo
-            href="/"
-            intent={intent}
-            className={cn(' relative z-[100]', triggerClass ? 'grow-animation' : '')}
-          ></Logo>
+        <div className="relative flex items-center gap-small">
+          <LangageSwitch></LangageSwitch>
+          <div className="relative h-16">
+            <AnimatePresence>
+              {!showMenu ? (
+                <motion.button
+                  key="menu"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1, transition: { duration: 1 } }}
+                  exit={{ opacity: 0 }}
+                  className="absolute h-fit w-fit  "
+                  onClick={() => setShowMenu(true)}
+                >
+                  <Icon
+                    path={mdiMenu}
+                    className="  text-white duration-fast hover:scale-105"
+                    size={2.5}
+                  ></Icon>
+                </motion.button>
+              ) : (
+                <motion.button
+                  key="close"
+                  initial={{ opacity: 0, rotate: 360 }}
+                  animate={{ opacity: 1, rotate: 0, transition: { duration: 1, ease: 'easeOut' } }}
+                  exit={{ opacity: 0, transition: { duration: 0.4 } }}
+                  className="absolute h-fit w-fit  "
+                  onClick={() => setShowMenu(false)}
+                >
+                  <Icon
+                    path={mdiClose}
+                    className="  text-white duration-fast hover:scale-105"
+                    size={2.5}
+                  ></Icon>
+                </motion.button>
+              )}
+            </AnimatePresence>
+          </div>
         </div>
-
-        <LangageSwitch></LangageSwitch>
       </div>
 
       <CSSTransition nodeRef={navRef} timeout={600} unmountOnExit classNames="fade" in={showMenu}>
@@ -98,7 +102,7 @@ const Nav: FC<NavProps> = ({ className, linkSize, intent }) => {
           )}
         >
           <ul className={'absolute  flex w-fit translate-y-large flex-col  justify-center'}>
-            {navLinks.map((link, i) => {
+            {navLinks.map((link) => {
               return (
                 <NavLink
                   className="max-tablet:text-[5rem] max-tablet:leading-[5rem] "

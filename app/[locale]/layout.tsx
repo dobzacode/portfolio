@@ -35,12 +35,11 @@ export default async function RootLayout({
       <body className="relative h-full  w-full overflow-x-hidden bg-black ">
         <NextIntlClientProvider messages={messages}>
           <Header
-            size={'medium'}
+            size={'large'}
             textColor={'neutral'}
             className="overlay  absolute  w-full max-w-full px-sub-large pt-[40px] tablet:px-large tablet:pt-large"
           ></Header>
           {children}
-         
         </NextIntlClientProvider>
       </body>
     </html>
