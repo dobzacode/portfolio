@@ -10,5 +10,5 @@ export default function Corentin() {
 
   const { View } = useLottie(options);
 
-  return <>{View}</>;
+  return <div className="-mt-large">{View}</div>;
 }
