@@ -6,11 +6,11 @@ import { v4 as uuidv4 } from 'uuid';
 import { inputVariants } from '../input';
 
 interface SelectProps
-  extends SelectHTMLAttributes<HTMLSelectElement>, // Use SelectHTMLAttributes
+  extends SelectHTMLAttributes<HTMLSelectElement>,
     VariantProps<typeof inputVariants> {
   choices: string[];
   loader?: JSX.Element;
-  placeholder: string;
+  placeholder?: string;
 }
 
 const InputSelect: FC<SelectProps> = forwardRef<HTMLInputElement, SelectProps>(
@@ -52,7 +52,7 @@ const InputSelect: FC<SelectProps> = forwardRef<HTMLInputElement, SelectProps>(
             <select
               className={cn(`body placeholder:body w-full p-extra-small `, className)}
               name={props.id}
-              placeholder={placeholder ? placeholder : ''}
+              
               aria-label={props.id}
               disabled={choices[0] === '' || choices[0] === 'No community is matching'}
               {...props}
