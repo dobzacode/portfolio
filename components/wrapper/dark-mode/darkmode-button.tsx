@@ -26,18 +26,6 @@ const DarkModeButton: FC<DarkModeButtonProps> = ({ className }) => {
       className={className}
       onClick={() => (theme === 'dark' ? setTheme('light') : setTheme('dark'))}
     >
-      {theme === 'dark' ? (
-        <motion.button
-          onClick={() => setTheme('dark')}
-          className={className}
-          key="moon"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1, transition: { duration: 1 } }}
-          exit={{ opacity: 0 }}
-        >
-          <FaMoon size={20} />
-        </motion.button>
-      ) : null}
       {theme === 'light' ? (
         <motion.button
           onClick={() => setTheme('light')}
@@ -49,7 +37,18 @@ const DarkModeButton: FC<DarkModeButtonProps> = ({ className }) => {
         >
           <FaSun size={20} />
         </motion.button>
-      ) : null}
+      ) : (
+        <motion.button
+          onClick={() => setTheme('dark')}
+          className={className}
+          key="moon"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1, transition: { duration: 1 } }}
+          exit={{ opacity: 0 }}
+        >
+          <FaMoon size={20} />
+        </motion.button>
+      )}
     </Button>
   );
 };
