@@ -1,15 +1,11 @@
-import { getTranslations, unstable_setRequestLocale } from 'next-intl/server';
+'use client';
 
-export async function generateMetadata() {
-  const t = await getTranslations('metadata.landing');
+import Layout from '@/components/Layout';
 
-  return {
-    title: t('title'),
-    description: t('description')
-  };
-}
-
-export default async function HomePage({ params: { locale } }: { params: { locale: string } }) {
-  unstable_setRequestLocale(locale);
-  return <main>{/* <Corentin></Corentin> */}</main>;
+export default function HomePage({ params: { locale } }: { params: { locale: string } }) {
+  return (
+    <Layout>
+      <main className={locale}>{/* <Corentin></Corentin> */}</main>
+    </Layout>
+  );
 }

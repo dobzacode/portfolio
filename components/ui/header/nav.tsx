@@ -7,7 +7,7 @@ import React, { FC, HTMLProps, useRef, useState } from 'react';
 import { CSSTransition } from 'react-transition-group';
 
 import CK from '@/components/animated-assets/ck';
-import DarkModeButton from '@/components/dark-mode/darkmode-button';
+import DarkModeButton from '@/components/wrapper/dark-mode/darkmode-button';
 import { mdilMenu, mdilPlus } from '@mdi/light-js';
 import { useTranslations } from 'next-intl';
 import LangageSwitch from './langage-switch';
