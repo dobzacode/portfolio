@@ -9,21 +9,20 @@ export const pathnames = {
     en: '/about',
     fr: '/a-propos'
   },
-  
-  'work' : {
+
+  '/work': {
     en: '/work',
     fr: '/projets'
   },
 
-  'contact': '/contact',
+  '/contact': '/contact',
 
   '/legal/informations': '/legal/informations',
 
   '/legal/privacy': {
     en: '/legal/privacy',
     fr: '/legal/confidentialite'
-  },
-
+  }
 } satisfies Pathnames<typeof locales>;
 
 export const { Link, redirect, usePathname, useRouter, getPathname } =

@@ -13,7 +13,9 @@
     "phrase3": "je suis",
     "phrase4": "développeur full-stack",
     "phrase5": "passionné et sensible à l'",
-    "phrase6": "UX/UI Design"
+    "phrase6": "UX/UI Design",
+    "project": "Voir mes projets",
+    "about": "En savoir plus"
   },
   "form": {
     "firstname": "Prénom",

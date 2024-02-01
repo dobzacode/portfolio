@@ -13,5 +13,9 @@ export default function Corentin() {
 
   myAnimation.setSpeed(1.3);
 
+  setTimeout(() => {
+    myAnimation.destroy();
+  }, 6000);
+
   return <div className="absolute -top-medium z-50">{myAnimation.View}</div>;
 }

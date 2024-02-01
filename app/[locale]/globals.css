@@ -200,3 +200,7 @@ input[type='search']:focus {
   position: relative;
   top: 2px;
 }
+
+ul {
+  list-style-type: none;
+}

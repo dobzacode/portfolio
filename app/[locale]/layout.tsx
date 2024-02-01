@@ -34,7 +34,7 @@ export default async function RootLayout({
 
   return (
     <html lang={locale}>
-      <body className="relative h-full  w-full overflow-x-hidden bg-primary1 dark:bg-primary99 ">
+      <body className="relative h-full  w-full overflow-x-hidden bg-primary1 duration-medium dark:bg-primary99">
         <Providers>
           <NextIntlClientProvider messages={messages}>
             <FramerMotionWrapper>

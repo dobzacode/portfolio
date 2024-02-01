@@ -1,11 +1,12 @@
 'use client';
 
+import nameDarkAnimation from '@/assets/lottie/ck-dark.json';
 import nameAnimation from '@/assets/lottie/ck.json';
 import { LottieOptions, useLottie } from 'lottie-react';
 
-export default function CK({ className }: { className?: string }) {
+export default function CK({ className, isDark }: { className?: string; isDark?: boolean }) {
   const options: LottieOptions = {
-    animationData: nameAnimation,
+    animationData: !isDark ? nameAnimation : nameDarkAnimation,
     loop: false
   };
 

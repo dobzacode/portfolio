@@ -1026,7 +1026,8 @@
       "ddd": 0,
       "ind": 3,
       "ty": 0,
-      "nm": "Text",
+      "nm": ".top-text",
+      "cl": "top-text",
       "refId": "comp_0",
       "sr": 1,
       "ks": {

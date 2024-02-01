@@ -1,17 +1,18 @@
 'use client';
 
-import { VariantProps, cva } from 'class-variance-authority';
 import { cn } from '@/lib/utils';
-import Link, { LinkProps } from 'next/link';
+import { Link } from '@/navigation';
+import { VariantProps, cva } from 'class-variance-authority';
+import { LinkProps } from 'next/link';
 import { usePathname } from 'next/navigation';
 import { FC } from 'react';
 
 const linkVariants = cva('', {
   variants: {
     size: {
-      small: 'py-small px-sub-large body leading-body font-medium',
-      medium: 'py-sub-medium px-sub-large sub-heading',
-      large: 'py-small px-sub-large heading'
+      small: ' body leading-body font-medium',
+      medium: ' sub-heading',
+      large: ' heading'
     },
     intent: {
       primary: 'text-primary80 dark:text-primary1',
@@ -90,6 +91,9 @@ const linkVariants = cva('', {
 interface NavLinkProps extends LinkProps, VariantProps<typeof linkVariants> {
   children?: React.ReactNode;
   className?: string;
+  locale?: string;
+  href: any;
+  isLi?: boolean;
 }
 
 const NavLink: FC<NavLinkProps> = ({
@@ -100,14 +104,38 @@ const NavLink: FC<NavLinkProps> = ({
   intent,
   className,
   currentNavStyle,
+  isLi,
   ...props
 }: NavLinkProps) => {
   const pathname = usePathname();
   const isActive = pathname === props.href;
 
+  if (!isLi)
+    return (
+      <Link
+        href={props.href}
+        // className={`${hover} ${
+        //   isActive && currentNavStyle
+        // } rounded-lg px-8 py-4  `}
+        className={cn(
+          linkVariants({
+            size,
+            rounded,
+            hover,
+            intent,
+            currentNavStyle: isActive ? intent : 'transparent',
+            className
+          })
+        )}
+      >
+        {children}
+      </Link>
+    );
+
   return (
     <li>
       <Link
+        href={props.href}
         // className={`${hover} ${
         //   isActive && currentNavStyle
         // } rounded-lg px-8 py-4  `}
@@ -121,7 +149,6 @@ const NavLink: FC<NavLinkProps> = ({
             currentNavStyle: isActive ? intent : 'transparent'
           })
         )}
-        {...props}
       >
         {children}
       </Link>

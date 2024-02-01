@@ -60,8 +60,11 @@ const Nav: FC<NavProps> = ({ className, linkSize, intent }) => {
   return (
     <header className={cn(className)}>
       <div className=" absolute top-0 z-30 flex w-full items-center justify-end px-large ">
-        <CK className="absolute -left-sub-large -top-[11.6rem]  w-[28rem]"></CK>
-
+        <CK className="absolute -left-sub-large -top-[11.6rem]  w-[28rem] dark:hidden"></CK>
+        <CK
+          isDark={true}
+          className="absolute -left-sub-large -top-[11.6rem]  hidden w-[28rem] dark:block"
+        ></CK>
         <div className="relative flex items-center gap-small pr-sub-large text-primary90 dark:text-primary1">
           <motion.div variants={menuItemVariant} initial="hidden" animate="visible" custom="1">
             <LangageSwitch></LangageSwitch>
