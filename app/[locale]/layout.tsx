@@ -1,7 +1,7 @@
 import Corentin from '@/components/animated-assets/corentin';
-import { Header } from '@/components/ui/header/header';
 import { Providers } from '@/components/wrapper/dark-mode/providers';
-import { FramerMotionWrapper } from '@/components/wrapper/framer-motion-wrapper';
+
+import FramerMotionWrapper from '@/components/wrapper/framer-motion-wrapper';
 import { NextIntlClientProvider } from 'next-intl';
 import { unstable_setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
@@ -39,11 +39,7 @@ export default async function RootLayout({
           <NextIntlClientProvider messages={messages}>
             <FramerMotionWrapper>
               <Corentin></Corentin>
-              <Header
-                size={'large'}
-                textColor={'neutral'}
-                className="  w-full max-w-full px-sub-large pt-[40px] tablet:px-large tablet:pt-large"
-              ></Header>
+
               {children}
               <div className="noise"></div>
             </FramerMotionWrapper>

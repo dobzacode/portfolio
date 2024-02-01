@@ -1,7 +1,19 @@
 'use client';
 
-import { AnimatePresence } from 'framer-motion';
+import { AnimatePresence, motion } from 'framer-motion';
+import { usePathname } from 'next/navigation';
+import FrozenRoute from './frozen-route';
 
-export function FramerMotionWrapper({ children }: { children: React.ReactNode }) {
-  return <AnimatePresence mode="wait">{children}</AnimatePresence>;
-}
+const FramerMotionWrapper = ({ children }: { children: React.ReactNode }) => {
+  const pathname = usePathname();
+
+  return (
+    <AnimatePresence mode="wait">
+      <motion.div key={pathname}>
+        <FrozenRoute>{children}</FrozenRoute>
+      </motion.div>
+    </AnimatePresence>
+  );
+};
+
+export default FramerMotionWrapper;

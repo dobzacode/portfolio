@@ -8,8 +8,11 @@ import { CSSTransition } from 'react-transition-group';
 
 import CK from '@/components/animated-assets/ck';
 import DarkModeButton from '@/components/wrapper/dark-mode/darkmode-button';
+import { usePathname, useRouter } from '@/navigation';
 import { mdilMenu, mdilPlus } from '@mdi/light-js';
+import { hasCookie } from 'cookies-next';
 import { useTranslations } from 'next-intl';
+import { useSearchParams } from 'next/navigation';
 import LangageSwitch from './langage-switch';
 import NavLink from './nav-link';
 
@@ -36,32 +39,51 @@ const navLinks = [
   { href: '/contact', name: 'contact' }
 ];
 
-const menuItemVariant: Variants = {
-  hidden: { y: -100 },
-  visible: (i: number) => ({
-    y: 0,
-    transition: {
-      type: 'spring',
-      stiffness: 100,
-      damping: 10,
-      delay: 5.5 + i * 0.115
-    }
-  }),
-  exit: { opacity: 0, transition: { duration: 1 } }
-};
-
 const Nav: FC<NavProps> = ({ className, linkSize, intent }) => {
   const [showMenu, setShowMenu] = useState<boolean>(false);
+  const [extraDelay] = useState<4.3 | 2>(!hasCookie('corentin') ? 4.3 : 2);
+
+  const searchParams = useSearchParams();
+  const pathname = usePathname();
+  const router = useRouter();
 
   const t = useTranslations('navigation.primaryNavigation');
 
   const navRef = useRef();
 
+  const menuItemVariant: Variants = {
+    hidden: { y: -100 },
+    visible: (i: number) => ({
+      y: 0,
+      transition: {
+        type: 'spring',
+        stiffness: 100,
+        damping: 10,
+        delay: extraDelay + i * 0.115
+      }
+    }),
+    exit: { opacity: 0, transition: { duration: 1 } }
+  };
+
+  const triggerMenu = () => {
+    console.log(showMenu);
+    if (showMenu) {
+      router.replace(pathname);
+    } else {
+      router.replace(`${pathname}?menu=true`);
+    }
+    setShowMenu(!showMenu);
+  };
+
   return (
     <header className={cn(className)}>
       <div className=" absolute top-0 z-30 flex w-full items-center justify-end px-large ">
-        <CK className="absolute -left-sub-large -top-[11.6rem]  w-[28rem] dark:hidden"></CK>
         <CK
+          extraDelay={extraDelay}
+          className="absolute -left-sub-large -top-[11.6rem]  w-[28rem] dark:hidden"
+        ></CK>
+        <CK
+          extraDelay={extraDelay}
           isDark={true}
           className="absolute -left-sub-large -top-[11.6rem]  hidden w-[28rem] dark:block"
         ></CK>
@@ -87,7 +109,7 @@ const Nav: FC<NavProps> = ({ className, linkSize, intent }) => {
                   animate={{ opacity: 1, transition: { duration: 1 } }}
                   exit={{ opacity: 0 }}
                   className="absolute h-fit w-fit  "
-                  onClick={() => setShowMenu(true)}
+                  onClick={() => triggerMenu()}
                 >
                   <Icon
                     path={mdilMenu}
@@ -102,7 +124,7 @@ const Nav: FC<NavProps> = ({ className, linkSize, intent }) => {
                   animate={{ opacity: 1, rotate: 0, transition: { duration: 1, ease: 'easeOut' } }}
                   exit={{ opacity: 0, transition: { duration: 0.4 } }}
                   className="absolute h-fit w-fit  "
-                  onClick={() => setShowMenu(false)}
+                  onClick={() => triggerMenu()}
                 >
                   <Icon
                     path={mdilPlus}
