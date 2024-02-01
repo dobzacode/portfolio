@@ -44,7 +44,7 @@ const menuItemVariant: Variants = {
       type: 'spring',
       stiffness: 100,
       damping: 10,
-      delay: 1.5 + i * 0.115
+      delay: 5.5 + i * 0.115
     }
   }),
   exit: { opacity: 0, transition: { duration: 1 } }

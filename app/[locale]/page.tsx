@@ -18,7 +18,7 @@ export default function HomePage({}) {
             x: '0px',
             rotate: '-17deg',
             transition: {
-              delay: 3.0 + 0.3,
+              delay: 3.0 + 4.3,
               type: 'spring',
               stiffness: '40'
             }
@@ -33,7 +33,7 @@ export default function HomePage({}) {
             animate={{
               y: '0px',
               transition: {
-                delay: 2.3 + 0.3,
+                delay: 2.3 + 4.3,
                 type: 'spring',
                 stiffness: '40'
               }
@@ -55,7 +55,7 @@ export default function HomePage({}) {
             x: '0px',
 
             transition: {
-              delay: 3.6 + 0.3,
+              delay: 3.6 + 4.3,
               type: 'spring',
               stiffness: '40'
             }

@@ -11,7 +11,11 @@ export default function CK({ className }: { className?: string }) {
 
   const myAnimation = useLottie(options);
 
-  myAnimation.setSpeed(1.3);
+  myAnimation.pause();
+
+  setTimeout(() => {
+    myAnimation.play();
+  }, 4500);
 
   return <div className={className}>{myAnimation.View}</div>;
 }

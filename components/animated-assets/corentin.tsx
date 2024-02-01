@@ -13,5 +13,5 @@ export default function Corentin() {
 
   myAnimation.setSpeed(1.3);
 
-  return <div className="absolute -top-medium">{myAnimation.View}</div>;
+  return <div className="absolute -top-medium z-50">{myAnimation.View}</div>;
 }

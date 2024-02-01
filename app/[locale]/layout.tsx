@@ -1,3 +1,4 @@
+import Corentin from '@/components/animated-assets/corentin';
 import { Header } from '@/components/ui/header/header';
 import { Providers } from '@/components/wrapper/dark-mode/providers';
 import { FramerMotionWrapper } from '@/components/wrapper/framer-motion-wrapper';
@@ -37,6 +38,7 @@ export default async function RootLayout({
         <Providers>
           <NextIntlClientProvider messages={messages}>
             <FramerMotionWrapper>
+              <Corentin></Corentin>
               <Header
                 size={'large'}
                 textColor={'neutral'}
