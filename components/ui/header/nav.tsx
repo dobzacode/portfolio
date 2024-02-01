@@ -7,6 +7,7 @@ import React, { FC, HTMLProps, useRef, useState } from 'react';
 import { CSSTransition } from 'react-transition-group';
 import Logo from '../branding/logo';
 
+import DarkModeButton from '@/components/dark-mode/darkmode-button';
 import { mdilMenu, mdilPlus } from '@mdi/light-js';
 import { useTranslations } from 'next-intl';
 import LangageSwitch from './langage-switch';
@@ -44,7 +45,7 @@ const Nav: FC<NavProps> = ({ className, linkSize, intent }) => {
 
   return (
     <header className={cn(className)}>
-      <div className=" absolute top-0 z-30 flex w-full items-center justify-between px-large">
+      <div className=" absolute top-0 z-30 flex w-full items-center justify-between px-large ">
         <Logo
           textType={'heading--large'}
           href="/"
@@ -54,8 +55,9 @@ const Nav: FC<NavProps> = ({ className, linkSize, intent }) => {
           CK
         </Logo>
 
-        <div className="relative flex items-center gap-small">
+        <div className="relative flex items-center gap-small text-primary90 dark:text-primary1">
           <LangageSwitch></LangageSwitch>
+          <DarkModeButton></DarkModeButton>
           <div className="relative h-16">
             <AnimatePresence>
               {!showMenu ? (
@@ -69,7 +71,7 @@ const Nav: FC<NavProps> = ({ className, linkSize, intent }) => {
                 >
                   <Icon
                     path={mdilMenu}
-                    className="  text-primary90 duration-fast hover:scale-105"
+                    className="  text-primary90 duration-fast hover:scale-105 dark:text-primary1"
                     size={2.5}
                   ></Icon>
                 </motion.button>
@@ -84,7 +86,7 @@ const Nav: FC<NavProps> = ({ className, linkSize, intent }) => {
                 >
                   <Icon
                     path={mdilPlus}
-                    className="  rotate-45 text-primary90 duration-fast hover:scale-105"
+                    className="  rotate-45 text-primary90 duration-fast hover:scale-105 dark:text-primary1"
                     size={2.5}
                   ></Icon>
                 </motion.button>

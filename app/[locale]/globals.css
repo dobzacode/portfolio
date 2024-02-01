@@ -1,3 +1,5 @@
+@import url('@/style/animatION.css');
+
 @tailwind components;
 @tailwind base;
 
@@ -183,17 +185,4 @@ input[type='search']:focus {
   margin-left: 5px;
   position: relative;
   top: 2px;
-}
-
-.corentin-first,
-.kittel-first {
-  filter: drop-shadow(4px 5px 5px #ade0db);
-}
-
-.corentin-first > g > g > path {
-  stroke: white;
-}
-
-.kittel-first > g > g > path {
-  stroke: white;
 }
