@@ -1,4 +1,3 @@
-import Corentin from '@/components/animated-assets/corentin';
 import { getTranslations, unstable_setRequestLocale } from 'next-intl/server';
 
 export async function generateMetadata() {
@@ -12,9 +11,5 @@ export async function generateMetadata() {
 
 export default async function HomePage({ params: { locale } }: { params: { locale: string } }) {
   unstable_setRequestLocale(locale);
-  return (
-    <main>
-      <Corentin></Corentin>
-    </main>
-  );
+  return <main>{/* <Corentin></Corentin> */}</main>;
 }

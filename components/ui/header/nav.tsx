@@ -1,12 +1,12 @@
 'use client';
 import { cn } from '@/lib/utils';
 import Icon from '@mdi/react';
-import { AnimatePresence, motion } from 'framer-motion';
+import { AnimatePresence, Variants, motion } from 'framer-motion';
 import React, { FC, HTMLProps, useRef, useState } from 'react';
 
 import { CSSTransition } from 'react-transition-group';
-import Logo from '../branding/logo';
 
+import CK from '@/components/animated-assets/ck';
 import DarkModeButton from '@/components/dark-mode/darkmode-button';
 import { mdilMenu, mdilPlus } from '@mdi/light-js';
 import { useTranslations } from 'next-intl';
@@ -36,6 +36,20 @@ const navLinks = [
   { href: '/contact', name: 'contact' }
 ];
 
+const menuItemVariant: Variants = {
+  hidden: { y: -100 },
+  visible: (i: number) => ({
+    y: 0,
+    transition: {
+      type: 'spring',
+      stiffness: 100,
+      damping: 10,
+      delay: 1.5 + i * 0.115
+    }
+  }),
+  exit: { opacity: 0, transition: { duration: 1 } }
+};
+
 const Nav: FC<NavProps> = ({ className, linkSize, intent }) => {
   const [showMenu, setShowMenu] = useState<boolean>(false);
 
@@ -45,20 +59,23 @@ const Nav: FC<NavProps> = ({ className, linkSize, intent }) => {
 
   return (
     <header className={cn(className)}>
-      <div className=" absolute top-0 z-30 flex w-full items-center justify-between px-large ">
-        <Logo
-          textType={'heading--large'}
-          href="/"
-          intent={intent}
-          className={cn(' relative z-[100] ')}
-        >
-          CK
-        </Logo>
+      <div className=" absolute top-0 z-30 flex w-full items-center justify-end px-large ">
+        <CK className="absolute -left-sub-large -top-[11.6rem]  w-[28rem]"></CK>
 
-        <div className="relative flex items-center gap-small text-primary90 dark:text-primary1">
-          <LangageSwitch></LangageSwitch>
-          <DarkModeButton></DarkModeButton>
-          <div className="relative h-16">
+        <div className="relative flex items-center gap-small pr-sub-large text-primary90 dark:text-primary1">
+          <motion.div variants={menuItemVariant} initial="hidden" animate="visible" custom="1">
+            <LangageSwitch></LangageSwitch>
+          </motion.div>
+          <motion.div variants={menuItemVariant} initial="hidden" animate="visible" custom="2">
+            <DarkModeButton></DarkModeButton>
+          </motion.div>
+          <motion.div
+            variants={menuItemVariant}
+            initial="hidden"
+            animate="visible"
+            custom="3"
+            className="relative h-16"
+          >
             <AnimatePresence>
               {!showMenu ? (
                 <motion.button
@@ -92,7 +109,7 @@ const Nav: FC<NavProps> = ({ className, linkSize, intent }) => {
                 </motion.button>
               )}
             </AnimatePresence>
-          </div>
+          </motion.div>
         </div>
       </div>
 

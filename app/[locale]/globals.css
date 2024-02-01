@@ -75,6 +75,20 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: 'HFF Ultrasound';
+  src: url('../../fonts/HFFUltrasound.eot');
+  src:
+    url('../../fonts/HFFUltrasound.eot?#iefix') format('embedded-opentype'),
+    url('../../fonts/HFFUltrasound.woff2') format('woff2'),
+    url('../../fonts/HFFUltrasound.woff') format('woff'),
+    url('../../fonts/HFFUltrasound.ttf') format('truetype'),
+    url('../../fonts/HFFUltrasound.svg#HFFUltrasound') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 @tailwind utilities;
 
 :root {

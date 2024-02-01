@@ -1,9 +1,9 @@
 'use client';
 
-import nameAnimation from '@/assets/lottie/corentin-kittel.json';
+import nameAnimation from '@/assets/lottie/ck.json';
 import { LottieOptions, useLottie } from 'lottie-react';
 
-export default function Corentin() {
+export default function CK({ className }: { className?: string }) {
   const options: LottieOptions = {
     animationData: nameAnimation,
     loop: false
@@ -13,5 +13,5 @@ export default function Corentin() {
 
   myAnimation.setSpeed(1.3);
 
-  return <div className="absolute -top-medium">{myAnimation.View}</div>;
+  return <div className={className}>{myAnimation.View}</div>;
 }
