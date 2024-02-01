@@ -12,10 +12,10 @@ const H2: FC<H2Props> = ({ children, className, textType, intent, hover, ...prop
     <h2
       className={cn(
         textVariants({
-          className,
           intent,
           textType,
-          hover
+          hover,
+          className
         })
       )}
       {...props}

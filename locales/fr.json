@@ -1,9 +1,19 @@
 {
   "navigation": {
     "primaryNavigation": {
-    "about": "a propos",
-    "work": "projets",
-    "contact": "contact"}
+      "about": "a propos",
+      "work": "projets",
+      "contact": "contact"
+    }
+  },
+  "home": {
+    "greeting": "Salut!",
+    "phrase1": "Je m'appelle",
+    "phrase2": "Corentin Kittel",
+    "phrase3": "je suis",
+    "phrase4": "développeur full-stack",
+    "phrase5": "passionné et sensible à l'",
+    "phrase6": "UX/UI Design"
   },
   "form": {
     "firstname": "Prénom",

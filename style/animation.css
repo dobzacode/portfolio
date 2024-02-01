@@ -112,3 +112,22 @@
     transform: translate(-10%, 10%);
   }
 }
+
+@keyframes widthAnimation {
+  0% {
+    border: 2px solid;
+    border-color: hsl(174 69% 60%);
+    max-width: 0%;
+  }
+  100% {
+    border: 2px solid;
+    border-color: hsl(174 69% 60%);
+    max-width: 40%;
+  }
+}
+
+.hrAnimated {
+  /* This section calls the widthAnimation animation we defined above */
+  border: 0px;
+  animation: 1s ease-out 2s forwards widthAnimation;
+}

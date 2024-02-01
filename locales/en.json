@@ -6,6 +6,15 @@
       "contact": "contact"
     }
   },
+  "home": {
+    "greeting": "Hello!",
+    "phrase1": "My name is",
+    "phrase2": "Corentin Kittel",
+    "phrase3": "I'm",
+    "phrase4": "a passionate full-stack developer",
+    "phrase5": "with a keen appreciation for",
+    "phrase6": "UX/UI design"
+  },
   "form": {
     "firstname": "Firstname",
     "lastname": "Lastname",
