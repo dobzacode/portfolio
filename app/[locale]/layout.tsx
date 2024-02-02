@@ -1,6 +1,7 @@
 import Corentin from '@/components/animated-assets/corentin';
 import { Providers } from '@/components/wrapper/dark-mode/providers';
 
+import SplashScreen from '@/components/ui/splash-screen/splash-screen';
 import FramerMotionWrapper from '@/components/wrapper/framer-motion-wrapper';
 import { NextIntlClientProvider } from 'next-intl';
 import { unstable_setRequestLocale } from 'next-intl/server';
@@ -37,6 +38,7 @@ export default async function RootLayout({
       <body className="relative h-full  w-full overflow-x-hidden bg-primary1 duration-medium dark:bg-primary99">
         <Providers>
           <NextIntlClientProvider messages={messages}>
+            <SplashScreen></SplashScreen>
             <FramerMotionWrapper>
               <Corentin></Corentin>
 

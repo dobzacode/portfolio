@@ -17,6 +17,9 @@
     "project": "Voir mes projets",
     "about": "En savoir plus"
   },
+  "loading": {
+    "phrase": "Chargement"
+  },
   "form": {
     "firstname": "Prénom",
     "lastname": "Nom",

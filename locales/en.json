@@ -17,6 +17,9 @@
     "project": "See my projects",
     "about": "More about me"
   },
+  "loading": {
+    "phrase": "Loading"
+  },
   "form": {
     "firstname": "Firstname",
     "lastname": "Lastname",

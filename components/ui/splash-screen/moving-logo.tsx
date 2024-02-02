@@ -4,16 +4,12 @@ import nameDarkAnimation from '@/assets/lottie/ck-dark.json';
 import nameAnimation from '@/assets/lottie/ck.json';
 import { LottieOptions, useLottie } from 'lottie-react';
 
-export default function CK({
+export default function MovingLogo({
   className,
-  isDark,
-  extraDelay,
-  splashDelay
+  isDark
 }: {
   className?: string;
   isDark?: boolean;
-  extraDelay: number;
-  splashDelay: number;
 }) {
   const options: LottieOptions = {
     animationData: !isDark ? nameAnimation : nameDarkAnimation,
@@ -22,16 +18,12 @@ export default function CK({
 
   const myAnimation = useLottie(options);
 
-  if (extraDelay === 2) return <div className={className}>{myAnimation.View}</div>;
+  myAnimation.setSpeed(1.5);
 
-  myAnimation.pause();
-
-  setTimeout(
-    () => {
-      myAnimation.play();
-    },
-    4500 + splashDelay * 1000
-  );
+  setTimeout(() => {
+    myAnimation.setDirection(-1);
+    myAnimation.play();
+  }, 3000);
 
   return <div className={className}>{myAnimation.View}</div>;
 }

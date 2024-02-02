@@ -1,7 +1,7 @@
 'use client';
 
 import nameAnimation from '@/assets/lottie/corentin-kittel.json';
-import { hasCookie, setCookie } from 'cookies-next';
+
 import { LottieOptions, useLottie } from 'lottie-react';
 
 export default function Corentin() {
@@ -12,16 +12,23 @@ export default function Corentin() {
 
   const myAnimation = useLottie(options);
 
-  if (hasCookie('corentin')) {
+  if (sessionStorage.getItem('corentin')) {
     return null;
   }
 
   myAnimation.setSpeed(1.3);
 
+  if (!sessionStorage.getItem('shown')) {
+    myAnimation.pause;
+    setTimeout(() => {
+      myAnimation.play;
+    }, 4500);
+  }
+
   setTimeout(() => {
     myAnimation.destroy();
-    setCookie('corentin', 'true');
-  }, 6000);
+    sessionStorage.setItem('corentin', 'true');
+  }, 10500);
 
   return <div className="absolute -top-medium z-50">{myAnimation.View}</div>;
 }

@@ -10,9 +10,7 @@ import CK from '@/components/animated-assets/ck';
 import DarkModeButton from '@/components/wrapper/dark-mode/darkmode-button';
 import { usePathname, useRouter } from '@/navigation';
 import { mdilMenu, mdilPlus } from '@mdi/light-js';
-import { hasCookie } from 'cookies-next';
 import { useTranslations } from 'next-intl';
-import { useSearchParams } from 'next/navigation';
 import LangageSwitch from './langage-switch';
 import NavLink from './nav-link';
 
@@ -41,9 +39,9 @@ const navLinks = [
 
 const Nav: FC<NavProps> = ({ className, linkSize, intent }) => {
   const [showMenu, setShowMenu] = useState<boolean>(false);
-  const [extraDelay] = useState<4.3 | 2>(!hasCookie('corentin') ? 4.3 : 2);
+  const [extraDelay] = useState<4.3 | 2>(!sessionStorage.getItem('corentin') ? 4.3 : 2);
+  const [splashDelay] = useState<4.5 | 0>(!sessionStorage.getItem('shown') ? 4.5 : 0);
 
-  const searchParams = useSearchParams();
   const pathname = usePathname();
   const router = useRouter();
 
@@ -59,7 +57,7 @@ const Nav: FC<NavProps> = ({ className, linkSize, intent }) => {
         type: 'spring',
         stiffness: 100,
         damping: 10,
-        delay: extraDelay + i * 0.115
+        delay: extraDelay + i * 0.115 + splashDelay
       }
     }),
     exit: { opacity: 0, transition: { duration: 1 } }
@@ -70,6 +68,7 @@ const Nav: FC<NavProps> = ({ className, linkSize, intent }) => {
     if (showMenu) {
       router.replace(pathname);
     } else {
+      // @ts-ignore
       router.replace(`${pathname}?menu=true`);
     }
     setShowMenu(!showMenu);
@@ -79,10 +78,12 @@ const Nav: FC<NavProps> = ({ className, linkSize, intent }) => {
     <header className={cn(className)}>
       <div className=" absolute top-0 z-30 flex w-full items-center justify-end px-large ">
         <CK
+          splashDelay={splashDelay}
           extraDelay={extraDelay}
           className="absolute -left-sub-large -top-[11.6rem]  w-[28rem] dark:hidden"
         ></CK>
         <CK
+          splashDelay={splashDelay}
           extraDelay={extraDelay}
           isDark={true}
           className="absolute -left-sub-large -top-[11.6rem]  hidden w-[28rem] dark:block"

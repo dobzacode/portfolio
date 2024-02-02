@@ -127,7 +127,70 @@
 }
 
 .hrAnimated {
-  /* This section calls the widthAnimation animation we defined above */
   border: 0px;
   animation: 1s ease-out 6s forwards widthAnimation;
+}
+
+.slideInFromRight {
+  transform: translateX(50%);
+  animation: slideInFromRight 1s ease-in-out forwards;
+}
+
+@keyframes slideInFromRight {
+  from {
+    opacity: 0;
+    transform: translateX(50%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.slideInToRight {
+  transform: translateY(0%);
+  animation: slideInToRight 1s 3s ease-in forwards;
+}
+
+@keyframes slideInToRight {
+  from {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(10%);
+  }
+}
+
+.slideInFromLeft {
+  transform: translateX(-50%);
+  animation: slideInFromLeft 1s ease-in-out forwards;
+}
+
+@keyframes slideInFromLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.slideInFromTop {
+  transform: translateY(-50%);
+  animation: slideInFromTop 1s ease-in-out forwards;
+}
+
+@keyframes slideInFromTop {
+  from {
+    opacity: 0;
+    transform: translateY(-50%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
