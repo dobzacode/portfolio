@@ -15,7 +15,7 @@ export default function Error({ error }: { error: Error & { digest?: string } })
   const t = useTranslations('error');
 
   return (
-    <section className="relative z-50 flex h-screen w-screen flex-col items-center justify-center gap-medium px-small text-black5">
+    <section className="relative z-50 flex h-screen w-screen flex-col items-center justify-center gap-medium px-small text-primary90 dark:text-primary5">
       <H2 textType="heading--extra-large">500</H2>
       <P textType="body" className="max-w-[400px] text-center">
         {t('content')}{' '}

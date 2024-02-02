@@ -3,6 +3,10 @@
   filter: drop-shadow(4px 5px 5px #ade0db);
 }
 
+.glowy-shadow {
+  filter: drop-shadow(4px 5px 5px #ade0db);
+}
+
 .corentin-first > g > g > path {
   stroke: white;
 }
@@ -193,4 +197,26 @@
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+.slide-in-enter {
+  transform: translateX(-150vw);
+}
+
+.slide-in-enter-active {
+  transform: translateX(0);
+  transition: transform 2s ease-out;
+}
+
+.slide-in-exit {
+  transform: translateX(0);
+  opacity: 1; /* Opacité pendant la sortie */
+}
+
+.slide-in-exit-active {
+  transform: translateX(150vw);
+  opacity: 0; /* Opacité pendant la sortie */
+  transition:
+    transform 1s ease-in,
+    opacity 1s ease-in; /* Transition pour les deux propriétés */
 }

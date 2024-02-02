@@ -2,15 +2,14 @@
 import { cn } from '@/lib/utils';
 import Icon from '@mdi/react';
 import { AnimatePresence, Variants, motion } from 'framer-motion';
-import React, { FC, HTMLProps, useRef, useState } from 'react';
-
-import { CSSTransition } from 'react-transition-group';
+import React, { FC, HTMLProps, useState } from 'react';
 
 import CK from '@/components/animated-assets/ck';
 import DarkModeButton from '@/components/wrapper/dark-mode/darkmode-button';
 import { usePathname, useRouter } from '@/navigation';
 import { mdilMenu, mdilPlus } from '@mdi/light-js';
 import { useTranslations } from 'next-intl';
+import { useSearchParams } from 'next/navigation';
 import AnimatedLogo from '../branding/animated-logo';
 import LangageSwitch from './langage-switch';
 import NavLink from './nav-link';
@@ -38,8 +37,10 @@ const navLinks = [
   { href: '/contact', name: 'contact' }
 ];
 
-const Nav: FC<NavProps> = ({ className, linkSize, intent }) => {
-  const [showMenu, setShowMenu] = useState<boolean>(false);
+const Nav: FC<NavProps> = ({ className, intent }) => {
+  const searchParams = useSearchParams();
+
+  const [showMenu, setShowMenu] = useState<boolean>(searchParams.get('menu') ? true : false);
 
   const [splashDelay] = useState<4.5 | 0>(!sessionStorage.getItem('shown') ? 4.5 : 0);
 
@@ -47,8 +48,6 @@ const Nav: FC<NavProps> = ({ className, linkSize, intent }) => {
   const router = useRouter();
 
   const t = useTranslations('navigation.primaryNavigation');
-
-  const navRef = useRef();
 
   const menuItemVariant: Variants = {
     hidden: { y: -100 },
@@ -77,7 +76,7 @@ const Nav: FC<NavProps> = ({ className, linkSize, intent }) => {
 
   return (
     <header className={cn(className)}>
-      <div className=" absolute top-0 z-30 flex w-full items-center justify-end px-large max-tablet:px-sub-large max-mobile-large:justify-between max-mobile-large:px-small">
+      <div className=" relative z-30 flex w-full items-center justify-end px-large max-tablet:px-sub-large max-mobile-large:justify-between max-mobile-large:px-small">
         <div className="max-mobile-large:hidden">
           <CK
             splashDelay={splashDelay}
@@ -140,33 +139,81 @@ const Nav: FC<NavProps> = ({ className, linkSize, intent }) => {
           </motion.div>
         </div>
       </div>
-
-      <CSSTransition nodeRef={navRef} timeout={600} unmountOnExit classNames="fade" in={showMenu}>
-        <nav
-          ref={navRef as any}
-          className={cn(
-            ' relative z-40 h-full w-fit self-start pt-medium mobile-large:pt-large tablet:pt-0'
+      <div className="relative -z-20 w-full self-start">
+        <AnimatePresence mode="popLayout">
+          {showMenu && (
+            <motion.div
+              key="specialMenu"
+              exit={{
+                opacity: 0,
+                x: '-20%',
+                transition: { duration: 1.5, ease: 'easeIn' }
+              }}
+            >
+              <nav
+                key={'navigation'}
+                className={cn(
+                  ' relative z-40 flex h-[75vh] w-fit items-center self-start  px-large max-tablet:px-sub-large max-mobile-large:px-extra-small '
+                )}
+              >
+                <ul className={' flex  flex-col  justify-center '}>
+                  {navLinks.map((link, i) => {
+                    return (
+                      <div
+                        className={`flex h-full w-fit flex-row-reverse items-center gap-extra-small ${
+                          showMenu ? 'overflow-hidden' : 'overflow-visible'
+                        }`}
+                        key={link.name}
+                      >
+                        <motion.div
+                          className="w-full"
+                          key={`${link.name} animated`}
+                          initial={{ x: '-200%' }}
+                          animate={{ x: '0', transition: { duration: 2 - 1.5, delay: i + 0.5 } }}
+                        >
+                          <NavLink
+                            isLi={true}
+                            className="leading-small heading--extra-large w-full font-['HFF_Ultrasound'] font-thin text-tertiary90 dark:text-tertiary1 "
+                            hover={true}
+                            index={i}
+                            intent={intent}
+                            currentNavStyle={intent}
+                            href={link.href}
+                          >
+                            {t(link.name).toUpperCase()}
+                          </NavLink>
+                        </motion.div>
+                        <motion.div
+                          key={`${link.name} border`}
+                          initial={{ maxHeight: 0, opacity: 0 }}
+                          animate={{
+                            maxHeight: [0, 100, 100, 0],
+                            opacity: [0, 1, 1, 0],
+                            transition: {
+                              maxHeight: {
+                                duration: 4 - 1.5,
+                                ease: 'easeIn',
+                                delay: i,
+                                times: [0, 0.25, 0.75, 1]
+                              },
+                              opacity: { duration: 4 - 1.5, delay: i, times: [0, 0.05, 0.99, 1] }
+                            }
+                          }}
+                          exit={{
+                            opacity: 0,
+                            transition: { duration: 0.5, delay: i * 0.115 }
+                          }}
+                          className="glowy-shadow relative z-10 h-[10rem] bg-tertiary40 p-1"
+                        ></motion.div>
+                      </div>
+                    );
+                  })}
+                </ul>
+              </nav>
+            </motion.div>
           )}
-        >
-          <ul className={'absolute  flex w-fit translate-y-large flex-col  justify-center'}>
-            {navLinks.map((link) => {
-              return (
-                <NavLink
-                  className="max-tablet:text-[5rem] max-tablet:leading-[5rem] "
-                  key={link.name}
-                  hover={true}
-                  size={linkSize}
-                  intent={intent}
-                  currentNavStyle={intent}
-                  href={link.href}
-                >
-                  {t(link.name).toUpperCase()}
-                </NavLink>
-              );
-            })}
-          </ul>
-        </nav>
-      </CSSTransition>
+        </AnimatePresence>
+      </div>
     </header>
   );
 };

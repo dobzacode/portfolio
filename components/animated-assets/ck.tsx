@@ -3,6 +3,7 @@
 import nameDarkAnimation from '@/assets/lottie/ck-dark.json';
 import nameAnimation from '@/assets/lottie/ck.json';
 import { LottieOptions, useLottie } from 'lottie-react';
+import { useEffect } from 'react';
 
 export default function CK({
   className,
@@ -24,9 +25,15 @@ export default function CK({
 
   myAnimation.pause();
 
-  setTimeout(() => {
-    myAnimation.play();
-  }, splashDelay * 1000);
+  useEffect(() => {
+    const timerId = setTimeout(() => {
+      myAnimation.play();
+    }, splashDelay * 1000);
+
+    return () => {
+      clearTimeout(timerId);
+    };
+  }, [myAnimation, splashDelay]);
 
   return <div className={className}>{myAnimation.View}</div>;
 }

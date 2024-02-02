@@ -8,15 +8,15 @@ const variants = {
 
 export default function Template({ children }) {
   return (
-    <motion.main
+    <motion.div
       variants={variants}
       initial="hidden"
       exit="hidden"
       animate="enter"
-      transition={{ type: 'linear', duration: 0.25 }}
+      transition={{ type: 'easeIn', duration: 0.5 }}
       key="LandingPage"
     >
       {children}
-    </motion.main>
+    </motion.div>
   );
 }

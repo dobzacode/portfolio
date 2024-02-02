@@ -23,7 +23,7 @@ export const metadata = {
 export default async function NotFound() {
   const t = await getTranslations('not-found');
   return (
-    <main className="flex h-screen w-screen flex-col items-center justify-center gap-medium px-small text-black5">
+    <main className="flex h-screen w-screen flex-col items-center justify-center gap-medium px-small text-primary90 dark:text-primary5">
       <H1 textType="heading--extra-large">404</H1>
       <P textType="body" className="max-w-[400px] text-center">
         {t('content')}{' '}

@@ -3,6 +3,7 @@
 import { cn } from '@/lib/utils';
 import { Link } from '@/navigation';
 import { VariantProps, cva } from 'class-variance-authority';
+import Image from 'next/image';
 import { LinkProps } from 'next/link';
 import { usePathname } from 'next/navigation';
 import { FC } from 'react';
@@ -94,6 +95,7 @@ interface NavLinkProps extends LinkProps, VariantProps<typeof linkVariants> {
   locale?: string;
   href: any;
   isLi?: boolean;
+  index?: number;
 }
 
 const NavLink: FC<NavLinkProps> = ({
@@ -105,6 +107,7 @@ const NavLink: FC<NavLinkProps> = ({
   className,
   currentNavStyle,
   isLi,
+  index,
   ...props
 }: NavLinkProps) => {
   const pathname = usePathname();
@@ -121,7 +124,7 @@ const NavLink: FC<NavLinkProps> = ({
           linkVariants({
             size,
             rounded,
-            hover,
+
             intent,
             currentNavStyle: isActive ? intent : 'transparent',
             className
@@ -133,25 +136,36 @@ const NavLink: FC<NavLinkProps> = ({
     );
 
   return (
-    <li>
+    <li className="relative">
       <Link
         href={props.href}
         // className={`${hover} ${
         //   isActive && currentNavStyle
         // } rounded-lg px-8 py-4  `}
         className={cn(
+          'peer',
           linkVariants({
-            className,
             size,
             rounded,
-            hover,
+
             intent,
-            currentNavStyle: isActive ? intent : 'transparent'
+            currentNavStyle: isActive ? intent : 'transparent',
+            className
           })
         )}
       >
         {children}
       </Link>
+
+      <Image
+        src="/link-hover.png"
+        width="400"
+        height="400"
+        alt=""
+        className={` absolute top-1/4 -z-10  scale-150  overflow-hidden opacity-0 duration-slow  peer-hover:opacity-100 ${
+          index! % 2 === 0 ? 'rotate-180' : ''
+        }`}
+      ></Image>
     </li>
   );
 };
