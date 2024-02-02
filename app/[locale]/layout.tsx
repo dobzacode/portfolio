@@ -40,7 +40,7 @@ export default async function RootLayout({
             <SplashScreen></SplashScreen>
             <FramerMotionWrapper>
               {children}
-              <div className="noise"></div>
+              <div className="noise max-mobile-large:hidden"></div>
             </FramerMotionWrapper>
           </NextIntlClientProvider>
         </Providers>

@@ -55,7 +55,7 @@ export default function HomePage({}) {
                 duration: 1 + 2
               }
             }}
-            className="heading--extra-large absolute -left-[15rem] top-extra-large -z-10 font-['HFF_Ultrasound'] font-extrabold leading-none  text-tertiary40 max-tablet:-left-medium  max-tablet:top-large max-tablet:text-heading-sub-extra-large max-mobile-large:left-0 max-mobile-large:text-heading-large"
+            className="heading--extra-large absolute -left-[15rem] top-extra-large -z-10 font-['HFF_Ultrasound'] font-extrabold leading-none  text-tertiary40 max-tablet:-left-medium  max-tablet:top-large max-tablet:text-heading-sub-extra-large max-mobile-large:left-extra-small max-mobile-large:text-heading-large"
           >
             {t('greeting').toUpperCase()}
           </motion.p>

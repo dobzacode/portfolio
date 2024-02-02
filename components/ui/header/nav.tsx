@@ -11,6 +11,7 @@ import DarkModeButton from '@/components/wrapper/dark-mode/darkmode-button';
 import { usePathname, useRouter } from '@/navigation';
 import { mdilMenu, mdilPlus } from '@mdi/light-js';
 import { useTranslations } from 'next-intl';
+import AnimatedLogo from '../branding/animated-logo';
 import LangageSwitch from './langage-switch';
 import NavLink from './nav-link';
 
@@ -76,16 +77,19 @@ const Nav: FC<NavProps> = ({ className, linkSize, intent }) => {
 
   return (
     <header className={cn(className)}>
-      <div className=" absolute top-0 z-30 flex w-full items-center justify-end px-large max-tablet:px-sub-large max-mobile-large:px-small">
-        <CK
-          splashDelay={splashDelay}
-          className="absolute -left-sub-large -top-[11.6rem] w-[28rem] dark:hidden  max-tablet:-top-[8rem] max-tablet:w-[20rem]"
-        ></CK>
-        <CK
-          splashDelay={splashDelay}
-          isDark={true}
-          className="absolute -left-sub-large -top-[11.6rem]  hidden w-[28rem] dark:block"
-        ></CK>
+      <div className=" absolute top-0 z-30 flex w-full items-center justify-end px-large max-tablet:px-sub-large max-mobile-large:justify-between max-mobile-large:px-small">
+        <div className="max-mobile-large:hidden">
+          <CK
+            splashDelay={splashDelay}
+            className="absolute -left-sub-large -top-[11.6rem] w-[28rem] dark:hidden  max-tablet:-top-[8rem] max-tablet:w-[20rem] "
+          ></CK>
+          <CK
+            splashDelay={splashDelay}
+            isDark={true}
+            className="absolute -left-sub-large -top-[11.6rem]  hidden w-[28rem]  dark:block max-tablet:-top-[8rem] max-tablet:w-[20rem] "
+          ></CK>
+        </div>
+        <AnimatedLogo splashDelay={splashDelay} className="w-24 mobile-large:hidden"></AnimatedLogo>
         <div className="relative flex items-center gap-small pr-sub-large text-primary90 dark:text-primary1 max-tablet:gap-4">
           <motion.div variants={menuItemVariant} initial="hidden" animate="visible" custom="1">
             <LangageSwitch></LangageSwitch>
