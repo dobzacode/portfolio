@@ -15,6 +15,7 @@ export default function Template({ children }) {
       animate="enter"
       transition={{ type: 'easeIn', duration: 0.5 }}
       key="LandingPage"
+      className="overflow-x-hidden"
     >
       {children}
     </motion.div>

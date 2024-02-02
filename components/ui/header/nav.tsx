@@ -153,7 +153,7 @@ const Nav: FC<NavProps> = ({ className, intent }) => {
               <nav
                 key={'navigation'}
                 className={cn(
-                  ' relative z-40 flex h-[75vh] w-fit items-center self-start  px-large max-tablet:px-sub-large max-mobile-large:px-extra-small '
+                  ' relative z-40 flex h-[75vh] w-fit items-center self-start px-large max-tablet:px-sub-large  max-mobile-large:items-start max-mobile-large:px-extra-small max-mobile-large:pt-large '
                 )}
               >
                 <ul className={' flex  flex-col  justify-center '}>
@@ -173,7 +173,7 @@ const Nav: FC<NavProps> = ({ className, intent }) => {
                         >
                           <NavLink
                             isLi={true}
-                            className="leading-small heading--extra-large w-full font-['HFF_Ultrasound'] font-thin text-tertiary90 dark:text-tertiary1 "
+                            className="leading-small heading--extra-large w-full font-['HFF_Ultrasound'] font-thin text-tertiary90 dark:text-tertiary1 max-mobile-large:text-heading-large max-mobile-large:leading-heading-large "
                             hover={true}
                             index={i}
                             intent={intent}
@@ -203,7 +203,7 @@ const Nav: FC<NavProps> = ({ className, intent }) => {
                             opacity: 0,
                             transition: { duration: 0.5, delay: i * 0.115 }
                           }}
-                          className="glowy-shadow relative z-10 h-[10rem] bg-tertiary40 p-1"
+                          className="glowy-shadow relative z-10 h-[10rem] bg-tertiary40 p-1 max-mobile-large:h-[5rem] max-mobile-large:p-[0.8px]"
                         ></motion.div>
                       </div>
                     );
