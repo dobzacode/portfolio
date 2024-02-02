@@ -6,7 +6,7 @@ import { VariantProps, cva } from 'class-variance-authority';
 import Image from 'next/image';
 import { LinkProps } from 'next/link';
 import { usePathname } from 'next/navigation';
-import { FC } from 'react';
+import { FC, useEffect, useState } from 'react';
 
 const linkVariants = cva('', {
   variants: {
@@ -26,14 +26,14 @@ const linkVariants = cva('', {
       neutral: 'text-neutral80 dark:text-neutral1'
     },
     currentNavStyle: {
-      primary: 'bg-primary80 dark:bg-primary1 text-primary1 dark:text-primary80',
-      secondary: 'bg-secondary80 dark:bg-secondary1',
-      tertiary: 'bg-tertiary80 dark:bg-tertiary1',
-      success: 'bg-success80 dark:bg-success1',
-      error: 'bg-error80 dark:bg-error1',
+      primary: '',
+      secondary: '',
+      tertiary: '',
+      success: '',
+      error: '',
       warning: 'bg-warning80 dark:bg-warning1',
       info: 'bg-info80 dark:bg-info1',
-      neutral: 'bg-neutral80 dark:bg-neutral1 text-neutral1 dark:text-neutral80',
+      neutral: '',
       transparent: ''
     },
     hover: {
@@ -112,14 +112,21 @@ const NavLink: FC<NavLinkProps> = ({
 }: NavLinkProps) => {
   const pathname = usePathname();
   const isActive = pathname === props.href;
+  const [showHover, setShowHover] = useState<boolean>(false);
+
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      setShowHover(true);
+    }, 5000);
+    return () => {
+      clearTimeout(timeout);
+    };
+  });
 
   if (!isLi)
     return (
       <Link
         href={props.href}
-        // className={`${hover} ${
-        //   isActive && currentNavStyle
-        // } rounded-lg px-8 py-4  `}
         className={cn(
           linkVariants({
             size,
@@ -162,9 +169,14 @@ const NavLink: FC<NavLinkProps> = ({
         width="400"
         height="400"
         alt=""
-        className={` absolute top-1/4 -z-10  scale-150  overflow-hidden opacity-0 duration-slow  peer-hover:opacity-100 ${
-          index! % 2 === 0 ? 'rotate-180' : ''
-        }`}
+        className={cn(
+          ` absolute top-1/4 -z-10  scale-150  overflow-hidden opacity-0 duration-slow   ${
+            index! % 2 === 0 ? 'rotate-180' : ''
+          } 
+        }`,
+          isActive && showHover ? 'opacity-100' : null,
+          showHover && 'peer-hover:opacity-100'
+        )}
       ></Image>
     </li>
   );

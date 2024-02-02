@@ -4,6 +4,7 @@ import Icon from '@mdi/react';
 import { AnimatePresence, Variants, motion } from 'framer-motion';
 import React, { FC, HTMLProps, useState } from 'react';
 
+import AccueilCurrent from '@/components/animated-assets/accueil-current';
 import CK from '@/components/animated-assets/ck';
 import DarkModeButton from '@/components/wrapper/dark-mode/darkmode-button';
 import { usePathname, useRouter } from '@/navigation';
@@ -32,6 +33,7 @@ interface NavProps extends HTMLProps<HTMLElement> {
 }
 
 const navLinks = [
+  { href: '/', name: 'home' },
   { href: '/about', name: 'about' },
   { href: '/work', name: 'work' },
   { href: '/contact', name: 'contact' }
@@ -77,18 +79,15 @@ const Nav: FC<NavProps> = ({ className, intent }) => {
   return (
     <header className={cn(className)}>
       <div className=" relative z-30 flex w-full items-center justify-end px-large max-tablet:px-sub-large max-mobile-large:justify-between max-mobile-large:px-small">
-        <div className="max-mobile-large:hidden">
-          <CK
-            splashDelay={splashDelay}
-            className="absolute -left-sub-large -top-[11.6rem] w-[28rem] dark:hidden  max-tablet:-top-[8rem] max-tablet:w-[20rem] "
-          ></CK>
-          <CK
-            splashDelay={splashDelay}
-            isDark={true}
-            className="absolute -left-sub-large -top-[11.6rem]  hidden w-[28rem]  dark:block max-tablet:-top-[8rem] max-tablet:w-[20rem] "
-          ></CK>
+        <div
+          className="absolute
+-left-sub-large  -top-[11.6rem]  w-[28rem]  max-tablet:-top-[8rem] max-tablet:w-[20rem] max-mobile-large:hidden"
+        >
+          <CK splashDelay={splashDelay} className=" dark:hidden    "></CK>
+          <CK splashDelay={splashDelay} isDark={true} className="  hidden   dark:block  "></CK>
         </div>
-        <AnimatedLogo splashDelay={splashDelay} className="w-24 mobile-large:hidden"></AnimatedLogo>
+        <AnimatedLogo splashDelay={splashDelay} className="w-14 mobile-large:hidden"></AnimatedLogo>
+
         <div className="relative flex items-center gap-small pr-sub-large text-primary90 dark:text-primary1 max-tablet:gap-4">
           <motion.div variants={menuItemVariant} initial="hidden" animate="visible" custom="1">
             <LangageSwitch></LangageSwitch>
@@ -144,6 +143,7 @@ const Nav: FC<NavProps> = ({ className, intent }) => {
           {showMenu && (
             <motion.div
               key="specialMenu"
+              className="flex h-[75vh] justify-center gap-extra-large px-large pt-large max-tablet:px-sub-large max-mobile-large:px-extra-small"
               exit={{
                 opacity: 0,
                 x: '-20%',
@@ -152,9 +152,7 @@ const Nav: FC<NavProps> = ({ className, intent }) => {
             >
               <nav
                 key={'navigation'}
-                className={cn(
-                  ' relative z-40 flex h-[75vh] w-fit items-start self-start px-large pt-large   max-tablet:px-sub-large max-mobile-large:px-extra-small '
-                )}
+                className={cn(' relative z-40 flex  w-fit items-start self-start     ')}
               >
                 <ul className={' flex  flex-col  justify-center '}>
                   {navLinks.map((link, i) => {
@@ -173,7 +171,7 @@ const Nav: FC<NavProps> = ({ className, intent }) => {
                         >
                           <NavLink
                             isLi={true}
-                            className="leading-small heading--extra-large relative z-50 w-full font-['HFF_Ultrasound'] font-thin text-tertiary90 dark:text-tertiary1 max-mobile-large:text-heading-large max-mobile-large:leading-heading-large "
+                            className="leading-small heading--extra-large relative z-50 w-full whitespace-nowrap font-['HFF_Ultrasound'] font-thin  text-tertiary90 dark:text-tertiary1 max-mobile-large:text-heading-large max-mobile-large:leading-heading-large "
                             hover={true}
                             index={i}
                             intent={intent}
@@ -210,6 +208,8 @@ const Nav: FC<NavProps> = ({ className, intent }) => {
                   })}
                 </ul>
               </nav>
+
+              <AccueilCurrent className="relative h-[710px] w-[710px]"></AccueilCurrent>
             </motion.div>
           )}
         </AnimatePresence>

@@ -3,7 +3,8 @@
   filter: drop-shadow(4px 5px 5px #ade0db);
 }
 
-.glowy-shadow {
+.glowy-shadow,
+.saber > g > g > path {
   filter: drop-shadow(4px 5px 5px #ade0db);
 }
 
@@ -19,7 +20,7 @@
   position: fixed;
   z-index: 9999;
   top: -300%;
-  left: -150%;
+  left: -120%;
   height: 600%;
   width: 600%;
   -webkit-animation: grain 7s steps(10) infinite;

@@ -1,6 +1,7 @@
 {
   "navigation": {
     "primaryNavigation": {
+      "home": "accueil",
       "about": "a propos",
       "work": "projets",
       "contact": "contact"
