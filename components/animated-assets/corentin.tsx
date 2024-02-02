@@ -19,9 +19,9 @@ export default function Corentin() {
   myAnimation.setSpeed(1.3);
 
   if (!sessionStorage.getItem('shown')) {
-    myAnimation.pause;
+    myAnimation.pause();
     setTimeout(() => {
-      myAnimation.play;
+      myAnimation.play();
     }, 4500);
   }
 

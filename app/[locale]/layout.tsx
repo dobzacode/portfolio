@@ -1,4 +1,3 @@
-import Corentin from '@/components/animated-assets/corentin';
 import { Providers } from '@/components/wrapper/dark-mode/providers';
 
 import SplashScreen from '@/components/ui/splash-screen/splash-screen';
@@ -40,8 +39,6 @@ export default async function RootLayout({
           <NextIntlClientProvider messages={messages}>
             <SplashScreen></SplashScreen>
             <FramerMotionWrapper>
-              <Corentin></Corentin>
-
               {children}
               <div className="noise"></div>
             </FramerMotionWrapper>

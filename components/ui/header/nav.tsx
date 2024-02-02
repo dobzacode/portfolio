@@ -39,7 +39,7 @@ const navLinks = [
 
 const Nav: FC<NavProps> = ({ className, linkSize, intent }) => {
   const [showMenu, setShowMenu] = useState<boolean>(false);
-  const [extraDelay] = useState<4.3 | 2>(!sessionStorage.getItem('corentin') ? 4.3 : 2);
+
   const [splashDelay] = useState<4.5 | 0>(!sessionStorage.getItem('shown') ? 4.5 : 0);
 
   const pathname = usePathname();
@@ -57,7 +57,7 @@ const Nav: FC<NavProps> = ({ className, linkSize, intent }) => {
         type: 'spring',
         stiffness: 100,
         damping: 10,
-        delay: extraDelay + i * 0.115 + splashDelay
+        delay: i * 0.115 + splashDelay
       }
     }),
     exit: { opacity: 0, transition: { duration: 1 } }
@@ -76,24 +76,22 @@ const Nav: FC<NavProps> = ({ className, linkSize, intent }) => {
 
   return (
     <header className={cn(className)}>
-      <div className=" absolute top-0 z-30 flex w-full items-center justify-end px-large ">
+      <div className=" absolute top-0 z-30 flex w-full items-center justify-end px-large max-tablet:px-sub-large max-mobile-large:px-small">
         <CK
           splashDelay={splashDelay}
-          extraDelay={extraDelay}
-          className="absolute -left-sub-large -top-[11.6rem]  w-[28rem] dark:hidden"
+          className="absolute -left-sub-large -top-[11.6rem] w-[28rem] dark:hidden  max-tablet:-top-[8rem] max-tablet:w-[20rem]"
         ></CK>
         <CK
           splashDelay={splashDelay}
-          extraDelay={extraDelay}
           isDark={true}
           className="absolute -left-sub-large -top-[11.6rem]  hidden w-[28rem] dark:block"
         ></CK>
-        <div className="relative flex items-center gap-small pr-sub-large text-primary90 dark:text-primary1">
+        <div className="relative flex items-center gap-small pr-sub-large text-primary90 dark:text-primary1 max-tablet:gap-4">
           <motion.div variants={menuItemVariant} initial="hidden" animate="visible" custom="1">
             <LangageSwitch></LangageSwitch>
           </motion.div>
           <motion.div variants={menuItemVariant} initial="hidden" animate="visible" custom="2">
-            <DarkModeButton></DarkModeButton>
+            <DarkModeButton className="max-tablet:scale-75"></DarkModeButton>
           </motion.div>
           <motion.div
             variants={menuItemVariant}
@@ -114,7 +112,7 @@ const Nav: FC<NavProps> = ({ className, linkSize, intent }) => {
                 >
                   <Icon
                     path={mdilMenu}
-                    className="  text-primary90 duration-fast hover:scale-105 dark:text-primary1"
+                    className="  text-primary90 duration-fast hover:scale-105 dark:text-primary1 max-tablet:scale-75"
                     size={2.5}
                   ></Icon>
                 </motion.button>
@@ -129,7 +127,7 @@ const Nav: FC<NavProps> = ({ className, linkSize, intent }) => {
                 >
                   <Icon
                     path={mdilPlus}
-                    className="  rotate-45 text-primary90 duration-fast hover:scale-105 dark:text-primary1"
+                    className="  rotate-45 text-primary90 duration-fast hover:scale-105 dark:text-primary1 max-tablet:scale-75"
                     size={2.5}
                   ></Icon>
                 </motion.button>

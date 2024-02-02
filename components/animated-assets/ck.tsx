@@ -7,12 +7,12 @@ import { LottieOptions, useLottie } from 'lottie-react';
 export default function CK({
   className,
   isDark,
-  extraDelay,
+
   splashDelay
 }: {
   className?: string;
   isDark?: boolean;
-  extraDelay: number;
+
   splashDelay: number;
 }) {
   const options: LottieOptions = {
@@ -22,16 +22,11 @@ export default function CK({
 
   const myAnimation = useLottie(options);
 
-  if (extraDelay === 2) return <div className={className}>{myAnimation.View}</div>;
-
   myAnimation.pause();
 
-  setTimeout(
-    () => {
-      myAnimation.play();
-    },
-    4500 + splashDelay * 1000
-  );
+  setTimeout(() => {
+    myAnimation.play();
+  }, splashDelay * 1000);
 
   return <div className={className}>{myAnimation.View}</div>;
 }
