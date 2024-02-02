@@ -153,27 +153,27 @@ const Nav: FC<NavProps> = ({ className, intent }) => {
               <nav
                 key={'navigation'}
                 className={cn(
-                  ' relative z-40 flex h-[75vh] w-fit items-center self-start px-large max-tablet:px-sub-large  max-mobile-large:items-start max-mobile-large:px-extra-small max-mobile-large:pt-large '
+                  ' relative z-40 flex h-[75vh] w-fit items-start self-start px-large pt-large   max-tablet:px-sub-large max-mobile-large:px-extra-small '
                 )}
               >
                 <ul className={' flex  flex-col  justify-center '}>
                   {navLinks.map((link, i) => {
                     return (
                       <div
-                        className={`flex h-full w-fit flex-row-reverse items-center gap-extra-small ${
+                        className={`relative z-50 flex h-full w-fit flex-row-reverse items-center gap-extra-small ${
                           showMenu ? 'overflow-hidden' : 'overflow-visible'
                         }`}
                         key={link.name}
                       >
                         <motion.div
-                          className="w-full"
+                          className="relative z-50 w-full"
                           key={`${link.name} animated`}
                           initial={{ x: '-200%' }}
                           animate={{ x: '0', transition: { duration: 2 - 1.5, delay: i + 0.5 } }}
                         >
                           <NavLink
                             isLi={true}
-                            className="leading-small heading--extra-large w-full font-['HFF_Ultrasound'] font-thin text-tertiary90 dark:text-tertiary1 max-mobile-large:text-heading-large max-mobile-large:leading-heading-large "
+                            className="leading-small heading--extra-large relative z-50 w-full font-['HFF_Ultrasound'] font-thin text-tertiary90 dark:text-tertiary1 max-mobile-large:text-heading-large max-mobile-large:leading-heading-large "
                             hover={true}
                             index={i}
                             intent={intent}

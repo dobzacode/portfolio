@@ -30,11 +30,11 @@ export default function HomePage({}) {
         className="  w-full max-w-full px-sub-large pt-[40px] tablet:px-large tablet:pt-large"
       ></Header>
       <main
-        className={`relative z-50 flex h-[80vh] w-screen flex-col items-center justify-center  duration-slowest ${
+        className={`relative -z-50 flex  w-screen flex-col items-center justify-center pt-medium  duration-slowest ${
           searchParams.get('menu') ? 'translate-x-[20%] opacity-0 ' : 'opacity-100 delay-1000'
         }`}
       >
-        <div className="relative -z-10 flex justify-center">
+        <div className="relative -z-10 flex justify-center ">
           <motion.p
             key="hello"
             initial={{ rotate: '-17deg', x: '100px', opacity: 0 }}
@@ -78,6 +78,7 @@ export default function HomePage({}) {
                   duration: 1 + 2
                 }
               }}
+              className="pl-medium"
               width="400"
               height="400"
               src="/random-portrait.png"
