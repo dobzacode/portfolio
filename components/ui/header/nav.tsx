@@ -68,7 +68,7 @@ const Nav: FC<NavProps> = ({ className, intent }) => {
   };
 
   const triggerMenu = () => {
-    console.log(showMenu);
+    showMenu;
     if (showMenu) {
       router.replace(pathname);
     } else {
@@ -161,7 +161,7 @@ const Nav: FC<NavProps> = ({ className, intent }) => {
                     return (
                       <div
                         onMouseEnter={() => {
-                          console.log(actualHover);
+                          (actualHover);
                           setActualHover(link.name as any);
                         }}
                         onMouseLeave={() => setActualHover(null)}

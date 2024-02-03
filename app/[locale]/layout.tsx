@@ -26,7 +26,7 @@ export default async function RootLayout({
         ? (await import(`../../locales/fr.json`)).default
         : (await import(`../../locales/en.json`)).default;
   } catch (error) {
-    console.log(error);
+    error;
     notFound();
   }
 

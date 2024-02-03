@@ -116,7 +116,7 @@ const NavLink: FC<NavLinkProps> = ({
   const isActive = pathname.includes(props.href.replace(/\//g, ''));
   const [showHover, setShowHover] = useState<boolean>(false);
 
-  console.log(pathname, props.href);
+
 
   useEffect(() => {
     const timeout = setTimeout(() => {
@@ -179,7 +179,7 @@ const NavLink: FC<NavLinkProps> = ({
           } 
         }`,
           isActive && showHover ? 'opacity-100' : null,
-          isActive && 'cursor-none',
+          isActive && "cursor-none",
           showHover && 'peer-hover:opacity-100'
         )}
       ></Image>

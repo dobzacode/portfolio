@@ -1,9 +1,5 @@
 'use client';
 
-
-
-
-
 import { useFormStatus } from 'react-dom';
 import { BarLoader } from 'react-spinners';
 import Button from '../button/button';
@@ -11,7 +7,7 @@ import Button from '../button/button';
 export function SubmitButton() {
   const { pending } = useFormStatus();
 
-  console.log(pending);
+  pending;
 
   return (
     <Button
