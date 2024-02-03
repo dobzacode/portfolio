@@ -7,6 +7,7 @@ import Image from 'next/image';
 import { LinkProps } from 'next/link';
 import { usePathname } from 'next/navigation';
 import { FC, useEffect, useState } from 'react';
+import P from '../text/p';
 
 const linkVariants = cva('', {
   variants: {
@@ -116,8 +117,6 @@ const NavLink: FC<NavLinkProps> = ({
   const isActive = pathname.includes(props.href.replace(/\//g, ''));
   const [showHover, setShowHover] = useState<boolean>(false);
 
-
-
   useEffect(() => {
     const timeout = setTimeout(() => {
       setShowHover(true);
@@ -148,25 +147,40 @@ const NavLink: FC<NavLinkProps> = ({
 
   return (
     <li className="relative">
-      <Link
-        href={props.href}
-        // className={`${hover} ${
-        //   isActive && currentNavStyle
-        // } rounded-lg px-8 py-4  `}
-        className={cn(
-          'peer',
-          linkVariants({
-            size,
-            rounded,
+      {!isActive ? (
+        <Link
+          href={props.href}
+          className={cn(
+            'peer',
+            linkVariants({
+              size,
+              rounded,
 
-            intent,
-            currentNavStyle: isActive ? intent : 'transparent',
-            className
-          })
-        )}
-      >
-        {children}
-      </Link>
+              intent,
+              currentNavStyle: isActive ? intent : 'transparent',
+              className
+            })
+          )}
+        >
+          {children}
+        </Link>
+      ) : (
+        <P
+          className={cn(
+            'peer',
+            linkVariants({
+              size,
+              rounded,
+
+              intent,
+              currentNavStyle: isActive ? intent : 'transparent',
+              className
+            })
+          )}
+        >
+          {children}
+        </P>
+      )}
 
       <Image
         src="/link-hover.png"
@@ -179,7 +193,7 @@ const NavLink: FC<NavLinkProps> = ({
           } 
         }`,
           isActive && showHover ? 'opacity-100' : null,
-          isActive && "cursor-none",
+          isActive && 'cursor-none',
           showHover && 'peer-hover:opacity-100'
         )}
       ></Image>

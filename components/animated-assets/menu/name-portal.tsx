@@ -6,7 +6,14 @@ import { forwardRef, useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 
 const NamePortal = forwardRef(
-  ({ className, text }: { className?: string; text: string }, ref: React.Ref<HTMLDivElement>) => {
+  (
+    {
+      className,
+      text,
+      setIsPlaying
+    }: { className?: string; text: string; setIsPlaying: () => void },
+    ref: React.Ref<HTMLDivElement>
+  ) => {
     const animationData = require(`@/assets/lottie/portal/${text}.json`);
 
     const options: LottieOptions = {
@@ -21,8 +28,9 @@ const NamePortal = forwardRef(
     useEffect(() => {
       if (animationRef.current) {
         animationRef.current.style.top = `${Math.random() * 500}px`;
+        setIsPlaying();
       }
-    }, [animationRef, text]);
+    }, [animationRef, text, animation.animationItem]);
 
     return (
       <motion.div
