@@ -2,7 +2,7 @@
 import { cn } from '@/lib/utils';
 import Icon from '@mdi/react';
 import { AnimatePresence, Variants, motion } from 'framer-motion';
-import React, { FC, HTMLProps, useState } from 'react';
+import React, { FC, HTMLProps, useEffect, useState } from 'react';
 
 import CK from '@/components/animated-assets/ck';
 import CurrentNamePortal from '@/components/animated-assets/menu/current-name-portal';
@@ -48,6 +48,8 @@ const Nav: FC<NavProps> = ({ className, intent }) => {
 
   const [actualHover, setActualHover] = useState<string | null>(null);
 
+  const [showAnimation, setShowAnimation] = useState<boolean>(false);
+
   const pathname = usePathname();
   const router = useRouter();
 
@@ -77,6 +79,13 @@ const Nav: FC<NavProps> = ({ className, intent }) => {
     }
     setShowMenu(!showMenu);
   };
+
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      setShowAnimation(true);
+    }, 6000);
+    return () => clearTimeout(timeout);
+  });
 
   return (
     <header className={cn(className)}>
@@ -161,7 +170,7 @@ const Nav: FC<NavProps> = ({ className, intent }) => {
                     return (
                       <div
                         onMouseEnter={() => {
-                          (actualHover);
+                          actualHover;
                           setActualHover(link.name as any);
                         }}
                         onMouseLeave={() => setActualHover(null)}
@@ -215,8 +224,12 @@ const Nav: FC<NavProps> = ({ className, intent }) => {
                   })}
                 </ul>
               </nav>
-
-              <CurrentNamePortal actualHover={actualHover}></CurrentNamePortal>
+              {showMenu && showAnimation ? (
+                <CurrentNamePortal actualHover={actualHover}></CurrentNamePortal>
+              ) : null}
+              {showMenu && !showAnimation ? (
+                <div className={`relative h-[710px] w-[710px]`}></div>
+              ) : null}
             </motion.div>
           )}
         </AnimatePresence>
