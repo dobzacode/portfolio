@@ -96,6 +96,8 @@ interface NavLinkProps extends LinkProps, VariantProps<typeof linkVariants> {
   href: any;
   isLi?: boolean;
   index?: number;
+  onMouseEnter?: () => void;
+  onMouseLeave?: () => void;
 }
 
 const NavLink: FC<NavLinkProps> = ({
