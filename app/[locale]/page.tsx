@@ -30,7 +30,7 @@ export default function HomePage({}) {
         className=" relative z-0 w-full max-w-full px-sub-large pt-[40px] tablet:px-large tablet:pt-large"
       ></Header>
       <main
-        className={`relative -z-50 flex w-screen  flex-col items-center justify-center bg-transparent pt-medium  duration-slowest ${
+        className={`relative -z-50 flex w-screen flex-col  items-center justify-center overflow-hidden bg-transparent pt-medium  duration-slowest ${
           searchParams.get('menu') ? 'translate-x-[20%] opacity-0 ' : 'opacity-100 delay-1000'
         }`}
       >

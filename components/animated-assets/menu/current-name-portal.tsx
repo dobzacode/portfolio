@@ -30,6 +30,7 @@ export default function CurrentNamePortal({}: {}) {
 
   return (
     <NamePortal
+      currentIndex={currentIndex}
       ref={namePortalRef}
       text={assetNames[currentIndex]}
       className={`relative -mt-large h-[710px] w-[710px]`}

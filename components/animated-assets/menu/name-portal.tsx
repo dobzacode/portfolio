@@ -22,6 +22,8 @@ const NamePortal = forwardRef(
       reversed: currentIndex % 2 === 0
     };
 
+    console.log(currentIndex % 2 === 0);
+
     const animation = useLottie(options);
 
     const animationRef = useRef<HTMLDivElement>(null);
