@@ -3,6 +3,7 @@
 import { cn } from '@/lib/utils';
 import { Link } from '@/navigation';
 import { VariantProps, cva } from 'class-variance-authority';
+import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 import { LinkProps } from 'next/link';
 import { usePathname } from 'next/navigation';
@@ -114,8 +115,14 @@ const NavLink: FC<NavLinkProps> = ({
   ...props
 }: NavLinkProps) => {
   const pathname = usePathname();
-  const isActive = pathname.includes(props.href.replace(/\//g, ''));
+  const t = useTranslations('navigation.primaryNavigation');
+  const isActive =
+    props.href.replace(/\//g, '') === ''
+      ? pathname.replace('en', '') === props.href
+      : pathname.includes(t(props.href.replace(/\//g, '')));
   const [showHover, setShowHover] = useState<boolean>(false);
+
+  console.log(pathname, t(props.href.replace(/\//g, '')));
 
   useEffect(() => {
     const timeout = setTimeout(() => {

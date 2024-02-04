@@ -4,7 +4,7 @@
 }
 
 .glowy-shadow,
-.saber > g > g > path {
+.saber > g > path {
   filter: drop-shadow(4px 5px 5px #ade0db);
 }
 

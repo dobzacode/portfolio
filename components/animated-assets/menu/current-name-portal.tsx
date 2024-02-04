@@ -1,7 +1,6 @@
 import { usePathname } from '@/navigation';
-import { useCallback, useEffect, useReducer, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import NamePortal from './name-portal';
-import { v4 } from 'uuid';
 
 function getRandomRotationClass() {
   const rotations = ['90deg', '0deg', '-90deg'];
@@ -14,11 +13,13 @@ function getRandomFromArray(array: string[]) {
   return array[randomIndex];
 }
 
-const determineAssetValue = (actualHover: string | null) => {
-  const valueWithoutSlash = actualHover?.replace('/', '');
+const determineAssetValue = (text: string | null) => {
+  const valueWithoutSlash = text?.replace('/', '');
+
   switch (valueWithoutSlash) {
     case 'about':
-      return 'kittel';
+      return getRandomFromArray(['full-stack', 'ui', 'web-design', 'web-dev']);
+
     default:
       return getRandomFromArray(['corentin', 'kittel']);
   }
@@ -28,14 +29,14 @@ export default function CurrentNamePortal({ actualHover }: { actualHover: string
   const pathname = usePathname();
 
   const [assetName, setAssetName] = useState<string | null>(
-    determineAssetValue(actualHover ? pathname : actualHover)
+    determineAssetValue(actualHover ? actualHover : pathname)
   );
 
   const namePortalRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setAssetName(determineAssetValue(actualHover));
+      setAssetName(determineAssetValue(actualHover ? actualHover : pathname));
 
       if (namePortalRef.current) {
         namePortalRef.current.style.rotate = getRandomRotationClass();
@@ -49,8 +50,8 @@ export default function CurrentNamePortal({ actualHover }: { actualHover: string
   return (
     <NamePortal
       ref={namePortalRef}
-      text={assetName ? assetName : 'corentin'}
-      className={`relative h-[710px] w-[710px]`}
+      text={assetName}
+      className={`relative -mt-large h-[710px] w-[710px]`}
     ></NamePortal>
   );
 }

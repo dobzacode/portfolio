@@ -2,7 +2,7 @@
 import { cn } from '@/lib/utils';
 import Icon from '@mdi/react';
 import { AnimatePresence, Variants, motion } from 'framer-motion';
-import React, { FC, HTMLProps, useEffect, useState } from 'react';
+import React, { FC, HTMLProps, useState } from 'react';
 
 import CK from '@/components/animated-assets/ck';
 import CurrentNamePortal from '@/components/animated-assets/menu/current-name-portal';
@@ -48,8 +48,6 @@ const Nav: FC<NavProps> = ({ className, intent }) => {
 
   const [actualHover, setActualHover] = useState<string | null>(null);
 
-  const [showAnimation, setShowAnimation] = useState<boolean>(false);
-
   const pathname = usePathname();
   const router = useRouter();
 
@@ -79,13 +77,6 @@ const Nav: FC<NavProps> = ({ className, intent }) => {
     }
     setShowMenu(!showMenu);
   };
-
-  useEffect(() => {
-    const timeout = setTimeout(() => {
-      setShowAnimation(true);
-    }, 6000);
-    return () => clearTimeout(timeout);
-  });
 
   return (
     <header className={cn(className)}>
@@ -154,7 +145,7 @@ const Nav: FC<NavProps> = ({ className, intent }) => {
           {showMenu && (
             <motion.div
               key="specialMenu"
-              className="flex h-[75vh] justify-center gap-extra-large px-large pt-large max-tablet:px-sub-large max-mobile-large:px-extra-small"
+              className="flex h-[75vh] justify-center gap-extra-large overflow-hidden px-large pt-large max-tablet:px-sub-large  max-mobile-large:px-extra-small"
               exit={{
                 opacity: 0,
                 x: '-20%',
@@ -163,7 +154,7 @@ const Nav: FC<NavProps> = ({ className, intent }) => {
             >
               <nav
                 key={'navigation'}
-                className={cn(' relative z-40 flex  w-fit items-start self-start     ')}
+                className={cn(' relative z-40 flex  w-fit items-start self-start    ')}
               >
                 <ul className={' flex  flex-col  justify-center '}>
                   {navLinks.map((link, i) => {
@@ -194,7 +185,7 @@ const Nav: FC<NavProps> = ({ className, intent }) => {
                             currentNavStyle={intent}
                             href={link.href}
                           >
-                            {t(link.name).toUpperCase()}
+                            {t(link.name).toUpperCase().replace(/-/g, ' ')}
                           </NavLink>
                         </motion.div>
                         <motion.div
@@ -224,12 +215,8 @@ const Nav: FC<NavProps> = ({ className, intent }) => {
                   })}
                 </ul>
               </nav>
-              {showMenu && showAnimation ? (
-                <CurrentNamePortal actualHover={actualHover}></CurrentNamePortal>
-              ) : null}
-              {showMenu && !showAnimation ? (
-                <div className={`relative h-[710px] w-[710px]`}></div>
-              ) : null}
+
+              <CurrentNamePortal actualHover={actualHover}></CurrentNamePortal>
             </motion.div>
           )}
         </AnimatePresence>

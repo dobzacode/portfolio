@@ -1,17 +1,20 @@
 'use client';
 
 import { LottieOptions, useLottie } from 'lottie-react';
-import { forwardRef, useEffect, useReducer, useRef, useState } from 'react';
+import { forwardRef, useEffect, useRef, useState } from 'react';
 
 import { motion } from 'framer-motion';
 
 const NamePortal = forwardRef(
-  ({ className, text }: { className?: string; text: string }, ref: React.Ref<HTMLDivElement>) => {
+  (
+    { className, text }: { className?: string; text: string | null },
+    ref: React.Ref<HTMLDivElement>
+  ) => {
     const animationData = require(`@/assets/lottie/portal/${text}.json`);
 
     const options: LottieOptions = {
       animationData: animationData,
-      loop: true
+      loop: false
     };
 
     const animation = useLottie(options);
@@ -47,7 +50,7 @@ const NamePortal = forwardRef(
         ref={ref}
       >
         <div
-          className="absolute top-0 [&>div>svg>g>g>g>g>g>path]:dark:fill-white"
+          className="absolute top-0 [&>div>svg>g>g>g>g>g>g>path]:dark:fill-white [&>div>svg>g>g>g>g>g>path]:dark:fill-white"
           ref={animationRef}
         >
           {animation.View}
