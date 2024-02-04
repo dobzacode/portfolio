@@ -30,7 +30,7 @@ export default function HomePage({}) {
         className=" relative z-0 w-full max-w-full px-sub-large pt-[40px] tablet:px-large tablet:pt-large"
       ></Header>
       <main
-        className={`relative z-50 flex w-screen flex-col  items-center justify-center overflow-hidden bg-transparent pt-medium  duration-slowest ${
+        className={`relative z-50 flex w-screen flex-col  items-center justify-center  bg-transparent pt-medium  duration-slowest ${
           searchParams.get('menu') ? 'translate-x-[20%] opacity-0 ' : 'opacity-100 delay-1000'
         }`}
       >
@@ -86,15 +86,18 @@ export default function HomePage({}) {
             ></motion.img>
             <motion.hr
               key="hr"
-              initial={{ maxWidth: 0, opacity: '0', border: '0px solid hsl(174 69% 60%)' }}
+              initial={{ maxWidth: 0, opacity: '0' }}
               animate={{
-                opacity: '1',
+                opacity: 1,
                 maxWidth: '100%',
-                border: '2px solid hsl(174 69% 60%)',
-                transition: { type: easeOut, delay: 2 + splashDelay }
+
+                transition: {
+                  maxWidth: { type: easeOut, delay: 2 + splashDelay },
+                  opacity: { duration: 0.01, delay: 2 + splashDelay }
+                }
               }}
               exit={{ maxWidth: 0, transition: { type: easeOut, delay: 1, duration: 0.5 + 2 } }}
-              className=" absolute bottom-0 z-40  box-content w-full border-tertiary40  max-tablet:w-2/3"
+              className=" absolute bottom-0 z-40 box-content w-full border-2 border-tertiary40  max-tablet:w-2/3"
             ></motion.hr>
           </div>
         </div>
@@ -158,7 +161,7 @@ export default function HomePage({}) {
               {t('phrase6')}
             </H2>
           </motion.div>
-          <div className="relative   flex justify-between gap-large">
+          <div className="relative  flex h-[10rem] items-start justify-between gap-large">
             <motion.div
               key="workLink"
               initial={{ y: '-100px', opacity: 0 }}
