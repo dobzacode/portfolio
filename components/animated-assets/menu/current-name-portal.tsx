@@ -8,49 +8,69 @@ function getRandomRotationClass() {
   return rotations[randomIndex];
 }
 
-function getRandomFromArray(array: string[]) {
-  const randomIndex = Math.floor(Math.random() * array.length);
-  return array[randomIndex];
+function getRandomFromArrayWithoutRepetition(array: string[], lastUsed: string | null) {
+  const filteredArray = array.filter((item) => item !== lastUsed);
+  const randomIndex = Math.floor(Math.random() * filteredArray.length);
+  return filteredArray[randomIndex];
 }
 
-const determineAssetValue = (text: string | null) => {
+const determineAssetValue = (text: string | null, lastUsed: string | null) => {
   const valueWithoutSlash = text?.replace('/', '');
 
   switch (valueWithoutSlash) {
     case 'about':
-      return getRandomFromArray(['full-stack', 'ui', 'web-design', 'web-dev']);
+      return getRandomFromArrayWithoutRepetition(
+        ['full-stack', 'ui', 'web-design', 'web-dev'],
+        lastUsed
+      );
 
     default:
-      return getRandomFromArray(['corentin', 'kittel']);
+      return getRandomFromArrayWithoutRepetition(['corentin', 'kittel'], lastUsed);
   }
 };
 
 export default function CurrentNamePortal({ actualHover }: { actualHover: string | null }) {
   const pathname = usePathname();
 
+  const [lastUsedAssetName, setLastUsedAssetName] = useState<string | null>(null);
   const [assetName, setAssetName] = useState<string | null>(
-    determineAssetValue(actualHover ? actualHover : pathname)
+    determineAssetValue(actualHover ? actualHover : pathname, lastUsedAssetName)
   );
 
   const namePortalRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setAssetName(determineAssetValue(actualHover ? actualHover : pathname));
+      const newAssetName = determineAssetValue(
+        actualHover ? actualHover : pathname,
+        lastUsedAssetName
+      );
+      setAssetName(newAssetName);
+      setLastUsedAssetName(newAssetName);
 
       if (namePortalRef.current) {
         namePortalRef.current.style.rotate = getRandomRotationClass();
       }
     }, 6000);
+
     return () => {
       clearInterval(interval);
     };
-  });
+  }, [actualHover, pathname, lastUsedAssetName]);
+
+  console.log(assetName);
 
   return (
     <NamePortal
       ref={namePortalRef}
-      text={assetName}
+      text={
+        !assetName
+          ? getRandomFromArrayWithoutRepetition(
+              ['full-stack', 'ui', 'web-design', 'web-dev', 'corentin', 'kittel'],
+              lastUsedAssetName
+            )
+          : assetName
+      }
       className={`relative -mt-large h-[710px] w-[710px]`}
     ></NamePortal>
   );

@@ -31,7 +31,7 @@ const NamePortal = forwardRef(
 
     useEffect(() => {
       const timeout = setTimeout(() => {
-        setTrigger((trigger) => trigger + 1);
+        setTrigger((trigger) => trigger + Math.random());
       }, 6000);
       return () => clearTimeout(timeout);
     });
@@ -43,7 +43,7 @@ const NamePortal = forwardRef(
           opacity: [0, 0, 1],
           transition: {
             times: [0, 0.99, 1],
-            duration: 6.5
+            duration: 6
           }
         }}
         className={className}

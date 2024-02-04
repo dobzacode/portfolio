@@ -122,8 +122,6 @@ const NavLink: FC<NavLinkProps> = ({
       : pathname.includes(t(props.href.replace(/\//g, '')));
   const [showHover, setShowHover] = useState<boolean>(false);
 
-  console.log(pathname, t(props.href.replace(/\//g, '')));
-
   useEffect(() => {
     const timeout = setTimeout(() => {
       setShowHover(true);
