@@ -4,7 +4,6 @@ import Icon from '@mdi/react';
 import { AnimatePresence, Variants, motion } from 'framer-motion';
 import React, { FC, HTMLProps, useEffect, useState } from 'react';
 
-import CK from '@/components/animated-assets/ck';
 import CurrentNamePortal from '@/components/animated-assets/menu/current-name-portal';
 import useBetterMediaQuery from '@/components/hooks/use-better-media-query';
 import DarkModeButton from '@/components/wrapper/dark-mode/darkmode-button';
@@ -13,6 +12,7 @@ import { mdilMenu, mdilPlus } from '@mdi/light-js';
 import { useTranslations } from 'next-intl';
 import { useSearchParams } from 'next/navigation';
 import AnimatedLogo from '../branding/animated-logo';
+import P from '../text/p';
 import LangageSwitch from './langage-switch';
 import NavLink from './nav-link';
 
@@ -78,29 +78,45 @@ const Nav: FC<NavProps> = ({ className, intent }) => {
   };
 
   const triggerMenu = () => {
-    showMenu;
     if (showMenu) {
       router.replace(pathname);
-      setShowAnimation(false);
+      setTimeout(() => {
+        setShowAnimation(false);
+      }, 1500);
     } else {
-      // @ts-ignore
+      //@ts-ignore
       router.replace(`${pathname}?menu=true`);
     }
     setShowMenu(!showMenu);
   };
 
+  console.log(showAnimation);
+
   return (
     <header className={cn(className)}>
-      <div className=" relative z-30 flex w-full items-center justify-end px-large max-tablet:px-sub-large max-mobile-large:justify-between max-mobile-large:px-small">
-        <div
-          className="absolute
--left-sub-large  -top-[11.6rem]  w-[28rem]  max-tablet:-top-[8rem] max-tablet:w-[20rem] max-mobile-large:hidden"
-        >
-          <CK splashDelay={splashDelay} className=" dark:hidden    "></CK>
-          <CK splashDelay={splashDelay} isDark={true} className="  hidden   dark:block  "></CK>
+      <div className=" relative z-30 flex w-full items-center  justify-between px-large max-tablet:px-sub-large max-mobile-large:px-small">
+        <div className="flex items-center gap-large">
+          <AnimatedLogo splashDelay={splashDelay} className="w-20 "></AnimatedLogo>
+          <AnimatePresence mode="wait">
+            {showMenu && (
+              <div
+                className={`relative z-50 flex h-full w-fit flex-row-reverse items-center gap-extra-small`}
+              >
+                <motion.div
+                  className="relative z-50 w-full"
+                  key={`corentin kittel animated`}
+                  initial={{ y: '-200%' }}
+                  animate={{ y: '0', transition: { type: 'spring' } }}
+                  exit={{ opacity: 0, transition: { duration: 1 } }}
+                >
+                  <P className="sub-heading relative z-50 w-full whitespace-nowrap    text-tertiary90 opacity-50 dark:text-tertiary1 ">
+                    Corentin Kittel
+                  </P>
+                </motion.div>
+              </div>
+            )}
+          </AnimatePresence>
         </div>
-        <AnimatedLogo splashDelay={splashDelay} className="w-14 mobile-large:hidden"></AnimatedLogo>
-
         <div className="relative flex items-center gap-small pr-sub-large text-primary90 dark:text-primary1 max-tablet:gap-4">
           <motion.div variants={menuItemVariant} initial="hidden" animate="visible" custom="1">
             <LangageSwitch></LangageSwitch>
@@ -152,14 +168,14 @@ const Nav: FC<NavProps> = ({ className, intent }) => {
         </div>
       </div>
       <div className="relative -z-20 w-full self-start">
-        <AnimatePresence mode="popLayout">
+        <AnimatePresence mode="wait">
           {showMenu && (
             <motion.div
               key="specialMenu"
-              className="flex overflow-hidden px-large pt-large max-tablet:px-sub-large  max-mobile-large:px-extra-small laptop:justify-center laptop:gap-medium  laptop-large:gap-extra-large"
+              className="flex  px-large pt-large max-tablet:px-sub-large  max-mobile-large:px-extra-small laptop:justify-center laptop:gap-medium  laptop-large:gap-extra-large"
               exit={{
                 opacity: 0,
-                x: '-20%',
+                x: '-35%',
                 transition: { duration: 1.5, ease: 'easeIn' }
               }}
             >
@@ -221,6 +237,7 @@ const Nav: FC<NavProps> = ({ className, intent }) => {
                   })}
                 </ul>
               </nav>
+
               {isLaptop && (
                 <>
                   {!showAnimation && (

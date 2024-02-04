@@ -51,6 +51,7 @@ const NamePortal = forwardRef(
             duration: 0
           }
         }}
+        exit={{ opacity: 0, transition: { duration: 1 } }}
         className={className}
         ref={ref}
       >

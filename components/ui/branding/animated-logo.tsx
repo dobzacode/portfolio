@@ -33,7 +33,7 @@ export default function AnimatedLogo({
           <motion.path
             initial={{ x: '10%', y: '-10%', rotate: '-10deg' }}
             animate={{
-              x: '0%',
+              x: '-4%',
               y: 0,
               rotate: 0,
               transition: { type: 'spring', delay: splashDelay + 1 }

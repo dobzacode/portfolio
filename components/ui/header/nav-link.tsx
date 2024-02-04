@@ -193,7 +193,7 @@ const NavLink: FC<NavLinkProps> = ({
         height="400"
         alt=""
         className={cn(
-          ` absolute top-1/4 -z-10  scale-150  overflow-hidden opacity-0 duration-slow   ${
+          ` absolute top-1/4 -z-10  scale-x-150 scale-y-[200%]  overflow-hidden opacity-0 duration-slow   ${
             index! % 2 === 0 ? 'rotate-180' : ''
           } 
         }`,
