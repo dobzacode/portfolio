@@ -26,6 +26,8 @@ export default function CurrentNamePortal({}: {}) {
     };
   }, [pathname, assetNames.length]);
 
+  console.log('red');
+
   return (
     <NamePortal
       ref={namePortalRef}

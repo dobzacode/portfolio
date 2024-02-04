@@ -1,45 +1,36 @@
 'use client';
 
 import { LottieOptions, useLottie } from 'lottie-react';
-import { forwardRef, useEffect, useRef, useState } from 'react';
+import { forwardRef, useEffect, useRef } from 'react';
 
 import { motion } from 'framer-motion';
 
 const NamePortal = forwardRef(
   (
-    { className, text }: { className?: string; text: string | null },
+    {
+      className,
+      text,
+      currentIndex
+    }: { className?: string; text: string | null; currentIndex: number },
     ref: React.Ref<HTMLDivElement>
   ) => {
     const animationData = require(`@/assets/lottie/portal/${text}.json`);
 
     const options: LottieOptions = {
       animationData: animationData,
-      loop: false
+      loop: false,
+      reversed: currentIndex % 2 === 0
     };
 
     const animation = useLottie(options);
 
-    const [trigger, setTrigger] = useState<number>(0);
-
     const animationRef = useRef<HTMLDivElement>(null);
-
-    if (Math.random() > 0.5) {
-      animation.goToAndPlay(6000);
-      animation.setDirection(-1);
-    }
 
     useEffect(() => {
       if (animationRef.current) {
         animationRef.current.style.top = `${Math.random() * 500}px`;
       }
-    }, [animationRef, text, trigger]);
-
-    useEffect(() => {
-      const timeout = setTimeout(() => {
-        setTrigger((trigger) => trigger + Math.random());
-      }, 6000);
-      return () => clearTimeout(timeout);
-    });
+    }, [animationRef, text]);
 
     return (
       <motion.div
