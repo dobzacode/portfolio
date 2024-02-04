@@ -23,6 +23,11 @@ const NamePortal = forwardRef(
 
     const animationRef = useRef<HTMLDivElement>(null);
 
+    if (Math.random() > 0.5) {
+      animation.goToAndPlay(6000);
+      animation.setDirection(-1);
+    }
+
     useEffect(() => {
       if (animationRef.current) {
         animationRef.current.style.top = `${Math.random() * 500}px`;
@@ -43,7 +48,7 @@ const NamePortal = forwardRef(
           opacity: [0, 0, 1],
           transition: {
             times: [0, 0.99, 1],
-            duration: 6
+            duration: 0
           }
         }}
         className={className}

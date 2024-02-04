@@ -2,7 +2,7 @@
 import { cn } from '@/lib/utils';
 import Icon from '@mdi/react';
 import { AnimatePresence, Variants, motion } from 'framer-motion';
-import React, { FC, HTMLProps, useState } from 'react';
+import React, { FC, HTMLProps, useEffect, useState } from 'react';
 
 import CK from '@/components/animated-assets/ck';
 import CurrentNamePortal from '@/components/animated-assets/menu/current-name-portal';
@@ -44,14 +44,21 @@ const Nav: FC<NavProps> = ({ className, intent }) => {
 
   const [showMenu, setShowMenu] = useState<boolean>(searchParams.get('menu') ? true : false);
 
-  const [splashDelay] = useState<4.5 | 0>(!sessionStorage.getItem('shown') ? 4.5 : 0);
+  const [showAnimation, setShowAnimation] = useState<boolean>(false);
 
-  const [actualHover, setActualHover] = useState<string | null>(null);
+  const [splashDelay] = useState<4.5 | 0>(!sessionStorage.getItem('shown') ? 4.5 : 0);
 
   const pathname = usePathname();
   const router = useRouter();
 
   const t = useTranslations('navigation.primaryNavigation');
+
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      setShowAnimation(true);
+    }, 4000);
+    return () => clearTimeout(timeout);
+  });
 
   const menuItemVariant: Variants = {
     hidden: { y: -100 },
@@ -71,6 +78,7 @@ const Nav: FC<NavProps> = ({ className, intent }) => {
     showMenu;
     if (showMenu) {
       router.replace(pathname);
+      setShowAnimation(false);
     } else {
       // @ts-ignore
       router.replace(`${pathname}?menu=true`);
@@ -160,11 +168,6 @@ const Nav: FC<NavProps> = ({ className, intent }) => {
                   {navLinks.map((link, i) => {
                     return (
                       <div
-                        onMouseEnter={() => {
-                          actualHover;
-                          setActualHover(link.name as any);
-                        }}
-                        onMouseLeave={() => setActualHover(null)}
                         className={`relative z-50 flex h-full w-fit flex-row-reverse items-center gap-extra-small ${
                           showMenu ? 'overflow-hidden' : 'overflow-visible'
                         }`}
@@ -215,8 +218,8 @@ const Nav: FC<NavProps> = ({ className, intent }) => {
                   })}
                 </ul>
               </nav>
-
-              <CurrentNamePortal actualHover={actualHover}></CurrentNamePortal>
+              {!showAnimation && <div className={`relative -mt-large h-[710px] w-[710px]`}></div>}
+              {showAnimation && <CurrentNamePortal></CurrentNamePortal>}
             </motion.div>
           )}
         </AnimatePresence>
