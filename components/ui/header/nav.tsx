@@ -82,7 +82,7 @@ const Nav: FC<NavProps> = ({ className, intent }) => {
       router.replace(pathname);
       setTimeout(() => {
         setShowAnimation(false);
-      }, 1500);
+      }, 1400);
     } else {
       //@ts-ignore
       router.replace(`${pathname}?menu=true`);
@@ -172,7 +172,7 @@ const Nav: FC<NavProps> = ({ className, intent }) => {
           {showMenu && (
             <motion.div
               key="specialMenu"
-              className="flex  px-large pt-large max-tablet:px-sub-large  max-mobile-large:px-extra-small laptop:justify-center laptop:gap-medium  laptop-large:gap-extra-large"
+              className="flex justify-between  px-large pt-large max-tablet:px-sub-large  max-mobile-large:px-extra-small  laptop:gap-medium  laptop-large:gap-extra-large"
               exit={{
                 opacity: 0,
                 x: '-35%',

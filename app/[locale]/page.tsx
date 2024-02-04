@@ -30,7 +30,7 @@ export default function HomePage({}) {
         className=" relative z-0 w-full max-w-full px-sub-large pt-[40px] tablet:px-large tablet:pt-large"
       ></Header>
       <main
-        className={`relative -z-50 flex w-screen flex-col  items-center justify-center overflow-hidden bg-transparent pt-medium  duration-slowest ${
+        className={`relative z-50 flex w-screen flex-col  items-center justify-center overflow-hidden bg-transparent pt-medium  duration-slowest ${
           searchParams.get('menu') ? 'translate-x-[20%] opacity-0 ' : 'opacity-100 delay-1000'
         }`}
       >
@@ -99,7 +99,7 @@ export default function HomePage({}) {
           </div>
         </div>
 
-        <div className="relative flex flex-col items-center justify-center gap-medium   duration-medium max-laptop:w-4/5 max-mobile-large:gap-small">
+        <div className="relative z-20 flex flex-col items-center justify-center gap-medium   duration-medium max-laptop:w-4/5 max-mobile-large:gap-small">
           <motion.div
             key="text"
             initial={{ x: '-100px', opacity: 0 }}
@@ -185,6 +185,7 @@ export default function HomePage({}) {
               </NavLink>
             </motion.div>
             <motion.div
+              onClick={() => console.log('click')}
               key="aboutLink"
               initial={{ y: '-100px', opacity: 0 }}
               animate={{
@@ -196,7 +197,7 @@ export default function HomePage({}) {
                 }
               }}
               exit={{ y: '100px', opacity: 0, transition: { delay: 2 } }}
-              className="relative   flex items-center gap-extra-small text-tertiary90 dark:text-tertiary1 max-tablet:gap-0 "
+              className="relative flex  cursor-pointer items-center gap-extra-small text-tertiary90 dark:text-tertiary1 max-tablet:gap-0 "
             >
               <Icon className="max-tablet:scale-75" path={mdilArrowRight} size={2} />
 

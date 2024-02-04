@@ -1,7 +1,7 @@
 'use client';
 
 import { LottieOptions, useLottie } from 'lottie-react';
-import { forwardRef, useEffect, useRef } from 'react';
+import { forwardRef, useEffect, useRef, useState } from 'react';
 
 import { motion } from 'framer-motion';
 
@@ -22,11 +22,20 @@ const NamePortal = forwardRef(
       reversed: currentIndex % 2 === 0
     };
 
+    const [trigger, setTrigger] = useState<number>(0);
+
     console.log(currentIndex % 2 === 0);
 
     const animation = useLottie(options);
 
     const animationRef = useRef<HTMLDivElement>(null);
+
+    useEffect(() => {
+      const timeout = setTimeout(() => {
+        setTrigger(trigger + Math.random());
+      }, 6000);
+      return () => clearTimeout(timeout);
+    });
 
     useEffect(() => {
       if (animationRef.current) {
