@@ -6,6 +6,7 @@ import React, { FC, HTMLProps, useEffect, useState } from 'react';
 
 import CK from '@/components/animated-assets/ck';
 import CurrentNamePortal from '@/components/animated-assets/menu/current-name-portal';
+import useBetterMediaQuery from '@/components/hooks/use-better-media-query';
 import DarkModeButton from '@/components/wrapper/dark-mode/darkmode-button';
 import { usePathname, useRouter } from '@/navigation';
 import { mdilMenu, mdilPlus } from '@mdi/light-js';
@@ -41,6 +42,8 @@ const navLinks = [
 
 const Nav: FC<NavProps> = ({ className, intent }) => {
   const searchParams = useSearchParams();
+
+  const isLaptop = useBetterMediaQuery('(min-width: 1024px)');
 
   const [showMenu, setShowMenu] = useState<boolean>(searchParams.get('menu') ? true : false);
 
@@ -153,7 +156,7 @@ const Nav: FC<NavProps> = ({ className, intent }) => {
           {showMenu && (
             <motion.div
               key="specialMenu"
-              className="flex h-[75vh] justify-center gap-extra-large overflow-hidden px-large pt-large max-tablet:px-sub-large  max-mobile-large:px-extra-small"
+              className="flex overflow-hidden px-large pt-large max-tablet:px-sub-large  max-mobile-large:px-extra-small laptop:justify-center laptop:gap-medium  laptop-large:gap-extra-large"
               exit={{
                 opacity: 0,
                 x: '-20%',
@@ -218,8 +221,14 @@ const Nav: FC<NavProps> = ({ className, intent }) => {
                   })}
                 </ul>
               </nav>
-              {!showAnimation && <div className={`relative -mt-large h-[710px] w-[710px]`}></div>}
-              {showAnimation && <CurrentNamePortal></CurrentNamePortal>}
+              {isLaptop && (
+                <>
+                  {!showAnimation && (
+                    <div className={`relative -mt-large h-[710px] w-[710px] `}></div>
+                  )}
+                  {showAnimation && <CurrentNamePortal></CurrentNamePortal>}
+                </>
+              )}
             </motion.div>
           )}
         </AnimatePresence>

@@ -5,7 +5,7 @@ import NamePortal from './name-portal';
 export default function CurrentNamePortal({}: {}) {
   const pathname = usePathname();
 
-  const assetNames = ['corentin', 'kittel', 'full-stack', 'ui', 'web-design', 'web-dev'];
+  const assetNames = ['full-stack', 'ui', 'web-design', 'web-dev'];
   const [currentIndex, setCurrentIndex] = useState<number>(
     Math.floor(Math.random() * assetNames.length)
   );
