@@ -24,14 +24,14 @@ export default function Page({}) {
         className=" relative z-50 w-full max-w-full  px-sub-large pt-[40px]  tablet:px-large tablet:pt-large"
       ></Header>
       <div
-        className={`z-4 0 relative flex w-screen flex-col-reverse items-center justify-between gap-medium bg-transparent pt-large duration-slowest max-laptop:px-large max-tablet:px-sub-large max-mobile-large:px-small tablet:px-medium laptop:flex-row  laptop:items-start  laptop:px-large  laptop-large:px-extra-large ${
+        className={`z-4 0 relative flex w-screen flex-col-reverse items-center justify-between gap-medium bg-transparent pt-medium duration-slowest max-laptop:px-large max-tablet:px-sub-large max-mobile-large:px-small tablet:px-medium laptop:flex-row laptop:items-start  laptop:px-large  laptop:pt-large  laptop-large:px-extra-large ${
           searchParams.get('menu') ? 'translate-x-[20%] opacity-0 ' : 'opacity-100 delay-1000'
         }`}
       >
         <main className="laptop:w-1/2">
           <div
-            className={`} relative z-50 -ml-small flex h-full w-fit flex-row-reverse items-center gap-extra-small
-                          overflow-hidden`}
+            className={`} relative z-50 flex h-full w-fit flex-row-reverse items-center gap-extra-small overflow-hidden
+                          laptop:-ml-small`}
           >
             <motion.div
               className="relative z-50 w-full"
@@ -39,7 +39,7 @@ export default function Page({}) {
               initial={{ x: '-200%' }}
               animate={{ x: '0', transition: { duration: 1, delay: 1.5 + splashDelay } }}
             >
-              <H1 className="leading-small heading--sub-extra-large relative z-50 w-full whitespace-nowrap  font-thin  text-primary90 dark:text-primary1 max-mobile-large:text-heading-large max-mobile-large:leading-heading-large ">
+              <H1 className="leading-small heading--sub-extra-large relative z-50 w-full whitespace-nowrap font-thin text-primary90  dark:text-primary1  max-[841px]:text-heading-large max-[841px]:leading-heading-sub-extra-large max-[540px]:text-heading-sub-large max-[540px]:leading-heading-large max-mobile-medium:text-heading ">
                 {t('title').toUpperCase()}
               </H1>
             </motion.div>
@@ -63,7 +63,7 @@ export default function Page({}) {
                 opacity: 0,
                 transition: { duration: 0.5 }
               }}
-              className="glowy-shadow relative z-10 h-[10rem] bg-tertiary40 p-1 max-mobile-large:h-[5rem] max-mobile-large:p-[0.8px]"
+              className="glowy-shadow relative z-10 h-[10rem] bg-tertiary40 p-1 max-tablet:h-[7.5rem] max-mobile-large:h-[5rem] max-mobile-large:p-[0.8px]"
             ></motion.div>
           </div>
           <div
