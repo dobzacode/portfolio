@@ -2,12 +2,12 @@
 import { cn } from '@/lib/utils';
 import Icon from '@mdi/react';
 import { AnimatePresence, Variants, motion } from 'framer-motion';
-import React, { FC, HTMLProps, useEffect, useState } from 'react';
+import React, { FC, HTMLProps, useState } from 'react';
 
 import CurrentNamePortal from '@/components/animated-assets/menu/current-name-portal';
 import useBetterMediaQuery from '@/components/hooks/use-better-media-query';
 import DarkModeButton from '@/components/wrapper/dark-mode/darkmode-button';
-import { usePathname, useRouter } from '@/navigation';
+import { Link, usePathname, useRouter } from '@/navigation';
 import { mdilMenu, mdilPlus } from '@mdi/light-js';
 import { useTranslations } from 'next-intl';
 import { useSearchParams } from 'next/navigation';
@@ -56,13 +56,6 @@ const Nav: FC<NavProps> = ({ className, intent }) => {
 
   const t = useTranslations('navigation.primaryNavigation');
 
-  useEffect(() => {
-    const timeout = setTimeout(() => {
-      setShowAnimation(true);
-    }, 4000);
-    return () => clearTimeout(timeout);
-  });
-
   const menuItemVariant: Variants = {
     hidden: { y: -100 },
     visible: (i: number) => ({
@@ -86,6 +79,9 @@ const Nav: FC<NavProps> = ({ className, intent }) => {
     } else {
       //@ts-ignore
       router.replace(`${pathname}?menu=true`);
+      setTimeout(() => {
+        setShowAnimation(true);
+      }, 4000);
     }
     setShowMenu(!showMenu);
   };
@@ -95,7 +91,7 @@ const Nav: FC<NavProps> = ({ className, intent }) => {
   return (
     <header className={cn(className)}>
       <div className=" relative z-30 flex w-full items-center  justify-between px-large max-tablet:px-sub-large max-mobile-large:px-small">
-        <div className="flex items-center gap-sub-large laptop:gap-large">
+        <Link href="/" className="flex items-center gap-sub-large laptop:gap-large">
           <AnimatedLogo splashDelay={splashDelay} className="w-20 "></AnimatedLogo>
           <AnimatePresence mode="wait">
             {showMenu && (
@@ -112,7 +108,7 @@ const Nav: FC<NavProps> = ({ className, intent }) => {
               </motion.div>
             )}
           </AnimatePresence>
-        </div>
+        </Link>
         <div className="relative flex items-center gap-small pr-sub-large text-primary90 dark:text-primary1 max-tablet:gap-4">
           <motion.div variants={menuItemVariant} initial="hidden" animate="visible" custom="1">
             <LangageSwitch></LangageSwitch>

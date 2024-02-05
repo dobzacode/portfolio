@@ -16,8 +16,6 @@ import { useSearchParams } from 'next/navigation';
 export default function HomePage({}) {
   const [splashDelay] = useState<4.5 | 0>(!sessionStorage.getItem('shown') ? 4.5 : 0);
 
-  ('shown');
-
   const searchParams = useSearchParams();
 
   const t = useTranslations('home');

@@ -18,6 +18,9 @@
     "project": "See my projects",
     "about": "More about me"
   },
+  "about": {
+    "title": "About"
+  },
   "loading": {
     "phrase": "Loading"
   },

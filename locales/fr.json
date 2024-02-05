@@ -18,6 +18,9 @@
     "project": "Voir mes projets",
     "about": "En savoir plus"
   },
+  "about": {
+    "title": "A propos"
+  },
   "loading": {
     "phrase": "Chargement"
   },
