@@ -21,7 +21,7 @@ export default function CustomCursor() {
   }, []);
   return (
     <div
-      className="cursor absolute flex h-20 w-20 cursor-none items-center justify-center rounded-full  duration-100  after:absolute after:-left-4 after:-top-4 after:h-10 after:w-10 after:rounded-full after:border-2 after:border-tertiary40 after:opacity-50"
+      className="cursor absolute flex h-20 w-20 cursor-none items-center justify-center rounded-full duration-100  after:absolute  after:-left-4 after:-top-4 after:h-10 after:w-10 after:rounded-full after:border-2 after:border-tertiary40 after:opacity-50 max-laptop:hidden"
       ref={cursorRef}
     >
       <div className="after:absolute after:-left-3 after:-top-3 after:h-8 after:w-8 after:rounded-full  after:bg-tertiary40 after:bg-opacity-40  after:opacity-50 "></div>
