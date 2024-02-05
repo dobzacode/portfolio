@@ -90,7 +90,7 @@ const Nav: FC<NavProps> = ({ className, intent }) => {
 
   return (
     <header className={cn(className)}>
-      <div className=" relative z-30 flex w-full items-center  justify-between px-large max-tablet:px-sub-large max-mobile-large:px-small">
+      <div className=" relative z-30 flex w-full items-center justify-between   px-large  max-tablet:px-sub-large max-mobile-large:px-small">
         <Link href="/" className="flex items-center gap-sub-large laptop:gap-large">
           <AnimatedLogo splashDelay={splashDelay} className="w-20 "></AnimatedLogo>
           <AnimatePresence mode="wait">

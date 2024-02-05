@@ -5,6 +5,7 @@ import { H1 } from '@/components/ui/text/h1';
 import P from '@/components/ui/text/p';
 import { motion } from 'framer-motion';
 import { useTranslations } from 'next-intl';
+import Image from 'next/image';
 import { useSearchParams } from 'next/navigation';
 import { useState } from 'react';
 
@@ -20,16 +21,16 @@ export default function Page({}) {
       <Header
         size={'large'}
         textColor={'neutral'}
-        className=" relative z-50 w-full max-w-full px-sub-large pt-[40px] tablet:px-large tablet:pt-large"
+        className=" relative z-50 w-full max-w-full  px-sub-large pt-[40px]  tablet:px-large tablet:pt-large"
       ></Header>
       <div
-        className={`relative z-40 flex w-screen flex-col items-start justify-start bg-transparent px-extra-large pt-large  duration-slowest max-tablet:px-sub-large  max-mobile-large:px-small ${
+        className={`z-4 0 relative flex w-screen flex-col-reverse items-center justify-between gap-medium bg-transparent pt-large duration-slowest max-laptop:px-large max-tablet:px-sub-large max-mobile-large:px-small tablet:px-medium laptop:flex-row  laptop:items-start  laptop:px-large  laptop-large:px-extra-large ${
           searchParams.get('menu') ? 'translate-x-[20%] opacity-0 ' : 'opacity-100 delay-1000'
         }`}
       >
-        <main className="w-1/2">
+        <main className="laptop:w-1/2">
           <div
-            className={`} relative z-50 flex h-full w-fit flex-row-reverse items-center gap-extra-small
+            className={`} relative z-50 -ml-small flex h-full w-fit flex-row-reverse items-center gap-extra-small
                           overflow-hidden`}
           >
             <motion.div
@@ -72,13 +73,14 @@ export default function Page({}) {
             <motion.div
               className="relative z-10 w-full"
               key={`Paragraph animated`}
-              initial={{ y: '-200%' }}
+              initial={{ y: '-250%' }}
               animate={{
                 y: '0',
                 transition: { type: 'spring', duration: 2, delay: 4.8 + splashDelay }
               }}
+              exit={{ y: '-250%', transition: { duration: 2 } }}
             >
-              <P className="sub-heading  relative z-10 w-full  font-thin  text-primary90 dark:text-primary1 ">
+              <P className="sub-heading relative z-10 w-full font-thin text-primary90 dark:text-primary1 max-tablet:text-sub-heading  max-tablet:leading-sub-heading  max-mobile-large:text-body max-mobile-large:leading-body ">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                 incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
                 exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
@@ -91,7 +93,7 @@ export default function Page({}) {
               key={`Paragraph border`}
               initial={{ width: 0, opacity: 0 }}
               animate={{
-                width: 700,
+                width: '100%',
                 opacity: 1,
                 transition: {
                   width: {
@@ -107,10 +109,30 @@ export default function Page({}) {
                 opacity: 0,
                 transition: { duration: 0.5 }
               }}
-              className="glowy-shadow relative z-20   bg-tertiary40 p-1 max-mobile-large:h-[5rem] max-mobile-large:p-[0.8px]"
+              className="glowy-shadow relative z-20 mb-medium  bg-tertiary40 p-1  max-mobile-large:p-[0.8px]"
             ></motion.hr>
           </div>
         </main>
+        <motion.div
+          initial={{ x: '20%', opacity: 0 }}
+          animate={{
+            x: 0,
+            opacity: 1,
+            transition: {
+              x: { duration: 0.5, delay: 1 + splashDelay },
+              opacity: { duration: 0.2, delay: 1 + splashDelay }
+            }
+          }}
+          exit={{ x: '20%', opacity: 0, transition: { duration: 1 } }}
+          className="relative h-[500px] w-[1000px] laptop:h-[700px] laptop:w-[500px] "
+        >
+          <Image
+            src="/image00043.jpeg"
+            alt="Corentin Kittel Picture"
+            fill
+            className=" object-cover object-[10%_15%] laptop:object-center"
+          ></Image>
+        </motion.div>
       </div>
     </>
   );
