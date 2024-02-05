@@ -99,6 +99,24 @@
   --tertiary-color-light: theme('colors.tertiary10') color: theme('colors.neutral80');
 }
 
+@keyframes cursorAnim {
+  0% {
+    background-color: var(--tertiary-color) / 10%;
+  }
+  50% {
+    background-color: var(--tertiary-color);
+  }
+  100% {
+    background-color: var(--tertiary-color) / 10%;
+  }
+}
+
+.expand::after,
+.expand > div {
+  animation: cursorAnim 2s;
+  transform-origin: bottom right;
+}
+
 *,
 *:before,
 *:after {

@@ -136,6 +136,7 @@ const NavLink: FC<NavLinkProps> = ({
       <Link
         href={props.href}
         className={cn(
+          'change-color-hover',
           linkVariants({
             size,
             rounded,
@@ -156,7 +157,8 @@ const NavLink: FC<NavLinkProps> = ({
         <Link
           href={props.href}
           className={cn(
-            'peer',
+            'change-color-hover peer',
+            'peer ',
             linkVariants({
               size,
               rounded,
@@ -172,7 +174,7 @@ const NavLink: FC<NavLinkProps> = ({
       ) : (
         <P
           className={cn(
-            'peer',
+            'change-color-hover peer',
             linkVariants({
               size,
               rounded,

@@ -1,6 +1,7 @@
 import { Providers } from '@/components/wrapper/dark-mode/providers';
 
 import LoadingBar from '@/components/animated-assets/loading-bar';
+import CustomCursor from '@/components/ui/custom-cursor';
 import { Header } from '@/components/ui/header/header';
 import SplashScreen from '@/components/ui/splash-screen/splash-screen';
 import FramerMotionWrapper from '@/components/wrapper/framer-motion-wrapper';
@@ -36,7 +37,7 @@ export default async function RootLayout({
 
   return (
     <html lang={locale} suppressHydrationWarning style={{ colorScheme: 'dark' }}>
-      <body className="relative h-full  w-full overflow-x-hidden bg-primary1 duration-medium dark:bg-primary99">
+      <body className="  relative h-full w-full overflow-x-hidden bg-primary1 duration-medium dark:bg-primary99">
         <Providers>
           <NextIntlClientProvider messages={messages}>
             <SplashScreen></SplashScreen>
@@ -51,6 +52,7 @@ export default async function RootLayout({
               <div className="noise max-mobile-large:hidden"></div>
             </FramerMotionWrapper>
           </NextIntlClientProvider>
+          <CustomCursor />
         </Providers>
       </body>
     </html>
