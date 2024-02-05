@@ -95,25 +95,21 @@ const Nav: FC<NavProps> = ({ className, intent }) => {
   return (
     <header className={cn(className)}>
       <div className=" relative z-30 flex w-full items-center  justify-between px-large max-tablet:px-sub-large max-mobile-large:px-small">
-        <div className="flex items-center gap-large">
+        <div className="flex items-center gap-sub-large laptop:gap-large">
           <AnimatedLogo splashDelay={splashDelay} className="w-20 "></AnimatedLogo>
           <AnimatePresence mode="wait">
             {showMenu && (
-              <div
-                className={`relative z-50 flex h-full w-fit flex-row-reverse items-center gap-extra-small`}
+              <motion.div
+                className="relative z-50 w-full"
+                key={`corentin kittel animated`}
+                initial={{ y: '-200%' }}
+                animate={{ y: '0', transition: { type: 'spring' } }}
+                exit={{ opacity: 0, transition: { duration: 1 } }}
               >
-                <motion.div
-                  className="relative z-50 w-full"
-                  key={`corentin kittel animated`}
-                  initial={{ y: '-200%' }}
-                  animate={{ y: '0', transition: { type: 'spring' } }}
-                  exit={{ opacity: 0, transition: { duration: 1 } }}
-                >
-                  <P className="sub-heading relative z-50 w-full whitespace-nowrap    text-tertiary90 opacity-50 dark:text-tertiary1 ">
-                    Corentin Kittel
-                  </P>
-                </motion.div>
-              </div>
+                <P className="sub-heading relative z-50 w-full whitespace-nowrap text-tertiary90   opacity-50 dark:text-tertiary1 max-tablet:hidden ">
+                  Corentin Kittel
+                </P>
+              </motion.div>
             )}
           </AnimatePresence>
         </div>
