@@ -2,7 +2,7 @@
 import { cn } from '@/lib/utils';
 import Icon from '@mdi/react';
 import { AnimatePresence, Variants, motion } from 'framer-motion';
-import React, { FC, HTMLProps, useState } from 'react';
+import React, { FC, HTMLProps, useEffect, useState } from 'react';
 
 import CurrentNamePortal from '@/components/animated-assets/menu/current-name-portal';
 import useBetterMediaQuery from '@/components/hooks/use-better-media-query';
@@ -86,7 +86,13 @@ const Nav: FC<NavProps> = ({ className, intent }) => {
     setShowMenu(!showMenu);
   };
 
-  console.log(showAnimation);
+  useEffect(() => {
+    setShowMenu(false);
+    const timeout = setTimeout(() => {
+      setShowAnimation(false);
+    }, 1400);
+    return () => clearTimeout(timeout);
+  }, [pathname]);
 
   return (
     <header className={cn(className)}>

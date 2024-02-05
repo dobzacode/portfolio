@@ -1,5 +1,7 @@
 import { Providers } from '@/components/wrapper/dark-mode/providers';
 
+import LoadingBar from '@/components/animated-assets/loading-bar';
+import { Header } from '@/components/ui/header/header';
 import SplashScreen from '@/components/ui/splash-screen/splash-screen';
 import FramerMotionWrapper from '@/components/wrapper/framer-motion-wrapper';
 import { NextIntlClientProvider } from 'next-intl';
@@ -38,6 +40,12 @@ export default async function RootLayout({
         <Providers>
           <NextIntlClientProvider messages={messages}>
             <SplashScreen></SplashScreen>
+            <LoadingBar></LoadingBar>
+            <Header
+              size={'large'}
+              textColor={'neutral'}
+              className=" relative z-50 w-full max-w-full px-sub-large pt-[40px] tablet:px-large tablet:pt-large"
+            ></Header>
             <FramerMotionWrapper>
               {children}
               <div className="noise max-mobile-large:hidden"></div>

@@ -1,6 +1,5 @@
 'use client';
 
-import { Header } from '@/components/ui/header/header';
 import NavLink from '@/components/ui/header/nav-link';
 import { H1 } from '@/components/ui/text/h1';
 import H2 from '@/components/ui/text/h2';
@@ -22,11 +21,6 @@ export default function HomePage({}) {
 
   return (
     <>
-      <Header
-        size={'large'}
-        textColor={'neutral'}
-        className=" relative z-50 w-full max-w-full px-sub-large pt-[40px] tablet:px-large tablet:pt-large"
-      ></Header>
       <main
         className={`relative z-40 flex w-screen flex-col  items-center justify-center  bg-transparent pt-medium  duration-slowest ${
           searchParams.get('menu') ? 'translate-x-[20%] opacity-0 ' : 'opacity-100 delay-1000'
@@ -41,7 +35,7 @@ export default function HomePage({}) {
               x: '0px',
               rotate: '-17deg',
               transition: {
-                delay: 3.0 + splashDelay,
+                delay: 1 + splashDelay,
                 type: 'spring',
                 stiffness: '40'
               }
@@ -53,7 +47,7 @@ export default function HomePage({}) {
                 duration: 1 + 2
               }
             }}
-            className="heading--extra-large absolute -left-[15rem] top-extra-large -z-10 font-['HFF_Ultrasound'] font-extrabold leading-none  text-tertiary40 max-tablet:-left-medium  max-tablet:top-large max-tablet:text-heading-sub-extra-large max-mobile-large:left-extra-small max-mobile-large:text-heading-large"
+            className="heading--extra-large  absolute -left-[15rem] top-extra-large -z-10 font-['HFF_Ultrasound'] font-extrabold leading-none  text-tertiary40 max-tablet:-left-medium  max-tablet:top-large max-tablet:text-heading-sub-extra-large max-mobile-large:left-extra-small max-mobile-large:text-heading-large"
           >
             {t('greeting').toUpperCase()}
           </motion.p>
@@ -64,7 +58,7 @@ export default function HomePage({}) {
               animate={{
                 y: '0px',
                 transition: {
-                  delay: 2.3 + splashDelay,
+                  delay: 0.3 + splashDelay,
                   ease: easeInOut,
                   duration: 1.5
                 }
@@ -90,8 +84,8 @@ export default function HomePage({}) {
                 maxWidth: '100%',
 
                 transition: {
-                  maxWidth: { type: easeOut, delay: 2 + splashDelay },
-                  opacity: { duration: 0.01, delay: 2 + splashDelay }
+                  maxWidth: { type: easeOut, delay: 0.5 + splashDelay },
+                  opacity: { duration: 0.01, delay: 0.5 + splashDelay }
                 }
               }}
               exit={{ maxWidth: 0, transition: { type: easeOut, delay: 1, duration: 0.5 + 2 } }}
@@ -109,7 +103,7 @@ export default function HomePage({}) {
               x: '0px',
 
               transition: {
-                delay: 3.6 + splashDelay,
+                delay: 1.6 + splashDelay,
                 type: 'spring',
                 stiffness: '40'
               }
@@ -119,13 +113,13 @@ export default function HomePage({}) {
           >
             <P
               textType="heading"
-              className="inline max-tablet:text-sub-heading max-tablet:leading-heading max-mobile-large:text-body max-mobile-large:leading-sub-heading"
+              className="inline max-tablet:text-sub-heading max-tablet:leading-heading max-mobile-large:text-body max-mobile-large:leading-sub-heading laptop:leading-[4.1rem]"
             >
               {t('phrase1')}
             </P>
             <H2
               textType="heading"
-              className="inline font-bold max-tablet:text-sub-heading max-tablet:leading-sub-heading max-mobile-large:text-body max-mobile-large:leading-body"
+              className="inline font-bold max-tablet:text-sub-heading max-tablet:leading-sub-heading max-mobile-large:text-body max-mobile-large:leading-body laptop:leading-[4.1rem]"
             >
               {' '}
               {t('phrase2')},{' '}
@@ -133,13 +127,13 @@ export default function HomePage({}) {
             <br className="max-laptop:hidden"></br>
             <P
               textType="heading"
-              className="inline max-tablet:text-sub-heading max-tablet:leading-sub-heading max-mobile-large:text-body max-mobile-large:leading-body"
+              className="inline max-tablet:text-sub-heading max-tablet:leading-sub-heading max-mobile-large:text-body max-mobile-large:leading-body laptop:leading-[4.1rem]"
             >
               {t('phrase3')}
             </P>
             <H1
               textType="heading"
-              className="inline font-bold max-tablet:text-sub-heading max-tablet:leading-sub-heading max-mobile-large:text-body max-mobile-large:leading-body"
+              className="inline font-bold max-tablet:text-sub-heading max-tablet:leading-sub-heading max-mobile-large:text-body max-mobile-large:leading-body laptop:leading-[4.1rem]"
             >
               {' '}
               {t('phrase4')}
@@ -147,13 +141,13 @@ export default function HomePage({}) {
             <br className="max-laptop:hidden"></br>
             <P
               textType="heading"
-              className="inline max-tablet:text-sub-heading max-tablet:leading-sub-heading max-mobile-large:text-body max-mobile-large:leading-body"
+              className="inline max-tablet:text-sub-heading max-tablet:leading-sub-heading max-mobile-large:text-body max-mobile-large:leading-body laptop:leading-[4.1rem]"
             >
               {t('phrase5')}
             </P>
             <H2
               textType="heading"
-              className="inline font-bold max-tablet:text-sub-heading max-tablet:leading-sub-heading max-mobile-large:text-body max-mobile-large:leading-body"
+              className="inline font-bold max-tablet:text-sub-heading max-tablet:leading-sub-heading max-mobile-large:text-body max-mobile-large:leading-body laptop:leading-[4.1rem]"
             >
               {' '}
               {t('phrase6')}
@@ -168,7 +162,7 @@ export default function HomePage({}) {
                 opacity: 1,
                 transition: {
                   type: 'spring',
-                  delay: 4.5 + splashDelay
+                  delay: 2.5 + splashDelay
                 }
               }}
               exit={{ y: '100px', opacity: 0, transition: { delay: 2 } }}
@@ -194,7 +188,7 @@ export default function HomePage({}) {
                 opacity: 1,
                 transition: {
                   type: 'spring',
-                  delay: 4.8 + splashDelay
+                  delay: 2.8 + splashDelay
                 }
               }}
               exit={{ y: '100px', opacity: 0, transition: { delay: 2 } }}
