@@ -2,18 +2,30 @@
 
 import { H1 } from '@/components/ui/text/h1';
 import P from '@/components/ui/text/p';
+import { dynamicBlurDataUrl } from '@/lib/utils';
 import { motion } from 'framer-motion';
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 import { useSearchParams } from 'next/navigation';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 export default function Page({}) {
   const [splashDelay] = useState<4.5 | 0>(!sessionStorage.getItem('shown') ? 4.5 : 0);
+  const [blurSrc, setBlurSrc] = useState<string>(
+    'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhfDwAChwGA60e6kgAAAABJRU5ErkJggg=='
+  );
 
   const searchParams = useSearchParams();
 
   const t = useTranslations('about');
+
+  useEffect(() => {
+    const fetchBlurData = async () => {
+      const blurImg = await dynamicBlurDataUrl('/image00043.jpeg');
+      setBlurSrc(blurImg);
+    };
+    fetchBlurData();
+  });
 
   return (
     <>
@@ -123,7 +135,9 @@ export default function Page({}) {
           className="relative h-[500px] w-[1000px]  laptop:h-[800px] laptop:w-[500px] laptop-large:h-[700px] "
         >
           <Image
-            src="/image00043.jpeg"
+            src={'/image00043.jpeg'}
+            sizes={'(max-width: 1000px) 100vw, 1000px'}
+            blurDataURL={blurSrc}
             alt="Corentin Kittel Picture"
             fill
             className=" object-cover object-[10%_15%] laptop:object-center"
