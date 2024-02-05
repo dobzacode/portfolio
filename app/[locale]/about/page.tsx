@@ -80,13 +80,15 @@ export default function Page({}) {
               }}
               exit={{ y: '-250%', transition: { duration: 2 } }}
             >
-              <P className="sub-heading relative z-10 w-full font-thin text-primary90 dark:text-primary1 max-tablet:text-sub-heading  max-tablet:leading-sub-heading  max-mobile-large:text-body max-mobile-large:leading-body ">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-                irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-                pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-                deserunt mollit anim id est laborum.
+              <P className="sub-heading relative z-10 w-full font-thin text-primary90 dark:text-primary1 max-tablet:text-sub-heading    max-mobile-large:text-body max-mobile-large:leading-sub-heading ">
+                {t('text1')}
+                <span className="font-bold">
+                  {t('text2')}
+                  {'. '}
+                </span>{' '}
+                <br></br>
+                {t('text3')} <span className="font-bold"> {t('text4')} </span>
+                {t('text5')}
               </P>
             </motion.div>
             <motion.hr
@@ -124,7 +126,7 @@ export default function Page({}) {
             }
           }}
           exit={{ x: '20%', opacity: 0, transition: { duration: 1 } }}
-          className="relative h-[500px] w-[1000px] laptop:h-[700px] laptop:w-[500px] "
+          className="relative h-[500px] w-[1000px]  laptop:h-[800px] laptop:w-[500px] laptop-large:h-[700px] "
         >
           <Image
             src="/image00043.jpeg"

@@ -119,7 +119,7 @@ export default function HomePage({}) {
           >
             <P
               textType="heading"
-              className="inline max-tablet:text-sub-heading max-tablet:leading-sub-heading max-mobile-large:text-body max-mobile-large:leading-body"
+              className="inline max-tablet:text-sub-heading max-tablet:leading-heading max-mobile-large:text-body max-mobile-large:leading-sub-heading"
             >
               {t('phrase1')}
             </P>

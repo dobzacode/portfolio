@@ -19,7 +19,13 @@
     "about": "En savoir plus"
   },
   "about": {
-    "title": "A propos"
+    "title": "A propos",
+
+    "text1": "Salut! Je m'appelle ",
+    "text2": "Corentin Kittel",
+    "text3": "Je suis un ",
+    "text4": "développeur full-stack ",
+    "text5": "avec un intérêt marqué pour le design d'interface et l'expérience utilisateur. J'ai commencé à apprendre le développement web en 2022 et depuis, je n'ai cessé d'approfondir mes connaissances et de créer. Ma passion réside dans la création de sites web et d'applications qui allient esthétisme et fonctionnalité. J'apprécie travailler avec des technologies modernes et suis constamment à la recherche de nouvelles compétences à acquérir."
   },
   "loading": {
     "phrase": "Chargement"

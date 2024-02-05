@@ -9,31 +9,31 @@
   }
 
   .heading--sub-extra-large {
-    @apply text-heading-sub-extra-large font-bold leading-heading-sub-extra-large;
+    @apply text-heading-sub-extra-large font-bold leading-heading-extra-large;
   }
 
   .heading--large {
-    @apply text-heading-large font-bold leading-heading-large;
+    @apply text-heading-large font-bold leading-heading-sub-extra-large;
   }
 
   .heading--sub-large {
-    @apply text-heading-sub-large font-medium leading-heading-sub-large;
+    @apply text-heading-sub-large font-medium leading-heading-large;
   }
 
   .heading {
-    @apply text-heading font-medium leading-heading;
+    @apply text-heading font-medium  leading-heading-sub-large;
   }
 
   .sub-heading {
-    @apply text-sub-heading font-normal leading-sub-heading;
+    @apply text-sub-heading font-normal  leading-heading;
   }
 
   .body {
-    @apply text-body font-normal leading-body;
+    @apply text-body font-normal leading-sub-heading;
   }
 
   .caption {
-    @apply text-caption font-normal leading-caption;
+    @apply text-caption font-normal leading-body;
   }
 
   .brutalism-border {
