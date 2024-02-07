@@ -12,12 +12,12 @@ export async function generateMetadata({
     title: t('title'),
     description: t('description'),
     openGraph: {
-      images: `url/og-image/${projectName}.jpg`,
+      images: `url/public/og-image/${projectName}.jpg`,
       title: t('title'),
       description: t('description')
     },
     twitter: {
-      images: `url/og-image/${projectName}.jpg`,
+      images: `url/public/og-image/${projectName}.jpg`,
       title: t('title'),
       description: t('description')
     }
