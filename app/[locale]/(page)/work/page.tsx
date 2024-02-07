@@ -85,12 +85,10 @@ export default function Page({}) {
                     transition: {
                       type: 'spring',
                       duration: 1,
-                      delay: 3.0 + splashDelay + index * 0.8
+                      delay: 2.5 + splashDelay + index * 0.8
                     }
                   }}
-                  exit={{ y: '-250%', transition: { duration: 2 } }}
                 >
-                  {/* Ajoutez onMouseEnter pour gérer le survol du lien */}
                   <Link
                     //@ts-ignore
                     href={`/work/${project.title.toLowerCase()}`}
@@ -112,9 +110,9 @@ export default function Page({}) {
                         duration: 0.5,
                         ease: 'easeInOut',
 
-                        delay: 2.5 + splashDelay + index * 0.8
+                        delay: 2 + splashDelay + index * 0.8
                       },
-                      opacity: { duration: 0.01, delay: 2.5 + splashDelay + index * 0.8 }
+                      opacity: { duration: 0.01, delay: 2 + splashDelay + index * 0.8 }
                     }
                   }}
                   exit={{
@@ -143,7 +141,13 @@ export default function Page({}) {
                   exit={{ opacity: 0, transition: { duration: 0.5 } }}
                   key={hoveredProjectImage}
                 >
-                  <Image fill src={hoveredProjectImage} className="border-2 " alt="Project Image" />
+                  <Image
+                    fill
+                    src={hoveredProjectImage}
+                    className="relative -z-20 border-2 grayscale"
+                    alt="Project Image"
+                  />
+                  <div className="absolute top-0 -z-10 h-full w-full bg-primary40 opacity-5 hover:opacity-0"></div>
                 </motion.div>
               )}
             </AnimatePresence>

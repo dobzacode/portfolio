@@ -82,9 +82,8 @@ export default function Page({}) {
               initial={{ y: '-250%' }}
               animate={{
                 y: '0',
-                transition: { type: 'spring', duration: 2, delay: 3 + splashDelay }
+                transition: { type: 'spring', duration: 2, delay: 2.5 + splashDelay }
               }}
-              exit={{ y: '-250%', transition: { duration: 2 } }}
             >
               <P className="sub-heading relative z-10 w-full font-thin text-primary90 dark:text-primary1 max-tablet:text-sub-heading    max-mobile-large:text-body max-mobile-large:leading-sub-heading ">
                 {t('text1')}
@@ -136,7 +135,6 @@ export default function Page({}) {
                 opacity: { duration: 0.2, delay: splashDelay }
               }
             }}
-            exit={{ x: '20%', opacity: 0, transition: { duration: 1 } }}
             className="relative h-[500px] w-[1000px]   max-laptop:max-w-[95%] laptop:h-[800px] laptop:w-[500px] laptop-large:h-[700px]"
           >
             <Image

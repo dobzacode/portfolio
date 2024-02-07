@@ -96,7 +96,7 @@ export default function Page({ params }: { params: { projectName: string } }) {
                   y: '0',
                   transition: { type: 'spring', duration: 2, delay: 3.5 + splashDelay - 0.8 }
                 }}
-                exit={{ y: '-250%', transition: { duration: 2 } }}
+                exit={{ y: '-50%', transition: { duration: 0.5 } }}
               >
                 <P className="sub-heading relative z-10 w-1/2 font-semibold  max-[841px]:text-body    max-mobile-large:text-body max-mobile-large:leading-sub-heading ">
                   {t('category')}
@@ -122,7 +122,7 @@ export default function Page({ params }: { params: { projectName: string } }) {
                   y: '0',
                   transition: { type: 'spring', duration: 2, delay: 3.8 + splashDelay - 0.8 }
                 }}
-                exit={{ y: '-400px', transition: { duration: 2 } }}
+                exit={{ y: '-100px', transition: { duration: 0.5 } }}
               >
                 <P className="sub-heading relative z-10 w-1/2 font-semibold  max-[841px]:text-body    max-mobile-large:text-body max-mobile-large:leading-sub-heading ">
                   {t('year')}
@@ -139,7 +139,7 @@ export default function Page({ params }: { params: { projectName: string } }) {
                   y: '0',
                   transition: { type: 'spring', duration: 2, delay: 4.1 + splashDelay - 0.8 }
                 }}
-                exit={{ y: '-250%', transition: { duration: 2 } }}
+                exit={{ y: '-50%', transition: { duration: 0.5 } }}
               >
                 <P className="sub-heading relative z-10 w-1/2 font-semibold  max-[841px]:text-body    max-mobile-large:text-body max-mobile-large:leading-sub-heading ">
                   Stack
@@ -165,7 +165,7 @@ export default function Page({ params }: { params: { projectName: string } }) {
                   y: '0',
                   transition: { type: 'spring', duration: 2, delay: 4.4 + splashDelay - 0.8 }
                 }}
-                exit={{ y: '-700px', transition: { duration: 2 } }}
+                exit={{ y: '-300px', transition: { duration: 0.5 } }}
               >
                 <P className="sub-heading relative z-10 w-1/2 font-semibold  max-[841px]:text-body    max-mobile-large:text-body max-mobile-large:leading-sub-heading ">
                   {t('status.label')}
@@ -182,7 +182,7 @@ export default function Page({ params }: { params: { projectName: string } }) {
                   y: '0',
                   transition: { type: 'spring', duration: 2, delay: 4.7 + splashDelay - 0.8 }
                 }}
-                exit={{ y: '-700px', transition: { duration: 2 } }}
+                exit={{ y: '-300px', transition: { duration: 0.5 } }}
               >
                 <a
                   //@ts-ignore
@@ -224,11 +224,11 @@ export default function Page({ params }: { params: { projectName: string } }) {
             x: 0,
             opacity: 1,
             transition: {
-              x: { duration: 0.5, delay: 4.9 + splashDelay },
-              opacity: { duration: 0.2, delay: 4.9 + splashDelay }
+              x: { duration: 0.5, delay: 4.7 + splashDelay },
+              opacity: { duration: 0.2, delay: 4.7 + splashDelay }
             }
           }}
-          exit={{ x: '20%', opacity: 0, transition: { duration: 1 } }}
+          exit={{ x: '20%', opacity: 0, transition: { duration: 0.5 } }}
           className="relative -z-10 aspect-square w-full  min-[1700px]:w-1/3"
         >
           <Image

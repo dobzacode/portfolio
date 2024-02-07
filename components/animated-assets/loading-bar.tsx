@@ -13,7 +13,7 @@ export default function LoadingBar() {
     setIsLoading(true);
     const timeout = setTimeout(() => {
       setIsLoading(false);
-    }, 3000);
+    }, 2500);
     return () => clearTimeout(timeout);
   }, [pathname]);
 
@@ -23,7 +23,7 @@ export default function LoadingBar() {
         {isLoading && (
           <motion.div
             initial={{ width: 0 }}
-            animate={{ width: '100%', transition: { duration: 3, ease: 'easeIn' } }}
+            animate={{ width: '100%', transition: { duration: 2.5, ease: 'easeInOut' } }}
             exit={{ opacity: 0, transition: { duration: 0.5 } }}
             className=" h-1 w-0 bg-tertiary40"
           ></motion.div>
