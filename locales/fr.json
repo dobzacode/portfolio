@@ -38,7 +38,13 @@
   },
   "projectPage": {
     "category": "Catégorie",
-    "year": "Année"
+    "year": "Année",
+    "status": {
+      "label": "Statut",
+      "completed": "Terminé",
+      "inProgress": "En cours"
+    },
+    "url": "accéder au site"
   },
   "form": {
     "firstname": "Prénom",

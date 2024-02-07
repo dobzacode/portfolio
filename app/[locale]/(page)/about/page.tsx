@@ -69,7 +69,7 @@ export default function Page({}) {
                 opacity: 0,
                 transition: { duration: 0.5 }
               }}
-              className="glowy-shadow relative z-10 h-[10rem] bg-tertiary40 p-1 max-tablet:h-[7.5rem] max-mobile-large:h-[5rem] max-mobile-large:p-[0.8px]"
+              className="glowy-shadow relative z-10 h-[10rem] bg-tertiary40 p-1 max-tablet:h-[7.5rem] max-tablet:p-[2px] max-mobile-large:h-[5rem]"
             ></motion.div>
           </div>
           <div
@@ -117,7 +117,7 @@ export default function Page({}) {
                 opacity: 0,
                 transition: { duration: 0.5 }
               }}
-              className="glowy-shadow relative z-20 mb-medium  bg-tertiary40 p-1  max-mobile-large:p-[0.8px]"
+              className="glowy-shadow relative z-20 mb-medium  bg-tertiary40 p-1  max-tablet:p-[2px]"
             ></motion.hr>
           </div>
         </main>

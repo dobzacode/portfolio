@@ -48,7 +48,7 @@ export default async function RootLayout({
             ></Header>
 
             {children}
-            <div className="noise max-mobile-large:hidden"></div>
+            <div className="noise "></div>
             <CustomCursor></CustomCursor>
           </NextIntlClientProvider>
         </Providers>

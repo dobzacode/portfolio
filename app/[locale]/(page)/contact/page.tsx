@@ -17,7 +17,7 @@ export default function Page({}) {
   return (
     <>
       <div
-        className={`z-4 0 relative flex w-screen flex-col-reverse gap-medium   bg-transparent px-large pt-medium  duration-slowest  max-tablet:px-medium  max-mobile-large:px-sub-medium tablet:pt-large laptop-large:items-center ${
+        className={`z-4 0 relative flex w-screen flex-col-reverse items-center gap-medium   bg-transparent px-large pt-medium  duration-slowest  max-tablet:px-medium  max-mobile-large:px-sub-medium tablet:pt-large laptop-large:items-center ${
           searchParams.get('menu') ? 'translate-x-[20%] opacity-0 ' : 'opacity-100 delay-1000'
         }`}
       >
@@ -47,7 +47,7 @@ export default function Page({}) {
                   opacity: 0,
                   transition: { duration: 0.5 }
                 }}
-                className="glowy-shadow relative z-10 h-[10rem] w-fit bg-tertiary40 p-1 max-tablet:h-[7.5rem] max-mobile-large:h-[5rem] max-mobile-large:p-[0.8px]"
+                className="glowy-shadow relative z-10 h-[10rem] w-fit bg-tertiary40 p-1 max-tablet:h-[7.5rem] max-tablet:p-[2px] max-mobile-large:h-[5rem]"
               ></motion.div>
               <motion.div
                 className="relative z-50 w-fit "
@@ -80,7 +80,7 @@ export default function Page({}) {
                 opacity: 0,
                 transition: { duration: 0.5 }
               }}
-              className="glowy-shadow relative  z-20 mb-medium bg-tertiary40  p-1 max-tablet:w-[110%] max-mobile-large:p-[0.8px]  laptop-large:w-full"
+              className="glowy-shadow relative  z-20 mb-medium bg-tertiary40  p-1 max-tablet:w-[110%] max-tablet:p-[2px]  laptop-large:w-full"
             ></motion.hr>
           </div>
 
@@ -96,7 +96,7 @@ export default function Page({}) {
                   transition: { type: 'spring', duration: 2, delay: 3.7 + splashDelay }
                 }}
                 exit={{ y: '-450%', transition: { duration: 2 } }}
-                className="sub-heading  flex items-start gap-sub-large text-primary90 dark:text-primary1 max-tablet:gap-medium max-tablet:text-body  max-tablet:leading-sub-heading max-[630px]:flex-col max-[630px]:items-start max-[630px]:gap-0 "
+                className="sub-heading  flex items-start gap-sub-large text-primary90 dark:text-primary1 max-[841px]:text-body max-[841px]:leading-sub-heading  max-tablet:gap-medium max-[630px]:flex-col max-[630px]:items-start max-[630px]:gap-0 "
               >
                 <P className="relative z-10  whitespace-nowrap font-semibold">E-MAIL</P>
                 <a className="font-thin" href="mailto: contact@corentinkittel.fr">
@@ -111,7 +111,7 @@ export default function Page({}) {
                   transition: { type: 'spring', duration: 2, delay: 4 + splashDelay }
                 }}
                 exit={{ y: '-450%', transition: { duration: 2 } }}
-                className="sub-heading  flex items-start gap-large text-primary90 dark:text-primary1 max-tablet:gap-medium max-tablet:text-body   max-tablet:leading-sub-heading max-[630px]:flex-col max-[630px]:items-start max-[630px]:gap-0 "
+                className="sub-heading  flex items-start gap-large text-primary90 dark:text-primary1 max-[841px]:text-body max-[841px]:leading-sub-heading   max-tablet:gap-medium max-[630px]:flex-col max-[630px]:items-start max-[630px]:gap-0 "
               >
                 <P className="relative z-10  whitespace-nowrap font-semibold">
                   {t('social').toUpperCase()}

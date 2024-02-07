@@ -10,7 +10,7 @@ import DarkModeButton from '@/components/wrapper/dark-mode/darkmode-button';
 import { Link, usePathname, useRouter } from '@/navigation';
 import { mdilMenu, mdilPlus } from '@mdi/light-js';
 import { useTranslations } from 'next-intl';
-import { useSearchParams } from 'next/navigation';
+import { useParams, useSearchParams } from 'next/navigation';
 import AnimatedLogo from '../branding/animated-logo';
 import P from '../text/p';
 import LangageSwitch from './langage-switch';
@@ -51,6 +51,8 @@ const Nav: FC<NavProps> = ({ className, intent }) => {
 
   const [splashDelay] = useState<4.5 | 0>(!sessionStorage.getItem('shown') ? 4.5 : 0);
 
+  const params = useParams();
+
   const pathname = usePathname();
   const router = useRouter();
 
@@ -73,13 +75,13 @@ const Nav: FC<NavProps> = ({ className, intent }) => {
   const triggerMenu = () => {
     if (showMenu) {
       //@ts-ignore
-      router.replace(pathname);
+      router.replace(`${pathname.replace('[projectName]', params.projectName)}`);
       setTimeout(() => {
         setShowAnimation(false);
       }, 1400);
     } else {
       //@ts-ignore
-      router.replace(`${pathname}?menu=true`);
+      router.replace(`${pathname.replace('[projectName]', params.projectName)}?menu=true`);
       setTimeout(() => {
         setShowAnimation(true);
       }, 4000);
@@ -98,8 +100,6 @@ const Nav: FC<NavProps> = ({ className, intent }) => {
   useEffect(() => {
     setShowMenu(searchParams.get('menu') ? true : false);
   }, [searchParams]);
-
-  console.log(splashDelay);
 
   return (
     <header className={cn(className)}>
@@ -235,7 +235,7 @@ const Nav: FC<NavProps> = ({ className, intent }) => {
                             opacity: 0,
                             transition: { duration: 0.5, delay: i * 0.115 }
                           }}
-                          className="glowy-shadow relative z-10 h-[10rem] bg-tertiary40 p-1 max-mobile-large:h-[5rem] max-mobile-large:p-[0.8px]"
+                          className="glowy-shadow relative z-10 h-[10rem] bg-tertiary40 p-1 max-tablet:p-[2px] max-mobile-large:h-[5rem]"
                         ></motion.div>
                       </div>
                     );

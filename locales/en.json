@@ -30,6 +30,7 @@
   "project": {
     "title": "Projects"
   },
+
   "contact": {
     "social": "Social medias"
   },
@@ -46,6 +47,16 @@
     "error": "An error occured, please try again later.",
     "subscribe": "Subscribe",
     "newsletterSuccess": "You have been successfully subscribed to our newsletter !"
+  },
+  "projectPage": {
+    "category": "Category",
+    "year": "Year",
+    "status": {
+      "label": "Status",
+      "completed": "Finished",
+      "inProgress": "In progress"
+    },
+    "url": "go to the website"
   },
   "reCaptcha": {
     "formPhrase": {
