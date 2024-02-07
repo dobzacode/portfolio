@@ -44,7 +44,7 @@ export default function HomePage({}) {
               opacity: 0,
               transition: {
                 type: 'tween',
-                duration: 1 + 2
+                duration: 2
               }
             }}
             className="heading--extra-large  absolute -left-[15rem] top-extra-large -z-10 font-['HFF_Ultrasound'] font-extrabold leading-none  text-tertiary40 max-tablet:-left-medium  max-tablet:top-large max-tablet:text-heading-sub-extra-large max-mobile-large:left-extra-small max-mobile-large:text-heading-large"
@@ -58,7 +58,7 @@ export default function HomePage({}) {
               animate={{
                 y: '0px',
                 transition: {
-                  delay: 0.3 + splashDelay,
+                  delay: splashDelay,
                   ease: easeInOut,
                   duration: 1.5
                 }
@@ -67,7 +67,7 @@ export default function HomePage({}) {
                 y: '70vh',
                 transition: {
                   type: 'tween',
-                  duration: 1 + 2
+                  duration: 2
                 }
               }}
               className="pl-medium"
@@ -103,7 +103,7 @@ export default function HomePage({}) {
               x: '0px',
 
               transition: {
-                delay: 1.6 + splashDelay,
+                delay: 0.6 + splashDelay,
                 type: 'spring',
                 stiffness: '40'
               }
@@ -162,7 +162,7 @@ export default function HomePage({}) {
                 opacity: 1,
                 transition: {
                   type: 'spring',
-                  delay: 2.5 + splashDelay
+                  delay: 1.5 + splashDelay
                 }
               }}
               exit={{ y: '100px', opacity: 0, transition: { delay: 2 } }}
@@ -188,7 +188,7 @@ export default function HomePage({}) {
                 opacity: 1,
                 transition: {
                   type: 'spring',
-                  delay: 2.8 + splashDelay
+                  delay: 1.8 + splashDelay
                 }
               }}
               exit={{ y: '100px', opacity: 0, transition: { delay: 2 } }}

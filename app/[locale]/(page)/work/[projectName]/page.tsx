@@ -55,7 +55,7 @@ export default function Page({ params }: { params: { projectName: string } }) {
               className="relative z-50 w-full"
               key={`Title animated`}
               initial={{ x: '-200%' }}
-              animate={{ x: '0', transition: { duration: 1, delay: 0.5 + splashDelay } }}
+              animate={{ x: '0', transition: { duration: 0.5, delay: 0.5 + splashDelay } }}
             >
               <H1 className="leading-small heading--sub-extra-large relative z-50 w-full whitespace-nowrap font-thin max-laptop:text-heading-large  max-laptop:leading-heading-sub-extra-large max-[841px]:text-heading-sub-large    max-[841px]:leading-heading-large max-mobile-large:w-full max-mobile-large:text-heading max-mobile-large:leading-heading-sub-large ">
                 {projectObj.title.toUpperCase()}
@@ -69,12 +69,12 @@ export default function Page({ params }: { params: { projectName: string } }) {
                 opacity: [0, 1, 1, 0],
                 transition: {
                   maxHeight: {
-                    duration: 4 - 1.5,
-                    ease: 'easeIn',
-                    times: [0, 0.25, 0.75, 1],
+                    duration: 2.5,
+                    ease: 'easeInOut',
+                    times: [0, 0.25, 0.4, 1],
                     delay: splashDelay
                   },
-                  opacity: { duration: 4 - 1.5, times: [0, 0.05, 0.99, 1], delay: splashDelay }
+                  opacity: { duration: 2.5, times: [0, 0.05, 0.99, 1], delay: splashDelay }
                 }
               }}
               exit={{
@@ -94,7 +94,7 @@ export default function Page({ params }: { params: { projectName: string } }) {
                 initial={{ y: '-250%' }}
                 animate={{
                   y: '0',
-                  transition: { type: 'spring', duration: 2, delay: 3.5 + splashDelay }
+                  transition: { type: 'spring', duration: 2, delay: 3.5 + splashDelay - 0.8 }
                 }}
                 exit={{ y: '-250%', transition: { duration: 2 } }}
               >
@@ -120,7 +120,7 @@ export default function Page({ params }: { params: { projectName: string } }) {
                 initial={{ y: '-400px' }}
                 animate={{
                   y: '0',
-                  transition: { type: 'spring', duration: 2, delay: 3.8 + splashDelay }
+                  transition: { type: 'spring', duration: 2, delay: 3.8 + splashDelay - 0.8 }
                 }}
                 exit={{ y: '-400px', transition: { duration: 2 } }}
               >
@@ -137,7 +137,7 @@ export default function Page({ params }: { params: { projectName: string } }) {
                 initial={{ y: '-250%' }}
                 animate={{
                   y: '0',
-                  transition: { type: 'spring', duration: 2, delay: 4.1 + splashDelay }
+                  transition: { type: 'spring', duration: 2, delay: 4.1 + splashDelay - 0.8 }
                 }}
                 exit={{ y: '-250%', transition: { duration: 2 } }}
               >
@@ -163,7 +163,7 @@ export default function Page({ params }: { params: { projectName: string } }) {
                 initial={{ y: '-700px' }}
                 animate={{
                   y: '0',
-                  transition: { type: 'spring', duration: 2, delay: 4.4 + splashDelay }
+                  transition: { type: 'spring', duration: 2, delay: 4.4 + splashDelay - 0.8 }
                 }}
                 exit={{ y: '-700px', transition: { duration: 2 } }}
               >
@@ -180,7 +180,7 @@ export default function Page({ params }: { params: { projectName: string } }) {
                 initial={{ y: '-700px' }}
                 animate={{
                   y: '0',
-                  transition: { type: 'spring', duration: 2, delay: 4.7 + splashDelay }
+                  transition: { type: 'spring', duration: 2, delay: 4.7 + splashDelay - 0.8 }
                 }}
                 exit={{ y: '-700px', transition: { duration: 2 } }}
               >
@@ -202,8 +202,9 @@ export default function Page({ params }: { params: { projectName: string } }) {
                 opacity: 1,
                 transition: {
                   width: {
-                    duration: 1.2,
-                    ease: 'easeIn',
+                    duration: 0.5,
+                    ease: 'easeInOut',
+
                     delay: 2.5 + splashDelay
                   },
                   opacity: { duration: 0.01, delay: 2.5 + splashDelay }
@@ -223,8 +224,8 @@ export default function Page({ params }: { params: { projectName: string } }) {
             x: 0,
             opacity: 1,
             transition: {
-              x: { duration: 0.5, delay: splashDelay },
-              opacity: { duration: 0.2, delay: splashDelay }
+              x: { duration: 0.5, delay: 4.9 + splashDelay },
+              opacity: { duration: 0.2, delay: 4.9 + splashDelay }
             }
           }}
           exit={{ x: '20%', opacity: 0, transition: { duration: 1 } }}

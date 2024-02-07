@@ -21,11 +21,11 @@ export default function Page({}) {
           searchParams.get('menu') ? 'translate-x-[20%] opacity-0 ' : 'opacity-100 delay-1000'
         }`}
       >
-        <main className="flex flex-col laptop-large:max-w-[1600px] ">
-          <div className="flex w-fit flex-col laptop-large:w-full">
+        <main className="flex flex-col  laptop-large:max-w-[1600px] ">
+          <div className="relative z-50 flex w-fit flex-col laptop-large:w-full">
             <div
-              className={`} relative z-50 flex h-full w-fit  items-center gap-extra-small overflow-hidden
-                            laptop:-ml-small`}
+              className={`} relative z-50 -ml-small flex h-full  w-fit items-center gap-extra-small
+                            overflow-hidden`}
             >
               <motion.div
                 key={`Title border`}
@@ -35,27 +35,27 @@ export default function Page({}) {
                   opacity: [0, 1, 1, 0],
                   transition: {
                     maxHeight: {
-                      duration: 4 - 1.5,
-                      ease: 'easeIn',
-                      times: [0, 0.25, 0.75, 1],
+                      duration: 2.5,
+                      ease: 'easeInOut',
+                      times: [0, 0.25, 0.4, 1],
                       delay: splashDelay
                     },
-                    opacity: { duration: 4 - 1.5, times: [0, 0.05, 0.99, 1], delay: splashDelay }
+                    opacity: { duration: 2.5, times: [0, 0.05, 0.99, 1], delay: splashDelay }
                   }
                 }}
                 exit={{
                   opacity: 0,
                   transition: { duration: 0.5 }
                 }}
-                className="glowy-shadow relative z-10 h-[10rem] w-fit bg-tertiary40 p-1 max-tablet:h-[7.5rem] max-tablet:p-[2px] max-mobile-large:h-[5rem]"
+                className="glowy-shadow relative z-10 h-[10rem] bg-tertiary40 p-1 max-tablet:h-[7.5rem] max-tablet:p-[2px] max-mobile-large:h-[5rem]"
               ></motion.div>
               <motion.div
-                className="relative z-50 w-fit "
+                className="relative z-50 w-full"
                 key={`Title animated`}
                 initial={{ x: '-200%' }}
-                animate={{ x: '0', transition: { duration: 1, delay: 0.5 + splashDelay } }}
+                animate={{ x: '0', transition: { duration: 0.5, delay: 0.5 + splashDelay } }}
               >
-                <H1 className="leading-small heading--sub-extra-large relative z-50 w-fit whitespace-nowrap font-thin text-primary90  dark:text-primary1  max-[841px]:text-heading-large max-[841px]:leading-heading-sub-extra-large max-[540px]:text-heading-sub-large max-[540px]:leading-heading-large ">
+                <H1 className="leading-small heading--sub-extra-large relative z-50 w-full whitespace-nowrap font-thin text-primary90 dark:text-primary1  max-[841px]:text-heading-large  max-[841px]:leading-heading-sub-extra-large max-[540px]:text-heading-sub-large max-[540px]:leading-heading-large max-mobile-medium:text-heading max-mobile-medium:leading-heading-sub-large ">
                   CONTACT
                 </H1>
               </motion.div>
@@ -68,8 +68,8 @@ export default function Page({}) {
                 opacity: 1,
                 transition: {
                   width: {
-                    duration: 1.2,
-                    ease: 'easeIn',
+                    duration: 0.5,
+                    ease: 'easeInOut',
 
                     delay: 2.5 + splashDelay
                   },
@@ -85,7 +85,7 @@ export default function Page({}) {
           </div>
 
           <div
-            className={`relative z-50 flex h-full flex-col-reverse gap-extra-small pb-medium  laptop-large:w-full `}
+            className={`relative z-0 flex h-full flex-col-reverse gap-extra-small overflow-hidden  pb-medium  laptop-large:w-full `}
           >
             <div className="relative z-10 flex justify-between gap-extra-large max-laptop-large:flex-col max-laptop-large:gap-small">
               <motion.div
@@ -93,7 +93,7 @@ export default function Page({}) {
                 initial={{ y: '-450%' }}
                 animate={{
                   y: '0',
-                  transition: { type: 'spring', duration: 2, delay: 3.7 + splashDelay }
+                  transition: { type: 'spring', duration: 2, delay: 3 + splashDelay }
                 }}
                 exit={{ y: '-450%', transition: { duration: 2 } }}
                 className="sub-heading  flex items-start gap-sub-large text-primary90 dark:text-primary1 max-[841px]:text-body max-[841px]:leading-sub-heading  max-tablet:gap-medium max-[630px]:flex-col max-[630px]:items-start max-[630px]:gap-0 "
@@ -108,7 +108,7 @@ export default function Page({}) {
                 initial={{ y: '-450%' }}
                 animate={{
                   y: '0',
-                  transition: { type: 'spring', duration: 2, delay: 4 + splashDelay }
+                  transition: { type: 'spring', duration: 2, delay: 3.3 + splashDelay }
                 }}
                 exit={{ y: '-450%', transition: { duration: 2 } }}
                 className="sub-heading  flex items-start gap-large text-primary90 dark:text-primary1 max-[841px]:text-body max-[841px]:leading-sub-heading   max-tablet:gap-medium max-[630px]:flex-col max-[630px]:items-start max-[630px]:gap-0 "
