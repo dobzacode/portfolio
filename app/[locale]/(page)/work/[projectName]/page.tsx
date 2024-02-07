@@ -12,10 +12,17 @@ export async function generateMetadata({
 
   return {
     title: t('title'),
-    description: t('description')
-    // openGraph: {
-    //   images: await generateOpenGraphImage(locale !== '/en' ? '' : locale)
-    // }
+    description: t('description'),
+    openGraph: {
+      images: require(`@/assets/og-image/${projectName}.jpg`),
+      title: t('title'),
+      description: t('description')
+    },
+    twitter: {
+      images: require(`@/assets/og-image/${projectName}.jpg`),
+      title: t('title'),
+      description: t('description')
+    }
   };
 }
 

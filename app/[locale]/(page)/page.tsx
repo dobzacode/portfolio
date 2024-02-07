@@ -7,9 +7,14 @@ export async function generateMetadata() {
   return {
     title: t('title'),
     description: t('description'),
-    // openGraph: {
-    //   images: await generateOpenGraphImage(locale !== '/en' ? '' : locale)
-    // }
+    opengraph: {
+      title: t('title'),
+      description: t('description')
+    },
+    twitter: {
+      title: t('title'),
+      description: t('description')
+    }
   };
 }
 
