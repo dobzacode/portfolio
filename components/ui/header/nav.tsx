@@ -35,8 +35,8 @@ interface NavProps extends HTMLProps<HTMLElement> {
 
 const navLinks = [
   { href: '/', name: 'home' },
-  { href: '/about', name: 'about' },
   { href: '/work', name: 'work' },
+  { href: '/about', name: 'about' },
   { href: '/contact', name: 'contact' }
 ];
 

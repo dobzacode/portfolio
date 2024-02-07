@@ -4,7 +4,8 @@
       "home": "accueil",
       "about": "a-propos",
       "work": "projets",
-      "contact": "contact"
+      "contact": "contact",
+      "legal": "Mentions légales"
     }
   },
   "home": {
@@ -59,62 +60,46 @@
     "error": "Une erreur est survenue, veuillez réessayer plus tard.",
     "newsletterSuccess": "Vous êtes bien abonné à notre newsletter !"
   },
-  "reCaptcha": {
-    "formPhrase": {
-      "1": "Ce site est protégé par reCAPTCHA, les ",
-      "2": "règles de confidentialité ",
-      "3": "et les ",
-      "4": "conditions d'utilisation ",
-      "5": "s'y appliquent."
-    }
-  },
-  "shop": {
-    "order": "ACHETER MAINTENANT"
-  },
-  "consent": {
-    "cookie": "Ce site internet utilise un cookie afin d'améliorer l'internationalisation du contenu. En naviguant sur ce site, vous acceptez l'utilisation de ce cookie.",
-    "accept": "Accepter",
-    "deny": "Refuser"
-  },
+
   "legal": {
     "title": "Mentions légales",
-    "law": "Conformément aux directives des articles 6-III et 19 de la Loi numero 2004-575 du 21 juin 2004 pour la Confiance de l'économie numérique, dite L.C.E.N., nous informons les visiteurs du site web : abjectact.com ",
+    "law": "Conformément aux directives des articles 6-III et 19 de la Loi numero 2004-575 du 21 juin 2004 pour la Confiance de l'économie numérique, dite L.C.E.N., nous informons les visiteurs du site web : corentinkittel.fr ",
     "law2": "Les données ci-jointe :",
     "legalInformation": {
       "heading": "1. Informations légales :",
-      "content": "Le site abjectact.com est la propriété exclusive de Association de droit local ABJECT ACT, qui le propose.",
-      "content2": "Association de droit local ABJECT ACT - Numero de téléphone : 0606060606",
-      "content3": "38 rue du bassin d'Austerlitz 67100 Strasbourg référencée au Registre du Commerce et des Sociétés(RCS) au numéro 90439277600020",
-      "content4": "Numéro de TVA Intracommunautaire : FR70904392776",
-      "content5": "Adresse de messagerie mail : abject.act@gmail.com",
+      "content": "Le site corentinkittel.fr est la propriété exclusive de l'autoentreprise Monsieur Corentin Kittel, qui le propose.",
+      "content2": "Autoentreprise Monsieur Corentin Kittel - Numero de téléphone : 0672357606",
+      "content3": "55 Avenue de la forêt noire 67000 Strasbourg référencée au Registre du Commerce et des Sociétés au numéro 90286337200022",
+
+      "content5": "Adresse de messagerie mail : contact@corentinkittel.fr",
       "webmaster": "Le Concepteur et Webmaster du site est : Kittel Corentin",
-      "webmasterEmail": "Adresse de messagerie mail : abject.act@gmail.com",
+      "webmasterEmail": "Adresse de messagerie mail : contact@corentinkittel.fr",
       "hosting1": "Hebergeur du site web : Vercel Inc",
       "hosting2": "Foreign Business Corporation",
       "hosting3": "Siège Sociale de l'hébergeur : 650 CALIFORNIA ST, FLOOR 7, Suite 06-104 SAN FRANCISCO, 94108, CA, United State"
     },
     "principles": {
       "heading": "2. Présentation et principe :",
-      "content": "Tout internaute se connectant et utilisant le site internet : abjectact.com est considéré comme utilisateur du site web. Le site suivant abjectact.com regroupe différents services, en l'état, mis à la disposition des utilisateur. Il est ici précisé que ces derniers doivent rester honnête et faire preuve de bonne foi tant envers les différents usagés qu'envers le réalisateur du site abjectact.com. Kittel Corentin s'efforce d'indiqué sur le site abjectact.com des informations les plus précises possibles (sous réserve de modifications apportées depuis leur mise en ligne), mais ne saurait attester l'exactitude, la finitude et l'actualité des informations diffusées sur son site internet, qu'elles soient ou non de son fait. En répercussion, l'utilisateur reconnaît se servir des informations données (à titre indicatif, non exhaustives et susceptibles d'évoluer) sous sa responsabilité exclusive."
+      "content": "Tout internaute se connectant et utilisant le site internet : corentinkittel.fr est considéré comme utilisateur du site web. Le site suivant corentinkittel.fr regroupe différents services, en l'état, mis à la disposition des utilisateur. Il est ici précisé que ces derniers doivent rester honnête et faire preuve de bonne foi tant envers les différents usagés qu'envers le réalisateur du site corentinkittel.fr. Kittel Corentin s'efforce d'indiqué sur le site corentinkittel.fr des informations les plus précises possibles (sous réserve de modifications apportées depuis leur mise en ligne), mais ne saurait attester l'exactitude, la finitude et l'actualité des informations diffusées sur son site internet, qu'elles soient ou non de son fait. En répercussion, l'utilisateur reconnaît se servir des informations données (à titre indicatif, non exhaustives et susceptibles d'évoluer) sous sa responsabilité exclusive."
     },
     "accessibility": {
       "heading": "3. Accessibilité :",
-      "content": "Le site internet abjectact.com est par principe accessible aux utilisateurs 24/24h, 7/7j, excepté en cas de maintenance, programmée ou pas, pour les besoins de sa maintenance ou en cas de force majeure. En cas d'impossibilité d'accès au service, abjectact.com s'engage à faire de son mieux afin de rétablir l'accès au site suivant et tentera alors d'informer au préalable aux utilisateurs Dates & heures de l'intervention. N'étant asservi qu'à une servitude de moyen, abjectact.com ne saurait être designé comme responsable des dommages, quelle qu'en soit la nature."
+      "content": "Le site internet corentinkittel.fr est par principe accessible aux utilisateurs 24/24h, 7/7j, excepté en cas de maintenance, programmée ou pas, pour les besoins de sa maintenance ou en cas de force majeure. En cas d'impossibilité d'accès au service, corentinkittel.fr s'engage à faire de son mieux afin de rétablir l'accès au site suivant et tentera alors d'informer au préalable aux utilisateurs Dates & heures de l'intervention. N'étant asservi qu'à une servitude de moyen, corentinkittel.fr ne saurait être designé comme responsable des dommages, quelle qu'en soit la nature."
     },
     "property": {
       "heading": "4. Droit de propriété intellectuelle :",
-      "content": "Abject Act est le propriétaire exclusif de l'intégralité des droits de propriété intellectuelle ou détient les droits et autorisations d'usage sur tous les éléments accessibles sur le site web, tant sur la structure que sur les articles et textes, images, graphismes, icônes, sons, logiciels… Toute reproduction totale ou partielle du site suivant abjectact.com, affichage, modification, mis à jour totalement ou partiellement de l'un quelconque de ces éléments, peu importe le moyen ou le procédé utilisé, est formellement interdite, sauf autorisation écrite préalable de Abject Act, directeur du site même partielle du site abjectact.com, affichage, edition, mis à jour totalement ou partiellement de l'un quelconque de ces éléments, quel que soit le moyen ou la technique utilisé, est interdite, sauf autorisation écrite préalable de Abject Act, propriétaire du site web au mail suivant : abject.act@gmail.com, sinon elle sera considérée de la même manière qu'une contrefaçon et passible de poursuite conformément aux dispositions des multiples articles L.335-2 et suivants du Code de Propriété Intellectuelle."
+      "content": "Corentin Kittel est le propriétaire exclusif de l'intégralité des droits de propriété intellectuelle ou détient les droits et autorisations d'usage sur tous les éléments accessibles sur le site web, tant sur la structure que sur les articles et textes, images, graphismes, icônes, sons, logiciels… Toute reproduction totale ou partielle du site suivant corentinkittel.fr, affichage, modification, mis à jour totalement ou partiellement de l'un quelconque de ces éléments, peu importe le moyen ou le procédé utilisé, est formellement interdite, sauf autorisation écrite préalable de Corentin Kittel, directeur du site même partielle du site corentinkittel.fr, affichage, edition, mis à jour totalement ou partiellement de l'un quelconque de ces éléments, quel que soit le moyen ou la technique utilisé, est interdite, sauf autorisation écrite préalable de Corentin Kittel, propriétaire du site web au mail suivant : contact@corentinkittel.fr, sinon elle sera considérée de la même manière qu'une contrefaçon et passible de poursuite conformément aux dispositions des multiples articles L.335-2 et suivants du Code de Propriété Intellectuelle."
     },
     "cookies": {
       "heading": "5. Cookies & Liens Hypertextes :",
-      "content": "Le site web abjectact.com contient différents URL cliquable vers d'autres sites (partenariats, sites sources .) mis en ligne suite à la validation de Kittel Corentin. Cependant, Kittel Corentin n'a pas la possibilité de controler l'ensemble des élements des différents sites visités et décline donc toute responsabilité de ce fait quand aux eventuels risques de contenus illicites. L'usager est avisé que au cours de ses navigation sur le site abjectact.com, un ou plusieurs cookies peuvent s'installer de façon automatique sur son par l'intermédiaire de son logiciel informatique de navigation. Un cookie c'est un assemblage de donnée qui ne permettra pas de savoir qui est l'utilisateur, en revanche qui sauvegarde des informations relatives à la navigation de l'utilisateur sur le site suivant. Le paramétrage du programme de navigation permet de renseigner de la compagnie de cookie et éventuellement, de la contester de la procédure décrite à l' adresse : www.abjectact.com. La mise en place à la possibilité toutefois de régler le navigateur de son pc afin de refuser la mise en place des cookies, en sachant que le refus de la mise en place d'un cookie pourrait entraîner l'incapacité d'avoir accès à plusieurs secteurs. Pour tout blocage des cookies, cherchez dans le moteur de recherche : blocage des cookies et suivez les consignes en lien avec votre version de navigateur."
+      "content": "Le site web corentinkittel.fr contient différents URL cliquable vers d'autres sites (partenariats, sites sources .) mis en ligne suite à la validation de Kittel Corentin. Cependant, Kittel Corentin n'a pas la possibilité de controler l'ensemble des élements des différents sites visités et décline donc toute responsabilité de ce fait quand aux eventuels risques de contenus illicites. "
     },
     "protection": {
       "heading": "6. Protection des personnes et des biens - Maniement des données personnelles :",
       "content": "En France, les données personnelles sont notamment protégées par la loi n° 78-87 du 6 janvier 1978 ainsi que la loi n° 2004-801 du 6 août 2004, l'article L. 226-13 du Code pénal ainsi que la Directive Européenne du 24 octobre 1995.",
-      "content2": "Sur le site suivant abjectact.com, Abject Act ne collecte pas d'informations personnelles ( suivant l'article 4 loi n°78-17 du 06 janvier 1978) relatives à l'usager que pour la nécéssité de certains services offerts par le site suivant abjectact.com. L'usager offre les informations en pleine conscience de cause, notamment lorsqu'il procède par lui-même à leur saisie. Il est donc précisé à l'usagé du site interne abjectact.com le devoir ou non de mentionner ces données. En conformité avec les dispositifs des articles 38 et autres de la loi 78-17 du 6 janvier 1978 concernant l'informatique, aux fichiers et aux différentes libertés, tout utilisateur possède un droit d'accès , de rectification, de suppression et d'opposition aux informations personnelles le concernant. Pour l'utiliser, adressez une demande par mail : abject.act@gmail.com ou alors par lettre manuscrite dûement signée, jointe d'une copie du titre d'identité avec signature du titulaire du document, en précisant l'adresse à laquelle une réponse devra être retournée.",
-      "content3": "Aucune information personnelle de l'utilisateur du site web abjectact.com n'est publiée à l'insu de l'utilisateur, échangée, transférée, vendue sur n'importe quel support à des tiers.",
-      "content4": "Le site web abjectact.com est en conformité avec le RGPD"
+      "content2": "Sur le site suivant corentinkittel.fr, Corentin Kittel ne collecte pas d'informations personnelles ( suivant l'article 4 loi n°78-17 du 06 janvier 1978) relatives à l'usager que pour la nécéssité de certains services offerts par le site suivant corentinkittel.fr. L'usager offre les informations en pleine conscience de cause, notamment lorsqu'il procède par lui-même à leur saisie. Il est donc précisé à l'usagé du site interne corentinkittel.fr le devoir ou non de mentionner ces données. En conformité avec les dispositifs des articles 38 et autres de la loi 78-17 du 6 janvier 1978 concernant l'informatique, aux fichiers et aux différentes libertés, tout utilisateur possède un droit d'accès , de rectification, de suppression et d'opposition aux informations personnelles le concernant. Pour l'utiliser, adressez une demande par mail : contact@corentinkittel.fr ou alors par lettre manuscrite dûement signée, jointe d'une copie du titre d'identité avec signature du titulaire du document, en précisant l'adresse à laquelle une réponse devra être retournée.",
+      "content3": "Aucune information personnelle de l'utilisateur du site web corentinkittel.fr n'est publiée à l'insu de l'utilisateur, échangée, transférée, vendue sur n'importe quel support à des tiers.",
+      "content4": "Le site web corentinkittel.fr est en conformité avec le RGPD"
     }
   },
   "privacy": {
@@ -227,7 +212,7 @@
     "modifyDeleteData": {
       "heading": "12. Comment modifier, supprimer ou contester les données recueillies",
       "content": "Si vous souhaitez que vos renseignements soient supprimés ou modifiés d'une façon ou d'une autre, veuillez communiquer avec notre agent de protection de la vie privée ici :",
-      "list": { "1": "- Louis Koerner", "2": "- abject.act@gmail.com", "3": "- 0606060606" }
+      "list": { "1": "- Louis Koerner", "2": "- contact@corentinkittel.fr", "3": "- 0606060606" }
     },
     "cookiePolicy": {
       "heading": "13. Politique sur les cookies",
@@ -245,7 +230,7 @@
       "content": "Si vous avez des questions à nous poser, n'hésitez pas à communiquer avec nous en utilisant ce qui suit :",
       "contactInfo": {
         "1": "- 0606060606",
-        "2": "- abject.act@gmail.com",
+        "2": "- contact@corentinkittel.fr",
         "3": "- 38 rue du bassin d'Austerlitz 67100"
       }
     }

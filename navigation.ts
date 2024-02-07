@@ -41,19 +41,7 @@ export const pathnames = {
 
   '/contact?menu=true': '/contact?menu=true',
 
-  '/legal/informations': '/legal/informations',
-
-  '/legal/informations?menu=true': '/legal/informations?menu=true',
-
-  '/legal/privacy': {
-    en: '/legal/privacy',
-    fr: '/legal/confidentialite'
-  },
-
-  '/legal/privacy?menu=true': {
-    en: '/legal/privacy?menu=true',
-    fr: '/legal/confidentialite?menu=true'
-  }
+  '/legal': '/legal'
 } satisfies Pathnames<typeof locales>;
 
 export const { Link, redirect, usePathname, useRouter, getPathname } =

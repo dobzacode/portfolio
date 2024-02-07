@@ -91,7 +91,6 @@ export default function Page({}) {
                   {t('text2')}
                   {'. '}
                 </span>{' '}
-                <br></br>
                 {t('text3')} <span className="font-bold"> {t('text4')} </span>
                 {t('text5')}
               </P>

@@ -195,7 +195,7 @@ export default function HomePage({}) {
               <NavLink
                 size="large"
                 isLi={false}
-                href="/work"
+                href="/about"
                 className="relative whitespace-nowrap font-['HFF_Ultrasound'] font-thin leading-heading before:absolute before:bottom-0 before:left-[50%] before:-z-10 before:w-full before:max-w-0 before:origin-center before:border-b-2 before:border-tertiary40 before:duration-medium hover:before:left-0 hover:before:max-w-full before:dark:border-tertiary40 max-tablet:text-sub-heading max-mobile-large:text-body"
               >
                 {t('about')}
