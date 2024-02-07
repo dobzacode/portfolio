@@ -60,6 +60,11 @@ export default function Page({}) {
                 </H1>
               </motion.div>
             </div>
+          </div>
+
+          <div
+            className={`relative z-0 flex h-full flex-col gap-extra-small overflow-hidden  pb-medium  laptop-large:w-full `}
+          >
             <motion.hr
               key={`Paragraph border`}
               initial={{ width: 0, opacity: 0 }}
@@ -82,11 +87,6 @@ export default function Page({}) {
               }}
               className="glowy-shadow relative  z-20 mb-medium bg-tertiary40  p-1 max-tablet:w-[110%] max-tablet:p-[2px]  laptop-large:w-full"
             ></motion.hr>
-          </div>
-
-          <div
-            className={`relative z-0 flex h-full flex-col-reverse gap-extra-small overflow-hidden  pb-medium  laptop-large:w-full `}
-          >
             <div className="relative z-10 flex justify-between gap-extra-large max-laptop-large:flex-col max-laptop-large:gap-small">
               <motion.div
                 key={`Email animated`}

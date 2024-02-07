@@ -103,8 +103,8 @@ const Nav: FC<NavProps> = ({ className, intent }) => {
 
   return (
     <header className={cn(className)}>
-      <div className=" relative z-30 flex w-full items-center justify-between   px-large  max-tablet:px-sub-large max-mobile-large:px-small">
-        <Link href="/" className="flex items-center gap-sub-large laptop:gap-large">
+      <div className=" relative z-30 flex w-full items-center justify-between max-tablet:px-sub-large  max-mobile-large:px-small  tablet:px-sub-large laptop:px-large">
+        <Link href="/" className="-ml-sub-medium flex items-center gap-sub-large laptop:gap-large">
           <AnimatedLogo splashDelay={splashDelay} className="w-20 "></AnimatedLogo>
           <AnimatePresence mode="wait">
             {showMenu && (
@@ -177,7 +177,7 @@ const Nav: FC<NavProps> = ({ className, intent }) => {
           {showMenu && (
             <motion.div
               key="specialMenu"
-              className="flex justify-between  px-large pt-large max-tablet:px-sub-large  max-mobile-large:px-extra-small  laptop:gap-medium  laptop-large:gap-extra-large"
+              className="flex justify-between  px-large pt-medium max-tablet:px-sub-large max-mobile-large:px-extra-small  tablet:pt-large  laptop:gap-medium  laptop-large:gap-extra-large"
               exit={{
                 opacity: 0,
                 x: '-50%',
