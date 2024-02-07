@@ -43,7 +43,7 @@ export default function Page({ params }: { params: { projectName: string } }) {
   console.log(projectList[projectObj.id - 1], projectObj.id - 1);
 
   return (
-    <div className="flex w-screen justify-center">
+    <div className="flex h-full w-screen justify-center overflow-hidden">
       <div
         className={`z-4 0 relative flex h-fit w-full flex-col flex-wrap items-start justify-center gap-medium bg-transparent py-medium  duration-slowest  max-[1700px]:w-fit max-laptop:px-large max-tablet:px-sub-large max-mobile-large:w-full max-mobile-large:max-w-full max-mobile-large:px-small tablet:px-medium laptop:flex-row   laptop:px-large  laptop:py-large  laptop-large:px-extra-large ${
           searchParams.get('menu') ? 'translate-x-[20%] opacity-0 ' : 'opacity-100 delay-1000'
@@ -235,7 +235,7 @@ export default function Page({ params }: { params: { projectName: string } }) {
             }
           }}
           exit={{ x: '20%', opacity: 0, transition: { duration: 0.5 } }}
-          className="relative z-50 aspect-square w-full  min-[1700px]:w-1/3"
+          className="relative z-50 mb-[4.8rem] aspect-square  w-full min-[1700px]:w-1/3 "
         >
           <Image
             src={projectObj.image}
@@ -246,7 +246,7 @@ export default function Page({ params }: { params: { projectName: string } }) {
             className="relative -z-20 grayscale duration-slow "
           ></Image>
           <div className="absolute top-0 -z-10 h-full w-full bg-primary40 opacity-5 "></div>
-          <div className="flex justify-between">
+          <div className=" justify-between">
             {projectList[projectObj.id - 1] && (
               <Link //@ts-ignore
                 href={`/work/${projectList[projectObj.id - 1].title.toLowerCase()}`}

@@ -93,7 +93,7 @@ export default function Page({}) {
                 initial={{ y: '-450%' }}
                 animate={{
                   y: '0',
-                  transition: { type: 'spring', duration: 2, delay: 3 + splashDelay }
+                  transition: { type: 'spring', duration: 2, delay: 2.5 + splashDelay }
                 }}
                 className="sub-heading  flex items-start gap-sub-large text-primary90 dark:text-primary1 max-[841px]:text-body max-[841px]:leading-sub-heading  max-tablet:gap-medium max-[630px]:flex-col max-[630px]:items-start max-[630px]:gap-0 "
               >
@@ -107,7 +107,7 @@ export default function Page({}) {
                 initial={{ y: '-450%' }}
                 animate={{
                   y: '0',
-                  transition: { type: 'spring', duration: 2, delay: 3.3 + splashDelay }
+                  transition: { type: 'spring', duration: 2, delay: 2.7 + splashDelay }
                 }}
                 className="sub-heading  flex items-start gap-large text-primary90 dark:text-primary1 max-[841px]:text-body max-[841px]:leading-sub-heading   max-tablet:gap-medium max-[630px]:flex-col max-[630px]:items-start max-[630px]:gap-0 "
               >

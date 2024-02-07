@@ -30,14 +30,14 @@ export default function Page({}) {
   return (
     <>
       <div
-        className={`z-4 0 relative flex w-screen flex-col-reverse items-center justify-between gap-medium bg-transparent pt-medium duration-slowest max-laptop:px-large max-tablet:px-sub-large max-mobile-large:px-small tablet:px-medium laptop:flex-row laptop:items-start  laptop:px-large  laptop:pt-large  laptop-large:px-extra-large ${
+        className={`z-4 0 relative flex w-screen flex-col-reverse items-center justify-center gap-medium bg-transparent pt-medium duration-slowest max-laptop:px-large max-tablet:px-sub-large max-mobile-large:px-small tablet:px-medium laptop:flex-row laptop:items-start  laptop:px-large  laptop:pt-large  laptop-large:px-extra-large ${
           searchParams.get('menu') ? 'translate-x-[20%] opacity-0 ' : 'opacity-100 delay-1000'
         }`}
       >
         <main className="laptop:w-1/2">
           <div
             className={`} relative z-50 flex h-full w-fit flex-row-reverse items-center gap-extra-small overflow-hidden
-                          laptop:-ml-small`}
+                          laptop:-ml-small laptop-large:-mt-[2.2rem]`}
           >
             <motion.div
               className="relative z-50 w-full"
