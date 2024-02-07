@@ -124,15 +124,11 @@ export default function Page({ params }: { params: { projectName: string } }) {
             <P className="sub-heading relative z-10 w-full font-semibold  max-tablet:text-sub-heading    max-mobile-large:text-body max-mobile-large:leading-sub-heading ">
               {t('category')}
             </P>
-           
-                  <P
-                    key={`${projectObj.year}`}
-                    className="sub-heading relative z-10 w-full whitespace-nowrap font-thin  max-tablet:text-sub-heading    max-mobile-large:text-body max-mobile-large:leading-sub-heading "
-                  >
-                    {category}
-                  </P>
-               
-            </div>
+
+            <P
+              key={`${projectObj.year}`}
+              className="sub-heading relative z-10 w-full whitespace-nowrap font-thin  max-tablet:text-sub-heading    max-mobile-large:text-body max-mobile-large:leading-sub-heading "
+            ></P>
           </motion.div>
           <motion.hr
             key={`Paragraph border`}

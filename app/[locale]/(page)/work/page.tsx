@@ -26,7 +26,7 @@ export default function Page({}) {
   return (
     <>
       <div
-        className={`z-4 0 relative flex w-screen  flex-col-reverse justify-between gap-medium bg-transparent pt-medium duration-slowest max-laptop-large:min-h-screen max-tablet:px-large  max-mobile-large:px-sub-large tablet:px-sub-extra-large laptop:flex-row laptop:items-start laptop:justify-center laptop:px-0  laptop:pt-large  laptop-large:gap-extra-large  ${
+        className={`z-4 0 relative flex w-screen  flex-col-reverse justify-between gap-medium bg-transparent pt-medium duration-slowest max-laptop-large:min-h-screen max-laptop:min-h-fit max-tablet:px-large  max-mobile-large:px-sub-large tablet:px-sub-extra-large laptop:flex-row laptop:items-start laptop:justify-center laptop:px-0  laptop:pt-large  laptop-large:gap-extra-large  ${
           searchParams.get('menu') ? 'translate-x-[20%] opacity-0 ' : 'opacity-100 delay-1000'
         }`}
       >

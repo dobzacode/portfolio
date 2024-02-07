@@ -121,28 +121,34 @@ export default function Page({}) {
             ></motion.hr>
           </div>
         </main>
-        <motion.div
-          initial={{ x: '20%', opacity: 0 }}
-          animate={{
-            x: 0,
-            opacity: 1,
-            transition: {
-              x: { duration: 0.5, delay: splashDelay },
-              opacity: { duration: 0.2, delay: splashDelay }
-            }
-          }}
-          exit={{ x: '20%', opacity: 0, transition: { duration: 1 } }}
-          className="relative h-[500px] w-[1000px]  laptop:h-[800px] laptop:w-[500px] laptop-large:h-[700px] "
-        >
-          <Image
-            src={'/image00043.jpeg'}
-            sizes={'(max-width: 1000px) 100vw, 1000px'}
-            blurDataURL={blurSrc}
-            alt="Corentin Kittel Picture"
-            fill
-            className=" object-cover object-[10%_15%] laptop:object-center"
-          ></Image>
-        </motion.div>
+        {!blurSrc && (
+          <div className="relative h-[500px] w-[1000px]  laptop:h-[800px] laptop:w-[500px] laptop-large:h-[700px] "></div>
+        )}
+        {blurSrc && (
+          <motion.div
+            key="moving image"
+            initial={{ x: '20%', opacity: 0 }}
+            animate={{
+              x: 0,
+              opacity: 1,
+              transition: {
+                x: { duration: 0.5, delay: splashDelay },
+                opacity: { duration: 0.2, delay: splashDelay }
+              }
+            }}
+            exit={{ x: '20%', opacity: 0, transition: { duration: 1 } }}
+            className="relative h-[500px] w-[1000px]  laptop:h-[800px] laptop:w-[500px] laptop-large:h-[700px] "
+          >
+            <Image
+              src={'/image00043.jpeg'}
+              sizes={'(max-width: 1000px) 100vw, 1000px'}
+              blurDataURL={blurSrc}
+              alt="Corentin Kittel Picture"
+              fill
+              className=" object-cover object-[10%_15%]  laptop:translate-y-[15%] laptop:object-center  laptop-large:translate-y-0"
+            ></Image>
+          </motion.div>
+        )}
       </div>
     </>
   );

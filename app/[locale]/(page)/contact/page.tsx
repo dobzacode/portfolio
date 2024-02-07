@@ -22,80 +22,42 @@ export default function Page({}) {
         }`}
       >
         <main className="w-full">
-          <div
-            className={`} relative z-50 flex h-full w-full  items-center gap-extra-small overflow-hidden
-                          laptop:-ml-small`}
-          >
-            <motion.div
-              key={`Title border`}
-              initial={{ maxHeight: 0, opacity: 0 }}
-              animate={{
-                maxHeight: [0, 100, 100, 0],
-                opacity: [0, 1, 1, 0],
-                transition: {
-                  maxHeight: {
-                    duration: 4 - 1.5,
-                    ease: 'easeIn',
-                    times: [0, 0.25, 0.75, 1],
-                    delay: splashDelay
-                  },
-                  opacity: { duration: 4 - 1.5, times: [0, 0.05, 0.99, 1], delay: splashDelay }
-                }
-              }}
-              exit={{
-                opacity: 0,
-                transition: { duration: 0.5 }
-              }}
-              className="glowy-shadow relative z-10 h-[10rem] w-fit bg-tertiary40 p-1 max-tablet:h-[7.5rem] max-mobile-large:h-[5rem] max-mobile-large:p-[0.8px]"
-            ></motion.div>
-            <motion.div
-              className="relative z-50 w-fit"
-              key={`Title animated`}
-              initial={{ x: '-200%' }}
-              animate={{ x: '0', transition: { duration: 1, delay: 0.5 + splashDelay } }}
+          <div className="flex w-fit flex-col laptop-large:w-full">
+            <div
+              className={`} relative z-50 flex h-full w-fit  items-center gap-extra-small overflow-hidden
+                            laptop:-ml-small`}
             >
-              <H1 className="leading-small heading--sub-extra-large relative z-50 w-full whitespace-nowrap font-thin text-primary90  dark:text-primary1  max-[841px]:text-heading-large max-[841px]:leading-heading-sub-extra-large max-[540px]:text-heading-sub-large max-[540px]:leading-heading-large max-mobile-medium:text-heading ">
-                CONTACT
-              </H1>
-            </motion.div>
-          </div>
-          <div
-            className={`} relative z-50 flex h-full flex-col-reverse gap-extra-small  overflow-hidden
-                          pb-medium`}
-          >
-            <div className="relative z-10 flex w-full justify-between gap-extra-large max-[1391px]:flex-col-reverse max-[1391px]:gap-small">
               <motion.div
-                key={`Email animated`}
-                initial={{ y: '-450%' }}
+                key={`Title border`}
+                initial={{ maxHeight: 0, opacity: 0 }}
                 animate={{
-                  y: '0',
-                  transition: { type: 'spring', duration: 2, delay: 3.7 + splashDelay }
+                  maxHeight: [0, 100, 100, 0],
+                  opacity: [0, 1, 1, 0],
+                  transition: {
+                    maxHeight: {
+                      duration: 4 - 1.5,
+                      ease: 'easeIn',
+                      times: [0, 0.25, 0.75, 1],
+                      delay: splashDelay
+                    },
+                    opacity: { duration: 4 - 1.5, times: [0, 0.05, 0.99, 1], delay: splashDelay }
+                  }
                 }}
-                exit={{ y: '-450%', transition: { duration: 2 } }}
-                className="sub-heading  flex items-start gap-sub-large text-primary90 dark:text-primary1 max-tablet:gap-medium max-tablet:text-sub-heading max-[630px]:flex-col  max-[630px]:items-start max-[630px]:gap-0 max-mobile-large:text-body max-mobile-large:leading-sub-heading "
-              >
-                <P className="relative z-10  whitespace-nowrap font-semibold">E-MAIL</P>
-                <a className="font-thin" href="mailto: contact@corentinkittel.fr">
-                  contact@corentinkittel.fr
-                </a>
-              </motion.div>
+                exit={{
+                  opacity: 0,
+                  transition: { duration: 0.5 }
+                }}
+                className="glowy-shadow relative z-10 h-[10rem] w-fit bg-tertiary40 p-1 max-tablet:h-[7.5rem] max-mobile-large:h-[5rem] max-mobile-large:p-[0.8px]"
+              ></motion.div>
               <motion.div
-                key={`Linkedin animated`}
-                initial={{ y: '-450%' }}
-                animate={{
-                  y: '0',
-                  transition: { type: 'spring', duration: 2, delay: 4 + splashDelay }
-                }}
-                exit={{ y: '-450%', transition: { duration: 2 } }}
-                className="sub-heading  flex items-start gap-large text-primary90 dark:text-primary1 max-tablet:gap-medium max-tablet:text-sub-heading max-[630px]:flex-col   max-[630px]:items-start max-[630px]:gap-0 max-mobile-large:text-body max-mobile-large:leading-sub-heading "
+                className="relative z-50 w-fit "
+                key={`Title animated`}
+                initial={{ x: '-200%' }}
+                animate={{ x: '0', transition: { duration: 1, delay: 0.5 + splashDelay } }}
               >
-                <P className="relative z-10  whitespace-nowrap font-semibold">
-                  {t('social').toUpperCase()}
-                </P>
-                <div className="flex flex-col gap-extra-small font-thin">
-                  <a href="linkedin">Linkedin</a>
-                  <a href="https://github.com/dobzacode">Github</a>
-                </div>
+                <H1 className="leading-small heading--sub-extra-large relative z-50 w-fit whitespace-nowrap font-thin text-primary90  dark:text-primary1  max-[841px]:text-heading-large max-[841px]:leading-heading-sub-extra-large max-[540px]:text-heading-sub-large max-[540px]:leading-heading-large ">
+                  CONTACT
+                </H1>
               </motion.div>
             </div>
             <motion.hr
@@ -118,8 +80,48 @@ export default function Page({}) {
                 opacity: 0,
                 transition: { duration: 0.5 }
               }}
-              className="glowy-shadow relative z-20 mb-medium w-[110%]  bg-tertiary40 p-1  max-mobile-large:p-[0.8px]"
+              className="glowy-shadow relative  z-20 mb-medium bg-tertiary40  p-1 max-tablet:w-[110%] max-mobile-large:p-[0.8px]  laptop-large:w-full"
             ></motion.hr>
+          </div>
+
+          <div
+            className={`relative z-50 flex h-full flex-col-reverse gap-extra-small pb-medium  laptop-large:w-full `}
+          >
+            <div className="relative z-10 flex justify-between gap-extra-large max-laptop-large:flex-col max-laptop-large:gap-small">
+              <motion.div
+                key={`Email animated`}
+                initial={{ y: '-450%' }}
+                animate={{
+                  y: '0',
+                  transition: { type: 'spring', duration: 2, delay: 3.7 + splashDelay }
+                }}
+                exit={{ y: '-450%', transition: { duration: 2 } }}
+                className="sub-heading  flex items-start gap-sub-large text-primary90 dark:text-primary1 max-tablet:gap-medium max-tablet:text-body  max-tablet:leading-sub-heading max-[630px]:flex-col max-[630px]:items-start max-[630px]:gap-0 "
+              >
+                <P className="relative z-10  whitespace-nowrap font-semibold">E-MAIL</P>
+                <a className="font-thin" href="mailto: contact@corentinkittel.fr">
+                  contact@corentinkittel.fr
+                </a>
+              </motion.div>
+              <motion.div
+                key={`Social animated`}
+                initial={{ y: '-450%' }}
+                animate={{
+                  y: '0',
+                  transition: { type: 'spring', duration: 2, delay: 4 + splashDelay }
+                }}
+                exit={{ y: '-450%', transition: { duration: 2 } }}
+                className="sub-heading  flex items-start gap-large text-primary90 dark:text-primary1 max-tablet:gap-medium max-tablet:text-body   max-tablet:leading-sub-heading max-[630px]:flex-col max-[630px]:items-start max-[630px]:gap-0 "
+              >
+                <P className="relative z-10  whitespace-nowrap font-semibold">
+                  {t('social').toUpperCase()}
+                </P>
+                <div className="flex flex-col gap-extra-small font-thin max-[630px]:gap-0">
+                  <a href="linkedin">Linkedin</a>
+                  <a href="https://github.com/dobzacode">Github</a>
+                </div>
+              </motion.div>
+            </div>
           </div>
         </main>
       </div>
