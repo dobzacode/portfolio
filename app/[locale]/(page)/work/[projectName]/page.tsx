@@ -8,18 +8,16 @@ export async function generateMetadata({
 }) {
   const t = await getTranslations(`metadata.${projectName}`);
 
-  console.log();
-
   return {
     title: t('title'),
     description: t('description'),
     openGraph: {
-      images: require(`@/assets/og-image/${projectName}.jpg`),
+      images: `url/og-image/${projectName}.jpg`,
       title: t('title'),
       description: t('description')
     },
     twitter: {
-      images: require(`@/assets/og-image/${projectName}.jpg`),
+      images: `url/og-image/${projectName}.jpg`,
       title: t('title'),
       description: t('description')
     }
