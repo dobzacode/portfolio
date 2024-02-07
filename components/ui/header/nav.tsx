@@ -180,8 +180,8 @@ const Nav: FC<NavProps> = ({ className, intent }) => {
               className="flex justify-between  px-large pt-large max-tablet:px-sub-large  max-mobile-large:px-extra-small  laptop:gap-medium  laptop-large:gap-extra-large"
               exit={{
                 opacity: 0,
-                x: '-35%',
-                transition: { duration: 1.5, ease: 'easeIn' }
+                x: '-50%',
+                transition: { duration: 1, ease: 'easeIn' }
               }}
             >
               <nav
