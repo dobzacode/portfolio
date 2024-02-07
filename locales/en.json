@@ -56,7 +56,10 @@
       "completed": "Finished",
       "inProgress": "In progress"
     },
-    "url": "go to the website"
+    "url": "Go to the website",
+    "nextProject": "Next",
+    "previousProject": "Previous",
+    "back": "Retour à la liste des projets"
   },
   "reCaptcha": {
     "formPhrase": {

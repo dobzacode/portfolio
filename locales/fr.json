@@ -44,7 +44,10 @@
       "completed": "Terminé",
       "inProgress": "En cours"
     },
-    "url": "accéder au site"
+    "url": "Accéder au site",
+    "nextProject": "Suivant",
+    "previousProject": "Précédent",
+    "back": "Back to the project list"
   },
   "form": {
     "firstname": "Prénom",

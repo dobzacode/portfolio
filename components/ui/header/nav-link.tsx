@@ -8,7 +8,6 @@ import Image from 'next/image';
 import { LinkProps } from 'next/link';
 import { usePathname } from 'next/navigation';
 import { FC, useEffect, useState } from 'react';
-import P from '../text/p';
 
 const linkVariants = cva('', {
   variants: {
@@ -153,41 +152,23 @@ const NavLink: FC<NavLinkProps> = ({
 
   return (
     <li className="relative">
-      {!isActive ? (
-        <Link
-          href={props.href}
-          className={cn(
-            'change-color-hover peer',
-            'peer ',
-            linkVariants({
-              size,
-              rounded,
+      <Link
+        href={props.href}
+        className={cn(
+          'change-color-hover peer',
+          'peer ',
+          linkVariants({
+            size,
+            rounded,
 
-              intent,
-              currentNavStyle: isActive ? intent : 'transparent',
-              className
-            })
-          )}
-        >
-          {children}
-        </Link>
-      ) : (
-        <P
-          className={cn(
-            'change-color-hover peer',
-            linkVariants({
-              size,
-              rounded,
-
-              intent,
-              currentNavStyle: isActive ? intent : 'transparent',
-              className
-            })
-          )}
-        >
-          {children}
-        </P>
-      )}
+            intent,
+            currentNavStyle: isActive ? intent : 'transparent',
+            className
+          })
+        )}
+      >
+        {children}
+      </Link>
 
       <Image
         src="/link-hover.png"

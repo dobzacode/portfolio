@@ -4,6 +4,7 @@ import { ProjectListProps, projectList } from '@/assets/project/project-list';
 import { H1 } from '@/components/ui/text/h1';
 import P from '@/components/ui/text/p';
 import { dynamicBlurDataUrl } from '@/lib/utils';
+import { Link } from '@/navigation';
 import { mdilArrowRight } from '@mdi/light-js';
 import Icon from '@mdi/react';
 import { motion } from 'framer-motion';
@@ -39,17 +40,19 @@ export default function Page({ params }: { params: { projectName: string } }) {
     return notFound();
   }
 
+  console.log(projectList[projectObj.id - 1], projectObj.id - 1);
+
   return (
     <div className="flex w-screen justify-center">
       <div
-        className={`z-4 0 relative flex h-fit w-full flex-col flex-wrap items-center justify-center gap-medium bg-transparent py-medium duration-slowest max-[1700px]:w-fit max-laptop:px-large max-tablet:px-sub-large max-mobile-large:w-full max-mobile-large:max-w-full max-mobile-large:px-small tablet:px-medium laptop:flex-row   laptop:px-large  laptop:py-large  laptop-large:px-extra-large ${
+        className={`z-4 0 relative flex h-fit w-full flex-col flex-wrap items-start justify-center gap-medium bg-transparent py-medium  duration-slowest  max-[1700px]:w-fit max-laptop:px-large max-tablet:px-sub-large max-mobile-large:w-full max-mobile-large:max-w-full max-mobile-large:px-small tablet:px-medium laptop:flex-row   laptop:px-large  laptop:py-large  laptop-large:px-extra-large ${
           searchParams.get('menu') ? 'translate-x-[20%] opacity-0 ' : 'opacity-100 delay-1000'
         }`}
       >
-        <main className="w-full text-primary90 dark:text-primary1 tablet:max-w-fit min-[1700px]:w-fit">
+        <main className="w-full  text-primary90 dark:text-primary1 tablet:max-w-fit min-[1700px]:w-fit">
           <div
             className={`} relative z-50 flex h-full w-fit flex-row-reverse items-center gap-extra-small overflow-hidden
-                            tablet:-ml-small`}
+                            tablet:-ml-small min-[1700px]:-mt-[2.2rem]`}
           >
             <motion.div
               className="relative z-50 w-full"
@@ -57,7 +60,7 @@ export default function Page({ params }: { params: { projectName: string } }) {
               initial={{ x: '-200%' }}
               animate={{ x: '0', transition: { duration: 0.5, delay: 0.5 + splashDelay } }}
             >
-              <H1 className="leading-small heading--sub-extra-large relative z-50 w-full whitespace-nowrap font-thin max-laptop:text-heading-large  max-laptop:leading-heading-sub-extra-large max-[841px]:text-heading-sub-large    max-[841px]:leading-heading-large max-mobile-large:w-full max-mobile-large:text-heading max-mobile-large:leading-heading-sub-large ">
+              <H1 className="leading-small heading--sub-extra-large relative z-50 w-full whitespace-nowrap font-thin max-laptop:text-heading-large max-laptop:leading-heading-sub-extra-large  max-[841px]:text-heading-sub-large max-[841px]:leading-heading-large    max-mobile-large:w-full max-mobile-large:text-heading max-mobile-large:leading-heading-sub-large  ">
                 {projectObj.title.toUpperCase()}
               </H1>
             </motion.div>
@@ -176,7 +179,7 @@ export default function Page({ params }: { params: { projectName: string } }) {
               </motion.div>
               <motion.div
                 className="relative z-10 w-full justify-between text-primary90 dark:text-primary1"
-                key={`Status animated`}
+                key={`Link animated`}
                 initial={{ y: '-700px' }}
                 animate={{
                   y: '0',
@@ -187,10 +190,12 @@ export default function Page({ params }: { params: { projectName: string } }) {
                 <a
                   //@ts-ignore
                   href={projectObj.url}
-                  className="sub-heading relative z-10 flex w-fit items-center gap-extra-small font-thin text-primary90 before:absolute before:bottom-0 before:left-[50%] before:-z-10 before:w-full before:max-w-0 before:origin-center before:border-b-2 before:border-tertiary40 before:duration-medium hover:before:left-0 hover:before:max-w-full dark:text-primary1 before:dark:border-tertiary40 max-[841px]:text-body max-tablet:text-body max-mobile-large:text-body max-mobile-large:leading-sub-heading"
+                  className="sub-heading relative z-10 flex w-fit items-center gap-extra-small font-thin text-primary90  dark:text-primary1 max-[841px]:text-body max-tablet:text-body max-mobile-large:text-body max-mobile-large:leading-sub-heading"
                 >
-                  <Icon size={1.6} path={mdilArrowRight}></Icon>
-                  <P>{t('url')}</P>
+                  <Icon size={2} className="-rotate-45" path={mdilArrowRight}></Icon>
+                  <P className="w-fit before:absolute before:bottom-0 before:right-[50%] before:-z-10 before:w-[90%] before:max-w-0 before:origin-center before:border-b-2 before:border-tertiary40 before:duration-medium hover:before:right-0 hover:before:max-w-[90%]  before:dark:border-tertiary40">
+                    {t('url')}
+                  </P>
                 </a>
               </motion.div>
             </div>
@@ -218,6 +223,7 @@ export default function Page({ params }: { params: { projectName: string } }) {
             ></motion.hr>
           </div>
         </main>
+
         <motion.div
           initial={{ x: '20%', opacity: 0 }}
           animate={{
@@ -229,7 +235,7 @@ export default function Page({ params }: { params: { projectName: string } }) {
             }
           }}
           exit={{ x: '20%', opacity: 0, transition: { duration: 0.5 } }}
-          className="relative -z-10 aspect-square w-full  min-[1700px]:w-1/3"
+          className="relative z-50 aspect-square w-full  min-[1700px]:w-1/3"
         >
           <Image
             src={projectObj.image}
@@ -237,9 +243,31 @@ export default function Page({ params }: { params: { projectName: string } }) {
             blurDataURL={blurSrc}
             alt={`Image of ${projectObj.title}`}
             fill
-            className="relative -z-20 grayscale duration-slow hover:grayscale-0"
+            className="relative -z-20 grayscale duration-slow "
           ></Image>
-          <div className="absolute top-0 -z-10 h-full w-full bg-primary40 opacity-5 hover:opacity-0"></div>
+          <div className="absolute top-0 -z-10 h-full w-full bg-primary40 opacity-5 "></div>
+          <div className="flex justify-between">
+            {projectList[projectObj.id - 1] && (
+              <Link //@ts-ignore
+                href={`/work/${projectList[projectObj.id - 1].title.toLowerCase()}`}
+                className="sub-heading absolute -bottom-[4.8rem] left-0 z-10 flex w-fit items-center gap-extra-small font-thin text-primary90  dark:text-primary1 max-[841px]:text-body max-tablet:text-body max-mobile-large:text-body max-mobile-large:leading-sub-heading"
+              >
+                <P className="relative whitespace-nowrap font-['HFF_Ultrasound'] font-thin leading-heading before:absolute before:bottom-0 before:left-[50%] before:-z-10 before:w-full before:max-w-0 before:origin-center before:border-b-2 before:border-tertiary40 before:duration-medium hover:before:left-0 hover:before:max-w-full before:dark:border-tertiary40 max-tablet:text-sub-heading max-mobile-large:text-body">
+                  {t('previousProject')}
+                </P>
+              </Link>
+            )}
+            {projectList[projectObj.id + 1] && (
+              <Link //@ts-ignore
+                href={`/work/${projectList[projectObj.id + 1].title.toLowerCase()}`}
+                className="sub-heading absolute -bottom-[4.8rem] right-0 z-10 flex w-fit items-center gap-extra-small font-thin text-primary90  dark:text-primary1 max-[841px]:text-body max-tablet:text-body max-mobile-large:text-body max-mobile-large:leading-sub-heading"
+              >
+                <P className="relative whitespace-nowrap font-['HFF_Ultrasound'] font-thin leading-heading before:absolute before:bottom-0 before:left-[50%] before:-z-10 before:w-full before:max-w-0 before:origin-center before:border-b-2 before:border-tertiary40 before:duration-medium hover:before:left-0 hover:before:max-w-full before:dark:border-tertiary40 max-tablet:text-sub-heading max-mobile-large:text-body">
+                  {t('nextProject')}
+                </P>{' '}
+              </Link>
+            )}
+          </div>
         </motion.div>
       </div>
     </div>
