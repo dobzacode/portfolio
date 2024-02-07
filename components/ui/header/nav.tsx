@@ -45,7 +45,7 @@ const Nav: FC<NavProps> = ({ className, intent }) => {
 
   const isLaptop = useBetterMediaQuery('(min-width: 1024px)');
 
-  const [showMenu, setShowMenu] = useState<boolean>(searchParams.get('menu') ? true : false);
+  const [showMenu, setShowMenu] = useState<boolean>(false);
 
   const [showAnimation, setShowAnimation] = useState<boolean>(false);
 
@@ -72,6 +72,7 @@ const Nav: FC<NavProps> = ({ className, intent }) => {
 
   const triggerMenu = () => {
     if (showMenu) {
+      //@ts-ignore
       router.replace(pathname);
       setTimeout(() => {
         setShowAnimation(false);
@@ -93,6 +94,12 @@ const Nav: FC<NavProps> = ({ className, intent }) => {
     }, 1400);
     return () => clearTimeout(timeout);
   }, [pathname]);
+
+  useEffect(() => {
+    setShowMenu(searchParams.get('menu') ? true : false);
+  }, [searchParams]);
+
+  console.log(splashDelay);
 
   return (
     <header className={cn(className)}>

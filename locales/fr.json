@@ -33,6 +33,13 @@
   "loading": {
     "phrase": "Chargement"
   },
+  "project": {
+    "title": "Projets"
+  },
+  "projectPage": {
+    "category": "Catégorie",
+    "year": "Année"
+  },
   "form": {
     "firstname": "Prénom",
     "lastname": "Nom",

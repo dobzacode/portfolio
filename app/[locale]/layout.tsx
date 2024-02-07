@@ -4,7 +4,6 @@ import LoadingBar from '@/components/animated-assets/loading-bar';
 import CustomCursor from '@/components/ui/custom-cursor';
 import { Header } from '@/components/ui/header/header';
 import SplashScreen from '@/components/ui/splash-screen/splash-screen';
-import FramerMotionWrapper from '@/components/wrapper/framer-motion-wrapper';
 import { NextIntlClientProvider } from 'next-intl';
 import { unstable_setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
@@ -47,12 +46,11 @@ export default async function RootLayout({
               textColor={'neutral'}
               className=" relative z-50 w-full max-w-full px-sub-large pt-[40px] tablet:px-large tablet:pt-large"
             ></Header>
-            <FramerMotionWrapper>
-              {children}
-              <div className="noise max-mobile-large:hidden"></div>
-            </FramerMotionWrapper>
+
+            {children}
+            <div className="noise max-mobile-large:hidden"></div>
+            <CustomCursor></CustomCursor>
           </NextIntlClientProvider>
-          <CustomCursor />
         </Providers>
       </body>
     </html>

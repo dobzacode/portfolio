@@ -22,7 +22,7 @@ export default function HomePage({}) {
   return (
     <>
       <main
-        className={`relative z-40 flex w-screen flex-col  items-center justify-center  bg-transparent pt-medium  duration-slowest ${
+        className={`relative z-40 flex h-fit w-screen flex-col  items-center justify-center  overflow-hidden bg-transparent  pt-medium duration-slowest ${
           searchParams.get('menu') ? 'translate-x-[20%] opacity-0 ' : 'opacity-100 delay-1000'
         }`}
       >
@@ -94,7 +94,7 @@ export default function HomePage({}) {
           </div>
         </div>
 
-        <div className="relative z-20 flex flex-col items-center justify-center gap-medium   duration-medium max-laptop:w-4/5 max-mobile-large:gap-small">
+        <div className="max-mobile-large:gap-asmall relative z-20 flex flex-col items-center justify-center   gap-medium duration-medium max-laptop:w-4/5">
           <motion.div
             key="text"
             initial={{ x: '-100px', opacity: 0 }}
@@ -109,7 +109,7 @@ export default function HomePage({}) {
               }
             }}
             exit={{ x: '100px', opacity: 0, transition: { delay: 2 } }}
-            className="pt-small text-center text-primary90 dark:text-primary1 "
+            className="relative z-40 pt-small text-center text-primary90 dark:text-primary1 "
           >
             <P
               textType="heading"
@@ -153,7 +153,7 @@ export default function HomePage({}) {
               {t('phrase6')}
             </H2>
           </motion.div>
-          <div className="relative  flex h-[10rem] items-start justify-between gap-large">
+          <div className="relative  flex h-[7rem] items-start justify-between gap-large">
             <motion.div
               key="workLink"
               initial={{ y: '-100px', opacity: 0 }}

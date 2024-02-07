@@ -4,15 +4,15 @@ import { motion } from 'framer-motion';
 
 export default function AnimatedLogo({
   className,
-  splashDelay
+  splashDelay = 0
 }: {
-  className: string;
-  splashDelay: number;
+  className?: string;
+  splashDelay?: number;
 }) {
   return (
     <motion.svg
       initial={{ opacity: 0 }}
-      animate={{ opacity: 1, transition: { delay: splashDelay, duration: 0.1 } }}
+      animate={{ opacity: 1, transition: { delay: splashDelay + 0.3, duration: 0.1 } }}
       className={`${className} overflow-visible fill-primary90 dark:fill-primary1`}
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 268.8 280"

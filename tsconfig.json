@@ -28,7 +28,7 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     "tailwind.config.js",
-    "app/[locale]/about/pagetsx"
+    "app/[locale]/(page)/about/pagetsx"
   ],
   "exclude": ["node_modules"]
 }

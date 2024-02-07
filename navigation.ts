@@ -22,6 +22,11 @@ export const pathnames = {
     fr: '/projets'
   },
 
+  '/work/[projectName]': {
+    en: '/work/[projectName]',
+    fr: '/projets/[projectName]'
+  },
+
   '/work?menu=true': {
     en: '/work?menu=true',
     fr: '/projets?menu=true'

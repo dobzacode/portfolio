@@ -72,7 +72,7 @@ export default function Page({}) {
                   transition: { type: 'spring', duration: 2, delay: 3.7 + splashDelay }
                 }}
                 exit={{ y: '-450%', transition: { duration: 2 } }}
-                className="sub-heading  flex items-end gap-sub-large text-primary90 dark:text-primary1 max-tablet:gap-medium max-tablet:text-sub-heading max-[630px]:flex-col  max-[630px]:items-start max-[630px]:gap-0 max-mobile-large:text-body max-mobile-large:leading-sub-heading "
+                className="sub-heading  flex items-start gap-sub-large text-primary90 dark:text-primary1 max-tablet:gap-medium max-tablet:text-sub-heading max-[630px]:flex-col  max-[630px]:items-start max-[630px]:gap-0 max-mobile-large:text-body max-mobile-large:leading-sub-heading "
               >
                 <P className="relative z-10  whitespace-nowrap font-semibold">E-MAIL</P>
                 <a className="font-thin" href="mailto: contact@corentinkittel.fr">
@@ -87,14 +87,15 @@ export default function Page({}) {
                   transition: { type: 'spring', duration: 2, delay: 4 + splashDelay }
                 }}
                 exit={{ y: '-450%', transition: { duration: 2 } }}
-                className="sub-heading  flex items-end gap-large text-primary90 dark:text-primary1 max-tablet:gap-medium max-tablet:text-sub-heading max-[630px]:flex-col   max-[630px]:items-start max-[630px]:gap-0 max-mobile-large:text-body max-mobile-large:leading-sub-heading "
+                className="sub-heading  flex items-start gap-large text-primary90 dark:text-primary1 max-tablet:gap-medium max-tablet:text-sub-heading max-[630px]:flex-col   max-[630px]:items-start max-[630px]:gap-0 max-mobile-large:text-body max-mobile-large:leading-sub-heading "
               >
                 <P className="relative z-10  whitespace-nowrap font-semibold">
                   {t('social').toUpperCase()}
                 </P>
-                <a className="font-thin" href="linkedin">
-                  Linkedin
-                </a>
+                <div className="flex flex-col gap-extra-small font-thin">
+                  <a href="linkedin">Linkedin</a>
+                  <a href="https://github.com/dobzacode">Github</a>
+                </div>
               </motion.div>
             </div>
             <motion.hr
