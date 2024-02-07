@@ -235,85 +235,39 @@
       }
     }
   },
-  "newsletter": {
-    "heading": "Abonnez-vous à notre Newsletter !",
-    "content": "Afin de nous louper aucun de nos événéments ainsi que les nouveautés de notre label"
-  },
-  "title": {
-    "contact-us": "Nous contacter",
-    "gallery": "Galerie"
-  },
-  "values": {
-    "risk-reduction": "réduction des risques"
-  },
+
   "metadata": {
-    "abject-act": {
-      "title": "Abject Act",
-      "description": "lorem ipsum"
+    "landing": {
+      "title": "Corentin Kittel | Développeur Full-Stack & UX/UI Designer",
+      "description": "Découvrez le profil professionnel de Corentin Kittel, un développeur Full-Stack passionné par l'art de l'UX/UI Design. Explorez son portfolio varié et découvrez comment il associe une expertise technique solide à une sensibilité esthétique pour créer des expériences utilisateur exceptionnelles. Rencontrez Corentin pour discuter de vos projets de développement web et d'amélioration de l'expérience utilisateur."
     },
-    "join-us": {
-      "title": "Rejoins-nous",
-      "description": "Devenez bénévole en remplissant notre formulaire de contact et participez à la création de soirées techno inoubliables. En rejoignant notre équipe, vous contribuerez à faire vibrer la scène musicale locale et à offrir des expériences uniques à notre communauté. Remplissez le formulaire dès maintenant pour faire partie de l'aventure Abject Act."
-    },
-    "newsletter": {
-      "title": "Newsletter",
-      "description": "Découvrez en avant-première les prochains événements et les dernières nouveautés du label Abject Act. Ne manquez rien de l'expérience Abject Act, abonnez-vous dès maintenant."
-    },
-    "blacklarsen": {
-      "title": "Black Larsen",
-      "description": "lorem ipsum"
-    },
-    "morsure": {
-      "title": "Morsure",
-      "description": "lorem ipsum"
-    },
-    "spore": {
-      "title": "Spore",
-      "description": "lorem ipsum"
-    },
-    "krauss": {
-      "title": "Krauss",
-      "description": "lorem ipsum"
-    },
-    "artists": {
-      "title": "Nos Artistes",
-      "description": "Pénétrez l'univers captivant des artistes Abject Act. Explorez la créativité sans limites de nos producteurs et DJs. Découvrez le son distinctif qui définit notre label. Rencontrez les talents qui façonnent notre identité musicale."
+    "about": {
+      "title": "À Propos de Corentin Kittel | Développeur Full-Stack & UX/UI Designer",
+      "description": "Explorez le parcours de Corentin Kittel, développeur full-stack passionné par le design d'interface et l'expérience utilisateur. Depuis 2022, je consacre mon temps à approfondir mes connaissances, créant ainsi des sites web et des applications qui marient élégance et fonctionnalité. Découvrez ma passion pour les technologies modernes et ma quête constante de nouvelles compétences pour offrir des solutions innovantes."
     },
     "contact": {
-      "title": "Nous Contacter",
-      "description": "Contactez-nous pour ouvrir de nouvelles opportunités. Utilisez notre formulaire de contact pour soumettre vos demandes de partenariat ou pour toute autre question. Nous sommes ouverts aux collaborations inspirantes et aux échanges variés. Laissez-nous savoir comment nous pouvons travailler ensemble et élargir nos horizons. Votre message compte, et nous sommes impatients de vous entendre."
+      "title": "Contactez Corentin Kittel | Développeur Full-Stack & UX/UI Designer",
+      "description": "Prenez contact avec Corentin Kittel, développeur full-stack passionné par le design d'interface et l'expérience utilisateur. Que vous ayez des questions, des projets à discuter ou des opportunités de collaboration, je suis là pour vous aider. Utilisez les informations de contact fournies pour initier la conversation et explorer comment nous pouvons travailler ensemble pour concrétiser vos idées numériques."
     },
-    "event": {
-      "title": "Evénements",
-      "description": "Explorez notre calendrier d'événements pour découvrir les soirées passées et les prochains rendez-vous à ne pas manquer."
-    },
-    "gallery": {
-      "title": "Galerie",
-      "description": "Découvrez l'atmosphère captivante de nos événements à travers notre galerie. Parcourez des photos saisissantes et des aftermovies qui capturent l'énergie unique de chaque soirée. Plongez dans l'esthétique visuelle d'Abject Act et revivez les moments mémorables. Explorez notre galerie dès maintenant et imprégnez-vous de l'essence de notre expérience musicale."
-    },
-    "label": {
-      "title": "Label",
-      "description": "Explorez la richesse de notre catalogue musical sur la page label. Découvrez toutes nos releases techno, des créations sonores uniques qui définissent l'identité d'Abject Act. Plongez dans notre galerie de releases pour un aperçu complet de notre évolution musicale. Vivez l'expérience Abject Act à travers notre collection musicale soigneusement sélectionnée."
+    "work": {
+      "title": "Portfolio de Corentin Kittel | Développeur Full-Stack & UX/UI Designer",
+      "description": "Explorez le portfolio de projets de Corentin Kittel, développeur full-stack passionné par le design d'interface et l'expérience utilisateur. "
     },
     "legalinformation": {
       "title": "Mentions légales",
-      "description": "Consultez nos mentions légales pour une transparence totale. Découvrez les informations juridiques et réglementaires qui encadrent notre plateforme. Chez Abject Act, nous nous engageons à respecter toutes les normes en vigueur. Accédez à notre page mentions légales pour obtenir des détails clairs et précis sur notre cadre juridique."
+      "description": "Consultez les mentions légales pour une transparence totale. Découvrez les informations juridiques et réglementaires qui encadrent la plateforme. Corentin Kittel s'engage à respecter toutes les normes en vigueur. Accédez à la page mentions légales pour obtenir des détails clairs et précis sur mon cadre juridique."
     },
-    "privacy": {
-      "title": "Politique de confidentialité",
-      "description": "Protéger votre vie privée est notre priorité. Consultez notre politique de confidentialité pour comprendre comment nous traitons vos données. Chez Abject Act, nous nous engageons à garantir la sécurité et la transparence dans la gestion de vos informations personnelles. Visitez notre page de politique de confidentialité pour en savoir plus sur nos pratiques et vos droits."
+    "mtonarchi": {
+      "title": "Mtonarchi | Projet de Corentin Kittel",
+      "description": "Découvrez Mtonarchi, un projet de Corentin Kittel, développeur full-stack passionné par le design d'interface et l'expérience utilisateur. "
     },
-    "shop": {
-      "title": "Boutique",
-      "description": "Découvrez l'univers Abject Act à travers notre boutique en ligne "
+    "roddat": {
+      "title": "Roddat | Projet de Corentin Kittel",
+      "description": "Découvrez Roddat, un projet de Corentin Kittel, développeur full-stack passionné par le design d'interface et l'expérience utilisateur. "
     },
-    "values": {
-      "title": "Nos valeurs",
-      "description": "xplorez les fondements d'Abject Act à travers notre page dédiée aux valeurs. Découvrez les principes qui guident notre engagement, de l'intégrité à l'innovation. Nous croyons en la puissance de la musique pour inspirer le changement et favoriser l'inclusion. Plongez dans nos valeurs fondamentales et rejoignez-nous dans la création d'une communauté unie par la passion musicale et la conviction partagée."
-    },
-    "landing": {
-      "title": "Abject Act",
-      "description": "Découvrez l'univers sonore d'Abject Act. Plongez dans une expérience musicale immersive, explorez nos événements captivants, parcourez notre galerie visuelle, et explorez notre boutique pour du merch exclusif. Rejoignez-nous dans notre engagement pour des valeurs fortes. "
+    "abject-act": {
+      "title": "Abject Act | Projet de Corentin Kittel",
+      "description": "Découvrez Abject Act, un projet de Corentin Kittel, développeur full-stack passionné par le design d'interface et l'expérience utilisateur. "
     }
   },
   "not-found": {
