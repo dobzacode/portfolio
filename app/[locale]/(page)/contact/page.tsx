@@ -17,11 +17,11 @@ export default function Page({}) {
   return (
     <>
       <div
-        className={`z-4 0 relative flex w-screen flex-col-reverse  gap-medium bg-transparent px-large pt-medium  duration-slowest  max-tablet:px-medium max-mobile-large:px-sub-medium ${
+        className={`z-4 0 relative flex w-screen flex-col-reverse gap-medium   bg-transparent px-large pt-medium  duration-slowest  max-tablet:px-medium  max-mobile-large:px-sub-medium tablet:pt-large laptop-large:items-center ${
           searchParams.get('menu') ? 'translate-x-[20%] opacity-0 ' : 'opacity-100 delay-1000'
         }`}
       >
-        <main className="w-full">
+        <main className="flex flex-col laptop-large:max-w-[1600px] ">
           <div className="flex w-fit flex-col laptop-large:w-full">
             <div
               className={`} relative z-50 flex h-full w-fit  items-center gap-extra-small overflow-hidden
