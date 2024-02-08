@@ -49,7 +49,7 @@ export default function SplashScreen({}) {
           />
           <PulseLoader
             color="#000000"
-            className="-ml-[4rem] dark:hidden max-tablet:scale-75"
+            className="relative z-20 -ml-[4rem] block dark:hidden max-tablet:scale-75"
             size={4}
           />
         </div>
