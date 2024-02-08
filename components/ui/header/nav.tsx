@@ -192,7 +192,7 @@ const Nav: FC<NavProps> = ({ className, intent }) => {
                   {navLinks.map((link, i) => {
                     return (
                       <div
-                        className={`relative z-50 flex h-full w-fit flex-row-reverse items-center gap-extra-small ${
+                        className={`relative z-50 flex h-fit w-fit flex-row-reverse items-center gap-extra-small ${
                           showMenu ? 'overflow-hidden' : 'overflow-visible'
                         }`}
                         key={link.name}
@@ -205,7 +205,7 @@ const Nav: FC<NavProps> = ({ className, intent }) => {
                         >
                           <NavLink
                             isLi={true}
-                            className="leading-small heading--extra-large relative z-50 w-full whitespace-nowrap font-['HFF_Ultrasound'] font-thin  text-tertiary90 dark:text-tertiary1 max-tablet:text-heading-sub-extra-large max-tablet:leading-heading-sub-extra-large max-mobile-large:text-heading-large max-mobile-large:leading-heading-large "
+                            className=" leading-small heading--extra-large relative z-50 w-full whitespace-nowrap font-['HFF_Ultrasound'] font-thin  text-tertiary90 dark:text-tertiary1 max-tablet:text-heading-sub-extra-large max-tablet:leading-heading-sub-extra-large max-mobile-large:text-heading-large max-mobile-large:leading-heading-large "
                             hover={true}
                             index={i}
                             intent={intent}
@@ -235,7 +235,7 @@ const Nav: FC<NavProps> = ({ className, intent }) => {
                             opacity: 0,
                             transition: { duration: 0.5, delay: i * 0.115 }
                           }}
-                          className="glowy-shadow relative z-10 h-[10rem] bg-tertiary40 p-1 max-tablet:h-[7.5rem]  max-mobile-large:h-[5rem] max-mobile-large:p-[2px]"
+                          className="glowy-shadow relative z-10  -mt-3 h-[10rem] bg-tertiary40 p-1 max-tablet:-mt-2 max-tablet:h-[7.5rem] max-mobile-large:-mt-1   max-mobile-large:h-[5rem] max-mobile-large:p-[2px]"
                         ></motion.div>
                       </div>
                     );
