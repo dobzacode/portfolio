@@ -138,11 +138,11 @@ export default function HomeContent({}) {
             </P>
             <H1
               textType="heading"
-              className="inline max-tablet:text-sub-heading max-tablet:leading-sub-heading max-mobile-large:text-body max-mobile-large:leading-body"
+              className="inline font-bold max-tablet:text-sub-heading max-tablet:leading-sub-heading max-mobile-large:text-body max-mobile-large:leading-body"
             >
               {' '}
               {t('phrase4')}
-            </H1>{' '}
+            </H1>
             <br className="max-laptop:hidden"></br>
             <P
               textType="heading"
