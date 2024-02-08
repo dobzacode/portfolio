@@ -126,20 +126,26 @@ export default function ProjectsContent({}) {
 
         {isLaptop && (
           <div className="flex aspect-square w-[50%] justify-center pt-6  max-laptop:hidden laptop-large:w-[30%]">
-            <AnimatePresence mode="wait">
+            <AnimatePresence mode="popLayout">
               {hoveredProjectImage && (
                 <motion.div
                   className="relative aspect-square w-full "
-                  initial={{ x: '50%' }}
+                  initial={{ x: '50%', opacity: 0 }}
                   animate={{
                     x: 0,
                     opacity: 1,
-                    transition: { opacity: { duration: 0.5 }, x: { type: 'spring', duration: 1 } }
+                    transition: { opacity: { duration: 0.1 }, x: { type: 'spring', duration: 2 } }
                   }}
-                  exit={{ opacity: 0, transition: { duration: 0.5 } }}
+                  exit={{
+                    opacity: 0,
+                    zIndex: '-30',
+                    transition: { opacity: { duration: 0.5 }, zIndex: { duration: 0.01 } }
+                  }}
                   key={hoveredProjectImage}
                 >
                   <Image
+                    priority={true}
+                    sizes={'(max-width: 500px) 100vw, 800px'}
                     fill
                     src={hoveredProjectImage}
                     className="relative -z-20 border-2 grayscale"

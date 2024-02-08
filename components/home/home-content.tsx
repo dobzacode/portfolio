@@ -10,6 +10,7 @@ import { easeInOut, easeOut, motion } from 'framer-motion';
 import { useTranslations } from 'next-intl';
 import { useState } from 'react';
 
+import Image from 'next/image';
 import { useSearchParams } from 'next/navigation';
 
 export default function HomeContent({}) {
@@ -52,7 +53,7 @@ export default function HomeContent({}) {
             {t('greeting').toUpperCase()}
           </motion.p>
           <div className="flex justify-center overflow-hidden max-tablet:w-2/3">
-            <motion.img
+            <motion.div
               key="portrait"
               initial={{ y: '70vh' }}
               animate={{
@@ -70,12 +71,17 @@ export default function HomeContent({}) {
                   duration: 1
                 }
               }}
-              className="pl-medium"
-              width="400"
-              height="400"
-              src="/random-portrait.png"
-              alt="picture"
-            ></motion.img>
+            >
+              <Image
+                priority={true}
+                className="pl-medium"
+                width="400"
+                height="400"
+                sizes={'(max-width: 500px) 100vw, 500px'}
+                src="/random-portrait.png"
+                alt="picture"
+              ></Image>
+            </motion.div>
             <motion.hr
               key="hr"
               initial={{ maxWidth: 0, opacity: '0' }}
