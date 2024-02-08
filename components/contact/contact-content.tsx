@@ -17,7 +17,7 @@ export default function ContactContent({}) {
   return (
     <>
       <div
-        className={`z-4 0 relative flex w-screen  flex-col-reverse items-center  gap-medium  bg-transparent px-large pt-medium  duration-slowest  max-tablet:px-medium  max-mobile-large:px-sub-medium tablet:pt-large laptop-large:items-center ${
+        className={`z-4 0 relative flex w-screen  flex-col-reverse items-center  gap-medium  bg-transparent px-large pt-medium  duration-slowest  max-tablet:px-medium  max-mobile-large:px-medium tablet:pt-large laptop-large:items-center ${
           searchParams.get('menu') ? 'translate-x-[20%] opacity-0 ' : 'opacity-100 delay-1000'
         }`}
       >

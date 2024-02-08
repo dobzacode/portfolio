@@ -30,7 +30,7 @@ export default function AboutContent({}) {
   return (
     <>
       <div
-        className={`z-4 0 relative flex w-screen flex-col-reverse items-center justify-center gap-large bg-transparent pb-large  pt-medium duration-slowest max-laptop:px-large max-tablet:px-sub-large max-mobile-large:px-small tablet:px-medium laptop:flex-row  laptop:items-start  laptop:px-large laptop:pt-large laptop-large:px-extra-large ${
+        className={`z-4 0 relative flex w-screen flex-col-reverse items-center justify-center gap-large bg-transparent pb-large  pt-medium duration-slowest max-laptop:px-large max-tablet:px-sub-large max-mobile-large:px-sub-medium tablet:px-medium laptop:flex-row  laptop:items-start  laptop:px-large laptop:pt-large laptop-large:px-extra-large ${
           searchParams.get('menu') ? 'translate-x-[20%] opacity-0 ' : 'opacity-100 delay-1000'
         }`}
       >
