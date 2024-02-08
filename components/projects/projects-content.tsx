@@ -26,7 +26,7 @@ export default function ProjectsContent({}) {
   return (
     <>
       <div
-        className={`z-4 0 relative flex w-screen  flex-col-reverse justify-between gap-medium bg-transparent pt-medium duration-slowest max-laptop-large:min-h-screen max-laptop:min-h-fit max-tablet:px-large  max-mobile-large:px-sub-large tablet:px-sub-extra-large tablet:pt-large laptop:flex-row laptop:items-start laptop:justify-center  laptop:px-0  laptop-large:gap-extra-large  ${
+        className={`z-4 0 relative flex w-screen  flex-col-reverse justify-between gap-medium bg-transparent pt-medium duration-slowest max-laptop-large:min-h-screen max-laptop:min-h-fit max-tablet:px-large max-mobile-large:px-sub-large   tablet:px-sub-extra-large tablet:pt-large laptop:flex-row laptop:items-start laptop:justify-center  laptop:px-0  laptop-large:gap-extra-large  ${
           searchParams.get('menu') ? 'translate-x-[20%] opacity-0 ' : 'opacity-100 delay-1000'
         }`}
       >
@@ -41,7 +41,7 @@ export default function ProjectsContent({}) {
               initial={{ x: '-200%' }}
               animate={{ x: '0', transition: { duration: 0.5, delay: 0.5 + splashDelay } }}
             >
-              <H1 className="leading-small heading--sub-extra-large relative z-50 w-full whitespace-nowrap font-thin text-primary90  dark:text-primary1  max-[841px]:text-heading-large max-[841px]:leading-heading-sub-extra-large max-[540px]:text-heading-sub-large max-[540px]:leading-heading-large max-mobile-medium:text-heading ">
+              <H1 className="leading-small heading--sub-extra-large relative z-50 w-full whitespace-nowrap font-medium text-primary90 dark:text-primary1 max-tablet:text-heading-large max-tablet:leading-heading-large  max-mobile-large:text-heading-sub-large  max-mobile-large:leading-heading-sub-large ">
                 {t('title').toUpperCase()}
               </H1>
             </motion.div>
@@ -72,7 +72,7 @@ export default function ProjectsContent({}) {
             return (
               <div
                 key={`${project.title} block`}
-                className={`relative z-50 flex h-full flex-col-reverse gap-sub-medium overflow-hidden pb-sub-medium mobile-large:pb-small tablet:gap-extra-small tablet:pb-medium`}
+                className={`relative z-50 flex h-full flex-col-reverse gap-sub-medium overflow-hidden pb-small  max-mobile-large:gap-small  max-mobile-large:pb-extra-small`}
               >
                 <motion.div
                   className="relative z-10 w-full"
@@ -92,7 +92,7 @@ export default function ProjectsContent({}) {
                     href={`/work/${project.title.toLowerCase()}`}
                     onMouseEnter={() => handleLinkHover(project.image)}
                     onMouseLeave={() => setHoveredProjectImage(null)}
-                    className="sub-heading relative z-10 w-full font-thin text-primary90 before:absolute before:bottom-0 before:left-[50%] before:-z-10 before:w-full before:max-w-0 before:origin-center before:border-b-2 before:border-tertiary40 before:duration-medium hover:before:left-0 hover:before:max-w-full dark:text-primary1 before:dark:border-tertiary40 max-tablet:text-sub-heading max-mobile-large:text-body max-mobile-large:leading-sub-heading"
+                    className="sub-heading relative z-10 w-full  text-primary90 before:absolute before:bottom-0 before:left-[50%] before:-z-10 before:w-full before:max-w-0 before:origin-center before:border-b-2 before:border-tertiary40 before:duration-medium hover:before:left-0 hover:before:max-w-full dark:text-primary1 before:dark:border-tertiary40 max-tablet:text-sub-heading max-mobile-large:text-body max-mobile-large:leading-sub-heading"
                   >
                     {project.title}
                   </Link>
@@ -117,7 +117,7 @@ export default function ProjectsContent({}) {
                     opacity: 0,
                     transition: { duration: 0.5 }
                   }}
-                  className="glowy-shadow relative z-20 bg-tertiary40 p-1  max-tablet:p-[2px]     tablet:mb-medium"
+                  className="glowy-shadow relative z-20 bg-tertiary40 p-[1px]  max-tablet:p-[1px]     "
                 ></motion.hr>
               </div>
             );

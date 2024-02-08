@@ -118,6 +118,13 @@
   }
 }
 
+@media (max-width: 500px) {
+  .noise {
+    -webkit-animation: none;
+    animation: none;
+  }
+}
+
 @keyframes widthAnimation {
   0% {
     border: 2px solid;

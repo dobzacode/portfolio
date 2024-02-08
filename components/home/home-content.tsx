@@ -112,13 +112,13 @@ export default function HomeContent({}) {
           >
             <P
               textType="heading"
-              className="inline max-tablet:text-sub-heading max-tablet:leading-heading max-mobile-large:text-body max-mobile-large:leading-sub-heading laptop:leading-[4.1rem]"
+              className="inline max-tablet:text-sub-heading max-tablet:leading-sub-heading max-mobile-large:text-body max-mobile-large:leading-body "
             >
               {t('phrase1')}
             </P>
             <H2
               textType="heading"
-              className="inline font-bold max-tablet:text-sub-heading max-tablet:leading-sub-heading max-mobile-large:text-body max-mobile-large:leading-body laptop:leading-[4.1rem]"
+              className="inline font-bold max-tablet:text-sub-heading max-tablet:leading-sub-heading max-mobile-large:text-body max-mobile-large:leading-body"
             >
               {' '}
               {t('phrase2')},{' '}
@@ -126,13 +126,13 @@ export default function HomeContent({}) {
             <br className="max-laptop:hidden"></br>
             <P
               textType="heading"
-              className="inline max-tablet:text-sub-heading max-tablet:leading-sub-heading max-mobile-large:text-body max-mobile-large:leading-body laptop:leading-[4.1rem]"
+              className="inline max-tablet:text-sub-heading max-tablet:leading-sub-heading max-mobile-large:text-body max-mobile-large:leading-body"
             >
               {t('phrase3')}
             </P>
             <H1
               textType="heading"
-              className="inline font-bold max-tablet:text-sub-heading max-tablet:leading-sub-heading max-mobile-large:text-body max-mobile-large:leading-body laptop:leading-[4.1rem]"
+              className="inline max-tablet:text-sub-heading max-tablet:leading-sub-heading max-mobile-large:text-body max-mobile-large:leading-body"
             >
               {' '}
               {t('phrase4')}
@@ -140,13 +140,13 @@ export default function HomeContent({}) {
             <br className="max-laptop:hidden"></br>
             <P
               textType="heading"
-              className="inline max-tablet:text-sub-heading max-tablet:leading-sub-heading max-mobile-large:text-body max-mobile-large:leading-body laptop:leading-[4.1rem]"
+              className="inline max-tablet:text-sub-heading max-tablet:leading-sub-heading max-mobile-large:text-body max-mobile-large:leading-body"
             >
               {t('phrase5')}
             </P>
             <H2
               textType="heading"
-              className="inline font-bold max-tablet:text-sub-heading max-tablet:leading-sub-heading max-mobile-large:text-body max-mobile-large:leading-body laptop:leading-[4.1rem]"
+              className="inline font-bold max-tablet:text-sub-heading max-tablet:leading-sub-heading max-mobile-large:text-body max-mobile-large:leading-body"
             >
               {' '}
               {t('phrase6')}
@@ -178,7 +178,7 @@ export default function HomeContent({}) {
               </NavLink>
             </motion.div>
             <motion.div
-              key="abountLink"
+              key="aboutLink"
               initial={{ y: '-100px', opacity: 0 }}
               animate={{
                 y: '0px',

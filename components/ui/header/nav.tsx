@@ -115,14 +115,14 @@ const Nav: FC<NavProps> = ({ className, intent }) => {
                 animate={{ y: '0', transition: { type: 'spring' } }}
                 exit={{ opacity: 0, transition: { duration: 1 } }}
               >
-                <P className="sub-heading relative z-50 w-full whitespace-nowrap text-tertiary90   opacity-50 dark:text-tertiary1 max-tablet:hidden ">
+                <P className="heading relative z-50 w-full whitespace-nowrap text-tertiary90   opacity-50 dark:text-tertiary1 max-tablet:hidden ">
                   Corentin Kittel
                 </P>
               </motion.div>
             )}
           </AnimatePresence>
         </Link>
-        <div className="relative flex items-center gap-small pr-sub-large text-primary90 dark:text-primary1 max-tablet:gap-4">
+        <div className="relative flex items-center gap-small pr-sub-large pt-5 text-primary90 dark:text-primary1 max-tablet:gap-4">
           <motion.div variants={menuItemVariant} initial="hidden" animate="visible" custom="1">
             <LangageSwitch></LangageSwitch>
           </motion.div>
@@ -134,7 +134,7 @@ const Nav: FC<NavProps> = ({ className, intent }) => {
             initial="hidden"
             animate="visible"
             custom="3"
-            className="relative h-16"
+            className="relative h-[37px]"
           >
             <AnimatePresence>
               {!showMenu ? (
@@ -149,7 +149,7 @@ const Nav: FC<NavProps> = ({ className, intent }) => {
                   <Icon
                     path={mdilMenu}
                     className="  text-primary90 duration-fast hover:scale-105 dark:text-primary1 max-tablet:scale-75"
-                    size={2.5}
+                    size={2}
                   ></Icon>
                 </motion.button>
               ) : (
@@ -164,7 +164,7 @@ const Nav: FC<NavProps> = ({ className, intent }) => {
                   <Icon
                     path={mdilPlus}
                     className="  rotate-45 text-primary90 duration-fast hover:scale-105 dark:text-primary1 max-tablet:scale-75"
-                    size={2.5}
+                    size={2}
                   ></Icon>
                 </motion.button>
               )}
@@ -177,7 +177,7 @@ const Nav: FC<NavProps> = ({ className, intent }) => {
           {showMenu && (
             <motion.div
               key="specialMenu"
-              className="flex justify-between  px-large pt-medium max-tablet:px-sub-large max-mobile-large:px-extra-small  tablet:pt-large  laptop:gap-medium  laptop-large:gap-extra-large"
+              className="flex justify-between  px-large pt-medium  max-tablet:px-0  tablet:pt-large  laptop:gap-medium  laptop-large:gap-extra-large"
               exit={{
                 opacity: 0,
                 x: '-50%',
@@ -205,7 +205,7 @@ const Nav: FC<NavProps> = ({ className, intent }) => {
                         >
                           <NavLink
                             isLi={true}
-                            className="leading-small heading--extra-large relative z-50 w-full whitespace-nowrap font-['HFF_Ultrasound'] font-thin  text-tertiary90 dark:text-tertiary1 max-mobile-large:text-heading-large max-mobile-large:leading-heading-large "
+                            className="leading-small heading--extra-large relative z-50 w-full whitespace-nowrap font-['HFF_Ultrasound'] font-thin  text-tertiary90 dark:text-tertiary1 max-tablet:text-heading-large max-tablet:leading-heading-large "
                             hover={true}
                             index={i}
                             intent={intent}
@@ -235,7 +235,7 @@ const Nav: FC<NavProps> = ({ className, intent }) => {
                             opacity: 0,
                             transition: { duration: 0.5, delay: i * 0.115 }
                           }}
-                          className="glowy-shadow relative z-10 h-[10rem] bg-tertiary40 p-1 max-tablet:p-[2px] max-mobile-large:h-[5rem]"
+                          className="glowy-shadow relative z-10 h-[10rem] bg-tertiary40 p-1 max-tablet:h-[5rem] max-tablet:p-[2px]"
                         ></motion.div>
                       </div>
                     );

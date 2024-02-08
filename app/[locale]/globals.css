@@ -1,4 +1,5 @@
 @import url('@/style/animation.css');
+@import url('https://fonts.googleapis.com/css2?family=Jura:wght@300;400;500;600;700&display=swap');
 
 @tailwind components;
 @tailwind base;
@@ -9,31 +10,31 @@
   }
 
   .heading--sub-extra-large {
-    @apply text-heading-sub-extra-large font-bold leading-heading-extra-large;
+    @apply text-heading-sub-extra-large font-bold leading-heading-sub-extra-large;
   }
 
   .heading--large {
-    @apply text-heading-large font-bold leading-heading-sub-extra-large;
+    @apply text-heading-large font-bold leading-heading-large;
   }
 
   .heading--sub-large {
-    @apply text-heading-sub-large font-medium leading-heading-large;
+    @apply text-heading-sub-large font-medium leading-heading-sub-large;
   }
 
   .heading {
-    @apply text-heading font-medium  leading-heading-sub-large;
+    @apply text-heading font-medium  leading-heading;
   }
 
   .sub-heading {
-    @apply text-sub-heading font-normal  leading-heading;
+    @apply text-sub-heading font-normal  leading-sub-heading;
   }
 
   .body {
-    @apply text-body font-normal leading-sub-heading;
+    @apply text-body font-normal leading-body;
   }
 
   .caption {
-    @apply text-caption font-normal leading-body;
+    @apply text-caption font-normal leading-caption;
   }
 
   .brutalism-border {
@@ -59,20 +60,6 @@
   .secondary-hover {
     @apply duration-fast tablet:hover:scale-[102%] tablet:hover:shadow-secondary-medium;
   }
-}
-
-@font-face {
-  font-family: 'FuturBlock';
-  src: url('../../fonts/FuturBlock-Regular.eot');
-  src:
-    url('../../fonts/FuturBlock-Regular.eot?#iefix') format('embedded-opentype'),
-    url('../../fonts/FuturBlock-Regular.woff2') format('woff2'),
-    url('../../fonts/FuturBlock-Regular.woff') format('woff'),
-    url('../../fonts/FuturBlock-Regular.ttf') format('truetype'),
-    url('../../fonts/FuturBlock-Regular.svg#FuturBlock-Regular') format('svg');
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
 }
 
 @font-face {
@@ -125,7 +112,7 @@
 
 html {
   font-size: 62.5%;
-  font-family: FuturBlock;
+  font-family: Jura;
 }
 
 .--visually-hidden {

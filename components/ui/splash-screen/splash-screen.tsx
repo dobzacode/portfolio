@@ -43,8 +43,8 @@ export default function SplashScreen({}) {
             {t('phrase')}{' '}
           </P>
           <PulseLoader
-            color="white"
-            className="hidden pb-4 dark:block max-tablet:scale-75"
+            color="#ffffff"
+            className="relative z-20 hidden pb-4 dark:block max-tablet:scale-75"
             size={4}
           />
           <PulseLoader className="-ml-[4rem] pb-4 dark:hidden max-tablet:scale-75" size={4} />

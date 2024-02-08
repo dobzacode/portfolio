@@ -16,8 +16,8 @@ export default function LangageSwitch() {
   };
 
   return (
-    <div className="fadeIn flex items-center gap-extra-small  ">
-      <span className="body flex gap-2 text-primary90 dark:text-primary1 max-tablet:text-caption">
+    <div className="flex items-center gap-extra-small pb-[9px] ">
+      <span className="sub-heading max-tablet:body flex gap-2 text-primary90 dark:text-primary1">
         <Button
           onClick={() => (locale !== 'en' ? switchLangage('en') : '')}
           className={cn(locale !== 'en' && 'opacity-50', 'hover:opacity-100')}

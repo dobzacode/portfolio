@@ -21,8 +21,8 @@ export default function ContactContent({}) {
           searchParams.get('menu') ? 'translate-x-[20%] opacity-0 ' : 'opacity-100 delay-1000'
         }`}
       >
-        <main className="flex flex-col  laptop-large:max-w-[1600px] ">
-          <div className="relative z-50 flex w-fit flex-col laptop-large:w-full">
+        <main className="flex w-full flex-col mobile-large:min-w-fit  mobile-large:max-w-[80%] laptop:w-fit laptop-large:max-w-[1600px]">
+          <div className="relative z-50 flex w-full flex-col">
             <div
               className={`} relative z-50 -ml-small flex h-full  w-fit items-center gap-extra-small
                             overflow-hidden`}
@@ -55,7 +55,7 @@ export default function ContactContent({}) {
                 initial={{ x: '-200%' }}
                 animate={{ x: '0', transition: { duration: 0.5, delay: 0.5 + splashDelay } }}
               >
-                <H1 className="leading-small heading--sub-extra-large relative z-50 w-full whitespace-nowrap font-thin text-primary90 dark:text-primary1  max-[841px]:text-heading-large  max-[841px]:leading-heading-sub-extra-large max-[540px]:text-heading-sub-large max-[540px]:leading-heading-large max-mobile-medium:text-heading max-mobile-medium:leading-heading-sub-large ">
+                <H1 className="leading-small heading--sub-extra-large relative z-50 w-full whitespace-nowrap font-medium text-primary90 dark:text-primary1 max-tablet:text-heading-large max-tablet:leading-heading-large  max-mobile-large:text-heading-sub-large  max-mobile-large:leading-heading-sub-large ">
                   CONTACT
                 </H1>
               </motion.div>
@@ -63,7 +63,7 @@ export default function ContactContent({}) {
           </div>
 
           <div
-            className={`relative z-0 flex h-full flex-col gap-extra-small overflow-hidden  pb-medium  laptop-large:w-full `}
+            className={`relative z-0 flex h-full w-full flex-col gap-extra-small  overflow-hidden  pb-medium `}
           >
             <motion.hr
               key={`Paragraph border`}
@@ -85,9 +85,9 @@ export default function ContactContent({}) {
                 opacity: 0,
                 transition: { duration: 0.5 }
               }}
-              className="glowy-shadow relative  z-20 mb-medium bg-tertiary40  p-1 max-tablet:w-[110%] max-tablet:p-[2px]  laptop-large:w-full"
+              className="glowy-shadow relative  z-20 mb-small bg-tertiary40  p-1 max-tablet:w-[110%] max-tablet:p-[2px]  laptop-large:w-full"
             ></motion.hr>
-            <div className="relative z-10 flex justify-between gap-extra-large max-laptop-large:flex-col max-laptop-large:gap-small">
+            <div className="relative z-10 flex justify-between gap-extra-large max-laptop:flex-col max-laptop:gap-small">
               <motion.div
                 key={`Email animated`}
                 initial={{ y: '-450%' }}
@@ -95,7 +95,7 @@ export default function ContactContent({}) {
                   y: '0',
                   transition: { type: 'spring', duration: 2, delay: 2.5 + splashDelay }
                 }}
-                className="sub-heading  flex items-start gap-sub-large text-primary90 dark:text-primary1 max-[841px]:text-body max-[841px]:leading-sub-heading  max-tablet:gap-medium max-[630px]:flex-col max-[630px]:items-start max-[630px]:gap-0 "
+                className="sub-heading  flex items-start gap-sub-large text-primary90 dark:text-primary1 max-tablet:gap-medium max-tablet:text-body  max-tablet:leading-body max-[630px]:flex-col max-[630px]:items-start max-[630px]:gap-0 "
               >
                 <P className="relative z-10  whitespace-nowrap font-semibold">E-MAIL</P>
                 <a className="font-thin" href="mailto: contact@corentinkittel.fr">
@@ -109,7 +109,7 @@ export default function ContactContent({}) {
                   y: '0',
                   transition: { type: 'spring', duration: 2, delay: 2.7 + splashDelay }
                 }}
-                className="sub-heading  flex items-start gap-large text-primary90 dark:text-primary1 max-[841px]:text-body max-[841px]:leading-sub-heading   max-tablet:gap-medium max-[630px]:flex-col max-[630px]:items-start max-[630px]:gap-0 "
+                className="sub-heading  flex items-start gap-large text-primary90 dark:text-primary1 max-tablet:gap-medium max-tablet:text-body   max-tablet:leading-body max-[630px]:flex-col max-[630px]:items-start max-[630px]:gap-0 "
               >
                 <P className="relative z-10  whitespace-nowrap font-semibold">
                   {t('social').toUpperCase()}

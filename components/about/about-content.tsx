@@ -30,11 +30,11 @@ export default function AboutContent({}) {
   return (
     <>
       <div
-        className={`z-4 0 relative flex w-screen flex-col-reverse items-center justify-center gap-medium bg-transparent pt-medium duration-slowest max-laptop:px-large max-tablet:px-sub-large max-mobile-large:px-small tablet:px-medium laptop:flex-row laptop:items-start  laptop:px-large  laptop:pt-large  laptop-large:px-extra-large ${
+        className={`z-4 0 relative flex w-screen flex-col-reverse items-center justify-center gap-large bg-transparent pb-large pt-medium duration-slowest max-laptop:px-large max-tablet:px-sub-large max-mobile-large:px-small tablet:px-medium laptop:flex-row laptop:items-start  laptop:px-large  laptop:pt-large  laptop-large:px-extra-large ${
           searchParams.get('menu') ? 'translate-x-[20%] opacity-0 ' : 'opacity-100 delay-1000'
         }`}
       >
-        <main className="laptop:w-1/2">
+        <main className="flex flex-col laptop:w-1/2">
           <div
             className={`} relative z-50 flex h-full w-fit flex-row-reverse items-center gap-extra-small overflow-hidden
                           laptop:-ml-small laptop-large:-mt-[2.2rem]`}
@@ -45,7 +45,7 @@ export default function AboutContent({}) {
               initial={{ x: '-200%' }}
               animate={{ x: '0', transition: { duration: 0.5, delay: 0.5 + splashDelay } }}
             >
-              <H1 className="leading-small heading--sub-extra-large relative z-50 w-full whitespace-nowrap font-thin text-primary90 dark:text-primary1  max-[841px]:text-heading-large  max-[841px]:leading-heading-sub-extra-large max-[540px]:text-heading-sub-large max-[540px]:leading-heading-large max-mobile-medium:text-heading max-mobile-medium:leading-heading-sub-large ">
+              <H1 className="leading-small heading--sub-extra-large relative z-50 w-full whitespace-nowrap font-medium text-primary90 dark:text-primary1 max-tablet:text-heading-large max-tablet:leading-heading-large  max-mobile-large:text-heading-sub-large  max-mobile-large:leading-heading-sub-large ">
                 {t('title').toUpperCase()}
               </H1>
             </motion.div>
@@ -73,8 +73,8 @@ export default function AboutContent({}) {
             ></motion.div>
           </div>
           <div
-            className={`} relative z-50 flex h-full flex-col-reverse gap-extra-small  overflow-hidden
-                          pb-medium`}
+            className={`} relative z-50 flex h-full flex-col-reverse gap-medium  overflow-hidden
+                          `}
           >
             <motion.div
               className="relative z-10 w-full"
@@ -87,11 +87,11 @@ export default function AboutContent({}) {
             >
               <P className="sub-heading relative z-10 w-full font-thin text-primary90 dark:text-primary1 max-tablet:text-sub-heading    max-mobile-large:text-body max-mobile-large:leading-sub-heading ">
                 {t('text1')}
-                <span className="font-bold">
+                <span className="font-semibold">
                   {t('text2')}
                   {'. '}
                 </span>{' '}
-                {t('text3')} <span className="font-bold"> {t('text4')} </span>
+                {t('text3')} <span className="font-semibold"> {t('text4')} </span>
                 {t('text5')}
               </P>
             </motion.div>
@@ -115,7 +115,7 @@ export default function AboutContent({}) {
                 opacity: 0,
                 transition: { duration: 0.5 }
               }}
-              className="glowy-shadow relative z-20 mb-extra-small bg-tertiary40  p-1 max-tablet:p-[2px]  mobile-large:mb-medium"
+              className="glowy-shadow relative z-20  bg-tertiary40  p-1 max-tablet:p-[2px]  "
             ></motion.hr>
           </div>
         </main>
