@@ -44,7 +44,7 @@ export default async function RootLayout({
             <Header size={'large'} textColor={'neutral'} className=" flex"></Header>
 
             {children}
-            <div className="noise "></div>
+            <div className="noise max-mobile-large:hidden"></div>
             <CustomCursor></CustomCursor>
           </NextIntlClientProvider>
         </Providers>
