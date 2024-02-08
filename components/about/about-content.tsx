@@ -133,6 +133,7 @@ export default function AboutContent({}) {
           className="relative h-[500px] w-[1000px]   max-laptop:max-w-[99%] laptop:h-[800px] laptop:w-[500px] laptop-large:h-[700px]"
         >
           <Image
+            priority={true}
             src={'/image00043.jpeg'}
             sizes={'(max-width: 1000px) 100vw, 1000px'}
             blurDataURL={blurSrc}

@@ -177,7 +177,7 @@ const Nav: FC<NavProps> = ({ className, intent }) => {
           {showMenu && (
             <motion.div
               key="specialMenu"
-              className="flex justify-between   pt-[6rem]  mobile-large:pt-[6rem] tablet:pt-[8rem] laptop:gap-medium  laptop:pt-[16rem]  laptop-large:gap-extra-large"
+              className="flex justify-between   pt-[6rem]  mobile-large:pt-[6rem] tablet:pt-[8rem] laptop:gap-medium  laptop:pt-[10rem]  laptop-large:gap-extra-large"
               exit={{
                 opacity: 0,
                 x: '-50%',

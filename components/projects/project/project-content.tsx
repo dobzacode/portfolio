@@ -262,8 +262,9 @@ export default function ProjectContent({ params }: { params: { projectName: stri
           className="relative z-50 aspect-square w-full  max-laptop:mb-large laptop:mt-6 laptop:w-1/2 laptop-large:w-1/3"
         >
           <Image
+            priority={true}
             src={projectObj.image}
-            sizes={'(max-width: 1000px) 100vw, 1000px'}
+            sizes={'(max-width: 1000px) 100vw, 700x'}
             blurDataURL={blurSrc}
             alt={`Image of ${projectObj.title}`}
             fill
