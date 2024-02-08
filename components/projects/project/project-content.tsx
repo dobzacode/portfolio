@@ -45,7 +45,7 @@ export default function ProjectContent({ params }: { params: { projectName: stri
   return (
     <div className="flex h-full w-screen justify-center overflow-hidden ">
       <div
-        className={`z-4 0 relative flex h-fit w-full  flex-col flex-wrap  justify-center gap-large bg-transparent py-medium  duration-slowest  max-laptop:w-fit max-laptop:px-large max-tablet:px-sub-large max-mobile-large:w-full max-mobile-large:max-w-full max-mobile-large:px-sub-large tablet:px-medium laptop:flex-row   laptop:px-large  laptop:py-large  laptop-large:px-extra-large ${
+        className={`z-4 0 relative flex h-fit w-full  flex-col flex-wrap  justify-center gap-sub-large bg-transparent py-medium  duration-slowest  max-laptop:w-fit max-laptop:px-large max-tablet:px-sub-large max-mobile-large:w-full max-mobile-large:max-w-full max-mobile-large:px-sub-large tablet:px-medium laptop:flex-row   laptop:px-large  laptop:py-large  laptop-large:px-extra-large ${
           searchParams.get('menu') ? 'translate-x-[20%] opacity-0 ' : 'opacity-100 delay-1000'
         }`}
       >
@@ -259,7 +259,7 @@ export default function ProjectContent({ params }: { params: { projectName: stri
             }
           }}
           exit={{ x: '20%', opacity: 0, transition: { duration: 0.5 } }}
-          className="relative z-50  aspect-square  w-full max-laptop:mb-large laptop:w-1/2 laptop-large:w-1/3"
+          className="relative z-50 aspect-square w-full  max-laptop:mb-large laptop:mt-6 laptop:w-1/2 laptop-large:w-1/3"
         >
           <Image
             src={projectObj.image}
