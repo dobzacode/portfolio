@@ -94,7 +94,7 @@ export default function HomeContent({}) {
           </div>
         </div>
 
-        <div className="max-mobile-large:gap-asmall relative z-20 flex flex-col items-center justify-center   gap-medium duration-medium max-laptop:w-4/5">
+        <div className="relative z-20 flex flex-col items-center justify-center gap-medium   duration-medium max-laptop:w-4/5 max-mobile-large:gap-small">
           <motion.div
             key="text"
             initial={{ x: '-100px', opacity: 0 }}
@@ -164,15 +164,15 @@ export default function HomeContent({}) {
                   delay: 1.5 + splashDelay
                 }
               }}
-              className="max-tablet:gap-0gap-extra-small   relative flex  items-center text-tertiary90 dark:text-tertiary1"
+              className="relative flex   items-center gap-extra-small  text-tertiary90 dark:text-tertiary1 max-tablet:gap-0"
             >
-              <Icon className="max-tablet:scale-75" path={mdilArrowRight} size={2} />
+              <Icon className="pb-1 max-tablet:scale-75" path={mdilArrowRight} size={2} />
 
               <NavLink
                 size="large"
                 isLi={false}
                 href="/work"
-                className="relative whitespace-nowrap font-['HFF_Ultrasound'] font-thin leading-heading before:absolute before:bottom-0 before:left-[50%] before:-z-10 before:w-full before:max-w-0 before:origin-center before:border-b-2 before:border-tertiary40 before:duration-medium hover:before:left-0 hover:before:max-w-full before:dark:border-tertiary40 max-tablet:text-sub-heading max-mobile-large:text-body"
+                className="relative whitespace-nowrap font-['HFF_Ultrasound'] font-thin leading-heading before:absolute before:bottom-0 before:left-[50%] before:-z-10 before:w-full before:max-w-0 before:origin-center before:border-b-2 before:border-tertiary40 before:duration-medium hover:before:left-0 hover:before:max-w-full before:dark:border-tertiary40 max-tablet:text-sub-heading max-mobile-large:text-body max-mobile-large:leading-sub-heading"
               >
                 {t('project')}
               </NavLink>
@@ -188,15 +188,15 @@ export default function HomeContent({}) {
                   delay: 1.8 + splashDelay
                 }
               }}
-              className="max-tablet:gap-0gap-extra-small   relative flex  items-center text-tertiary90 dark:text-tertiary1"
+              className="relative flex   items-center gap-extra-small  text-tertiary90 dark:text-tertiary1 max-tablet:gap-0"
             >
-              <Icon className="max-tablet:scale-75" path={mdilArrowRight} size={2} />
+              <Icon className="pb-1 max-tablet:scale-75" path={mdilArrowRight} size={2} />
 
               <NavLink
                 size="large"
                 isLi={false}
                 href="/about"
-                className="relative whitespace-nowrap font-['HFF_Ultrasound'] font-thin leading-heading before:absolute before:bottom-0 before:left-[50%] before:-z-10 before:w-full before:max-w-0 before:origin-center before:border-b-2 before:border-tertiary40 before:duration-medium hover:before:left-0 hover:before:max-w-full before:dark:border-tertiary40 max-tablet:text-sub-heading max-mobile-large:text-body"
+                className="relative whitespace-nowrap font-['HFF_Ultrasound'] font-thin leading-heading before:absolute before:bottom-0 before:left-[50%] before:-z-10 before:w-full before:max-w-0 before:origin-center before:border-b-2 before:border-tertiary40 before:duration-medium hover:before:left-0 hover:before:max-w-full before:dark:border-tertiary40 max-tablet:text-sub-heading max-mobile-large:text-body max-mobile-large:leading-sub-heading"
               >
                 {t('about')}
               </NavLink>
