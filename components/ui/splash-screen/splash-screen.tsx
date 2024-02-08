@@ -39,7 +39,7 @@ export default function SplashScreen({}) {
           />
         </div>
       </div>
-      <div className="absolute bottom-small left-1/2 z-50 m-auto -translate-x-1/2 transform  text-primary90   dark:text-primary1">
+      <div className="absolute bottom-small left-1/2 z-50 -translate-x-1/2  transform text-primary90  dark:text-primary1   max-mobile-large:bottom-large">
         <div className="slideInToRight   z-50">
           <div className="slideInFromLeft z-50">
             <Link
