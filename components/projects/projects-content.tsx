@@ -117,7 +117,7 @@ export default function ProjectsContent({}) {
                     opacity: 0,
                     transition: { duration: 0.5 }
                   }}
-                  className="glowy-shadow relative z-20 bg-tertiary40 p-[1px]  max-tablet:p-[1px]     "
+                  className="glowy-shadow relative z-20 bg-tertiary40 p-[1.8px]  max-tablet:p-[1.8px]     "
                 ></motion.hr>
               </div>
             );
