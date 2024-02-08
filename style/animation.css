@@ -23,13 +23,37 @@
   left: -120%;
   height: 600%;
   width: 600%;
-  -webkit-animation: grain 7s steps(10) infinite;
-  animation: grain 7s steps(10) infinite;
+  -webkit-animation:
+    grain 7s steps(10) infinite,
+    fadeIn 1s ease-out;
+  animation:
+    grain 7s steps(10) infinite,
+    fadeIn 1s ease-in forwards;
   background-image: url(/noise.png);
   background-size: 200px;
   background-repeat: repeat;
-  opacity: 0.25;
+  opacity: 0;
   pointer-events: none;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 0.25;
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
 
 @-webkit-keyframes grain {
