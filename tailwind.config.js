@@ -157,6 +157,7 @@ module.exports = {
         primary70: `hsl(${PRIMARY_COLOR_HSL}, 30%)`,
         primary80: `hsl(${PRIMARY_COLOR_HSL}, 20%)`,
         primary90: `hsl(${PRIMARY_COLOR_HSL}, 10%)`,
+        primary95: `hsl(${PRIMARY_COLOR_HSL}, 5%)`,
         primary99: `hsl(${PRIMARY_COLOR_HSL}, 1%)`,
         primary100: `hsl(${PRIMARY_COLOR_HSL}, 0%)`,
 

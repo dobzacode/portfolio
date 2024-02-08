@@ -103,7 +103,7 @@ export default function HomeContent({}) {
         <div className="relative z-20 flex flex-col items-center justify-center gap-medium   duration-medium max-laptop:w-4/5 max-mobile-large:gap-small">
           <motion.div
             key="text"
-            initial={{ x: '-100%', opacity: 0 }}
+            initial={{ x: '-50%', opacity: 0 }}
             animate={{
               opacity: 1,
               x: '0px',
