@@ -130,7 +130,7 @@ export default function AboutContent({}) {
               opacity: { duration: 0.2, delay: splashDelay }
             }
           }}
-          className="relative h-[500px] w-[1000px]   max-laptop:max-w-[95%] laptop:h-[800px] laptop:w-[500px] laptop-large:h-[700px]"
+          className="relative h-[500px] w-[1000px]   max-laptop:max-w-[99%] laptop:h-[800px] laptop:w-[500px] laptop-large:h-[700px]"
         >
           <Image
             src={'/image00043.jpeg'}

@@ -1,6 +1,7 @@
 'use client';
 
 import useBetterMediaQuery from '@/components/hooks/use-better-media-query';
+import { Link } from '@/navigation';
 import { useTranslations } from 'next-intl';
 import { useEffect, useState } from 'react';
 import { PulseLoader } from 'react-spinners';
@@ -59,12 +60,12 @@ export default function SplashScreen({}) {
       </div>
       <div className=" absolute bottom-small left-1/2 m-auto -translate-x-1/2 transform text-primary90  dark:text-primary1  ">
         <div className="slideInFromRight">
-          <P
-            textType={'sub-heading'}
-            className="slideInToRight max-tablet:text-body max-tablet:leading-body"
+          <Link
+            href="/legal"
+            className="slideInToRight sub-heading leading-heading max-tablet:text-body max-tablet:leading-body"
           >
             &#169; Corentin Kittel 2024
-          </P>
+          </Link>
         </div>
       </div>
     </div>
