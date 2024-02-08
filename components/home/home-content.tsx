@@ -97,15 +97,15 @@ export default function HomeContent({}) {
         <div className="relative z-20 flex flex-col items-center justify-center gap-medium   duration-medium max-laptop:w-4/5 max-mobile-large:gap-small">
           <motion.div
             key="text"
-            initial={{ x: '-100px', opacity: 0 }}
+            initial={{ x: '-100%', opacity: 0 }}
             animate={{
               opacity: 1,
               x: '0px',
 
               transition: {
-                delay: 0.6 + splashDelay,
+                delay: 1.2 + splashDelay,
                 type: 'spring',
-                stiffness: '40'
+                duration: 1.7
               }
             }}
             className="relative z-40 pt-small text-center text-primary90 dark:text-primary1 "
@@ -161,7 +161,7 @@ export default function HomeContent({}) {
                 opacity: 1,
                 transition: {
                   type: 'spring',
-                  delay: 1.5 + splashDelay
+                  delay: 2 + splashDelay
                 }
               }}
               className="relative flex   items-center gap-extra-small  text-tertiary90 dark:text-tertiary1 max-tablet:gap-0"
@@ -185,7 +185,7 @@ export default function HomeContent({}) {
                 opacity: 1,
                 transition: {
                   type: 'spring',
-                  delay: 1.8 + splashDelay
+                  delay: 2.3 + splashDelay
                 }
               }}
               className="relative flex   items-center gap-extra-small  text-tertiary90 dark:text-tertiary1 max-tablet:gap-0"

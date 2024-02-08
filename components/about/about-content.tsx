@@ -30,14 +30,13 @@ export default function AboutContent({}) {
   return (
     <>
       <div
-        className={`z-4 0 relative flex w-screen flex-col-reverse items-center justify-center gap-large bg-transparent pb-large pt-medium duration-slowest max-laptop:px-large max-tablet:px-sub-large max-mobile-large:px-small tablet:px-medium laptop:flex-row laptop:items-start  laptop:px-large  laptop:pt-large  laptop-large:px-extra-large ${
+        className={`z-4 0 relative flex w-screen flex-col-reverse items-center justify-center gap-large bg-transparent pb-large  pt-medium duration-slowest max-laptop:px-large max-tablet:px-sub-large max-mobile-large:px-small tablet:px-medium laptop:flex-row  laptop:items-start  laptop:px-large laptop:pt-large laptop-large:px-extra-large ${
           searchParams.get('menu') ? 'translate-x-[20%] opacity-0 ' : 'opacity-100 delay-1000'
         }`}
       >
-        <main className="flex flex-col laptop:w-1/2">
+        <main className="flex flex-col  laptop:w-1/2 laptop:max-w-[45%]">
           <div
-            className={`} relative z-50 flex h-full w-fit flex-row-reverse items-center gap-extra-small overflow-hidden
-                          laptop:-ml-small laptop-large:-mt-[2.2rem]`}
+            className={`relative z-50 -ml-[14px] flex h-full w-fit flex-row-reverse items-center gap-extra-small overflow-hidden mobile-large:-ml-[18px] `}
           >
             <motion.div
               className="relative z-50 w-full"
@@ -45,7 +44,7 @@ export default function AboutContent({}) {
               initial={{ x: '-200%' }}
               animate={{ x: '0', transition: { duration: 0.5, delay: 0.5 + splashDelay } }}
             >
-              <H1 className="leading-small heading--sub-extra-large relative z-50 w-full whitespace-nowrap font-medium text-primary90 dark:text-primary1 max-tablet:text-heading-large max-tablet:leading-heading-large  max-mobile-large:text-heading-sub-large  max-mobile-large:leading-heading-sub-large ">
+              <H1 className="leading-small heading--extra-large relative z-50 w-full whitespace-nowrap font-['HFF_Ultrasound'] font-medium text-primary90 dark:text-primary1 max-tablet:text-heading-sub-extra-large max-tablet:leading-heading-sub-extra-large  max-mobile-large:text-heading-large  max-mobile-large:leading-heading-large ">
                 {t('title').toUpperCase()}
               </H1>
             </motion.div>
@@ -73,7 +72,7 @@ export default function AboutContent({}) {
             ></motion.div>
           </div>
           <div
-            className={`} relative z-50 flex h-full flex-col-reverse gap-medium  overflow-hidden
+            className={`} relative z-50 flex h-full flex-col-reverse gap-medium  overflow-hidden pb-large
                           `}
           >
             <motion.div
@@ -119,33 +118,29 @@ export default function AboutContent({}) {
             ></motion.hr>
           </div>
         </main>
-        {!blurSrc && (
-          <div className="relative h-[500px] w-[1000px]  laptop:h-[800px] laptop:w-[500px] laptop-large:h-[700px] "></div>
-        )}
-        {blurSrc && (
-          <motion.div
-            key="moving image"
-            initial={{ x: '20%', opacity: 0 }}
-            animate={{
-              x: 0,
-              opacity: 1,
-              transition: {
-                x: { duration: 0.5, delay: splashDelay },
-                opacity: { duration: 0.2, delay: splashDelay }
-              }
-            }}
-            className="relative h-[500px] w-[1000px]   max-laptop:max-w-[95%] laptop:h-[800px] laptop:w-[500px] laptop-large:h-[700px]"
-          >
-            <Image
-              src={'/image00043.jpeg'}
-              sizes={'(max-width: 1000px) 100vw, 1000px'}
-              blurDataURL={blurSrc}
-              alt="Corentin Kittel Picture"
-              fill
-              className=" object-cover object-[10%_15%]  laptop:translate-y-[15%] laptop:object-center  laptop-large:translate-y-0"
-            ></Image>
-          </motion.div>
-        )}
+
+        <motion.div
+          key="moving image"
+          initial={{ x: '20%', opacity: 0 }}
+          animate={{
+            x: 0,
+            opacity: 1,
+            transition: {
+              x: { duration: 0.5, delay: splashDelay },
+              opacity: { duration: 0.2, delay: splashDelay }
+            }
+          }}
+          className="relative h-[500px] w-[1000px]   max-laptop:max-w-[95%] laptop:h-[800px] laptop:w-[500px] laptop-large:h-[700px]"
+        >
+          <Image
+            src={'/image00043.jpeg'}
+            sizes={'(max-width: 1000px) 100vw, 1000px'}
+            blurDataURL={blurSrc}
+            alt="Corentin Kittel Picture"
+            fill
+            className=" object-cover object-[10%_15%]  laptop:object-center  laptop:pt-4"
+          ></Image>
+        </motion.div>
       </div>
     </>
   );

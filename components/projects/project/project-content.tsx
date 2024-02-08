@@ -45,15 +45,15 @@ export default function ProjectContent({ params }: { params: { projectName: stri
   return (
     <div className="flex h-full w-screen justify-center overflow-hidden ">
       <div
-        className={`z-4 0 relative flex h-fit w-full  flex-col flex-wrap  justify-center gap-large bg-transparent py-medium  duration-slowest  max-[1700px]:w-fit max-laptop:px-large max-tablet:px-sub-large max-mobile-large:w-full max-mobile-large:max-w-full max-mobile-large:px-small tablet:px-medium laptop:flex-row   laptop:px-large  laptop:py-large  laptop-large:px-extra-large ${
+        className={`z-4 0 relative flex h-fit w-full  flex-col flex-wrap  justify-center gap-large bg-transparent py-medium  duration-slowest  max-laptop:w-fit max-laptop:px-large max-tablet:px-sub-large max-mobile-large:w-full max-mobile-large:max-w-full max-mobile-large:px-sub-large tablet:px-medium laptop:flex-row   laptop:px-large  laptop:py-large  laptop-large:px-extra-large ${
           searchParams.get('menu') ? 'translate-x-[20%] opacity-0 ' : 'opacity-100 delay-1000'
         }`}
       >
-        <main className="flex  w-full flex-col gap-sub-large text-primary90  dark:text-primary1 tablet:max-w-fit min-[1700px]:w-fit min-[1700px]:gap-large">
-          <div className="relative z-50  flex flex-col bg-transparent">
+        <main className="flex   w-full flex-col gap-sub-large  text-primary90 dark:text-primary1 laptop:w-full laptop:max-w-[42%]">
+          <div className="relative z-50 flex flex-col bg-transparent max-[1200px]:w-fit max-laptop:w-auto">
             <div
-              className={`} relative z-50 flex  w-fit flex-row-reverse items-center gap-extra-small overflow-hidden
-                              tablet:-ml-small min-[1700px]:-mt-[2.2rem]`}
+              className={`} relative z-50 -ml-small  flex w-fit flex-row-reverse items-center gap-extra-small
+                              overflow-hidden `}
             >
               <motion.div
                 className="relative z-50 w-full"
@@ -61,7 +61,7 @@ export default function ProjectContent({ params }: { params: { projectName: stri
                 initial={{ x: '-200%' }}
                 animate={{ x: '0', transition: { duration: 0.5, delay: 0.5 + splashDelay } }}
               >
-                <H1 className="leading-small heading--sub-extra-large relative z-50 w-full whitespace-nowrap font-medium text-primary90 dark:text-primary1 max-tablet:text-heading-large max-tablet:leading-heading-large  max-mobile-large:text-heading-sub-large  max-mobile-large:leading-heading-sub-large ">
+                <H1 className="leading-small heading--extra-large relative z-50 w-full whitespace-nowrap font-['HFF_Ultrasound'] font-medium text-primary90 dark:text-primary1 max-tablet:text-heading-sub-extra-large max-tablet:leading-heading-sub-extra-large  max-mobile-large:text-heading-large  max-mobile-large:leading-heading-large ">
                   {projectObj.title.toUpperCase()}
                 </H1>
               </motion.div>
@@ -259,7 +259,7 @@ export default function ProjectContent({ params }: { params: { projectName: stri
             }
           }}
           exit={{ x: '20%', opacity: 0, transition: { duration: 0.5 } }}
-          className="relative z-50 mb-[4.8rem] aspect-square  w-full min-[1700px]:w-1/3 "
+          className="relative z-50  aspect-square  w-full max-laptop:mb-large laptop:w-1/2 laptop-large:w-1/3"
         >
           <Image
             src={projectObj.image}
@@ -267,7 +267,7 @@ export default function ProjectContent({ params }: { params: { projectName: stri
             blurDataURL={blurSrc}
             alt={`Image of ${projectObj.title}`}
             fill
-            className="relative -z-20 grayscale duration-slow "
+            className="relative -z-20 object-cover grayscale duration-slow"
           ></Image>
           <div className="absolute top-0 -z-10 h-full w-full bg-primary40 opacity-5 "></div>
           <div className=" justify-between">

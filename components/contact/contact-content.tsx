@@ -17,11 +17,11 @@ export default function ContactContent({}) {
   return (
     <>
       <div
-        className={`z-4 0 relative flex w-screen flex-col-reverse items-center gap-medium   bg-transparent px-large pt-medium  duration-slowest  max-tablet:px-medium  max-mobile-large:px-sub-medium tablet:pt-large laptop-large:items-center ${
+        className={`z-4 0 relative flex w-screen  flex-col-reverse items-center  gap-medium  bg-transparent px-large pt-medium  duration-slowest  max-tablet:px-medium  max-mobile-large:px-sub-medium tablet:pt-large laptop-large:items-center ${
           searchParams.get('menu') ? 'translate-x-[20%] opacity-0 ' : 'opacity-100 delay-1000'
         }`}
       >
-        <main className="flex w-full flex-col mobile-large:min-w-fit  mobile-large:max-w-[80%] laptop:w-fit laptop-large:max-w-[1600px]">
+        <main className="flex w-full flex-col mobile-large:min-w-fit  mobile-large:max-w-[80%] laptop:max-w-[73%]">
           <div className="relative z-50 flex w-full flex-col">
             <div
               className={`} relative z-50 -ml-small flex h-full  w-fit items-center gap-extra-small
@@ -55,7 +55,7 @@ export default function ContactContent({}) {
                 initial={{ x: '-200%' }}
                 animate={{ x: '0', transition: { duration: 0.5, delay: 0.5 + splashDelay } }}
               >
-                <H1 className="leading-small heading--sub-extra-large relative z-50 w-full whitespace-nowrap font-medium text-primary90 dark:text-primary1 max-tablet:text-heading-large max-tablet:leading-heading-large  max-mobile-large:text-heading-sub-large  max-mobile-large:leading-heading-sub-large ">
+                <H1 className="leading-small heading--extra-large relative z-50 w-full whitespace-nowrap font-['HFF_Ultrasound'] font-medium text-primary90 dark:text-primary1 max-tablet:text-heading-sub-extra-large max-tablet:leading-heading-sub-extra-large  max-mobile-large:text-heading-large  max-mobile-large:leading-heading-large ">
                   CONTACT
                 </H1>
               </motion.div>

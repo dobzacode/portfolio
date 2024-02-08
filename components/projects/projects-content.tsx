@@ -30,7 +30,7 @@ export default function ProjectsContent({}) {
           searchParams.get('menu') ? 'translate-x-[20%] opacity-0 ' : 'opacity-100 delay-1000'
         }`}
       >
-        <main className="w-full laptop:w-[30%] laptop-large:w-[40%]  laptop-large:max-w-fit">
+        <main className="w-full laptop:w-[32%] laptop-large:w-[32%]  ">
           <div
             className={`relative z-50 -ml-small flex h-full w-fit flex-row-reverse items-center gap-extra-small
                           overflow-hidden`}
@@ -41,7 +41,7 @@ export default function ProjectsContent({}) {
               initial={{ x: '-200%' }}
               animate={{ x: '0', transition: { duration: 0.5, delay: 0.5 + splashDelay } }}
             >
-              <H1 className="leading-small heading--sub-extra-large relative z-50 w-full whitespace-nowrap font-medium text-primary90 dark:text-primary1 max-tablet:text-heading-large max-tablet:leading-heading-large  max-mobile-large:text-heading-sub-large  max-mobile-large:leading-heading-sub-large ">
+              <H1 className="leading-small heading--extra-large relative z-50 w-full whitespace-nowrap font-['HFF_Ultrasound'] font-medium text-primary90 dark:text-primary1 max-tablet:text-heading-sub-extra-large max-tablet:leading-heading-sub-extra-large  max-mobile-large:text-heading-large  max-mobile-large:leading-heading-large ">
                 {t('title').toUpperCase()}
               </H1>
             </motion.div>
@@ -125,7 +125,7 @@ export default function ProjectsContent({}) {
         </main>
 
         {isLaptop && (
-          <div className="flex aspect-square w-[50%] justify-center max-laptop-large:translate-y-[130px]  max-laptop:hidden laptop-large:w-[30%]">
+          <div className="flex aspect-square w-[50%] justify-center pt-6  max-laptop:hidden laptop-large:w-[30%]">
             <AnimatePresence mode="wait">
               {hoveredProjectImage && (
                 <motion.div

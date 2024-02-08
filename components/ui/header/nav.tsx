@@ -103,8 +103,8 @@ const Nav: FC<NavProps> = ({ className, intent }) => {
 
   return (
     <header className={cn(className)}>
-      <div className=" relative z-30 flex w-full items-center justify-between max-tablet:px-sub-large  max-mobile-large:px-small  tablet:px-sub-large laptop:px-large">
-        <Link href="/" className="-ml-sub-medium flex items-center gap-sub-large laptop:gap-large">
+      <div className=" relative z-30 flex w-full items-center justify-between ">
+        <Link href="/" className="flex items-center gap-sub-large laptop:gap-large">
           <AnimatedLogo splashDelay={splashDelay} className="w-20 "></AnimatedLogo>
           <AnimatePresence mode="wait">
             {showMenu && (
@@ -122,7 +122,7 @@ const Nav: FC<NavProps> = ({ className, intent }) => {
             )}
           </AnimatePresence>
         </Link>
-        <div className="relative flex items-center gap-small pr-sub-large pt-5 text-primary90 dark:text-primary1 max-tablet:gap-4">
+        <div className="relative flex items-center gap-small  text-primary90 dark:text-primary1 max-tablet:gap-4">
           <motion.div variants={menuItemVariant} initial="hidden" animate="visible" custom="1">
             <LangageSwitch></LangageSwitch>
           </motion.div>
@@ -134,7 +134,7 @@ const Nav: FC<NavProps> = ({ className, intent }) => {
             initial="hidden"
             animate="visible"
             custom="3"
-            className="relative h-[37px]"
+            className="relative h-[37px] w-[24px]"
           >
             <AnimatePresence>
               {!showMenu ? (
@@ -177,7 +177,7 @@ const Nav: FC<NavProps> = ({ className, intent }) => {
           {showMenu && (
             <motion.div
               key="specialMenu"
-              className="flex justify-between  px-large pt-medium  max-tablet:px-0  tablet:pt-large  laptop:gap-medium  laptop-large:gap-extra-large"
+              className="flex justify-between      pt-medium laptop:gap-medium  laptop:pt-large  laptop-large:gap-extra-large"
               exit={{
                 opacity: 0,
                 x: '-50%',
@@ -186,7 +186,7 @@ const Nav: FC<NavProps> = ({ className, intent }) => {
             >
               <nav
                 key={'navigation'}
-                className={cn(' relative z-40 flex  w-fit items-start self-start    ')}
+                className={cn(' relative z-40 -ml-small flex w-fit items-start self-start    ')}
               >
                 <ul className={' flex  flex-col  justify-center '}>
                   {navLinks.map((link, i) => {
@@ -205,7 +205,7 @@ const Nav: FC<NavProps> = ({ className, intent }) => {
                         >
                           <NavLink
                             isLi={true}
-                            className="leading-small heading--extra-large relative z-50 w-full whitespace-nowrap font-['HFF_Ultrasound'] font-thin  text-tertiary90 dark:text-tertiary1 max-tablet:text-heading-large max-tablet:leading-heading-large "
+                            className="leading-small heading--extra-large relative z-50 w-full whitespace-nowrap font-['HFF_Ultrasound'] font-thin  text-tertiary90 dark:text-tertiary1 max-tablet:text-heading-sub-extra-large max-tablet:leading-heading-sub-extra-large max-mobile-large:text-heading-large max-mobile-large:leading-heading-large "
                             hover={true}
                             index={i}
                             intent={intent}
@@ -235,7 +235,7 @@ const Nav: FC<NavProps> = ({ className, intent }) => {
                             opacity: 0,
                             transition: { duration: 0.5, delay: i * 0.115 }
                           }}
-                          className="glowy-shadow relative z-10 h-[10rem] bg-tertiary40 p-1 max-tablet:h-[5rem] max-tablet:p-[2px]"
+                          className="glowy-shadow relative z-10 h-[10rem] bg-tertiary40 p-1 max-tablet:h-[7.5rem]  max-mobile-large:h-[5rem] max-mobile-large:p-[2px]"
                         ></motion.div>
                       </div>
                     );

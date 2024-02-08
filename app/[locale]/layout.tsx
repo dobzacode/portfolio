@@ -41,7 +41,7 @@ export default async function RootLayout({
           <NextIntlClientProvider messages={messages}>
             <SplashScreen></SplashScreen>
             <LoadingBar></LoadingBar>
-            <Header size={'large'} textColor={'neutral'} className=" "></Header>
+            <Header size={'large'} textColor={'neutral'} className=" flex"></Header>
 
             {children}
             <div className="noise "></div>
