@@ -90,7 +90,7 @@ export default function ProjectContent({ params }: { params: { projectName: stri
             </div>
           </div>
           <div
-            className={` relative  -z-50 flex  w-full flex-col gap-medium  overflow-hidden pb-medium`}
+            className={` relative  z-10 flex  w-full flex-col gap-medium  overflow-hidden pb-medium`}
           >
             <motion.hr
               key={`Paragraph border`}
@@ -183,7 +183,7 @@ export default function ProjectContent({ params }: { params: { projectName: stri
               <a
                 //@ts-ignore
                 href={projectObj.url}
-                className="sub-heading m relative z-10 flex w-fit items-center gap-extra-small font-thin  text-primary90 dark:text-primary1 max-tablet:text-body max-mobile-large:text-body max-mobile-large:leading-body"
+                className="sub-heading m relative z-40 flex w-fit items-center gap-extra-small font-thin  text-primary90 dark:text-primary1 max-tablet:text-body max-mobile-large:text-body max-mobile-large:leading-body"
               >
                 <Icon
                   size={2}
