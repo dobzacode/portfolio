@@ -43,14 +43,14 @@ export default function ProjectContent({ params }: { params: { projectName: stri
   console.log(projectList[projectObj.id - 1], projectObj.id - 1);
 
   return (
-    <div className="flex h-full w-screen justify-center overflow-hidden ">
+    <div className="flex h-full w-screen justify-center overflow-hidden px-medium py-medium mobile-large:px-large tablet:px-large laptop:py-large laptop:pl-extra-large laptop-large:px-extra-large">
       <div
-        className={`z-4 0 relative flex h-fit w-full  flex-col flex-wrap  justify-center gap-sub-large bg-transparent py-medium  duration-slowest  max-laptop:w-fit max-laptop:px-large max-tablet:px-sub-large max-mobile-large:w-full max-mobile-large:max-w-full max-mobile-large:px-medium tablet:px-medium laptop:flex-row   laptop:px-extra-large  laptop:py-large   ${
+        className={`z-4 0 relative flex h-fit w-full  flex-col   justify-center gap-sub-large bg-transparent   duration-slowest     max-mobile-large:w-full max-mobile-large:max-w-full  laptop:flex-row       ${
           searchParams.get('menu') ? 'translate-x-[20%] opacity-0 ' : 'opacity-100 delay-1000'
         }`}
       >
-        <main className="flex   w-full flex-col gap-sub-large  text-primary90 dark:text-primary1 laptop:w-full laptop:max-w-[42%]">
-          <div className="relative z-50 flex flex-col bg-transparent max-[1200px]:w-fit max-laptop:w-auto">
+        <main className="flex   w-full flex-col   text-primary90 dark:text-primary1 laptop:w-1/2 laptop-large:w-full laptop-large:max-w-[650px]">
+          <div className="relative z-50 flex w-full flex-col bg-transparent max-laptop:w-auto">
             <div
               className={`} relative z-50 -ml-small  flex w-fit flex-row-reverse items-center gap-extra-small
                               overflow-hidden `}
@@ -88,6 +88,10 @@ export default function ProjectContent({ params }: { params: { projectName: stri
                 className="glowy-shadow relative z-10 -mt-3 h-[10rem] bg-tertiary40 p-1 max-tablet:-mt-2 max-tablet:h-[7.5rem] max-tablet:p-[2px] max-mobile-large:-mt-1 max-mobile-large:h-[5rem]"
               ></motion.div>
             </div>
+          </div>
+          <div
+            className={` relative  -z-50 flex  w-full flex-col gap-medium  overflow-hidden pb-medium`}
+          >
             <motion.hr
               key={`Paragraph border`}
               initial={{ width: 0, opacity: 0 }}
@@ -109,23 +113,24 @@ export default function ProjectContent({ params }: { params: { projectName: stri
               }}
               className="glowy-shadow  relative z-20  bg-tertiary40 p-1  max-tablet:p-[2px]"
             ></motion.hr>
-          </div>
-          <div className={` relative  -z-50 flex  w-full flex-col-reverse  gap-extra-small  `}>
-            <div className="flex w-full flex-col gap-small">
-              <motion.div
-                className="relative z-10 flex w-full "
-                key={`Paragraph animated`}
-                initial={{ y: '-250%', opacity: 0 }}
-                animate={{
-                  y: '0',
-                  opacity: 1,
-                  transition: {
-                    y: { type: 'spring', duration: 2, delay: 3.5 + splashDelay - 0.8 },
-                    opacity: { duration: 0.8, delay: 3.5 + splashDelay - 0.8 }
-                  }
-                }}
-                exit={{ y: '-50%', transition: { duration: 0.5 } }}
-              >
+            <motion.div
+              initial={{ y: '-250%', opacity: 0 }}
+              animate={{
+                y: '0',
+                opacity: 1,
+                transition: {
+                  y: {
+                    type: 'spring',
+                    duration: 2,
+                    delay: 3.5 + splashDelay - 0.8
+                  },
+                  opacity: { duration: 2, delay: 3.5 + splashDelay - 0.8 }
+                }
+              }}
+              exit={{ y: '-50%', transition: { duration: 0.5 } }}
+              className="relative -z-20 flex w-full flex-col gap-small overflow-hidden "
+            >
+              <div className="relative z-10 flex w-full " key={`Paragraph animated`}>
                 <P className="sub-heading relative z-10 w-1/2 font-semibold  max-tablet:text-body    max-mobile-large:text-body max-mobile-large:leading-body ">
                   {t('category')}
                 </P>
@@ -141,42 +146,16 @@ export default function ProjectContent({ params }: { params: { projectName: stri
                     );
                   })}
                 </div>
-              </motion.div>
-              <motion.div
-                className="relative z-10 flex w-full justify-between"
-                key={`Year animated`}
-                initial={{ y: '-400px', opacity: 0 }}
-                animate={{
-                  y: '0',
-                  opacity: 1,
-                  transition: {
-                    y: { type: 'spring', duration: 2, delay: 3.8 + splashDelay - 0.8 },
-                    opacity: { duration: 0.8, delay: 3.8 + splashDelay - 0.8 }
-                  }
-                }}
-                exit={{ y: '-100px', transition: { duration: 0.5 } }}
-              >
+              </div>
+              <div className="relative z-10 flex w-full justify-between">
                 <P className="sub-heading relative z-10 w-1/2 font-semibold  max-tablet:text-body    max-mobile-large:text-body max-mobile-large:leading-body ">
                   {t('year')}
                 </P>
                 <P className="sub-heading relative z-10 w-1/2 whitespace-nowrap font-thin  max-tablet:text-body    max-mobile-large:text-body max-mobile-large:leading-body ">
                   {projectObj.year}
                 </P>
-              </motion.div>
-              <motion.div
-                className="relative z-10 flex w-full "
-                key={`Stack animated`}
-                initial={{ y: '-250%', opacity: 0 }}
-                animate={{
-                  y: '0',
-                  opacity: 1,
-                  transition: {
-                    y: { type: 'spring', duration: 2, delay: 4.1 + splashDelay - 0.8 },
-                    opacity: { duration: 0.8, delay: 4.1 + splashDelay - 0.8 }
-                  }
-                }}
-                exit={{ y: '-50%', transition: { duration: 0.5 } }}
-              >
+              </div>
+              <div className="relative z-10 flex w-full ">
                 <P className="sub-heading relative z-10 w-1/2 font-semibold  max-tablet:text-body    max-mobile-large:text-body max-mobile-large:leading-body ">
                   Stack
                 </P>
@@ -192,60 +171,31 @@ export default function ProjectContent({ params }: { params: { projectName: stri
                     );
                   })}
                 </div>
-              </motion.div>
-              <motion.div
-                className="relative z-10 flex w-full justify-between"
-                key={`Status animated`}
-                initial={{ y: '-700px', opacity: 0 }}
-                animate={{
-                  y: '0',
-                  opacity: 1,
-                  transition: {
-                    y: { type: 'spring', duration: 2, delay: 4.4 + splashDelay - 0.8 },
-                    opacity: { duration: 0.8, delay: 4.4 + splashDelay - 0.8 }
-                  }
-                }}
-                exit={{ y: '-300px', transition: { duration: 0.5 } }}
-              >
+              </div>
+              <div className="relative z-10 flex w-full justify-between">
                 <P className="sub-heading relative z-10 w-1/2 font-semibold  max-tablet:text-body    max-mobile-large:text-body max-mobile-large:leading-body ">
                   {t('status.label')}
                 </P>
                 <P className="sub-heading relative z-10 w-1/2 whitespace-nowrap font-thin  max-tablet:text-body    max-mobile-large:text-body max-mobile-large:leading-body ">
                   {t(`status.${projectObj.status}`)}
                 </P>
-              </motion.div>
-            </div>
+              </div>
+              <a
+                //@ts-ignore
+                href={projectObj.url}
+                className="sub-heading m relative z-10 flex w-fit items-center gap-extra-small font-thin  text-primary90 dark:text-primary1 max-tablet:text-body max-mobile-large:text-body max-mobile-large:leading-body"
+              >
+                <Icon
+                  size={2}
+                  className="-rotate-45 max-tablet:scale-75"
+                  path={mdilArrowRight}
+                ></Icon>
+                <P className="w-fit before:absolute before:bottom-0 before:right-[50%] before:-z-10 before:w-[82%] before:max-w-0 before:origin-center before:border-b-2 before:border-tertiary40 before:duration-medium hover:before:right-0 hover:before:max-w-[90%]  before:dark:border-tertiary40">
+                  {t('url')}
+                </P>
+              </a>
+            </motion.div>
           </div>
-
-          <motion.div
-            className="relative z-10 w-full  items-end justify-between place-self-end "
-            key={`Link animated`}
-            initial={{ y: '-700px', opacity: 0 }}
-            animate={{
-              y: '0',
-              opacity: 1,
-              transition: {
-                y: { type: 'spring', duration: 2, delay: 4.7 + splashDelay - 0.8 },
-                opacity: { duration: 0.8, delay: 4.7 + splashDelay - 0.8 }
-              }
-            }}
-            exit={{ y: '-300px', transition: { duration: 0.5 } }}
-          >
-            <a
-              //@ts-ignore
-              href={projectObj.url}
-              className="sub-heading m relative z-10 flex w-fit items-center gap-extra-small font-thin  text-primary90 dark:text-primary1 max-tablet:text-body max-mobile-large:text-body max-mobile-large:leading-body"
-            >
-              <Icon
-                size={2}
-                className="-rotate-45 max-tablet:scale-75"
-                path={mdilArrowRight}
-              ></Icon>
-              <P className="w-fit before:absolute before:bottom-0 before:right-[50%] before:-z-10 before:w-[82%] before:max-w-0 before:origin-center before:border-b-2 before:border-tertiary40 before:duration-medium hover:before:right-0 hover:before:max-w-[90%]  before:dark:border-tertiary40">
-                {t('url')}
-              </P>
-            </a>
-          </motion.div>
         </main>
 
         <motion.div
@@ -254,12 +204,12 @@ export default function ProjectContent({ params }: { params: { projectName: stri
             x: '0',
             opacity: 1,
             transition: {
-              x: { type: 'spring', duration: 2, delay: 5.0 + splashDelay - 0.8 },
-              opacity: { duration: 0.8, delay: 5.0 + splashDelay - 0.8 }
+              x: { type: 'spring', duration: 2, delay: 3.5 + splashDelay - 0.8 },
+              opacity: { duration: 0.8, delay: 3.5 + splashDelay - 0.8 }
             }
           }}
-          exit={{ x: '20%', opacity: 0, transition: { duration: 0.5 } }}
-          className="relative z-50 aspect-square w-full  max-laptop:mb-large laptop:mt-6 laptop:w-1/2 laptop-large:w-1/3"
+          exit={{ y: '-20%', opacity: 0, transition: { duration: 0.5 } }}
+          className="relative z-50 aspect-square w-full  max-laptop:mb-large laptop:mt-6 laptop:w-1/2 laptop-large:max-w-[650px]"
         >
           <Image
             priority={true}
