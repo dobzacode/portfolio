@@ -17,7 +17,7 @@
 
 ## Author
 
-👤 **Your Name**
+👤 **Corentin Kittel**
 
 * Website: corentinkittel.fr
 * Github: [@dobzacode](https://github.com/dobzacode)
