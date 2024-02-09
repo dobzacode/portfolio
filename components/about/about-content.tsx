@@ -30,11 +30,11 @@ export default function AboutContent({}) {
   return (
     <>
       <div
-        className={`z-4 0 relative flex w-screen flex-col-reverse items-center justify-center gap-large bg-transparent pb-large  pt-medium duration-slowest max-laptop:px-large max-tablet:px-sub-large max-mobile-large:px-sub-medium tablet:px-medium laptop:flex-row  laptop:items-start  laptop:px-large laptop:pt-large laptop-large:px-extra-large ${
+        className={`z-4 0 relative flex w-screen  flex-col-reverse items-center justify-center  gap-large bg-transparent px-medium pb-large  pt-sub-large duration-slowest mobile-large:px-large tablet:pt-large   laptop:flex-row  laptop:items-start   laptop:px-extra-large laptop:pt-large ${
           searchParams.get('menu') ? 'translate-x-[20%] opacity-0 ' : 'opacity-100 delay-1000'
         }`}
       >
-        <main className="flex flex-col  laptop:w-1/2 laptop:max-w-[45%]">
+        <main className="flex flex-col  laptop:w-3/5 laptop:max-w-[650px] laptop-large:w-1/2">
           <div
             className={`relative z-50 -ml-[14px] flex h-full w-fit flex-row-reverse items-center gap-extra-small overflow-hidden mobile-large:-ml-[18px] `}
           >
@@ -130,7 +130,7 @@ export default function AboutContent({}) {
               opacity: { duration: 0.2, delay: splashDelay }
             }
           }}
-          className="relative h-[500px] w-[1000px]   max-laptop:max-w-[99%] laptop:h-[800px] laptop:w-[500px] laptop-large:h-[700px]"
+          className="relative h-[500px] w-full   laptop:h-[700px]  laptop:w-full laptop:max-w-[650px] laptop-large:h-[800px]"
         >
           <Image
             priority={true}
@@ -139,7 +139,7 @@ export default function AboutContent({}) {
             blurDataURL={blurSrc}
             alt="Corentin Kittel Picture"
             fill
-            className=" object-cover object-[10%_15%]  laptop:object-center  laptop:pt-4"
+            className="object-cover object-top laptop:object-center laptop:pt-6 laptop-large:object-contain  laptop-large:object-left-top"
           ></Image>
         </motion.div>
       </div>

@@ -103,7 +103,7 @@ const Nav: FC<NavProps> = ({ className, intent }) => {
 
   return (
     <header className={cn(className)}>
-      <div className=" relative z-30 flex w-full items-center justify-between ">
+      <div className=" relative z-30 flex w-full items-center justify-between">
         <Link href="/" className="flex items-center gap-sub-large laptop:gap-large">
           <AnimatedLogo splashDelay={splashDelay} className="w-20 "></AnimatedLogo>
           <AnimatePresence mode="wait">
@@ -122,7 +122,7 @@ const Nav: FC<NavProps> = ({ className, intent }) => {
             )}
           </AnimatePresence>
         </Link>
-        <div className="relative flex items-center gap-small  text-primary90 dark:text-primary1 max-tablet:gap-4">
+        <div className="relative -mr-small flex items-center  gap-small text-primary90 dark:text-primary1 max-tablet:gap-4">
           <motion.div variants={menuItemVariant} initial="hidden" animate="visible" custom="1">
             <LangageSwitch></LangageSwitch>
           </motion.div>

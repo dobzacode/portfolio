@@ -17,11 +17,11 @@ export default function ContactContent({}) {
   return (
     <>
       <div
-        className={`z-4 0 relative flex w-screen  flex-col-reverse items-center  gap-medium  bg-transparent px-large pt-medium  duration-slowest  max-tablet:px-medium  max-mobile-large:px-medium tablet:pt-large laptop-large:items-center ${
+        className={`z-4 0 relative flex w-screen  flex-col-reverse items-center  gap-medium  bg-transparent px-medium pt-medium   duration-slowest mobile-large:px-large  tablet:pt-large laptop:px-extra-large laptop-large:items-center ${
           searchParams.get('menu') ? 'translate-x-[20%] opacity-0 ' : 'opacity-100 delay-1000'
         }`}
       >
-        <main className="flex w-full flex-col mobile-large:min-w-fit  mobile-large:max-w-[80%] laptop:max-w-[73%]">
+        <main className="flex w-full max-w-[1300px] flex-col   ">
           <div className="relative z-50 flex w-full flex-col">
             <div
               className={`} relative z-50 -ml-small flex h-full  w-fit items-center gap-extra-small
@@ -87,7 +87,7 @@ export default function ContactContent({}) {
               }}
               className="glowy-shadow relative  z-20 mb-small bg-tertiary40  p-1 max-tablet:w-[110%] max-tablet:p-[2px]  laptop-large:w-full"
             ></motion.hr>
-            <div className="relative z-10 flex justify-between gap-extra-large max-laptop:flex-col max-laptop:gap-small">
+            <div className="relative z-10 flex justify-between gap-extra-large max-[1150px]:flex-col max-[1150px]:gap-small">
               <motion.div
                 key={`Email animated`}
                 initial={{ y: '-450%' }}
