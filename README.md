@@ -10,6 +10,7 @@
 ## Features
 
 - **Next.js Framework**: Leveraging Next.js for a modern, efficient, and dynamic web application that ensures a smooth user experience.
+- **Next-Intl for Localization**: Implementing Next-Intl to provide localization support, making the website accessible to a global audience.
 - **Tailwind CSS**: Styling the portfolio with Tailwind CSS, a utility-first CSS framework, for a responsive and visually appealing design.
 - **Framer Motion**: Incorporating Framer Motion to bring life to the user interface with smooth animations and delightful transitions.
 - **Lottie Animations**: Enhancing the visual experience with animations imported from After Effects using Lottie, adding a touch of creativity to the portfolio.
