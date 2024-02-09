@@ -8,6 +8,7 @@ export interface ProjectListProps {
   status: 'completed' | 'inProgress';
   url: string;
   id: number;
+  github: string;
 }
 
 export const projectList: ProjectListProps[] = [
@@ -20,7 +21,8 @@ export const projectList: ProjectListProps[] = [
     stack: ['Next.js', 'TailwindCSS', 'Framer Motion', 'TypeScript', 'Vercel'],
     status: 'inProgress',
     url: 'marion-archi.vercel.app',
-    id: 0
+    id: 0,
+    github: 'https://github.com/dobzacode/MTONARCHI'
   },
   {
     title: 'ABJECT-ACT',
@@ -31,7 +33,8 @@ export const projectList: ProjectListProps[] = [
     stack: ['Next.js', 'TailwindCSS', 'Framer Motion', 'Next-intl', 'TypeScript', 'Vercel'],
     status: 'inProgress',
     url: 'abject-act.vercel.app',
-    id: 1
+    id: 1,
+    github: 'https://github.com/dobzacode/ABJECT-ACT'
   },
   {
     title: 'RODDAT',
@@ -42,6 +45,7 @@ export const projectList: ProjectListProps[] = [
     stack: ['Next.js', 'TailwindCSS', 'TypeScript', 'Prisma', 'Next-Auth', 'Vercel', 'Neon.tech'],
     status: 'completed',
     url: 'roddat.vercel.app',
-    id: 2
+    id: 2,
+    github: 'https://github.com/dobzacode/RODDAT'
   }
 ];

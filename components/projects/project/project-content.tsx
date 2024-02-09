@@ -130,16 +130,19 @@ export default function ProjectContent({ params }: { params: { projectName: stri
               exit={{ y: '-50%', transition: { duration: 0.5 } }}
               className="relative -z-20 flex w-full flex-col gap-small overflow-hidden "
             >
-              <div className="relative z-10 flex w-full " key={`Paragraph animated`}>
-                <P className="sub-heading relative z-10 w-1/2 font-semibold  max-tablet:text-body    max-mobile-large:text-body max-mobile-large:leading-body ">
+              <div
+                className="relative z-10 flex w-full justify-between "
+                key={`Paragraph animated`}
+              >
+                <P className="sub-heading relative z-10 w-full max-w-full font-semibold  max-tablet:text-body    max-mobile-large:text-body max-mobile-large:leading-body ">
                   {t('category')}
                 </P>
-                <div>
+                <div className=" flex w-3/5 flex-col">
                   {projectObj.category.map((category) => {
                     return (
                       <P
                         key={`${category}`}
-                        className="sub-heading relative z-10 w-1/2 whitespace-nowrap font-thin  max-tablet:text-body    max-mobile-large:text-body max-mobile-large:leading-body "
+                        className="sub-heading relative z-10 whitespace-nowrap font-thin  max-tablet:text-body    max-mobile-large:text-body max-mobile-large:leading-body "
                       >
                         {category}
                       </P>
@@ -147,24 +150,24 @@ export default function ProjectContent({ params }: { params: { projectName: stri
                   })}
                 </div>
               </div>
-              <div className="relative z-10 flex w-full justify-between">
-                <P className="sub-heading relative z-10 w-1/2 font-semibold  max-tablet:text-body    max-mobile-large:text-body max-mobile-large:leading-body ">
+              <div className="relative z-10 flex w-full justify-between ">
+                <P className="sub-heading relative z-10 w-full max-w-full font-semibold  max-tablet:text-body    max-mobile-large:text-body max-mobile-large:leading-body ">
                   {t('year')}
                 </P>
-                <P className="sub-heading relative z-10 w-1/2 whitespace-nowrap font-thin  max-tablet:text-body    max-mobile-large:text-body max-mobile-large:leading-body ">
+                <P className=" sub-heading relative z-10 w-3/5 whitespace-nowrap font-thin  max-tablet:text-body    max-mobile-large:text-body max-mobile-large:leading-body ">
                   {projectObj.year}
                 </P>
               </div>
-              <div className="relative z-10 flex w-full ">
-                <P className="sub-heading relative z-10 w-1/2 font-semibold  max-tablet:text-body    max-mobile-large:text-body max-mobile-large:leading-body ">
+              <div className="relative z-10 flex w-full justify-between ">
+                <P className="sub-heading relative z-10 w-full max-w-full font-semibold  max-tablet:text-body    max-mobile-large:text-body max-mobile-large:leading-body ">
                   Stack
                 </P>
-                <div>
+                <div className="flex w-3/5 flex-col">
                   {projectObj.stack.map((stack) => {
                     return (
                       <P
                         key={`${stack}`}
-                        className="sub-heading relative z-10 w-1/2 whitespace-nowrap font-thin  max-tablet:text-body    max-mobile-large:text-body max-mobile-large:leading-body "
+                        className=" sub-heading relative z-10 w-full whitespace-nowrap font-thin  max-tablet:text-body    max-mobile-large:text-body max-mobile-large:leading-body "
                       >
                         {stack}
                       </P>
@@ -172,28 +175,44 @@ export default function ProjectContent({ params }: { params: { projectName: stri
                   })}
                 </div>
               </div>
-              <div className="relative z-10 flex w-full justify-between">
-                <P className="sub-heading relative z-10 w-1/2 font-semibold  max-tablet:text-body    max-mobile-large:text-body max-mobile-large:leading-body ">
+              <div className="relative z-10 flex w-full justify-between ">
+                <P className="sub-heading relative z-10 w-full max-w-full font-semibold  max-tablet:text-body    max-mobile-large:text-body max-mobile-large:leading-body ">
                   {t('status.label')}
                 </P>
-                <P className="sub-heading relative z-10 w-1/2 whitespace-nowrap font-thin  max-tablet:text-body    max-mobile-large:text-body max-mobile-large:leading-body ">
+                <P className=" sub-heading relative z-10 w-3/5 whitespace-nowrap font-thin  max-tablet:text-body    max-mobile-large:text-body max-mobile-large:leading-body ">
                   {t(`status.${projectObj.status}`)}
                 </P>
               </div>
-              <a
-                //@ts-ignore
-                href={projectObj.url}
-                className="sub-heading m relative z-40 flex w-fit items-center gap-extra-small font-thin  text-primary90 dark:text-primary1 max-tablet:text-body max-mobile-large:text-body max-mobile-large:leading-body"
-              >
-                <Icon
-                  size={2}
-                  className="-rotate-45 max-tablet:scale-75"
-                  path={mdilArrowRight}
-                ></Icon>
-                <P className="w-fit before:absolute before:bottom-0 before:right-[50%] before:-z-10 before:w-[82%] before:max-w-0 before:origin-center before:border-b-2 before:border-tertiary40 before:duration-medium hover:before:right-0 hover:before:max-w-[90%]  before:dark:border-tertiary40">
-                  {t('url')}
-                </P>
-              </a>
+              <div className="flex  justify-between">
+                <a
+                  //@ts-ignore
+                  href={projectObj.url}
+                  className="sub-heading m relative z-40 flex w-full items-center gap-extra-small font-thin  text-primary90 dark:text-primary1 max-tablet:text-body max-mobile-large:text-body max-mobile-large:leading-body"
+                >
+                  <Icon
+                    size={2}
+                    className="-rotate-45 max-tablet:scale-75"
+                    path={mdilArrowRight}
+                  ></Icon>
+                  <P className="w-fit before:absolute before:bottom-0 before:right-[50%] before:-z-10 before:w-[82%] before:max-w-0 before:origin-center before:border-b-2 before:border-tertiary40 before:duration-medium hover:before:right-0 hover:before:max-w-[90%]  before:dark:border-tertiary40">
+                    {t('url')}
+                  </P>
+                </a>
+                <a
+                  //@ts-ignore
+                  href={projectObj.url}
+                  className="sub-heading m relative z-40 flex w-3/5 items-center gap-extra-small font-thin  text-primary90 dark:text-primary1 max-tablet:text-body max-mobile-large:text-body max-mobile-large:leading-body"
+                >
+                  <Icon
+                    size={2}
+                    className="-ml-[3.8rem] -rotate-45 max-tablet:scale-75"
+                    path={mdilArrowRight}
+                  ></Icon>
+                  <P className="w-fit before:absolute before:bottom-0 before:right-[50%] before:-z-10 before:w-[82%] before:max-w-0 before:origin-center before:border-b-2 before:border-tertiary40 before:duration-medium hover:before:right-0 hover:before:max-w-[90%]  before:dark:border-tertiary40">
+                    {t('github')}
+                  </P>
+                </a>
+              </div>
             </motion.div>
           </div>
         </main>

@@ -58,6 +58,7 @@
       "inProgress": "In progress"
     },
     "url": "Go to the website",
+    "github": "Go to the GitHub",
     "nextProject": "Next",
     "previousProject": "Previous",
     "back": "Retour à la liste des projets"
