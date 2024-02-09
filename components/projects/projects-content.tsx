@@ -9,6 +9,7 @@ import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 import { useSearchParams } from 'next/navigation';
 import { useState } from 'react';
+import Carousel from '../ui/div/carousel';
 
 export default function ProjectsContent({}) {
   const [splashDelay] = useState<4.5 | 0>(!sessionStorage.getItem('shown') ? 4.5 : 0);
@@ -26,7 +27,7 @@ export default function ProjectsContent({}) {
   return (
     <>
       <div
-        className={`z-4 0 relative flex w-screen  flex-col-reverse justify-between gap-medium bg-transparent pt-medium duration-slowest max-laptop-large:min-h-screen max-laptop:min-h-fit max-mobile-large:px-medium    mobile-large:px-large tablet:px-large tablet:pt-large laptop:flex-row laptop:items-start  laptop:justify-center laptop:px-extra-large laptop-large:gap-extra-large  ${
+        className={`z-4 0 relative flex w-screen  flex-col justify-between gap-medium bg-transparent pt-medium duration-slowest max-laptop-large:min-h-screen max-laptop:min-h-fit max-mobile-large:px-medium    mobile-large:px-large tablet:px-large tablet:pt-large laptop:flex-row laptop:items-start  laptop:justify-center laptop:px-extra-large laptop-large:gap-extra-large  ${
           searchParams.get('menu') ? 'translate-x-[20%] opacity-0 ' : 'opacity-100 delay-1000'
         }`}
       >
@@ -157,6 +158,7 @@ export default function ProjectsContent({}) {
             </AnimatePresence>
           </div>
         )}
+        {!isLaptop && <Carousel></Carousel>}
       </div>
     </>
   );
