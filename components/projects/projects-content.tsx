@@ -26,11 +26,11 @@ export default function ProjectsContent({}) {
   return (
     <>
       <div
-        className={`z-4 0 relative flex w-screen  flex-col-reverse justify-between gap-medium bg-transparent pt-medium duration-slowest max-laptop-large:min-h-screen max-laptop:min-h-fit max-tablet:px-large    max-mobile-large:px-medium tablet:px-large tablet:pt-large laptop:flex-row laptop:items-start  laptop:justify-center laptop:px-large laptop-large:gap-extra-large  ${
+        className={`z-4 0 relative flex w-screen  flex-col-reverse justify-between gap-medium bg-transparent pt-medium duration-slowest max-laptop-large:min-h-screen max-laptop:min-h-fit max-mobile-large:px-medium    mobile-large:px-large tablet:px-large tablet:pt-large laptop:flex-row laptop:items-start  laptop:justify-center laptop:px-extra-large laptop-large:gap-extra-large  ${
           searchParams.get('menu') ? 'translate-x-[20%] opacity-0 ' : 'opacity-100 delay-1000'
         }`}
       >
-        <main className="w-full max-w-[650px]  ">
+        <main className="w-full laptop:w-2/5 laptop:max-w-[650px]  ">
           <div
             className={`relative z-50 -ml-small flex h-full w-fit flex-row-reverse items-center gap-extra-small
                           overflow-hidden`}
@@ -125,7 +125,7 @@ export default function ProjectsContent({}) {
         </main>
 
         {isLaptop && (
-          <div className="flex aspect-square  max-w-[650px] justify-center  pt-6 max-laptop:hidden">
+          <div className="flex aspect-square justify-center pt-6   max-laptop:hidden  laptop:w-3/5 laptop:max-w-[650px]">
             <AnimatePresence mode="popLayout">
               {hoveredProjectImage && (
                 <motion.div

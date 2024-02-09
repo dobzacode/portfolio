@@ -122,7 +122,7 @@ const Nav: FC<NavProps> = ({ className, intent }) => {
             )}
           </AnimatePresence>
         </Link>
-        <div className="relative -mr-small flex items-center  gap-small text-primary90 dark:text-primary1 max-tablet:gap-4">
+        <div className="relative  flex items-center  gap-small text-primary90 dark:text-primary1 max-tablet:gap-4">
           <motion.div variants={menuItemVariant} initial="hidden" animate="visible" custom="1">
             <LangageSwitch></LangageSwitch>
           </motion.div>

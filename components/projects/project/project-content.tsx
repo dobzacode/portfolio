@@ -45,7 +45,7 @@ export default function ProjectContent({ params }: { params: { projectName: stri
   return (
     <div className="flex h-full w-screen justify-center overflow-hidden ">
       <div
-        className={`z-4 0 relative flex h-fit w-full  flex-col flex-wrap  justify-center gap-sub-large bg-transparent py-medium  duration-slowest  max-laptop:w-fit max-laptop:px-large max-tablet:px-sub-large max-mobile-large:w-full max-mobile-large:max-w-full max-mobile-large:px-medium tablet:px-medium laptop:flex-row   laptop:px-large  laptop:py-large  laptop-large:px-extra-large ${
+        className={`z-4 0 relative flex h-fit w-full  flex-col flex-wrap  justify-center gap-sub-large bg-transparent py-medium  duration-slowest  max-laptop:w-fit max-laptop:px-large max-tablet:px-sub-large max-mobile-large:w-full max-mobile-large:max-w-full max-mobile-large:px-medium tablet:px-medium laptop:flex-row   laptop:px-extra-large  laptop:py-large   ${
           searchParams.get('menu') ? 'translate-x-[20%] opacity-0 ' : 'opacity-100 delay-1000'
         }`}
       >
@@ -126,7 +126,7 @@ export default function ProjectContent({ params }: { params: { projectName: stri
                 }}
                 exit={{ y: '-50%', transition: { duration: 0.5 } }}
               >
-                <P className="sub-heading relative z-10 w-1/2 font-semibold  max-tablet:text-body    max-mobile-large:text-body max-mobile-large:leading-sub-heading ">
+                <P className="sub-heading relative z-10 w-1/2 font-semibold  max-tablet:text-body    max-mobile-large:text-body max-mobile-large:leading-body ">
                   {t('category')}
                 </P>
                 <div>
@@ -134,7 +134,7 @@ export default function ProjectContent({ params }: { params: { projectName: stri
                     return (
                       <P
                         key={`${category}`}
-                        className="sub-heading relative z-10 w-1/2 whitespace-nowrap font-thin  max-tablet:text-body    max-mobile-large:text-body max-mobile-large:leading-sub-heading "
+                        className="sub-heading relative z-10 w-1/2 whitespace-nowrap font-thin  max-tablet:text-body    max-mobile-large:text-body max-mobile-large:leading-body "
                       >
                         {category}
                       </P>
@@ -156,10 +156,10 @@ export default function ProjectContent({ params }: { params: { projectName: stri
                 }}
                 exit={{ y: '-100px', transition: { duration: 0.5 } }}
               >
-                <P className="sub-heading relative z-10 w-1/2 font-semibold  max-tablet:text-body    max-mobile-large:text-body max-mobile-large:leading-sub-heading ">
+                <P className="sub-heading relative z-10 w-1/2 font-semibold  max-tablet:text-body    max-mobile-large:text-body max-mobile-large:leading-body ">
                   {t('year')}
                 </P>
-                <P className="sub-heading relative z-10 w-1/2 whitespace-nowrap font-thin  max-tablet:text-body    max-mobile-large:text-body max-mobile-large:leading-sub-heading ">
+                <P className="sub-heading relative z-10 w-1/2 whitespace-nowrap font-thin  max-tablet:text-body    max-mobile-large:text-body max-mobile-large:leading-body ">
                   {projectObj.year}
                 </P>
               </motion.div>
@@ -177,7 +177,7 @@ export default function ProjectContent({ params }: { params: { projectName: stri
                 }}
                 exit={{ y: '-50%', transition: { duration: 0.5 } }}
               >
-                <P className="sub-heading relative z-10 w-1/2 font-semibold  max-tablet:text-body    max-mobile-large:text-body max-mobile-large:leading-sub-heading ">
+                <P className="sub-heading relative z-10 w-1/2 font-semibold  max-tablet:text-body    max-mobile-large:text-body max-mobile-large:leading-body ">
                   Stack
                 </P>
                 <div>
@@ -185,7 +185,7 @@ export default function ProjectContent({ params }: { params: { projectName: stri
                     return (
                       <P
                         key={`${stack}`}
-                        className="sub-heading relative z-10 w-1/2 whitespace-nowrap font-thin  max-tablet:text-body    max-mobile-large:text-body max-mobile-large:leading-sub-heading "
+                        className="sub-heading relative z-10 w-1/2 whitespace-nowrap font-thin  max-tablet:text-body    max-mobile-large:text-body max-mobile-large:leading-body "
                       >
                         {stack}
                       </P>
@@ -207,10 +207,10 @@ export default function ProjectContent({ params }: { params: { projectName: stri
                 }}
                 exit={{ y: '-300px', transition: { duration: 0.5 } }}
               >
-                <P className="sub-heading relative z-10 w-1/2 font-semibold  max-tablet:text-body    max-mobile-large:text-body max-mobile-large:leading-sub-heading ">
+                <P className="sub-heading relative z-10 w-1/2 font-semibold  max-tablet:text-body    max-mobile-large:text-body max-mobile-large:leading-body ">
                   {t('status.label')}
                 </P>
-                <P className="sub-heading relative z-10 w-1/2 whitespace-nowrap font-thin  max-tablet:text-body    max-mobile-large:text-body max-mobile-large:leading-sub-heading ">
+                <P className="sub-heading relative z-10 w-1/2 whitespace-nowrap font-thin  max-tablet:text-body    max-mobile-large:text-body max-mobile-large:leading-body ">
                   {t(`status.${projectObj.status}`)}
                 </P>
               </motion.div>
@@ -234,7 +234,7 @@ export default function ProjectContent({ params }: { params: { projectName: stri
             <a
               //@ts-ignore
               href={projectObj.url}
-              className="sub-heading m relative z-10 flex w-fit items-center gap-extra-small font-thin  text-primary90 dark:text-primary1 max-tablet:text-body max-mobile-large:text-body max-mobile-large:leading-sub-heading"
+              className="sub-heading m relative z-10 flex w-fit items-center gap-extra-small font-thin  text-primary90 dark:text-primary1 max-tablet:text-body max-mobile-large:text-body max-mobile-large:leading-body"
             >
               <Icon
                 size={2}
@@ -275,7 +275,7 @@ export default function ProjectContent({ params }: { params: { projectName: stri
             {projectList[projectObj.id - 1] && (
               <Link //@ts-ignore
                 href={`/work/${projectList[projectObj.id - 1].title.toLowerCase()}`}
-                className="sub-heading absolute -bottom-[4.8rem] left-0 z-10 flex w-fit items-center gap-extra-small font-thin text-primary90  dark:text-primary1 max-tablet:text-body  max-mobile-large:text-body max-mobile-large:leading-sub-heading"
+                className="sub-heading absolute -bottom-[4.8rem] left-0 z-10 flex w-fit items-center gap-extra-small font-thin text-primary90  dark:text-primary1 max-tablet:text-body  max-mobile-large:text-body max-mobile-large:leading-body"
               >
                 <P className="relative whitespace-nowrap font-['HFF_Ultrasound'] font-thin leading-heading before:absolute before:bottom-0 before:left-[50%] before:-z-10 before:w-full before:max-w-0 before:origin-center before:border-b-2 before:border-tertiary40 before:duration-medium hover:before:left-0 hover:before:max-w-full before:dark:border-tertiary40 max-tablet:text-sub-heading max-mobile-large:text-body">
                   {t('previousProject')}
@@ -285,7 +285,7 @@ export default function ProjectContent({ params }: { params: { projectName: stri
             {projectList[projectObj.id + 1] && (
               <Link //@ts-ignore
                 href={`/work/${projectList[projectObj.id + 1].title.toLowerCase()}`}
-                className="sub-heading absolute -bottom-[4.8rem] right-0 z-10 flex w-fit items-center gap-extra-small font-thin text-primary90  dark:text-primary1 max-tablet:text-body  max-mobile-large:text-body max-mobile-large:leading-sub-heading"
+                className="sub-heading absolute -bottom-[4.8rem] right-0 z-10 flex w-fit items-center gap-extra-small font-thin text-primary90  dark:text-primary1 max-tablet:text-body  max-mobile-large:text-body max-mobile-large:leading-body"
               >
                 <P className="relative whitespace-nowrap font-['HFF_Ultrasound'] font-thin leading-heading before:absolute before:bottom-0 before:left-[50%] before:-z-10 before:w-full before:max-w-0 before:origin-center before:border-b-2 before:border-tertiary40 before:duration-medium hover:before:left-0 hover:before:max-w-full before:dark:border-tertiary40 max-tablet:text-sub-heading max-mobile-large:text-body">
                   {t('nextProject')}

@@ -2,6 +2,8 @@
 
 import { H1 } from '@/components/ui/text/h1';
 import P from '@/components/ui/text/p';
+import { mdilArrowRight } from '@mdi/light-js';
+import Icon from '@mdi/react';
 import { motion } from 'framer-motion';
 import { useTranslations } from 'next-intl';
 import { useSearchParams } from 'next/navigation';
@@ -87,7 +89,7 @@ export default function ContactContent({}) {
               }}
               className="glowy-shadow relative  z-20 mb-small bg-tertiary40  p-1 max-tablet:w-[110%] max-tablet:p-[2px]  laptop-large:w-full"
             ></motion.hr>
-            <div className="relative z-10 flex justify-between gap-extra-large max-[1150px]:flex-col max-[1150px]:gap-small">
+            <div className="relative z-10 flex justify-between gap-extra-large max-[1200px]:flex-col max-[1200px]:gap-small">
               <motion.div
                 key={`Email animated`}
                 initial={{ y: '-450%' }}
@@ -95,7 +97,7 @@ export default function ContactContent({}) {
                   y: '0',
                   transition: { type: 'spring', duration: 2, delay: 2.5 + splashDelay }
                 }}
-                className="sub-heading  flex items-start gap-sub-large text-primary90 dark:text-primary1 max-tablet:gap-medium max-tablet:text-body  max-tablet:leading-body max-[630px]:flex-col max-[630px]:items-start max-[630px]:gap-0 "
+                className="sub-heading  flex items-start gap-sub-large text-primary90 dark:text-primary1 max-[1200px]:justify-between max-tablet:gap-medium max-tablet:text-body  max-tablet:leading-body  max-[630px]:gap-0 "
               >
                 <P className="relative z-10  whitespace-nowrap font-semibold">E-MAIL</P>
                 <a className="font-thin" href="mailto: contact@corentinkittel.fr">
@@ -109,14 +111,29 @@ export default function ContactContent({}) {
                   y: '0',
                   transition: { type: 'spring', duration: 2, delay: 2.7 + splashDelay }
                 }}
-                className="sub-heading  flex items-start gap-large text-primary90 dark:text-primary1 max-tablet:gap-medium max-tablet:text-body   max-tablet:leading-body max-[630px]:flex-col max-[630px]:items-start max-[630px]:gap-0 "
+                className="sub-heading  flex items-start gap-large text-primary90 dark:text-primary1 max-[1200px]:justify-between max-tablet:gap-medium max-tablet:text-body   max-tablet:leading-body max-[630px]:gap-0 "
               >
                 <P className="relative z-10  whitespace-nowrap font-semibold">
                   {t('social').toUpperCase()}
                 </P>
                 <div className="flex flex-col gap-extra-small font-thin max-[630px]:gap-0">
-                  <a href="linkedin">Linkedin</a>
-                  <a href="https://github.com/dobzacode">Github</a>
+                  <div className="flex items-center gap-extra-small text-primary90 dark:text-primary1  max-tablet:-mt-4">
+                    <Icon
+                      size={2}
+                      className=" -rotate-45 max-tablet:scale-75
+                      "
+                      path={mdilArrowRight}
+                    ></Icon>
+                    <a href="linkedin">Linkedin</a>
+                  </div>
+                  <div className="flex items-center gap-extra-small text-primary90 dark:text-primary1  max-tablet:-mt-4">
+                    <Icon
+                      size={2}
+                      className=" -rotate-45 max-tablet:scale-75"
+                      path={mdilArrowRight}
+                    ></Icon>
+                    <a href="https://github.com/dobzacode">Github</a>
+                  </div>
                 </div>
               </motion.div>
             </div>
