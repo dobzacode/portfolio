@@ -204,8 +204,8 @@ export default function ProjectContent({ params }: { params: { projectName: stri
             x: '0',
             opacity: 1,
             transition: {
-              x: { type: 'spring', duration: 2, delay: 3.5 + splashDelay - 0.8 },
-              opacity: { duration: 0.8, delay: 3.5 + splashDelay - 0.8 }
+              x: { type: 'spring', duration: 2, delay: 4.5 + splashDelay - 0.8 },
+              opacity: { duration: 0.8, delay: 4.5 + splashDelay - 0.8 }
             }
           }}
           exit={{ y: '-20%', opacity: 0, transition: { duration: 0.5 } }}
