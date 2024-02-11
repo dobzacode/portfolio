@@ -183,32 +183,33 @@ export default function ProjectContent({ params }: { params: { projectName: stri
                   {t(`status.${projectObj.status}`)}
                 </P>
               </div>
-              <div className="flex  justify-between">
+              <div className="flex justify-between  max-[1300px]:flex-col max-[1300px]:gap-extra-small max-laptop:flex-row max-laptop:gap-0 max-mobile-large:flex-col">
                 <a
                   //@ts-ignore
                   href={projectObj.url}
-                  className="sub-heading m relative z-40 flex w-full items-center gap-extra-small font-thin  text-primary90 dark:text-primary1 max-tablet:text-body max-mobile-large:text-body max-mobile-large:leading-body"
+                  className="sub-heading m relative z-40 flex w-full items-center gap-extra-small font-thin text-primary90  dark:text-primary1 max-tablet:-ml-[0.8rem] max-tablet:text-body  max-mobile-large:text-body "
                 >
                   <Icon
                     size={2}
                     className="-rotate-45 max-tablet:scale-75"
                     path={mdilArrowRight}
                   ></Icon>
-                  <P className="w-fit before:absolute before:bottom-0 before:right-[50%] before:-z-10 before:w-[82%] before:max-w-0 before:origin-center before:border-b-2 before:border-tertiary40 before:duration-medium hover:before:right-0 hover:before:max-w-[90%]  before:dark:border-tertiary40">
+                  <P className="relative w-fit before:absolute before:bottom-0 before:-z-10  before:w-full before:max-w-0 before:origin-center before:border-b-2 before:border-tertiary40 before:duration-medium hover:before:max-w-full before:dark:border-tertiary40  max-tablet:-ml-[0.8rem] max-mobile-large:-mb-1 tablet:before:-mb-1">
                     {t('url')}
                   </P>
                 </a>
                 <a
                   //@ts-ignore
                   href={projectObj.url}
-                  className="sub-heading m relative z-40 flex w-3/5 items-center gap-extra-small font-thin  text-primary90 dark:text-primary1 max-tablet:text-body max-mobile-large:text-body max-mobile-large:leading-body"
+                  className="sub-heading relative z-40 flex w-3/5 items-center gap-extra-small whitespace-nowrap font-thin text-primary90  dark:text-primary1 max-tablet:text-body max-mobile-large:-ml-[0.8rem] max-mobile-large:text-body  "
                 >
                   <Icon
                     size={2}
-                    className="-ml-[3.8rem] -rotate-45 max-tablet:scale-75"
+                    className=" -rotate-45 max-laptop:-ml-[3.8rem] max-tablet:-ml-[3rem] max-tablet:scale-75 max-mobile-large:ml-0 min-[1300px]:-ml-[3.8rem]"
                     path={mdilArrowRight}
                   ></Icon>
-                  <P className="w-fit before:absolute before:bottom-0 before:right-[50%] before:-z-10 before:w-[82%] before:max-w-0 before:origin-center before:border-b-2 before:border-tertiary40 before:duration-medium hover:before:right-0 hover:before:max-w-[90%]  before:dark:border-tertiary40">
+
+                  <P className="relative w-fit before:absolute before:bottom-0 before:-z-10  before:w-full before:max-w-0 before:origin-center before:border-b-2 before:border-tertiary40 before:duration-medium hover:before:max-w-full before:dark:border-tertiary40  max-tablet:-ml-[0.8rem]  max-mobile-large:-mb-1 tablet:before:-mb-1">
                     {t('github')}
                   </P>
                 </a>

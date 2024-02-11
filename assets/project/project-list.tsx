@@ -20,7 +20,7 @@ export const projectList: ProjectListProps[] = [
     year: 2023,
     stack: ['Next.js', 'TailwindCSS', 'Framer Motion', 'TypeScript', 'Vercel'],
     status: 'inProgress',
-    url: 'marion-archi.vercel.app',
+    url: 'https://marion-archi.vercel.app',
     id: 0,
     github: 'https://github.com/dobzacode/MTONARCHI'
   },
@@ -32,7 +32,7 @@ export const projectList: ProjectListProps[] = [
     year: 2023,
     stack: ['Next.js', 'TailwindCSS', 'Framer Motion', 'Next-intl', 'TypeScript', 'Vercel'],
     status: 'inProgress',
-    url: 'abject-act.vercel.app',
+    url: 'https://abject-act.vercel.app',
     id: 1,
     github: 'https://github.com/dobzacode/ABJECT-ACT'
   },
@@ -44,7 +44,7 @@ export const projectList: ProjectListProps[] = [
     year: 2023,
     stack: ['Next.js', 'TailwindCSS', 'TypeScript', 'Prisma', 'Next-Auth', 'Vercel', 'Neon.tech'],
     status: 'completed',
-    url: 'roddat.vercel.app',
+    url: 'https://roddat.vercel.app',
     id: 2,
     github: 'https://github.com/dobzacode/RODDAT'
   }
