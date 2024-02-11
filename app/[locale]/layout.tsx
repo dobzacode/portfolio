@@ -1,7 +1,6 @@
 import { Providers } from '@/components/wrapper/dark-mode/providers';
 
 import LoadingBar from '@/components/animated-assets/loading-bar';
-import CustomCursor from '@/components/ui/custom-cursor';
 import { Header } from '@/components/ui/header/header';
 import SplashScreen from '@/components/ui/splash-screen/splash-screen';
 import { NextIntlClientProvider } from 'next-intl';
@@ -45,7 +44,6 @@ export default async function RootLayout({
 
             {children}
             <div className="noise max-mobile-large:hidden"></div>
-            <CustomCursor></CustomCursor>
           </NextIntlClientProvider>
         </Providers>
       </body>
