@@ -49,7 +49,7 @@ export default function NotFound() {
           }
         }}
         exit={{ opacity: 0, x: '50%', transition: { duration: 1.5 } }}
-        className="flex h-screen w-screen flex-col items-center justify-center gap-medium px-small text-primary90 dark:text-primary5"
+        className="flex h-[75vh] w-full flex-col items-center justify-center gap-medium px-small text-primary90 dark:text-primary5"
       >
         <H1 textType="heading--extra-large">404</H1>
         <P textType="body" className="max-w-[400px] text-center">

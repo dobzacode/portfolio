@@ -84,7 +84,7 @@ const Nav: FC<NavProps> = ({ className, intent }) => {
       router.replace(`${pathname.replace('[projectName]', params.projectName)}?menu=true`);
       setTimeout(() => {
         setShowAnimation(true);
-      }, 4000);
+      }, 2000);
     }
     setShowMenu(!showMenu);
   };
@@ -201,7 +201,7 @@ const Nav: FC<NavProps> = ({ className, intent }) => {
                           className="relative z-50 w-full"
                           key={`${link.name} animated`}
                           initial={{ x: '-200%' }}
-                          animate={{ x: '0', transition: { duration: 2 - 1.5, delay: i + 0.5 } }}
+                          animate={{ x: '0', transition: { duration: 0.5, delay: i * 0.5 + 0.5 } }}
                         >
                           <NavLink
                             isLi={true}
@@ -223,12 +223,12 @@ const Nav: FC<NavProps> = ({ className, intent }) => {
                             opacity: [0, 1, 1, 0],
                             transition: {
                               maxHeight: {
-                                duration: 4 - 1.5,
-                                ease: 'easeIn',
-                                delay: i,
+                                duration: 2,
+                                ease: 'easeInOut',
+                                delay: i * 0.5,
                                 times: [0, 0.25, 0.75, 1]
                               },
-                              opacity: { duration: 4 - 1.5, delay: i, times: [0, 0.05, 0.99, 1] }
+                              opacity: { duration: 2, delay: i * 0.5, times: [0, 0.05, 0.99, 1] }
                             }
                           }}
                           exit={{

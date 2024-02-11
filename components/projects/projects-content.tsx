@@ -84,7 +84,7 @@ export default function ProjectsContent({}) {
                     transition: {
                       type: 'spring',
                       duration: 1,
-                      delay: 2.3 + splashDelay + index * 0.5
+                      delay: 0.5 + splashDelay + index * 0.5
                     }
                   }}
                 >
@@ -109,9 +109,9 @@ export default function ProjectsContent({}) {
                         duration: 0.5,
                         ease: 'easeInOut',
 
-                        delay: 2 + splashDelay + index * 0.5
+                        delay: 0 + splashDelay + index * 0.5
                       },
-                      opacity: { duration: 0.01, delay: 2 + splashDelay + index * 0.5 }
+                      opacity: { duration: 0.01, delay: 0 + splashDelay + index * 0.5 }
                     }
                   }}
                   exit={{

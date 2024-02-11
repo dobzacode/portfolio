@@ -78,9 +78,9 @@ export default function ContactContent({}) {
                     duration: 0.5,
                     ease: 'easeInOut',
 
-                    delay: 2.5 + splashDelay
+                    delay: 0 + splashDelay
                   },
-                  opacity: { duration: 0.01, delay: 2.5 + splashDelay }
+                  opacity: { duration: 0.01, delay: 0 + splashDelay }
                 }
               }}
               exit={{
@@ -95,7 +95,7 @@ export default function ContactContent({}) {
                 initial={{ y: '-450%' }}
                 animate={{
                   y: '0',
-                  transition: { type: 'spring', duration: 2, delay: 2.5 + splashDelay }
+                  transition: { type: 'spring', duration: 2, delay: 0.5 + splashDelay }
                 }}
                 className="sub-heading  flex items-start gap-sub-large text-primary90 dark:text-primary1 max-[1200px]:justify-between max-tablet:gap-medium max-tablet:text-body  max-tablet:leading-body  max-[630px]:gap-0 "
               >
@@ -109,7 +109,7 @@ export default function ContactContent({}) {
                 initial={{ y: '-450%' }}
                 animate={{
                   y: '0',
-                  transition: { type: 'spring', duration: 2, delay: 2.7 + splashDelay }
+                  transition: { type: 'spring', duration: 2, delay: 0.8 + splashDelay }
                 }}
                 className="sub-heading  flex items-start gap-large text-primary90 dark:text-primary1 max-[1200px]:justify-between max-tablet:gap-medium max-tablet:text-body   max-tablet:leading-body max-[630px]:gap-0 "
               >

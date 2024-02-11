@@ -102,9 +102,9 @@ export default function ProjectContent({ params }: { params: { projectName: stri
                   width: {
                     duration: 0.5,
                     ease: 'easeInOut',
-                    delay: 2.5 + splashDelay
+                    delay: 0 + splashDelay
                   },
-                  opacity: { duration: 0.01, delay: 2.5 + splashDelay }
+                  opacity: { duration: 0.01, delay: 0 + splashDelay }
                 }
               }}
               exit={{
@@ -122,9 +122,9 @@ export default function ProjectContent({ params }: { params: { projectName: stri
                   y: {
                     type: 'spring',
                     duration: 2,
-                    delay: 3.5 + splashDelay - 0.8
+                    delay: 0.5 + splashDelay
                   },
-                  opacity: { duration: 2, delay: 3.5 + splashDelay - 0.8 }
+                  opacity: { duration: 2, delay: 0.5 + splashDelay }
                 }
               }}
               exit={{ y: '-50%', transition: { duration: 0.5 } }}
@@ -223,8 +223,8 @@ export default function ProjectContent({ params }: { params: { projectName: stri
             x: '0',
             opacity: 1,
             transition: {
-              x: { type: 'spring', duration: 2, delay: 4.5 + splashDelay - 0.8 },
-              opacity: { duration: 0.8, delay: 4.5 + splashDelay - 0.8 }
+              x: { type: 'spring', duration: 2, delay: 1.5 + splashDelay - 0.8 },
+              opacity: { duration: 0.8, delay: 1.5 + splashDelay - 0.8 }
             }
           }}
           exit={{ y: '-20%', opacity: 0, transition: { duration: 0.5 } }}

@@ -81,7 +81,7 @@ export default function AboutContent({}) {
               initial={{ y: '-250%' }}
               animate={{
                 y: '0',
-                transition: { type: 'spring', duration: 2, delay: 2.5 + splashDelay }
+                transition: { type: 'spring', duration: 2, delay: 0.5 + splashDelay }
               }}
             >
               <P className="sub-heading relative z-10 w-full font-thin text-primary90 dark:text-primary1 max-tablet:text-sub-heading    max-mobile-large:text-body max-mobile-large:leading-sub-heading ">
@@ -105,9 +105,9 @@ export default function AboutContent({}) {
                     duration: 0.5,
                     ease: 'easeInOut',
 
-                    delay: 2.5 + splashDelay
+                    delay: 0 + splashDelay
                   },
-                  opacity: { duration: 0.01, delay: 2.5 + splashDelay }
+                  opacity: { duration: 0.01, delay: 0 + splashDelay }
                 }
               }}
               exit={{
