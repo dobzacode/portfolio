@@ -30,7 +30,7 @@ export default function AboutContent({}) {
   return (
     <>
       <div
-        className={`z-4 0 relative flex w-screen  flex-col-reverse items-center justify-center  gap-large bg-transparent px-medium pb-large  pt-sub-large duration-slowest mobile-large:px-large tablet:pt-large   laptop:flex-row  laptop:items-start   laptop:px-extra-large laptop:pt-large ${
+        className={`z-4 0 relative flex w-screen  flex-col items-center justify-center gap-small  bg-transparent px-medium pb-large pt-sub-large  duration-slowest mobile-large:px-large tablet:pt-large laptop:flex-row   laptop:items-start  laptop:gap-large   laptop:px-extra-large laptop:pt-large ${
           searchParams.get('menu') ? 'translate-x-[20%] opacity-0 ' : 'opacity-100 delay-1000'
         }`}
       >
