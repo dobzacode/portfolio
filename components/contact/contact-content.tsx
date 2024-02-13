@@ -26,36 +26,14 @@ export default function ContactContent({}) {
         <main className="flex w-full max-w-[1300px] flex-col   ">
           <div className="relative z-50 flex w-full flex-col">
             <div
-              className={`} relative z-50 -ml-small flex h-full  w-fit items-center gap-extra-small
-                            overflow-hidden`}
+              className={`} relative z-50  flex h-full  w-fit items-center gap-extra-small
+                            `}
             >
-              <motion.div
-                key={`Title border`}
-                initial={{ maxHeight: 0, opacity: 0 }}
-                animate={{
-                  maxHeight: [0, 100, 100, 0],
-                  opacity: [0, 1, 1, 0],
-                  transition: {
-                    maxHeight: {
-                      duration: 2.5,
-                      ease: 'easeInOut',
-                      times: [0, 0.25, 0.4, 1],
-                      delay: splashDelay
-                    },
-                    opacity: { duration: 2.5, times: [0, 0.05, 0.99, 1], delay: splashDelay }
-                  }
-                }}
-                exit={{
-                  opacity: 0,
-                  transition: { duration: 0.5 }
-                }}
-                className="glowy-shadow relative z-10 -mt-3 h-[10rem] bg-tertiary40 p-1 max-tablet:-mt-2 max-tablet:h-[7.5rem] max-tablet:p-[2px] max-mobile-large:-mt-1 max-mobile-large:h-[5rem]"
-              ></motion.div>
               <motion.div
                 className="relative z-50 w-full"
                 key={`Title animated`}
-                initial={{ x: '-200%' }}
-                animate={{ x: '0', transition: { duration: 0.5, delay: 0.5 + splashDelay } }}
+                initial={{ y: '-50%', opacity: 0 }}
+                animate={{ y: '0', opacity: 1, transition: { duration: 0.5, delay: splashDelay } }}
               >
                 <H1 className="leading-small heading--extra-large relative z-50 w-full whitespace-nowrap font-['HFF_Ultrasound'] font-medium text-primary90 dark:text-primary1 max-tablet:text-heading-sub-extra-large max-tablet:leading-heading-sub-extra-large  max-mobile-large:text-heading-large  max-mobile-large:leading-heading-large ">
                   CONTACT
@@ -95,7 +73,7 @@ export default function ContactContent({}) {
                 initial={{ y: '-450%' }}
                 animate={{
                   y: '0',
-                  transition: { type: 'spring', duration: 2, delay: 0.5 + splashDelay }
+                  transition: { type: 'spring', duration: 2, delay: 0.1 + splashDelay }
                 }}
                 className="sub-heading  flex items-start gap-sub-large text-primary90 dark:text-primary1 max-[1200px]:justify-between max-tablet:gap-medium max-tablet:text-body  max-tablet:leading-body  max-[630px]:gap-0 "
               >
@@ -109,7 +87,7 @@ export default function ContactContent({}) {
                 initial={{ y: '-450%' }}
                 animate={{
                   y: '0',
-                  transition: { type: 'spring', duration: 2, delay: 0.8 + splashDelay }
+                  transition: { type: 'spring', duration: 2, delay: 0.3 + splashDelay }
                 }}
                 className="sub-heading  flex items-start gap-large text-primary90 dark:text-primary1 max-[1200px]:justify-between max-tablet:gap-medium max-tablet:text-body   max-tablet:leading-body max-[630px]:gap-0 "
               >

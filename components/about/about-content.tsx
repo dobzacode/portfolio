@@ -36,40 +36,18 @@ export default function AboutContent({}) {
       >
         <main className="flex flex-col  laptop:w-3/5 laptop:max-w-[650px] laptop-large:w-1/2">
           <div
-            className={`relative z-50 -ml-[14px] flex h-full w-fit flex-row-reverse items-center gap-extra-small overflow-hidden mobile-large:-ml-[18px] `}
+            className={`relative z-50  flex h-full w-fit flex-row-reverse items-center gap-extra-small `}
           >
             <motion.div
               className="relative z-50 w-full"
               key={`Title animated`}
-              initial={{ x: '-200%' }}
-              animate={{ x: '0', transition: { duration: 0.5, delay: 0.5 + splashDelay } }}
+              initial={{ y: '-50%', opacity: 0 }}
+              animate={{ y: '0', opacity: 1, transition: { duration: 0.5, delay: splashDelay } }}
             >
               <H1 className="leading-small heading--extra-large relative z-50 w-full whitespace-nowrap font-['HFF_Ultrasound'] font-medium text-primary90 dark:text-primary1 max-tablet:text-heading-sub-extra-large max-tablet:leading-heading-sub-extra-large  max-mobile-large:text-heading-large  max-mobile-large:leading-heading-large ">
                 {t('title').toUpperCase()}
               </H1>
             </motion.div>
-            <motion.div
-              key={`Title border`}
-              initial={{ maxHeight: 0, opacity: 0 }}
-              animate={{
-                maxHeight: [0, 100, 100, 0],
-                opacity: [0, 1, 1, 0],
-                transition: {
-                  maxHeight: {
-                    duration: 2.5,
-                    ease: 'easeInOut',
-                    times: [0, 0.25, 0.4, 1],
-                    delay: splashDelay
-                  },
-                  opacity: { duration: 2.5, times: [0, 0.05, 0.99, 1], delay: splashDelay }
-                }
-              }}
-              exit={{
-                opacity: 0,
-                transition: { duration: 0.5 }
-              }}
-              className="glowy-shadow relative z-10 -mt-3 h-[10rem] bg-tertiary40 p-1 max-tablet:-mt-2 max-tablet:h-[7.5rem] max-tablet:p-[2px] max-mobile-large:-mt-1 max-mobile-large:h-[5rem]"
-            ></motion.div>
           </div>
           <div
             className={`} relative z-50 flex h-full flex-col-reverse gap-medium  overflow-hidden pb-large
@@ -81,7 +59,7 @@ export default function AboutContent({}) {
               initial={{ y: '-250%' }}
               animate={{
                 y: '0',
-                transition: { type: 'spring', duration: 2, delay: 0.5 + splashDelay }
+                transition: { type: 'spring', duration: 2, delay: 0.1 + splashDelay }
               }}
             >
               <P className="sub-heading relative z-10 w-full font-thin text-primary90 dark:text-primary1 max-tablet:text-sub-heading    max-mobile-large:text-body max-mobile-large:leading-sub-heading ">

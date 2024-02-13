@@ -7,7 +7,7 @@ import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 import { LinkProps } from 'next/link';
 import { usePathname } from 'next/navigation';
-import { FC, useEffect, useState } from 'react';
+import { FC, useState } from 'react';
 
 const linkVariants = cva('', {
   variants: {
@@ -119,16 +119,7 @@ const NavLink: FC<NavLinkProps> = ({
     props.href.replace(/\//g, '') === ''
       ? pathname.replace('en', '') === props.href
       : pathname.includes(t(props.href.replace(/\//g, '')));
-  const [showHover, setShowHover] = useState<boolean>(false);
-
-  useEffect(() => {
-    const timeout = setTimeout(() => {
-      setShowHover(true);
-    }, 2000);
-    return () => {
-      clearTimeout(timeout);
-    };
-  });
+  const [showHover] = useState<boolean>(true);
 
   if (!isLi)
     return (

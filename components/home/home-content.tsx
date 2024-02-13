@@ -36,7 +36,7 @@ export default function HomeContent({}) {
               x: '0px',
               rotate: '-17deg',
               transition: {
-                delay: 1 + splashDelay,
+                delay: 0.7 + splashDelay,
                 type: 'spring',
                 stiffness: '40'
               }
@@ -61,7 +61,7 @@ export default function HomeContent({}) {
                 transition: {
                   delay: splashDelay,
                   ease: easeInOut,
-                  duration: 1.5
+                  duration: 1
                 }
               }}
               exit={{
@@ -90,8 +90,8 @@ export default function HomeContent({}) {
                 maxWidth: '100%',
 
                 transition: {
-                  maxWidth: { type: easeOut, delay: 0.5 + splashDelay },
-                  opacity: { duration: 0.01, delay: 0.5 + splashDelay }
+                  maxWidth: { type: easeOut, delay: splashDelay },
+                  opacity: { duration: 0.01, delay: splashDelay }
                 }
               }}
               exit={{ maxWidth: 0, transition: { type: easeOut, duration: 1 } }}
@@ -109,7 +109,7 @@ export default function HomeContent({}) {
               x: '0px',
 
               transition: {
-                delay: 1.2 + splashDelay,
+                delay: 0.9 + splashDelay,
                 type: 'spring',
                 duration: 1.7
               }
@@ -161,13 +161,13 @@ export default function HomeContent({}) {
           <div className="relative  flex h-[7rem] items-start justify-between gap-large">
             <motion.div
               key="workLink"
-              initial={{ y: '-100px', opacity: 0 }}
+              initial={{ y: '-40px', opacity: 0 }}
               animate={{
                 y: '0px',
                 opacity: 1,
                 transition: {
                   type: 'spring',
-                  delay: 2 + splashDelay
+                  delay: 1.4 + splashDelay
                 }
               }}
               className="relative flex   items-center gap-extra-small  text-tertiary90 dark:text-tertiary1 max-tablet:gap-0"
@@ -185,13 +185,13 @@ export default function HomeContent({}) {
             </motion.div>
             <motion.div
               key="aboutLink"
-              initial={{ y: '-100px', opacity: 0 }}
+              initial={{ y: '-40px', opacity: 0 }}
               animate={{
                 y: '0px',
                 opacity: 1,
                 transition: {
                   type: 'spring',
-                  delay: 2.3 + splashDelay
+                  delay: 1.6 + splashDelay
                 }
               }}
               className="relative flex   items-center gap-extra-small  text-tertiary90 dark:text-tertiary1 max-tablet:gap-0"

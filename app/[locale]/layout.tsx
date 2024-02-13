@@ -1,6 +1,5 @@
 import { Providers } from '@/components/wrapper/dark-mode/providers';
 
-import LoadingBar from '@/components/animated-assets/loading-bar';
 import { Header } from '@/components/ui/header/header';
 import SplashScreen from '@/components/ui/splash-screen/splash-screen';
 import { NextIntlClientProvider } from 'next-intl';
@@ -39,7 +38,7 @@ export default async function RootLayout({
         <Providers>
           <NextIntlClientProvider messages={messages}>
             <SplashScreen></SplashScreen>
-            <LoadingBar></LoadingBar>
+
             <Header size={'large'} textColor={'neutral'} className=" flex"></Header>
 
             {children}
