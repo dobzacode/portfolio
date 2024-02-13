@@ -10,7 +10,7 @@ import { useSearchParams } from 'next/navigation';
 import { useState } from 'react';
 
 export default function ContactContent({}) {
-  const [splashDelay] = useState<4.5 | 0>(!sessionStorage.getItem('shown') ? 4.5 : 0);
+  const [splashDelay] = useState<3 | 0>(!sessionStorage.getItem('shown') ? 3 : 0);
 
   const searchParams = useSearchParams();
 

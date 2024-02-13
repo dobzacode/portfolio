@@ -178,7 +178,7 @@
 
 .slideInToRight {
   transform: translateY(0%);
-  animation: slideInToRight 1s 3s ease-in forwards;
+  animation: slideInToRight 1s 2s ease-in forwards;
 }
 
 @keyframes slideInToRight {

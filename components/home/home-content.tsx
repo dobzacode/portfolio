@@ -14,7 +14,7 @@ import Image from 'next/image';
 import { useSearchParams } from 'next/navigation';
 
 export default function HomeContent({}) {
-  const [splashDelay] = useState<4.5 | 0>(!sessionStorage.getItem('shown') ? 4.5 : 0);
+  const [splashDelay] = useState<3.5 | 0>(!sessionStorage.getItem('shown') ? 3.5 : 0);
 
   const searchParams = useSearchParams();
 

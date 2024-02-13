@@ -13,7 +13,7 @@ export default function SplashScreen({}) {
     const timeoutId = setTimeout(() => {
       setVisible(false);
       sessionStorage.setItem('shown', 'true');
-    }, 4500);
+    }, 3000);
 
     return () => clearTimeout(timeoutId);
   }, []);

@@ -49,7 +49,7 @@ const Nav: FC<NavProps> = ({ className, intent }) => {
 
   const [showAnimation, setShowAnimation] = useState<boolean>(false);
 
-  const [splashDelay] = useState<4.5 | 0>(!sessionStorage.getItem('shown') ? 4.5 : 0);
+  const [splashDelay] = useState<3.5 | 0>(!sessionStorage.getItem('shown') ? 3.5 : 0);
 
   const params = useParams();
 

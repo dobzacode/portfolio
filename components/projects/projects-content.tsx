@@ -12,7 +12,7 @@ import { useState } from 'react';
 import Carousel from '../ui/div/carousel';
 
 export default function ProjectsContent({}) {
-  const [splashDelay] = useState<4.5 | 0>(!sessionStorage.getItem('shown') ? 4.5 : 0);
+  const [splashDelay] = useState<3.5 | 0>(!sessionStorage.getItem('shown') ? 3.5 : 0);
   const [hoveredProjectImage, setHoveredProjectImage] = useState<string | null>(null);
 
   const searchParams = useSearchParams();
