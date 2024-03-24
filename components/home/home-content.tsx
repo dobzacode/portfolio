@@ -48,11 +48,11 @@ export default function HomeContent({}) {
                 duration: 1
               }
             }}
-            className="heading--extra-large  absolute -left-[15rem] top-extra-large -z-10 font-['HFF_Ultrasound'] font-extrabold leading-none  text-tertiary40 max-tablet:-left-medium  max-tablet:top-large max-tablet:text-heading-sub-extra-large max-mobile-large:left-extra-small max-mobile-large:text-heading-large"
+            className="heading--extra-large  absolute -left-[5rem] top-extra-large -z-10 font-['HFF_Ultrasound'] font-extrabold leading-none  text-tertiary40 max-tablet:-left-small  max-tablet:top-large max-tablet:text-heading-sub-extra-large max-mobile-large:left-sub-large max-mobile-large:text-heading-large"
           >
             {t('greeting').toUpperCase()}
           </motion.p>
-          <div className="flex justify-center overflow-hidden max-tablet:w-2/3">
+          <div className="flex h-[540px] w-[540px] justify-center overflow-hidden max-tablet:h-[350px] max-tablet:w-2/3">
             <motion.div
               key="portrait"
               initial={{ y: '70vh' }}
@@ -78,7 +78,7 @@ export default function HomeContent({}) {
                 width="400"
                 height="400"
                 sizes={'(max-width: 500px) 100vw, 500px'}
-                src="/random-portrait.png"
+                src="/portrait.png"
                 alt="picture"
               ></Image>
             </motion.div>
