@@ -105,7 +105,10 @@ const Nav: FC<NavProps> = ({ className, intent }) => {
     <header className={cn(className)}>
       <div className=" relative z-30 flex w-full items-center justify-between">
         <Link href="/" className="flex items-center gap-sub-large laptop:gap-large">
-          <AnimatedLogo splashDelay={splashDelay} className="w-20 "></AnimatedLogo>
+          <AnimatedLogo
+            splashDelay={splashDelay}
+            className="w-12 mobile-large:w-20 "
+          ></AnimatedLogo>
           <AnimatePresence mode="wait">
             {showMenu && (
               <motion.div
@@ -127,7 +130,7 @@ const Nav: FC<NavProps> = ({ className, intent }) => {
             <LangageSwitch></LangageSwitch>
           </motion.div>
           <motion.div variants={menuItemVariant} initial="hidden" animate="visible" custom="2">
-            <DarkModeButton className="max-tablet:scale-75"></DarkModeButton>
+            <DarkModeButton className="max-tablet:mb-[4px] max-tablet:scale-75"></DarkModeButton>
           </motion.div>
           <motion.div
             variants={menuItemVariant}
@@ -148,7 +151,7 @@ const Nav: FC<NavProps> = ({ className, intent }) => {
                 >
                   <Icon
                     path={mdilMenu}
-                    className="  text-primary90 duration-fast hover:scale-105 dark:text-primary1 max-tablet:scale-75"
+                    className="  text-primary90 duration-fast hover:scale-105 dark:text-primary1 max-tablet:scale-75 max-tablet:pb-1"
                     size={2}
                   ></Icon>
                 </motion.button>
@@ -158,12 +161,12 @@ const Nav: FC<NavProps> = ({ className, intent }) => {
                   initial={{ opacity: 0, rotate: 360 }}
                   animate={{ opacity: 1, rotate: 0, transition: { duration: 1, ease: 'easeOut' } }}
                   exit={{ opacity: 0, transition: { duration: 0.4 } }}
-                  className="absolute h-fit w-fit  "
+                  className="absolute h-fit w-fit "
                   onClick={() => triggerMenu()}
                 >
                   <Icon
                     path={mdilPlus}
-                    className="  rotate-45 text-primary90 duration-fast hover:scale-105 dark:text-primary1 max-tablet:scale-75"
+                    className="  rotate-45 text-primary90 duration-fast hover:scale-105 dark:text-primary1 max-tablet:scale-75  max-tablet:pb-1"
                     size={2}
                   ></Icon>
                 </motion.button>
