@@ -35,17 +35,5 @@ export const projectList: ProjectListProps[] = [
     url: 'https://abject-act.vercel.app',
     id: 1,
     github: 'https://github.com/dobzacode/ABJECT-ACT'
-  },
-  {
-    title: 'RODDAT',
-    image: '/project/roddat.jpg',
-    client: 'Personnal Project',
-    category: ['Full-stack', 'UI/UX Design'],
-    year: 2023,
-    stack: ['Next.js', 'TailwindCSS', 'TypeScript', 'Prisma', 'Next-Auth', 'Vercel', 'Neon.tech'],
-    status: 'completed',
-    url: 'https://roddat.vercel.app',
-    id: 2,
-    github: 'https://github.com/dobzacode/RODDAT'
   }
 ];
