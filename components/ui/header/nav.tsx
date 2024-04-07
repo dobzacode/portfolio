@@ -238,7 +238,7 @@ const Nav: FC<NavProps> = ({ className, intent }) => {
                             opacity: 0,
                             transition: { duration: 0.5, delay: i * 0.115 }
                           }}
-                          className="glowy-shadow relative z-10  -mt-3 h-[10rem] bg-tertiary40 p-1 max-tablet:-mt-2 max-tablet:h-[7.5rem] max-mobile-large:-mt-1   max-mobile-large:h-[5rem] max-mobile-large:p-[2px]"
+                          className="glowy-shadow relative z-10  -mt-3 h-[10rem] bg-tertiary40 p-1 max-tablet:-mt-2 max-tablet:h-[7.5rem] max-mobile-large:-mt-1   max-mobile-large:h-[5rem] max-mobile-large:p-[0.2rem]"
                         ></motion.div>
                       </div>
                     );

@@ -183,6 +183,30 @@ export default function HomeContent({}) {
                 {t('project')}
               </NavLink>
             </motion.div>
+            <motion.div
+              key="workLink"
+              initial={{ y: '-40px', opacity: 0 }}
+              animate={{
+                y: '0px',
+                opacity: 1,
+                transition: {
+                  type: 'spring',
+                  delay: 1.4 + splashDelay
+                }
+              }}
+              className="relative flex   items-center gap-extra-small  text-tertiary90 dark:text-tertiary1 max-tablet:gap-0"
+            >
+              <Icon className="pb-1 max-tablet:scale-75" path={mdilArrowRight} size={2} />
+
+              <NavLink
+                size="large"
+                isLi={false}
+                href="/contact"
+                className="relative whitespace-nowrap font-['HFF_Ultrasound'] font-thin leading-heading before:absolute before:bottom-0 before:left-[50%] before:-z-10 before:w-full before:max-w-0 before:origin-center before:border-b-2 before:border-tertiary40 before:duration-medium hover:before:left-0 hover:before:max-w-full before:dark:border-tertiary40 max-tablet:text-sub-heading max-mobile-large:text-body max-mobile-large:leading-sub-heading"
+              >
+                {t('contact')}
+              </NavLink>
+            </motion.div>
           </div>
         </div>
       </main>
