@@ -94,17 +94,19 @@ export default function ContactContent({}) {
                 <P className="relative z-10  whitespace-nowrap font-semibold">
                   {t('social').toUpperCase()}
                 </P>
-                <div className="flex flex-col gap-extra-small font-thin max-[630px]:gap-0">
-                  <div className="flex items-center gap-extra-small text-primary90 dark:text-primary1  max-tablet:-mt-4">
+                <div className="-mt-2 flex flex-col gap-extra-small font-thin max-[630px]:gap-0">
+                  <div className="flex items-center gap-extra-small text-primary90 dark:text-primary1  ">
                     <Icon
                       size={2}
                       className=" -rotate-45 max-tablet:scale-75
                       "
                       path={mdilArrowRight}
                     ></Icon>
-                    <a href="linkedin">Linkedin</a>
+                    <a href="https://www.linkedin.com/in/corentin-kittel-a404a5300/?originalSubdomain=fr">
+                      Linkedin
+                    </a>
                   </div>
-                  <div className="flex items-center gap-extra-small text-primary90 dark:text-primary1  max-tablet:-mt-4">
+                  <div className="flex items-center gap-extra-small text-primary90 dark:text-primary1  ">
                     <Icon
                       size={2}
                       className=" -rotate-45 max-tablet:scale-75"

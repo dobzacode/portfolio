@@ -45,7 +45,7 @@ export default function ProjectContent({ params }: { params: { projectName: stri
   return (
     <div className="flex h-full w-screen justify-center overflow-hidden px-medium py-medium mobile-large:px-large tablet:px-large laptop:py-large laptop:pl-extra-large laptop-large:px-extra-large">
       <div
-        className={`z-4 0 relative flex h-fit w-full  flex-col   justify-center gap-sub-large bg-transparent   duration-slowest     max-mobile-large:w-full max-mobile-large:max-w-full  laptop:flex-row       ${
+        className={`z-4 0 relative flex h-fit w-full  flex-col   justify-center bg-transparent duration-slowest   max-mobile-large:w-full     max-mobile-large:max-w-full laptop:flex-row  laptop:gap-sub-large       ${
           searchParams.get('menu') ? 'translate-x-[20%] opacity-0 ' : 'opacity-100 delay-1000'
         }`}
       >
@@ -161,7 +161,7 @@ export default function ProjectContent({ params }: { params: { projectName: stri
                   {t(`status.${projectObj.status}`)}
                 </P>
               </div>
-              <div className="flex justify-between  max-[1300px]:flex-col max-[1300px]:gap-extra-small max-laptop:flex-row max-laptop:gap-0 max-mobile-large:flex-col">
+              <div className="flex justify-between  max-[1300px]:flex-col max-[1300px]:gap-extra-small max-laptop:flex-row max-laptop:gap-0 max-mobile-large:flex-col laptop:pt-4">
                 <a
                   //@ts-ignore
                   href={projectObj.url}
