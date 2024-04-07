@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i');
+@import url('@/style/animation.css');
 
-@tailwind base;
 @tailwind components;
+@tailwind base;
 
 @layer components {
   .heading--extra-large {
@@ -21,11 +21,11 @@
   }
 
   .heading {
-    @apply text-heading font-medium leading-heading;
+    @apply text-heading font-medium  leading-heading;
   }
 
   .sub-heading {
-    @apply text-sub-heading font-normal leading-sub-heading;
+    @apply text-sub-heading font-normal  leading-sub-heading;
   }
 
   .body {
@@ -59,127 +59,113 @@
   .secondary-hover {
     @apply duration-fast tablet:hover:scale-[102%] tablet:hover:shadow-secondary-medium;
   }
-
-  .primary-cta {
-    @apply bg-primary40;
-  }
-
-  .card {
-    @apply border-primary/10 rounded-small  border p-small shadow-md;
-  }
-
-  .inner-card {
-    @apply border-primary/10 rounded-small border p-small shadow-inner;
-  }
-}
-
-@tailwind utilities;
-
-@layer base {
-  :root {
-    --gradient: #e1f0da;
-
-    --background: 107 27.3% 99%;
-    --foreground: 107 4.2% 7%;
-
-    --muted: 107 27.72% 38.7%;
-    --muted-foreground: 107 4.2% 59%;
-
-    --popover: 107 41.06% 99%;
-    --popover-foreground: 107 4.2% 66%;
-
-    --card: 107 41.06% 99%;
-    --card-foreground: 107 4.2% 65%;
-
-    --border: 107 1% 60%;
-    --input: 107 1% 60%;
-
-    --primary: 107 42% 9%;
-    --primary-foreground: 107 4.2% 90%;
-
-    --secondary: 193 27.72% 99%;
-    --secondary-foreground: 193 4.2% 38%;
-
-    --accent: 107 27.72% 99%;
-    --accent-foreground: 107 4.2% 38%;
-
-    --destructive: 0 62.8% 50%;
-    --destructive-foreground: 107 4.2% 38%;
-
-    --ring: 107 42% 90%;
-  }
-
-  .dark {
-    --background: 0 0% 3.9%;
-    --foreground: 0 0% 98%;
-
-    --card: 0 0% 3.9%;
-    --card-foreground: 0 0% 98%;
-
-    --popover: 0 0% 3.9%;
-    --popover-foreground: 0 0% 98%;
-
-    --primary: 0 0% 98%;
-    --primary-foreground: 0 0% 9%;
-
-    --secondary: 0 0% 14.9%;
-    --secondary-foreground: 0 0% 98%;
-
-    --muted: 0 0% 14.9%;
-    --muted-foreground: 0 0% 63.9%;
-
-    --accent: 0 0% 14.9%;
-    --accent-foreground: 0 0% 98%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 0 0% 98%;
-
-    --border: 0 0% 14.9%;
-    --input: 0 0% 14.9%;
-    --ring: 0 0% 83.1%;
-  }
-}
-
-@layer base {
-  * {
-    @apply border-border;
-    @apply min-w-0;
-  }
-  body {
-    @apply bg-background text-foreground;
-  }
 }
 
 @font-face {
-  font-family: 'Plantor';
-  src: url('/fonts/plantor.eot');
+  font-family: 'Jura';
+  src: url('/fonts/Jura-SemiBold.eot');
   src:
-    url('/fonts/plantor.eot?#iefix') format('embedded-opentype'),
-    url('/fonts/plantor.woff2') format('woff2'),
-    url('/fonts/plantor.woff') format('woff'),
-    url('/fonts/plantor.ttf') format('truetype');
+    url('/fonts/Jura-SemiBold.eot?#iefix') format('embedded-opentype'),
+    url('/fonts/Jura-SemiBold.woff2') format('woff2'),
+    url('/fonts/Jura-SemiBold.woff') format('woff'),
+    url('/fonts/Jura-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Jura';
+  src: url('/fonts/Jura-Light.eot');
+  src:
+    url('/fonts/Jura-Light.eot?#iefix') format('embedded-opentype'),
+    url('/fonts/Jura-Light.woff2') format('woff2'),
+    url('/fonts/Jura-Light.woff') format('woff'),
+    url('/fonts/Jura-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Jura';
+  src: url('/fonts/Jura-Regular.eot');
+  src:
+    url('/fonts/Jura-Regular.eot?#iefix') format('embedded-opentype'),
+    url('/fonts/Jura-Regular.woff2') format('woff2'),
+    url('/fonts/Jura-Regular.woff') format('woff'),
+    url('/fonts/Jura-Regular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Mustica Pro';
-  src: url('/fonts/MusticaPro-SemiBold.eot');
+  font-family: 'Jura';
+  src: url('/fonts/Jura-Bold.eot');
   src:
-    url('/fonts/MusticaPro-SemiBold.eot?#iefix') format('embedded-opentype'),
-    url('/fonts/MusticaPro-SemiBold.woff2') format('woff2'),
-    url('/fonts/MusticaPro-SemiBold.woff') format('woff'),
-    url('/fonts/MusticaPro-SemiBold.ttf') format('truetype');
-  font-weight: 600;
+    url('/fonts/Jura-Bold.eot?#iefix') format('embedded-opentype'),
+    url('/fonts/Jura-Bold.woff2') format('woff2'),
+    url('/fonts/Jura-Bold.woff') format('woff'),
+    url('/fonts/Jura-Bold.ttf') format('truetype');
+  font-weight: bold;
   font-style: normal;
   font-display: swap;
 }
 
+@font-face {
+  font-family: 'Jura';
+  src: url('/fonts/Jura-Medium.eot');
+  src:
+    url('/fonts/Jura-Medium.eot?#iefix') format('embedded-opentype'),
+    url('/fonts/Jura-Medium.woff2') format('woff2'),
+    url('/fonts/Jura-Medium.woff') format('woff'),
+    url('/fonts/Jura-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'HFF Ultrasound';
+  src: url('/fonts/HFFUltrasound.eot');
+  src:
+    url('/fonts/HFFUltrasound.eot?#iefix') format('embedded-opentype'),
+    url('/fonts/HFFUltrasound.woff2') format('woff2'),
+    url('/fonts/HFFUltrasound.woff') format('woff'),
+    url('/fonts/HFFUltrasound.ttf') format('truetype'),
+    url('/fonts/HFFUltrasound.svg#HFFUltrasound') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@tailwind utilities;
+
 :root {
   --primary-color: theme('colors.primary40');
-  color: theme('colors.neutral80');
-  font-family: 'Mustica Pro', sans-serif;
+  --secondary-color: theme('colors.secondary40');
+  --tertiary-color: theme('colors.tertiary40');
+
+  --tertiary-color-light: theme('colors.tertiary10') color: theme('colors.neutral80');
+}
+
+@keyframes cursorAnim {
+  0% {
+    background-color: var(--tertiary-color) / 10%;
+  }
+  50% {
+    background-color: var(--tertiary-color);
+  }
+  100% {
+    background-color: var(--tertiary-color) / 10%;
+  }
+}
+
+.expand::after,
+.expand > div {
+  animation: cursorAnim 2s;
+  transform-origin: bottom right;
 }
 
 *,
@@ -189,9 +175,101 @@
 }
 
 html {
-  font-family: roboto;
+  font-size: 62.5%;
+  font-family: Jura;
 }
 
-.transition-long {
-  transition: all 0.5s ease;
+.--visually-hidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+select {
+  appearance: none;
+  background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23131313%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E');
+  background-repeat: no-repeat;
+  background-position: right 0.7rem top 50%;
+  background-size: 0.6rem auto;
+}
+
+input[type='search']::-webkit-search-decoration,
+input[type='search']::-webkit-search-cancel-button,
+input[type='search']::-webkit-search-results-button,
+input[type='search']::-webkit-search-results-decoration {
+  -webkit-appearance: none;
+}
+
+input:focus {
+  outline: 2px solid black;
+}
+
+textarea:focus {
+  outline: 2px solid black;
+}
+
+input[type='search']:focus {
+  outline: none;
+}
+
+.toggle-switch {
+  display: inline-block;
+  background: #ccc;
+  border-radius: 16px;
+  width: 58px;
+  height: 32px;
+  position: relative;
+  vertical-align: middle;
+  transition: background 0.25s;
+}
+
+.toggle-switch:before,
+.toggle-switch:after {
+  content: '';
+}
+
+.toggle-switch:before {
+  display: block;
+  background: linear-gradient(to bottom, #fff 0%, #eee 100%);
+  border-radius: 50%;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.25);
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  transition: left 0.25s;
+}
+
+.toggle:hover .toggle-switch:before {
+  background: linear-gradient(to bottom, #fff 0%, #fff 100%);
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.5);
+}
+
+.toggle-checkbox:checked + .toggle-switch {
+  background: var(--primary-color);
+}
+
+.toggle-checkbox:checked + .toggle-switch:before {
+  left: 30px;
+}
+
+.toggle-checkbox {
+  position: absolute;
+  visibility: hidden;
+}
+
+.toggle-label {
+  margin-left: 5px;
+  position: relative;
+  top: 2px;
+}
+
+ul {
+  list-style-type: none;
 }
