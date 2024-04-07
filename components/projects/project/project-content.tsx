@@ -173,22 +173,7 @@ export default function ProjectContent({ params }: { params: { projectName: stri
                     path={mdilArrowRight}
                   ></Icon>
                   <P className="relative w-fit before:absolute before:bottom-0 before:-z-10  before:w-full before:max-w-0 before:origin-center before:border-b-2 before:border-tertiary40 before:duration-medium hover:before:max-w-full before:dark:border-tertiary40  max-tablet:-ml-[0.8rem] max-mobile-large:-mb-1 tablet:before:-mb-1">
-                    {t('url')}
-                  </P>
-                </a>
-                <a
-                  //@ts-ignore
-                  href={projectObj.url}
-                  className="sub-heading relative z-40 flex w-3/5 items-center gap-extra-small whitespace-nowrap font-thin text-primary90  dark:text-primary1 max-tablet:text-body max-mobile-large:-ml-[0.8rem] max-mobile-large:text-body  "
-                >
-                  <Icon
-                    size={2}
-                    className=" -rotate-45 max-laptop:-ml-[3.8rem] max-tablet:-ml-[3rem] max-tablet:scale-75 max-mobile-large:ml-0 min-[1300px]:-ml-[3.8rem]"
-                    path={mdilArrowRight}
-                  ></Icon>
-
-                  <P className="relative w-fit before:absolute before:bottom-0 before:-z-10  before:w-full before:max-w-0 before:origin-center before:border-b-2 before:border-tertiary40 before:duration-medium hover:before:max-w-full before:dark:border-tertiary40  max-tablet:-ml-[0.8rem]  max-mobile-large:-mb-1 tablet:before:-mb-1">
-                    {t('github')}
+                    {projectObj.url.replace('https://', '')}
                   </P>
                 </a>
               </div>
