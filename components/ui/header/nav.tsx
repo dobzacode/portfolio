@@ -130,7 +130,7 @@ const Nav: FC<NavProps> = ({ className, intent }) => {
             <LangageSwitch></LangageSwitch>
           </motion.div>
           <motion.div variants={menuItemVariant} initial="hidden" animate="visible" custom="2">
-            <DarkModeButton className="max-tablet:mb-[4px] max-tablet:scale-75"></DarkModeButton>
+            <DarkModeButton></DarkModeButton>
           </motion.div>
           <motion.div
             variants={menuItemVariant}
@@ -151,8 +151,7 @@ const Nav: FC<NavProps> = ({ className, intent }) => {
                 >
                   <Icon
                     path={mdilMenu}
-                    className="  text-primary90 duration-fast hover:scale-105 dark:text-primary1 max-tablet:scale-75 max-tablet:pb-1"
-                    size={2}
+                    className="h-[3rem] w-[3rem] pb-1 text-primary90  duration-fast hover:scale-105 dark:text-primary1 max-tablet:h-[2.4rem] max-tablet:w-[2.4rem] max-tablet:pb-1 max-mobile-large:h-[2.0rem] max-mobile-large:w-[2.0rem]"
                   ></Icon>
                 </motion.button>
               ) : (

@@ -30,10 +30,10 @@ export default function HomeContent({}) {
         <div className="relative z-10 flex justify-center ">
           <motion.p
             key="hello"
-            initial={{ rotate: '-17deg', x: '100px', opacity: 0 }}
+            initial={{ rotate: '-17deg', x: '10rem', opacity: 0 }}
             animate={{
               opacity: 1,
-              x: '0px',
+              x: '0rem',
               rotate: '-17deg',
               transition: {
                 delay: 0.7 + splashDelay,
@@ -52,12 +52,12 @@ export default function HomeContent({}) {
           >
             {t('greeting').toUpperCase()}
           </motion.p>
-          <div className="flex h-[540px] w-[540px] justify-center overflow-hidden max-tablet:h-[350px] max-tablet:w-2/3">
+          <div className="flex h-[54rem] w-[54rem] justify-center overflow-hidden max-tablet:h-[35rem] max-tablet:w-2/3">
             <motion.div
               key="portrait"
               initial={{ y: '70vh' }}
               animate={{
-                y: '0px',
+                y: '0rem',
                 transition: {
                   delay: splashDelay,
                   ease: easeInOut,
@@ -161,9 +161,9 @@ export default function HomeContent({}) {
           <div className="relative  flex h-[7rem] items-start justify-between gap-large">
             <motion.div
               key="workLink"
-              initial={{ y: '-40px', opacity: 0 }}
+              initial={{ y: '-4rem', opacity: 0 }}
               animate={{
-                y: '0px',
+                y: '0rem',
                 opacity: 1,
                 transition: {
                   type: 'spring',
@@ -172,7 +172,10 @@ export default function HomeContent({}) {
               }}
               className="relative flex   items-center gap-extra-small  text-tertiary90 dark:text-tertiary1 max-tablet:gap-0"
             >
-              <Icon className="pb-1 max-tablet:scale-75" path={mdilArrowRight} size={2} />
+              <Icon
+                className="h-[3.6rem] w-[3.6rem] pb-1 max-tablet:h-[3.0rem] max-tablet:w-[3.0rem] max-mobile-large:h-[2.0rem] max-mobile-large:w-[2.0rem]"
+                path={mdilArrowRight}
+              />
 
               <NavLink
                 size="large"
@@ -185,7 +188,7 @@ export default function HomeContent({}) {
             </motion.div>
             <motion.div
               key="workLink"
-              initial={{ y: '-40px', opacity: 0 }}
+              initial={{ y: '-4rem', opacity: 0 }}
               animate={{
                 y: '0px',
                 opacity: 1,
@@ -196,7 +199,10 @@ export default function HomeContent({}) {
               }}
               className="relative flex   items-center gap-extra-small  text-tertiary90 dark:text-tertiary1 max-tablet:gap-0"
             >
-              <Icon className="pb-1 max-tablet:scale-75" path={mdilArrowRight} size={2} />
+              <Icon
+                className="h-[3.6rem] w-[3.6rem] pb-1 max-tablet:h-[3.0rem] max-tablet:w-[3.0rem] max-mobile-large:h-[2.0rem] max-mobile-large:w-[2.0rem]"
+                path={mdilArrowRight}
+              />
 
               <NavLink
                 size="large"

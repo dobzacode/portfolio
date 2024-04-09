@@ -30,13 +30,13 @@ const DarkModeButton: FC<DarkModeButtonProps> = ({ className }) => {
       {theme === 'light' || !theme ? (
         <motion.button
           onClick={() => setTheme('light')}
-          className={className}
+          className="h-[3rem] w-[3rem] pb-1 max-tablet:h-[2.4rem] max-tablet:w-[2.4rem] max-mobile-large:h-[2.0rem] max-mobile-large:w-[2.0rem]"
           key="sun"
           initial={{ opacity: 0, rotate: 360 }}
           animate={{ opacity: 1, rotate: 0, transition: { duration: 1, ease: 'easeOut' } }}
           exit={{ opacity: 0, transition: { duration: 0.4 } }}
         >
-          <Icon size={2} path={mdiWeatherSunny} />
+          <Icon path={mdiWeatherSunny} />
         </motion.button>
       ) : (
         <motion.button
@@ -47,7 +47,7 @@ const DarkModeButton: FC<DarkModeButtonProps> = ({ className }) => {
           animate={{ opacity: 1, transition: { duration: 1 } }}
           exit={{ opacity: 0 }}
         >
-          <Icon size={2} path={mdiWeatherNight} />
+          <Icon path={mdiWeatherNight} />
         </motion.button>
       )}
     </Button>
