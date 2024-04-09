@@ -137,7 +137,7 @@ const Nav: FC<NavProps> = ({ className, intent }) => {
             initial="hidden"
             animate="visible"
             custom="3"
-            className="relative h-[37px] w-[24px]"
+            className="relative h-[3.6rem] w-[3.6rem] max-tablet:h-[2.8rem] max-tablet:w-[2.8rem] max-mobile-large:h-[2.6rem] max-mobile-large:w-[2.6rem]"
           >
             <AnimatePresence>
               {!showMenu ? (
@@ -151,7 +151,7 @@ const Nav: FC<NavProps> = ({ className, intent }) => {
                 >
                   <Icon
                     path={mdilMenu}
-                    className="h-[3rem] w-[3rem] pb-1 text-primary90  duration-fast hover:scale-105 dark:text-primary1 max-tablet:h-[2.4rem] max-tablet:w-[2.4rem] max-tablet:pb-1 max-mobile-large:h-[2.0rem] max-mobile-large:w-[2.0rem]"
+                    className="h-[3rem] w-[3rem]  text-primary90  duration-fast hover:scale-105 dark:text-primary1 max-tablet:h-[2.2rem] max-tablet:w-[2.2rem]  max-mobile-large:h-[2.0rem] max-mobile-large:w-[2.0rem]"
                   ></Icon>
                 </motion.button>
               ) : (
