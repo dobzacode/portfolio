@@ -9,6 +9,7 @@ export async function generateMetadata({
   const t = await getTranslations(`metadata.${projectName}`);
 
   return {
+    metadataBase: new URL('https://corentinkitteL.fr'),
     title: t('title'),
     description: t('description'),
     openGraph: {

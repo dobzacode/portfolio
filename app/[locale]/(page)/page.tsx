@@ -5,6 +5,7 @@ export async function generateMetadata() {
   const t = await getTranslations('metadata.landing');
 
   return {
+    metadataBase: new URL('https://corentinkitteL.fr'),
     title: t('title'),
     description: t('description'),
     opengraph: {
