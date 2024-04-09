@@ -27,7 +27,7 @@ const DarkModeButton: FC<DarkModeButtonProps> = ({ className }) => {
       className={className}
       onClick={() => (theme === 'dark' ? setTheme('light') : setTheme('dark'))}
     >
-      {theme === 'light' ? (
+      {theme === 'light' || !theme ? (
         <motion.button
           onClick={() => setTheme('light')}
           className={className}
