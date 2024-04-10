@@ -51,7 +51,7 @@ export default function ProjectsContent({}) {
             return (
               <div
                 key={`${project.title} block`}
-                className={`relative z-50 flex h-full flex-col-reverse gap-sub-medium overflow-hidden pb-small  max-mobile-large:gap-small  max-mobile-large:pb-extra-small`}
+                className={`relative z-50 flex h-full flex-col-reverse gap-sub-medium overflow-hidden pb-small  max-mobile-large:gap-small  max-mobile-large:pb-small`}
               >
                 <motion.div
                   className="relative z-10 w-full"

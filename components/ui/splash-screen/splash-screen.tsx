@@ -31,11 +31,11 @@ export default function SplashScreen({}) {
           </P>
           <BarLoader
             color="#ffffff"
-            className="relative z-20 hidden animate-pulse rounded-sm dark:block"
+            className="relative z-20 hidden animate-pulse rounded-sm dark:block max-mobile-large:-mt-1"
           />
           <BarLoader
             color="#000000"
-            className="relative z-20 block animate-pulse rounded-sm dark:hidden"
+            className="relative z-20 block animate-pulse rounded-sm dark:hidden max-mobile-large:-mt-1"
           />
         </div>
       </div>

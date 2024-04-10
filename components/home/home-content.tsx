@@ -173,7 +173,7 @@ export default function HomeContent({}) {
               className="relative flex   items-center gap-extra-small  text-tertiary90 dark:text-tertiary1 max-tablet:gap-0"
             >
               <Icon
-                className="h-[3.6rem] w-[3.6rem] pb-1 max-tablet:h-[3.0rem] max-tablet:w-[3.0rem] max-mobile-large:h-[2.0rem] max-mobile-large:w-[2.0rem]"
+                className="h-[3.6rem] w-[3.6rem] pb-1 max-tablet:h-[3.0rem] max-tablet:w-[3.0rem] max-mobile-large:h-[2.2rem] max-mobile-large:w-[2.2rem] max-mobile-large:pb-1.5"
                 path={mdilArrowRight}
               />
 
@@ -187,7 +187,7 @@ export default function HomeContent({}) {
               </NavLink>
             </motion.div>
             <motion.div
-              key="workLink"
+              key="contactLink"
               initial={{ y: '-4rem', opacity: 0 }}
               animate={{
                 y: '0px',
@@ -200,7 +200,7 @@ export default function HomeContent({}) {
               className="relative flex   items-center gap-extra-small  text-tertiary90 dark:text-tertiary1 max-tablet:gap-0"
             >
               <Icon
-                className="h-[3.6rem] w-[3.6rem] pb-1 max-tablet:h-[3.0rem] max-tablet:w-[3.0rem] max-mobile-large:h-[2.0rem] max-mobile-large:w-[2.0rem]"
+                className="h-[3.6rem] w-[3.6rem] pb-1 max-tablet:h-[3.0rem] max-tablet:w-[3.0rem] max-mobile-large:h-[2.2rem] max-mobile-large:w-[2.2rem] max-mobile-large:pb-1.5"
                 path={mdilArrowRight}
               />
 

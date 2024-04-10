@@ -26,7 +26,7 @@ export default function ContactContent({}) {
         <main className="flex w-full max-w-[1300px] flex-col   ">
           <div className="relative z-50 flex w-full flex-col">
             <div
-              className={`} relative z-50  flex h-full  w-fit items-center gap-extra-small
+              className={`relative z-50  flex h-full  w-fit items-center gap-extra-small
                             `}
             >
               <motion.div
@@ -98,22 +98,24 @@ export default function ContactContent({}) {
                   <div className="flex items-center gap-extra-small text-primary90 dark:text-primary1  ">
                     <Icon
                       size={2}
-                      className=" -rotate-45 max-tablet:scale-75
-                      "
+                      className="-rotate-45 max-tablet:scale-75 max-mobile-large:-mr-3 max-mobile-large:mt-[0.12rem]"
                       path={mdilArrowRight}
                     ></Icon>
                     <a href="https://www.linkedin.com/in/corentin-kittel-a404a5300/?originalSubdomain=fr">
                       Linkedin
                     </a>
                   </div>
-                  <div className="flex items-center gap-extra-small text-primary90 dark:text-primary1  ">
+                  <a
+                    href="https://github.com/dobzacode"
+                    className="flex items-center gap-extra-small text-primary90 dark:text-primary1  "
+                  >
                     <Icon
                       size={2}
-                      className=" -rotate-45 max-tablet:scale-75"
+                      className="-rotate-45 max-tablet:scale-75 max-mobile-large:-mr-3 max-mobile-large:mt-[0.12rem]"
                       path={mdilArrowRight}
                     ></Icon>
-                    <a href="https://github.com/dobzacode">Github</a>
-                  </div>
+                    <p>Github</p>
+                  </a>
                 </div>
               </motion.div>
             </div>

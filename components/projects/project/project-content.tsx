@@ -165,11 +165,11 @@ export default function ProjectContent({ params }: { params: { projectName: stri
                 <a
                   //@ts-ignore
                   href={projectObj.url}
-                  className="sub-heading m relative z-40 flex w-full items-center gap-extra-small font-thin text-primary90  dark:text-primary1 max-tablet:-ml-[0.8rem] max-tablet:text-body  max-mobile-large:text-body "
+                  className="sub-heading  relative z-40 flex w-full items-center gap-extra-small font-thin text-primary90  dark:text-primary1 max-tablet:-ml-[0.8rem] max-tablet:text-body  max-mobile-large:text-body "
                 >
                   <Icon
                     size={2}
-                    className="-rotate-45 max-tablet:scale-75"
+                    className="-rotate-45 max-tablet:scale-75 max-mobile-large:mt-2"
                     path={mdilArrowRight}
                   ></Icon>
                   <P className="relative w-fit before:absolute before:bottom-0 before:-z-10  before:w-full before:max-w-0 before:origin-center before:border-b-2 before:border-tertiary40 before:duration-medium hover:before:max-w-full before:dark:border-tertiary40  max-tablet:-ml-[0.8rem] max-mobile-large:-mb-1 tablet:before:-mb-1">
@@ -208,7 +208,7 @@ export default function ProjectContent({ params }: { params: { projectName: stri
             {projectList[projectObj.id - 1] && (
               <Link //@ts-ignore
                 href={`/work/${projectList[projectObj.id - 1].title.toLowerCase()}`}
-                className="sub-heading absolute -bottom-[4.8rem] left-0 z-10 flex w-fit items-center gap-extra-small font-thin text-primary90  dark:text-primary1 max-tablet:text-body  max-mobile-large:text-body max-mobile-large:leading-body"
+                className="sub-heading absolute -bottom-[3.4rem] left-0 z-10 flex w-fit items-center gap-extra-small font-thin text-primary90  dark:text-primary1 max-tablet:text-body  max-mobile-large:text-body max-mobile-large:leading-body"
               >
                 <P className="relative whitespace-nowrap font-['HFF_Ultrasound'] font-thin leading-[2.6rem] before:absolute before:bottom-0 before:left-[50%] before:-z-10 before:w-full before:max-w-0 before:origin-center before:border-b-2 before:border-tertiary40 before:duration-medium hover:before:left-0 hover:before:max-w-full before:dark:border-tertiary40 max-tablet:text-sub-heading max-mobile-large:text-body">
                   {t('previousProject')}
@@ -218,7 +218,7 @@ export default function ProjectContent({ params }: { params: { projectName: stri
             {projectList[projectObj.id + 1] && (
               <Link //@ts-ignore
                 href={`/work/${projectList[projectObj.id + 1].title.toLowerCase()}`}
-                className="sub-heading absolute -bottom-[4.8rem] right-0 z-10 flex w-fit items-center gap-extra-small font-thin text-primary90  dark:text-primary1 max-tablet:text-body  max-mobile-large:text-body max-mobile-large:leading-body"
+                className="sub-heading absolute -bottom-[3.4rem] right-0 z-10 flex w-fit items-center gap-extra-small font-thin text-primary90  dark:text-primary1 max-tablet:text-body  max-mobile-large:text-body max-mobile-large:leading-body"
               >
                 <P className="relative whitespace-nowrap font-['HFF_Ultrasound'] font-thin leading-[2.6rem] before:absolute before:bottom-0 before:left-[50%] before:-z-10 before:w-full before:max-w-0 before:origin-center before:border-b-2 before:border-tertiary40 before:duration-medium hover:before:left-0 hover:before:max-w-full before:dark:border-tertiary40 max-tablet:text-sub-heading max-mobile-large:text-body">
                   {t('nextProject')}

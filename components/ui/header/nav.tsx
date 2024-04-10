@@ -125,7 +125,7 @@ const Nav: FC<NavProps> = ({ className, intent }) => {
             )}
           </AnimatePresence>
         </Link>
-        <div className="relative  flex items-center  gap-small text-primary90 dark:text-primary1 max-tablet:gap-4">
+        <div className="relative  flex items-center  gap-small text-primary90 dark:text-primary1 max-tablet:gap-4 max-mobile-large:pt-2">
           <motion.div variants={menuItemVariant} initial="hidden" animate="visible" custom="1">
             <LangageSwitch></LangageSwitch>
           </motion.div>
@@ -151,7 +151,7 @@ const Nav: FC<NavProps> = ({ className, intent }) => {
                 >
                   <Icon
                     path={mdilMenu}
-                    className="h-[3rem] w-[3rem]  text-primary90  duration-fast hover:scale-105 dark:text-primary1 max-tablet:h-[2.2rem] max-tablet:w-[2.2rem]  max-mobile-large:h-[2.0rem] max-mobile-large:w-[2.0rem]"
+                    className="h-[3rem] w-[3rem]  text-primary90  duration-fast hover:scale-105 dark:text-primary1 max-tablet:h-[2.2rem] max-tablet:w-[2.2rem] max-mobile-large:mt-0.5  max-mobile-large:h-[1.8rem] max-mobile-large:w-[1.8rem]"
                   ></Icon>
                 </motion.button>
               ) : (
@@ -163,11 +163,12 @@ const Nav: FC<NavProps> = ({ className, intent }) => {
                   className="absolute h-fit w-fit "
                   onClick={() => triggerMenu()}
                 >
-                  <Icon
-                    path={mdilPlus}
-                    className="  rotate-45 text-primary90 duration-fast hover:scale-105 dark:text-primary1 max-tablet:scale-75  max-tablet:pb-1"
-                    size={2}
-                  ></Icon>
+                  <div className="rotate-45">
+                    <Icon
+                      path={mdilPlus}
+                      className="h-[3rem] w-[3rem]  text-primary90  duration-fast hover:scale-105 dark:text-primary1 max-tablet:h-[2.2rem] max-tablet:w-[2.2rem] max-mobile-large:mt-[0.12rem]   max-mobile-large:h-[2rem] max-mobile-large:w-[2rem]"
+                    ></Icon>
+                  </div>
                 </motion.button>
               )}
             </AnimatePresence>
@@ -237,7 +238,7 @@ const Nav: FC<NavProps> = ({ className, intent }) => {
                             opacity: 0,
                             transition: { duration: 0.5, delay: i * 0.115 }
                           }}
-                          className="glowy-shadow relative z-10  -mt-3 h-[10rem] bg-tertiary40 p-1 max-tablet:-mt-2 max-tablet:h-[7.5rem] max-mobile-large:-mt-1   max-mobile-large:h-[5rem] max-mobile-large:p-[0.2rem]"
+                          className="glowy-shadow relative z-10  -mt-3 h-[10rem] bg-tertiary40 p-1 max-tablet:-mt-2 max-tablet:h-[7.5rem] max-mobile-large:-mt-4   max-mobile-large:h-[5rem] max-mobile-large:p-[0.2rem]"
                         ></motion.div>
                       </div>
                     );
