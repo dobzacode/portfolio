@@ -1,7 +1,5 @@
 import { Providers } from '@/components/wrapper/dark-mode/providers';
 
-import { Header } from '@/components/ui/header/header';
-import SplashScreen from '@/components/ui/splash-screen/splash-screen';
 import { NextIntlClientProvider } from 'next-intl';
 import { unstable_setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
@@ -37,10 +35,6 @@ export default async function RootLayout({
       <body className="  relative h-full w-full overflow-x-hidden bg-primary1 duration-medium dark:bg-primary99">
         <Providers>
           <NextIntlClientProvider messages={messages}>
-            <SplashScreen></SplashScreen>
-
-            <Header size={'large'} textColor={'neutral'} className=" flex"></Header>
-
             {children}
             <div className="noise max-mobile-large:hidden"></div>
           </NextIntlClientProvider>

@@ -12,18 +12,7 @@
     <changefreq>yearly</changefreq>
     <priority>1</priority>
   </url>
-  <url>
-    <loc>https://corentinkittel.fr/en/about</loc>
-    <lastmod>2024-04-11</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://corentinkittel.fr/a-propos</loc>
-    <lastmod>2024-04-11</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
+ 
   <url>
     <loc>https://corentinkittel.fr/contact</loc>
     <lastmod>2024-04-11</lastmod>
@@ -60,18 +49,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-   <url>
-    <loc>https://corentinkittel.fr/projets/roddat</loc>
-    <lastmod>2024-04-11</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-    <url>
-      <loc>https://corentinkittel.fr/en/work/roddat</loc>
-      <lastmod>2024-04-11</lastmod>
-      <changefreq>monthly</changefreq>
-      <priority>0.8</priority>
-    </url>
+   
     <url>
     <loc>https://corentinkittel.fr/projets/abject-act</loc>
     <lastmod>2024-04-11</lastmod>
