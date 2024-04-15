@@ -129,15 +129,15 @@
   "metadata": {
     "landing": {
       "title": "Corentin Kittel | Full-Stack Developer & UX/UI Designer",
-      "description": "Explore the professional profile of Corentin Kittel, a Full-Stack developer passionate about the art of UX/UI Design. Dive into his diverse portfolio and discover how he combines strong technical expertise with aesthetic sensitivity to create exceptional user experiences. Connect with Corentin to discuss your web development projects and user experience enhancements."
+      "description": "Explore the profile of Corentin Kittel, a Full-Stack developer passionate about UX/UI Design. Discover his portfolio and how he combines technical expertise with aesthetic sensitivity."
     },
     "about": {
       "title": "About Corentin Kittel | Full-Stack Developer & UX/UI Designer",
-      "description": "Explore the journey of Corentin Kittel, a full-stack developer passionate about interface design and user experience. Since 2022, I have dedicated my time to deepening my knowledge, creating websites and applications that blend elegance with functionality. Discover my passion for modern technologies and my constant quest for new skills to provide innovative solutions."
+      "description": "Discover Corentin Kittel, a full-stack developer passionate about interface design and user experience. Since 2022, I've dedicated myself to creating elegant and functional websites and apps."
     },
     "contact": {
       "title": "Contact Corentin Kittel | Full-Stack Developer & UX/UI Designer",
-      "description": "Get in touch with Corentin Kittel, a full-stack developer passionate about interface design and user experience. Whether you have questions, projects to discuss, or collaboration opportunities, I am here to assist. Use the provided contact information to initiate a conversation and explore how we can work together to bring your digital ideas to life."
+      "description": "Get in touch with Corentin Kittel, a full-stack developer passionate about interface design and user experience. Have questions or projects to discuss? Let's connect and explore collaboration opportunities."
     },
     "work": {
       "title": "Portfolio of Corentin Kittel | Full-Stack Developer & UX/UI Designer",
@@ -145,7 +145,7 @@
     },
     "legalinformation": {
       "title": "Legal Information",
-      "description": "Check out the legal information for complete transparency. Discover the legal and regulatory information framing the platform. Corentin Kittel is committed to complying with all applicable standards. Visit the legal information page for clear and precise details about my legal framework."
+      "description": "Check out the legal information for transparency. Discover the regulations framing the platform. Corentin Kittel is committed to compliance. Visit for clear details about the legal framework."
     },
     "mtonarchi": {
       "title": "Mtonarchi | Project by Corentin Kittel",
@@ -160,6 +160,7 @@
       "description": "Explore Abject Act, a project by Corentin Kittel, a full-stack developer passionate about interface design and user experience."
     }
   },
+
   "not-found": {
     "content": "The page you are looking for does not exist. Please return to the home page.",
     "button": "Go back to home page"
