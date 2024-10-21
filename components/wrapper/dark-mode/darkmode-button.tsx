@@ -22,12 +22,14 @@ const DarkModeButton: FC<DarkModeButtonProps> = ({ className }) => {
     return null;
   }
 
+  console.log(theme);
+
   return (
     <Button
       className={className}
       onClick={() => (theme === 'dark' ? setTheme('light') : setTheme('dark'))}
     >
-      {theme === 'light' || !theme ? (
+      {theme === 'light' ? (
         <motion.div
           className="h-[3rem] w-[3rem] pb-1 max-tablet:h-[2.4rem] max-tablet:w-[2.4rem] max-mobile-large:h-[2.0rem] max-mobile-large:w-[2.0rem]"
           key="sun"

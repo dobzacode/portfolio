@@ -31,7 +31,7 @@ export default async function RootLayout({
   unstable_setRequestLocale(locale);
 
   return (
-    <html lang={locale} suppressHydrationWarning style={{ colorScheme: 'dark' }}>
+    <html lang={locale} suppressHydrationWarning>
       <body className="  relative h-full w-full overflow-x-hidden bg-primary1 duration-medium dark:bg-primary99">
         <Providers>
           <NextIntlClientProvider messages={messages}>
