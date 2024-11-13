@@ -4,7 +4,7 @@ import { getTranslations, unstable_setRequestLocale } from 'next-intl/server';
 
 export async function generateStaticParams() {
   return projectList.map((project) => ({
-    projectName: project.title
+    projectName: project.title.toLowerCase()
   }));
 }
 
