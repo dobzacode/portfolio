@@ -1,6 +1,6 @@
 'use client';
 
-import { projectList } from '@/assets/project/project-list';
+import { ProjectListProps, projectList } from '@/assets/project/project-list';
 import useBetterMediaQuery from '@/components/hooks/use-better-media-query';
 import { H1 } from '@/components/ui/text/h1';
 import { Link } from '@/navigation';
@@ -8,18 +8,18 @@ import { AnimatePresence, motion } from 'framer-motion';
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 import { useSearchParams } from 'next/navigation';
-import { useState } from 'react';
+import { useState } from 'react'; // Import useRef
 import Carousel from '../ui/div/carousel';
 
 export default function ProjectsContent({}) {
   const [splashDelay] = useState<3.5 | 0>(!sessionStorage.getItem('shown') ? 3.5 : 0);
-  const [hoveredProjectImage, setHoveredProjectImage] = useState<string | null>(null);
+  const [hoveredProject, sethoveredProject] = useState<ProjectListProps>(projectList[0]);
 
   const searchParams = useSearchParams();
   const t = useTranslations('project');
 
-  const handleLinkHover = (imageURL: string) => {
-    setHoveredProjectImage(imageURL);
+  const handleLinkHover = (project: ProjectListProps) => {
+    sethoveredProject(project);
   };
 
   const isLaptop = useBetterMediaQuery('(min-width: 1024px)');
@@ -69,8 +69,7 @@ export default function ProjectsContent({}) {
                   <Link
                     //@ts-ignore
                     href={`/work/${project.title.toLowerCase()}`}
-                    onMouseEnter={() => handleLinkHover(project.image)}
-                    onMouseLeave={() => setHoveredProjectImage(null)}
+                    onMouseEnter={() => handleLinkHover(project)}
                     className="sub-heading relative z-10 w-full  text-primary90 before:absolute before:bottom-0 before:left-[50%] before:-z-10 before:w-full before:max-w-0 before:origin-center before:border-b-2 before:border-tertiary40 before:duration-medium hover:before:left-0 hover:before:max-w-full dark:text-primary1 before:dark:border-tertiary40 max-tablet:text-sub-heading max-mobile-large:text-body max-mobile-large:leading-sub-heading"
                   >
                     {project.title}
@@ -106,31 +105,37 @@ export default function ProjectsContent({}) {
         {isLaptop && (
           <div className="flex aspect-square justify-center pt-6   max-laptop:hidden  laptop:w-3/5 laptop:max-w-[650px]">
             <AnimatePresence mode="popLayout">
-              {hoveredProjectImage && (
+              {hoveredProject && (
                 <motion.div
                   className="relative aspect-square w-full "
                   initial={{ x: '50%', opacity: 0 }}
                   animate={{
                     x: 0,
                     opacity: 1,
-                    transition: { opacity: { duration: 0.1 }, x: { type: 'spring', duration: 2 } }
+                    transition: { opacity: { duration: 0.3 }, x: { type: 'spring', duration: 2 } }
                   }}
                   exit={{
                     opacity: 0,
                     zIndex: '-30',
                     transition: { opacity: { duration: 0.5 }, zIndex: { duration: 0.01 } }
                   }}
-                  key={hoveredProjectImage}
+                  key={`${hoveredProject.title} image`} // Use the ref key to minimize unwanted re-triggers
                 >
-                  <Image
-                    priority={true}
-                    sizes={'(max-width: 500px) 100vw, 800px'}
-                    fill
-                    src={hoveredProjectImage}
-                    className="relative -z-20 border-2 grayscale"
-                    alt="Project Image"
-                  />
-                  <div className="absolute top-0 -z-10 h-full w-full bg-primary40 opacity-5 hover:opacity-0"></div>
+                  <Link
+                    //@ts-ignore
+                    href={`/work/${hoveredProject.title.toLowerCase()}`}
+                  >
+                    <Image
+                      priority={true}
+                      sizes={'(max-width: 500px) 100vw, 800px'}
+                      fill
+                      placeholder="blur"
+                      src={hoveredProject.image}
+                      className="relative -z-20 border-2 grayscale"
+                      alt="Project Image"
+                    />
+                    <div className="absolute top-0 -z-10 h-full w-full bg-primary40 opacity-5"></div>
+                  </Link>
                 </motion.div>
               )}
             </AnimatePresence>

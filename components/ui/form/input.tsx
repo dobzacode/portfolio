@@ -11,7 +11,6 @@ import {
 } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 
-
 import { cn } from '@/lib/utils';
 import { VariantProps, cva } from 'class-variance-authority';
 import P from '../text/p';
@@ -191,4 +190,3 @@ Input.displayName = 'Button';
 
 export { inputVariants };
 export default Input;
-

@@ -3,7 +3,6 @@
 import { buttonVariants } from '@/components/ui/button/button';
 import H2 from '@/components/ui/text/h2';
 import P from '@/components/ui/text/p';
-import { cn } from '@/lib/utils';
 import { Link } from '@/navigation';
 import { motion } from 'framer-motion';
 import { useTranslations } from 'next-intl';
@@ -38,14 +37,10 @@ export default function Error({ error }: { error: Error & { digest?: string } })
           }
         }}
         exit={{ opacity: 0, x: '50%', transition: { duration: 1.5 } }}
-        className={cn(
-          `
-      
-         relative z-10 flex h-screen w-screen flex-col items-center justify-center gap-medium px-small text-primary90 dark:text-primary5 `
-        )}
+        className="flex h-[75vh] w-full flex-col items-center justify-center gap-medium px-small text-primary90 dark:text-primary5 "
       >
         <H2 textType="heading--extra-large">500</H2>
-        <P textType="body" className="max-w-[400px] text-center">
+        <P textType="body" className="max-w-[400px] text-pretty text-center">
           {t('content')}{' '}
         </P>
         <Link

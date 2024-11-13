@@ -57,6 +57,9 @@
       "completed": "Finished",
       "inProgress": "In progress"
     },
+    "link": {
+      "label": "Links"
+    },
     "url": "Go to the website",
     "github": "Go to the GitHub",
     "nextProject": "Next",
@@ -158,6 +161,18 @@
     "abject-act": {
       "title": "Abject Act | Project by Corentin Kittel",
       "description": "Explore Abject Act, a project by Corentin Kittel, a full-stack developer passionate about interface design and user experience."
+    },
+    "arozvit": {
+      "title": "Arozvit | Project by Corentin Kittel",
+      "description": "Discover Arozvit, a project by Corentin Kittel, a full-stack developer passionate about interface design and user experience."
+    },
+    "acte-5": {
+      "title": "Acte 5 | Project by Corentin Kittel",
+      "description": "Discover Acte 5, a project by Corentin Kittel, a full-stack developer passionate about interface design and user experience."
+    },
+    "dine-dong": {
+      "title": "Dine Dong | Project by Corentin Kittel",
+      "description": "Discover Dine Dong, a project by Corentin Kittel, a full-stack developer passionate about interface design and user experience."
     }
   },
 

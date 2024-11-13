@@ -3,7 +3,6 @@
 import { ProjectListProps, projectList } from '@/assets/project/project-list';
 import { H1 } from '@/components/ui/text/h1';
 import P from '@/components/ui/text/p';
-import { dynamicBlurDataUrl } from '@/lib/utils';
 import { Link } from '@/navigation';
 import { mdilArrowRight } from '@mdi/light-js';
 import Icon from '@mdi/react';
@@ -11,14 +10,10 @@ import { motion } from 'framer-motion';
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 import { notFound, useSearchParams } from 'next/navigation';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 
 export default function ProjectContent({ params }: { params: { projectName: string } }) {
   const [splashDelay] = useState<3.5 | 0>(!sessionStorage.getItem('shown') ? 3.5 : 0);
-
-  const [blurSrc, setBlurSrc] = useState<string>(
-    'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhfDwAChwGA60e6kgAAAABJRU5ErkJggg=='
-  );
 
   const searchParams = useSearchParams();
   const t = useTranslations('projectPage');
@@ -27,20 +22,9 @@ export default function ProjectContent({ params }: { params: { projectName: stri
     (project: ProjectListProps) => project.title === params.projectName.toUpperCase()
   );
 
-  useEffect(() => {
-    const fetchBlurData = async () => {
-      if (!projectObj) return;
-      const blurImg = await dynamicBlurDataUrl(`${projectObj.image}`);
-      setBlurSrc(blurImg);
-    };
-    fetchBlurData();
-  });
-
   if (projectObj === undefined) {
     return notFound();
   }
-
-  console.log(projectList[projectObj.id - 1], projectObj.id - 1);
 
   return (
     <div className="flex h-full w-screen justify-center overflow-hidden px-medium py-medium mobile-large:px-large tablet:px-large laptop:py-large laptop:pl-extra-large laptop-large:px-extra-large">
@@ -105,7 +89,7 @@ export default function ProjectContent({ params }: { params: { projectName: stri
                   opacity: { duration: 2, delay: 0.3 + splashDelay }
                 }
               }}
-              exit={{ y: '-50%', transition: { duration: 0.5 } }}
+              exit={{ y: '-30%', transition: { duration: 0.5 } }}
               className="relative -z-20 flex w-full flex-col gap-small overflow-hidden "
             >
               <div
@@ -120,7 +104,7 @@ export default function ProjectContent({ params }: { params: { projectName: stri
                     return (
                       <P
                         key={`${category}`}
-                        className="sub-heading relative z-10 whitespace-nowrap font-thin  max-tablet:text-body    max-mobile-large:text-body max-mobile-large:leading-body "
+                        className="sub-heading relative z-10 whitespace-nowrap font-thin     max-tablet:text-body max-mobile-large:text-body max-mobile-large:leading-body"
                       >
                         {category}
                       </P>
@@ -145,7 +129,7 @@ export default function ProjectContent({ params }: { params: { projectName: stri
                     return (
                       <P
                         key={`${stack}`}
-                        className=" sub-heading relative z-10 w-full whitespace-nowrap font-thin  max-tablet:text-body    max-mobile-large:text-body max-mobile-large:leading-body "
+                        className=" sub-heading relative z-10 w-full  whitespace-nowrap font-thin  max-tablet:text-body    max-mobile-large:text-body max-mobile-large:leading-body "
                       >
                         {stack}
                       </P>
@@ -161,21 +145,42 @@ export default function ProjectContent({ params }: { params: { projectName: stri
                   {t(`status.${projectObj.status}`)}
                 </P>
               </div>
-              <div className="flex justify-between  max-[1300px]:flex-col max-[1300px]:gap-extra-small max-laptop:flex-row max-laptop:gap-0 max-mobile-large:flex-col laptop:pt-4">
-                <a
-                  //@ts-ignore
-                  href={projectObj.url}
-                  className="sub-heading  relative z-40 flex w-full items-center gap-extra-small font-thin text-primary90  dark:text-primary1 max-tablet:-ml-[0.8rem] max-tablet:text-body  max-mobile-large:text-body "
-                >
-                  <Icon
-                    size={2}
-                    className="-rotate-45 max-tablet:scale-75 max-mobile-large:mt-2"
-                    path={mdilArrowRight}
-                  ></Icon>
-                  <P className="relative w-fit before:absolute before:bottom-0 before:-z-10  before:w-full before:max-w-0 before:origin-center before:border-b-2 before:border-tertiary40 before:duration-medium hover:before:max-w-full before:dark:border-tertiary40  max-tablet:-ml-[0.8rem] max-mobile-large:-mb-1 tablet:before:-mb-1">
-                    {projectObj.url.replace('https://', '')}
-                  </P>
-                </a>
+              <div className="relative z-10 flex w-full justify-between ">
+                <P className="sub-heading relative z-10 w-full max-w-full font-semibold  max-tablet:text-body    max-mobile-large:text-body max-mobile-large:leading-body ">
+                  {t('link.label')}
+                </P>
+                <div className="flex w-3/5 flex-col">
+                  {projectObj.url && (
+                    <a
+                      //@ts-ignore
+                      href={projectObj.url}
+                      className="sub-heading  relative z-40 flex w-full items-center gap-extra-small font-thin text-primary90  dark:text-primary1 max-tablet:-ml-[0.8rem] max-tablet:text-body  max-mobile-large:text-body "
+                    >
+                      <Icon
+                        size={2}
+                        className="-rotate-45 max-tablet:!size-10 "
+                        path={mdilArrowRight}
+                      ></Icon>
+                      <P className="relative w-fit before:absolute before:bottom-0 before:-z-10  before:w-full before:max-w-0 before:origin-center before:border-b-2 before:border-tertiary40 before:duration-medium hover:before:max-w-full before:dark:border-tertiary40  max-tablet:-ml-[0.8rem] max-mobile-large:-mb-1 tablet:before:-mb-1">
+                        {projectObj.url.replace('https://', '')}
+                      </P>
+                    </a>
+                  )}
+                  <a
+                    //@ts-ignore
+                    href={projectObj.github}
+                    className="sub-heading  relative z-40 flex w-full items-center gap-extra-small font-thin text-primary90  dark:text-primary1 max-tablet:-ml-[0.8rem] max-tablet:text-body  max-mobile-large:text-body "
+                  >
+                    <Icon
+                      size={2}
+                      className="-rotate-45 max-tablet:!size-10 "
+                      path={mdilArrowRight}
+                    ></Icon>
+                    <P className="relative w-fit before:absolute before:bottom-0 before:-z-10  before:w-full before:max-w-0 before:origin-center before:border-b-2 before:border-tertiary40 before:duration-medium hover:before:max-w-full before:dark:border-tertiary40  max-tablet:-ml-[0.8rem] max-mobile-large:-mb-1 tablet:before:-mb-1">
+                      Github
+                    </P>
+                  </a>
+                </div>
               </div>
             </motion.div>
           </div>
@@ -191,14 +196,14 @@ export default function ProjectContent({ params }: { params: { projectName: stri
               opacity: { duration: 0.8, delay: 1.2 + splashDelay - 0.8 }
             }
           }}
-          exit={{ y: '-20%', opacity: 0, transition: { duration: 0.5 } }}
+          exit={{ opacity: 0, transition: { duration: 0.5 } }}
           className="relative z-50 aspect-square w-full  max-laptop:mb-large laptop:mt-6 laptop:w-1/2 laptop-large:max-w-[650px]"
         >
           <Image
             priority={true}
             src={projectObj.image}
             sizes={'(max-width: 1000px) 100vw, 700x'}
-            blurDataURL={blurSrc}
+            placeholder="blur"
             alt={`Image of ${projectObj.title}`}
             fill
             className="relative -z-20 object-cover grayscale duration-slow"

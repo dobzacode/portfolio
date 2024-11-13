@@ -45,6 +45,9 @@
       "completed": "Terminé",
       "inProgress": "En cours"
     },
+    "link": {
+      "label": "Liens"
+    },
     "url": "Accéder au site",
     "github": "Accéder au Github",
     "nextProject": "Suivant",
@@ -269,6 +272,18 @@
     "abject-act": {
       "title": "Abject Act | Projet de Corentin Kittel",
       "description": "Découvrez Abject Act, un projet de Corentin Kittel, développeur full-stack."
+    },
+    "dine-dong": {
+      "title": "Dine Dong | Projet de Corentin Kittel",
+      "description": "Découvrez Dine Dong, un projet de Corentin Kittel, développeur full-stack."
+    },
+    "acte-5": {
+      "title": "Acte 5 | Projet de Corentin Kittel",
+      "description": "Découvrez Acte 5, un projet de Corentin Kittel, développeur full-stack."
+    },
+    "arozvit": {
+      "title": "Arozvit | Projet de Corentin Kittel",
+      "description": "Découvrez Arozvit, un projet de Corentin Kittel, développeur full-stack."
     }
   },
   "not-found": {

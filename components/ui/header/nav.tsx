@@ -181,11 +181,10 @@ const Nav: FC<NavProps> = ({ className, intent }) => {
             <motion.div
               key="specialMenu"
               className="flex justify-between   pt-[6rem]  mobile-large:pt-[6rem] tablet:pt-[8rem] laptop:gap-medium  laptop:pt-[10rem]  laptop-large:gap-extra-large"
-              exit={{
-                opacity: 0,
-                x: '-50%',
-                transition: { duration: 1, ease: 'easeIn' }
-              }}
+              // exit={{
+              //   opacity: 0,
+              //   transition: { duration: 1, ease: 'easeIn' }
+              // }}
             >
               <nav
                 key={'navigation'}
@@ -205,6 +204,7 @@ const Nav: FC<NavProps> = ({ className, intent }) => {
                           key={`${link.name} animated`}
                           initial={{ x: '-200%' }}
                           animate={{ x: '0', transition: { duration: 0.5, delay: i * 0.5 + 0.5 } }}
+                          exit={{ x: '-150%', transition: { duration: 1, delay: 0.5 } }}
                         >
                           <NavLink
                             isLi={true}
@@ -235,8 +235,17 @@ const Nav: FC<NavProps> = ({ className, intent }) => {
                             }
                           }}
                           exit={{
-                            opacity: 0,
-                            transition: { duration: 0.5, delay: i * 0.115 }
+                            maxHeight: [0, 100, 100, 0],
+                            opacity: [0, 1, 1, 0],
+                            transition: {
+                              maxHeight: {
+                                duration: 1.5,
+                                ease: 'easeInOut',
+                                delay: 0,
+                                times: [0, 0.25, 0.75, 1]
+                              },
+                              opacity: { duration: 1.5, delay: 0, times: [0, 0.05, 0.99, 1] }
+                            }
                           }}
                           className="glowy-shadow relative z-10  -mt-3 h-[10rem] bg-tertiary40 p-1 max-tablet:-mt-2 max-tablet:h-[7.5rem] max-mobile-large:-mt-4   max-mobile-large:h-[5rem] max-mobile-large:p-[0.2rem]"
                         ></motion.div>
