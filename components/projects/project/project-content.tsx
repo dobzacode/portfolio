@@ -46,7 +46,7 @@ export default function ProjectContent({ params }: { params: { projectName: stri
                 animate={{ y: '0', opacity: 1, transition: { duration: 0.5, delay: splashDelay } }}
               >
                 <H1 className="leading-small heading--extra-large relative z-50 w-full whitespace-nowrap font-['HFF_Ultrasound'] font-medium text-primary90 dark:text-primary1 max-tablet:text-heading-sub-extra-large max-tablet:leading-heading-sub-extra-large  max-mobile-large:text-heading-large  max-mobile-large:leading-heading-large ">
-                  {projectObj.title.toUpperCase()}
+                  {projectObj.title.toUpperCase().replace('-', ' ')}
                 </H1>
               </motion.div>
             </div>

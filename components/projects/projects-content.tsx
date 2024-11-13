@@ -72,7 +72,7 @@ export default function ProjectsContent({}) {
                     onMouseEnter={() => handleLinkHover(project)}
                     className="sub-heading relative z-10 w-full  text-primary90 before:absolute before:bottom-0 before:left-[50%] before:-z-10 before:w-full before:max-w-0 before:origin-center before:border-b-2 before:border-tertiary40 before:duration-medium hover:before:left-0 hover:before:max-w-full dark:text-primary1 before:dark:border-tertiary40 max-tablet:text-sub-heading max-mobile-large:text-body max-mobile-large:leading-sub-heading"
                   >
-                    {project.title}
+                    {project.title.replace('-', ' ')}
                   </Link>
                 </motion.div>
                 <motion.hr

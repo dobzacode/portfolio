@@ -29,7 +29,7 @@ export const projectList: ProjectListProps[] = [
     stack: [
       'Next.js',
       'TailwindCSS',
-      'Shadcn UI',
+
       'Framer Motion',
       'FastAPI',
       'Stripe',
