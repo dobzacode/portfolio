@@ -4,14 +4,14 @@ import NavLink from '@/components/ui/header/nav-link';
 import { H1 } from '@/components/ui/text/h1';
 import H2 from '@/components/ui/text/h2';
 import P from '@/components/ui/text/p';
+import portraitImg from '@/public/portrait.png';
 import { mdilArrowRight } from '@mdi/light-js';
 import Icon from '@mdi/react';
 import { easeInOut, easeOut, motion } from 'framer-motion';
 import { useTranslations } from 'next-intl';
-import { useState } from 'react';
-
 import Image from 'next/image';
 import { useSearchParams } from 'next/navigation';
+import { useState } from 'react';
 
 export default function HomeContent({}) {
   const [splashDelay] = useState<3.5 | 0>(!sessionStorage.getItem('shown') ? 3.5 : 0);
@@ -78,7 +78,8 @@ export default function HomeContent({}) {
                 width="400"
                 height="400"
                 sizes={'(max-width: 500px) 100vw, 500px'}
-                src="/portrait.png"
+                src={portraitImg}
+                placeholder="blur"
                 alt="picture"
               ></Image>
             </motion.div>

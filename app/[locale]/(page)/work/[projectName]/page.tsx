@@ -1,5 +1,12 @@
+import { projectList } from '@/assets/project/project-list';
 import ProjectContent from '@/components/projects/project/project-content';
 import { getTranslations, unstable_setRequestLocale } from 'next-intl/server';
+
+export async function generateStaticParams() {
+  return projectList.map((project) => ({
+    projectName: project.title
+  }));
+}
 
 export async function generateMetadata({
   params: { projectName }
