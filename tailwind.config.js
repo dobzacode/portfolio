@@ -293,6 +293,7 @@ module.exports = {
         'extra-small': parseFloat(SUBHEADING_SIZE) - 1.6 + 'rem'
       },
       boxShadow: {
+        'custom-glow': '4px 5px 5px #ade0db',
         'medium-light': mediumShadow('0deg 0% 50%'),
         'primary-low': lowShadow(PRIMARY_COLOR_SHADOW),
         'primary-medium': mediumShadow(PRIMARY_COLOR_SHADOW),

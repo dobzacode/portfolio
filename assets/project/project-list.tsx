@@ -1,35 +1,25 @@
-import abjectactimg from '@/public/project/abject-act.jpg';
-import acte5img from '@/public/project/acte-5.jpg';
-import arozvitimg from '@/public/project/arozvit.jpg';
-import dinedongimg from '@/public/project/dine-dong.jpg';
-import mtonarchiimg from '@/public/project/mtonarchi.jpg';
-import roddatimg from '@/public/project/roddat.jpg';
-
-import { StaticImageData } from 'next/image';
-
-export interface ProjectListProps {
-  title: string;
-  image: StaticImageData;
-  client?: string;
-  category: string[];
-  stack: string[];
-  year: number;
-  status: 'completed' | 'inProgress';
-  url?: string;
-  id: number;
+export interface ProjectInformation {
+  name: string;
+  description: string;
+  type: 'personnel' | 'professionnel';
+  image: string;
+  competences: string[];
+  duration: string;
   github: string;
+  website: string;
 }
 
-export const projectList: ProjectListProps[] = [
+export const projects: ProjectInformation[] = [
   {
-    title: 'DINE-DONG',
-    image: dinedongimg,
-    category: ['Full-stack', 'UI/UX Design', 'DevOps'],
-    year: 2024,
-    stack: [
+    name: 'Dine Dong',
+    type: 'personnel',
+    description:
+      'Dine-Dong est une application communautaire permettant de vendre et découvrir des repas faits maison. Conçue avec Next.js, FastAPI, PostgreSQL et AWS Lambda, elle facilite la connexion entre les passionnés de cuisine et les chefs locaux.',
+    duration: 'Août 2024 - En cours',
+    image: '/project/dine-dong.jpg',
+    competences: [
       'Next.js',
       'TailwindCSS',
-
       'Framer Motion',
       'FastAPI',
       'Stripe',
@@ -41,28 +31,28 @@ export const projectList: ProjectListProps[] = [
       'Terraform',
       'AWS'
     ],
-    status: 'completed',
-    url: 'https://dine-dong.fr',
-    id: 0,
-    github: 'https://github.com/dobzacode/dine-dong'
+    github: 'https://github.com/dobzacode/dine-dong',
+    website: 'https://dine-dong.fr'
   },
   {
-    title: 'RODDAT',
-    image: roddatimg,
-    category: ['Full-stack', 'UI/UX Design'],
-    year: 2024,
-    stack: ['Next.js', 'TailwindCSS', 'Prisma', 'NextAuth', 'PostgreSQL', 'S3', 'Vercel'],
-    status: 'completed',
-    url: 'https://roddat.vercel.app',
-    id: 1,
-    github: 'https://github.com/dobzacode/roddat'
+    name: 'Roddat',
+    type: 'personnel',
+    description:
+      'Clone de Reddit développé avec Next.js, Prisma, PostgreSQL et Tailwind CSS. Il propose une interface interactive et une API RESTful pour gérer les interactions entre utilisateurs de manière fluide et efficace.',
+    duration: 'Septembre 2023 - Novembre 2023',
+    image: '/project/roddat.jpg',
+    competences: ['Next.js', 'TailwindCSS', 'Prisma', 'NextAuth', 'PostgreSQL', 'S3', 'Vercel'],
+    github: 'https://github.com/dobzacode/roddat',
+    website: 'https://roddat.vercel.app'
   },
   {
-    title: 'AROZVIT',
-    image: arozvitimg,
-    category: ['Full-stack', 'UI/UX Design', 'Mobile', 'DevOps'],
-    year: 2024,
-    stack: [
+    name: 'Arozvit',
+    type: 'personnel',
+    duration: 'Mai 2024 - Juin 2024',
+    description:
+      'Outil de gestion des plantes, développé avec Next.js pour le web et Expo pour le mobile. Il permet de suivre les soins des plantes, avec une API tRPC pour une intégration fluide et une interface intuitive.',
+    image: '/project/arozvit.jpg',
+    competences: [
       'Next.js',
       'TailwindCSS',
       'NativeWind',
@@ -73,44 +63,54 @@ export const projectList: ProjectListProps[] = [
       'Turborepo',
       'Github Actions',
       'Jest',
-      'Maestro'
+      'Maestro',
+      'Figma'
     ],
-    status: 'completed',
-    id: 2,
-    github: 'https://github.com/dobzacode/arozvit'
+    github: 'https://github.com/dobzacode/arozvit',
+    website: ''
   },
   {
-    title: 'ACTE-5',
-    image: acte5img,
-    category: ['Front-End', 'UI/UX Design'],
-    year: 2024,
-    stack: ['Next.js', 'TailwindCSS', 'Vercel', 'Framer Motion', 'Sanity'],
-    status: 'completed',
-    id: 3,
-    github: 'https://github.com/dobzacode/acte-5'
+    name: 'Acte 5',
+    type: 'professionnel',
+    duration: 'Avril 2024 - En cours',
+    description:
+      "Entreprise spécialisée dans la production d'événements d'entreprise et de spectacles comiques. Le site, conçu avec Next.js et Sanity CMS, permet une gestion optimisée des événements et une navigation agréable.",
+    image: '/project/acte-5.jpg',
+    competences: ['Next.js', 'TailwindCSS', 'Vercel', 'Framer Motion', 'Sanity', 'Figma'],
+    github: 'https://github.com/dobzacode/acte-5',
+    website: 'https://acte-5.vercel.app'
   },
   {
-    title: 'ABJECT-ACT',
-    image: abjectactimg,
-    client: 'Abject-Act',
-    category: ['Front-End', 'UI/UX Design'],
-    year: 2023,
-    stack: ['Next.js', 'TailwindCSS', 'Framer Motion', 'Next-intl', 'Vercel', 'Sanity'],
-    status: 'inProgress',
-    url: 'https://abject-act.vercel.app',
-    id: 4,
-    github: 'https://github.com/dobzacode/ABJECT-ACT'
+    name: 'Abject Act',
+    type: 'professionnel',
+    duration: 'Mai 2024 - Avril 2024',
+    description:
+      'Association produisant des événements techno à Strasbourg. Son site, créé avec Next.js, Tailwind CSS et Next-Intl, offre une expérience multilingue et réactive avec des animations captivantes.',
+    image: '/project/abject-act.jpg',
+    competences: ['Next.js', 'TailwindCSS', 'Framer Motion', 'Next-intl', 'Vercel', 'Sanity'],
+    github: 'https://github.com/dobzacode/ABJECT-ACT',
+    website: 'https://abject-act.vercel.app'
   },
   {
-    title: 'MTONARCHI',
-    image: mtonarchiimg,
-    client: 'Mtonarchi',
-    category: ['Front-End', 'UI/UX Design'],
-    year: 2023,
-    stack: ['Next.js', 'TailwindCSS', 'Framer Motion', 'Vercel', 'Sanity'],
-    status: 'inProgress',
-    url: 'https://marion-archi.vercel.app',
-    id: 5,
-    github: 'https://github.com/dobzacode/MTONARCHI'
+    name: 'Mtonarchi',
+    type: 'professionnel',
+    duration: 'Décembre 2023 - Avril 2024',
+    description:
+      'Site de Marion Deleersnyder, architecte à Strasbourg. Il présente ses projets et services en architecture, avec une interface élégante et un design responsive pour une navigation optimisée.',
+    image: '/project/mtonarchi.jpg',
+    competences: ['Next.js', 'TailwindCSS', 'Framer Motion', 'Vercel', 'Sanity'],
+    github: 'https://github.com/dobzacode/MTONARCHI',
+    website: 'https://marion-archi.vercel.app'
+  },
+  {
+    name: 'Portfolio',
+    type: 'personnel',
+    duration: 'Novembre 2024',
+    description:
+      'Un espace pour découvrir mes créations, mes compétences et mes expériences professionnelles. Conçu avec Next.js, Tailwind CSS et Framer Motion.',
+    image: '/project/portfolio.jpg',
+    competences: ['Next.js', 'TailwindCSS', 'Framer Motion'],
+    github: 'https://github.com/dobzacode/portfolio',
+    website: 'https://corentinkittel.fr'
   }
 ];

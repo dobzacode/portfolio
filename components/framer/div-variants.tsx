@@ -3,60 +3,60 @@
 import { type Variants } from 'framer-motion';
 
 export const delayFadeInVariant: Variants = {
-  hidden: { opacity: 0 },
-  enter: (custom: number) => ({
+  initial: { opacity: 0 },
+  animate: (custom: number) => ({
     opacity: 1,
     transition: { duration: 0.4, delay: 0.05 * custom }
   }),
-  exit: { opacity: 0, transition: { duration: 0.5 } }
+  enter: { opacity: 0, transition: { duration: 0.5 } }
 };
 
 export const ComingFromTopVariant: Variants = {
-  hidden: {
+  initial: {
     opacity: 0,
     y: -100
   },
-  enter: {
+  animate: {
     opacity: 1,
     y: 0
   },
-  exit: {
+  enter: {
     opacity: 0,
     y: 100
   }
 };
 
 export const ComingFromBottomVariant: Variants = {
-  hidden: {
+  initial: {
     opacity: 0,
     y: '100%'
   },
-  enter: {
+  animate: {
     opacity: 1,
     y: 0
   },
-  exit: {
+  enter: {
     opacity: 0,
     y: '-100%'
   }
 };
 
 export const ComingFromLeftVariant: Variants = {
-  hidden: {
+  initial: {
     opacity: 0,
     x: -100,
     transition: {
       duration: 0.5
     }
   },
-  enter: {
+  animate: {
     opacity: 1,
     x: 0,
     transition: {
       duration: 0.5
     }
   },
-  exit: {
+  enter: {
     opacity: 0,
     x: 100,
     transition: {
@@ -66,21 +66,21 @@ export const ComingFromLeftVariant: Variants = {
 };
 
 export const ComingFromLeftVariantWithFadeExit: Variants = {
-  hidden: {
+  initial: {
     opacity: 0,
     x: -50,
     transition: {
       duration: 0.5
     }
   },
-  enter: {
+  animate: {
     opacity: 1,
     x: 0,
     transition: {
       duration: 0.5
     }
   },
-  exit: {
+  enter: {
     opacity: 0,
 
     transition: {
@@ -90,21 +90,21 @@ export const ComingFromLeftVariantWithFadeExit: Variants = {
 };
 
 export const ComingFromRightVariantWithFadeExit: Variants = {
-  hidden: {
+  initial: {
     opacity: 0,
     x: 50,
     transition: {
       duration: 0.5
     }
   },
-  enter: {
+  animate: {
     opacity: 1,
     x: 0,
     transition: {
       duration: 0.5
     }
   },
-  exit: {
+  enter: {
     opacity: 0,
 
     transition: {
@@ -114,33 +114,33 @@ export const ComingFromRightVariantWithFadeExit: Variants = {
 };
 
 export const FullTranslateFromLeft: Variants = {
-  hidden: {
+  initial: {
     opacity: 0,
     x: -100
   },
-  enter: {
+  animate: {
     opacity: 1,
     x: 0
   },
-  exit: {
+  enter: {
     opacity: 0,
     x: 100
   }
 };
 
 export const TextSliderVariant: Variants = {
-  hidden: {
+  initial: {
     opacity: 0,
     x: -100
   },
-  enter: {
+  animate: {
     opacity: 1,
     x: 0,
     transition: {
       type: 'spring'
     }
   },
-  exit: {
+  enter: {
     opacity: 0,
     x: 100,
     transition: {
@@ -150,21 +150,21 @@ export const TextSliderVariant: Variants = {
 };
 
 export const ComingFromRightVariant: Variants = {
-  hidden: {
+  initial: {
     opacity: 0,
     x: 100,
     transition: {
       duration: 0.5
     }
   },
-  enter: {
+  animate: {
     opacity: 1,
     x: 0,
     transition: {
       duration: 0.5
     }
   },
-  exit: {
+  enter: {
     opacity: 0,
     x: -100,
     transition: {
@@ -174,30 +174,30 @@ export const ComingFromRightVariant: Variants = {
 };
 
 export const FromTopStaggerVariant: Variants = {
-  hidden: {
+  initial: {
     opacity: 0,
     y: 4
   },
-  enter: () => ({
+  animate: () => ({
     opacity: 1,
     y: 0
   }),
-  exit: {
+  enter: {
     opacity: 0,
     y: -100
   }
 };
 
 export const FadeInVariant: Variants = {
-  hidden: {
+  initial: {
     opacity: 0,
     y: 0
   },
-  enter: () => ({
+  animate: () => ({
     opacity: 1,
     y: 0
   }),
-  exit: {
+  enter: {
     opacity: 0,
     y: 0
   }

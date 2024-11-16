@@ -1,5 +1,5 @@
 'use client';
-import Button from '@/components/ui/button/button';
+import Button from '@/components/ui/button';
 import { mdiWeatherNight, mdiWeatherSunny } from '@mdi/js';
 import Icon from '@mdi/react';
 import { motion } from 'framer-motion';
