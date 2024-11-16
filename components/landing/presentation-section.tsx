@@ -4,7 +4,7 @@ import ProfilPicture from './profil-picture';
 
 export default function PresentationSection() {
   return (
-    <section className="flex flex-col gap-medium " id="a-propos">
+    <section className="flex flex-col gap-medium laptop:!pt-0" id="a-propos">
       <ProfilPicture className="max-laptop:hidden" />
       <div className="flex flex-col gap-small">
         <InviewWrapper

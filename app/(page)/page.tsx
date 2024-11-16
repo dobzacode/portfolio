@@ -10,7 +10,7 @@ import ProjectSection from '@/components/landing/project-section';
 export default async function HomePage() {
   return (
     <main className="flex max-w-[600px] flex-col [&>section]:pb-extra-small [&>section]:last:pb-0 mobile-large:[&>section]:pb-sub-large laptop:[&>section]:pb-large">
-      <section className="flex flex-col [&>*]:py-small mobile-large:[&>*]:py-medium laptop:[&>*]:py-sub-large">
+      <section className=" flex flex-col [&>*]:py-small mobile-large:[&>*]:py-medium laptop:[&>*]:py-sub-large">
         <PresentationSection />
         {[
           { title: 'Experiences', informations: experiences, id: 'experiences' },
