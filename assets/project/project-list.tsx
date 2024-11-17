@@ -12,7 +12,7 @@ export interface ProjectInformation {
 export const projects: ProjectInformation[] = [
   {
     name: 'Dine Dong',
-    type: 'personnel',
+    type: 'professionnel',
     description:
       'Application communautaire permettant de vendre et découvrir des repas faits maison. Conçue avec Next.js, FastAPI, PostgreSQL et AWS Lambda, elle facilite la connexion entre les passionnés de cuisine et les chefs locaux.',
     duration: 'Août 2024 - En cours',
