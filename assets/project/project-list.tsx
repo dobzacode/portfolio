@@ -14,7 +14,7 @@ export const projects: ProjectInformation[] = [
     name: 'Dine Dong',
     type: 'personnel',
     description:
-      'Dine-Dong est une application communautaire permettant de vendre et découvrir des repas faits maison. Conçue avec Next.js, FastAPI, PostgreSQL et AWS Lambda, elle facilite la connexion entre les passionnés de cuisine et les chefs locaux.',
+      'Application communautaire permettant de vendre et découvrir des repas faits maison. Conçue avec Next.js, FastAPI, PostgreSQL et AWS Lambda, elle facilite la connexion entre les passionnés de cuisine et les chefs locaux.',
     duration: 'Août 2024 - En cours',
     image: '/project/dine-dong.jpg',
     competences: [
@@ -85,7 +85,7 @@ export const projects: ProjectInformation[] = [
     type: 'professionnel',
     duration: 'Mai 2024 - Avril 2024',
     description:
-      'Association produisant des événements techno à Strasbourg. Son site, créé avec Next.js, Tailwind CSS et Next-Intl, offre une expérience multilingue et réactive avec des animations captivantes.',
+      'Association produisant des événements techno à Strasbourg. Son site, créé avec Next.js, Tailwind CSS et Next-Intl, offre une expérience multilingue et réactive.',
     image: '/project/abject-act.jpg',
     competences: ['Next.js', 'TailwindCSS', 'Framer Motion', 'Next-intl', 'Vercel', 'Sanity'],
     github: 'https://github.com/dobzacode/ABJECT-ACT',
@@ -96,7 +96,7 @@ export const projects: ProjectInformation[] = [
     type: 'professionnel',
     duration: 'Décembre 2023 - Avril 2024',
     description:
-      'Site de Marion Deleersnyder, architecte à Strasbourg. Il présente ses projets et services en architecture, avec une interface élégante et un design responsive pour une navigation optimisée.',
+      'Site vitrine de Marion Deleersnyder, architect à Strasbourg. Le contenu est géré grâce à Sanity, un CMS headless performant, offrant une flexibilité maximale pour la gestion des contenus.',
     image: '/project/mtonarchi.jpg',
     competences: ['Next.js', 'TailwindCSS', 'Framer Motion', 'Vercel', 'Sanity'],
     github: 'https://github.com/dobzacode/MTONARCHI',
