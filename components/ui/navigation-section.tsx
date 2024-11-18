@@ -11,8 +11,8 @@ const id = [
   'formations',
   'certifications',
   'competences',
-  'personnels',
-  'professionnels'
+  'professionnels',
+  'personnels'
 ];
 
 interface NavigationProps {

@@ -18,7 +18,7 @@ export default function SideBar() {
           sectionIds={['a-propos', 'experiences', 'formations', 'certifications', 'competences']}
           title="Informations générales"
         />
-        <NavigationSection sectionIds={['personnels', 'professionnels']} title="Mes projets" />
+        <NavigationSection sectionIds={['professionnels', 'personnels']} title="Mes projets" />
       </nav>
       <ul className="mt-auto flex h-full items-end gap-small [&>li:hover]:opacity-75 [&>li]:duration-fast">
         <li>

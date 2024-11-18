@@ -28,7 +28,7 @@ export default async function HomePage() {
         <CompetenceSection />
       </section>
       <section className="flex flex-col pt-medium [&>*]:py-small mobile-large:[&>*]:py-medium laptop:[&>*]:py-sub-large">
-        <div className="flex flex-col gap-sub-large" id="personnels">
+        <div className="flex flex-col gap-sub-large" id="professionnels">
           <InviewWrapper
             variant={FadeInVariant}
             className="flex flex-col items-center justify-center gap-small"
@@ -41,14 +41,15 @@ export default async function HomePage() {
             </p>
           </InviewWrapper>
           <ProjectSection
-            informations={projects.filter((p) => p.type === 'personnel')}
-            title="Projets personnels"
+            informations={projects.filter((p) => p.type === 'professionnel')}
+            title="Projets professionnels"
           />
         </div>
+
         <ProjectSection
-          informations={projects.filter((p) => p.type === 'professionnel')}
-          title="Projets professionnels"
-          id="professionnels"
+          id="personnels"
+          informations={projects.filter((p) => p.type === 'personnel')}
+          title="Projets personnels"
         />
       </section>
     </main>
