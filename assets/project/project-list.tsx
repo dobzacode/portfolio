@@ -6,7 +6,7 @@ export interface ProjectInformation {
   competences: string[];
   duration: string;
   github: string;
-  website: string;
+  website?: string;
 }
 
 export const projects: ProjectInformation[] = [
@@ -31,8 +31,7 @@ export const projects: ProjectInformation[] = [
       'Terraform',
       'AWS'
     ],
-    github: 'https://github.com/dobzacode/dine-dong',
-    website: 'https://dine-dong.fr'
+    github: 'https://github.com/dobzacode/dine-dong'
   },
   {
     name: 'Roddat',

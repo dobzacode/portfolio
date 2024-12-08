@@ -29,13 +29,15 @@ export default function ProjectCard({
           ))}
         </div>
         <div className="mt-auto flex gap-extra-small ">
-          <a
-            className="caption flex items-center gap-1 rounded-full  bg-tertiary90 px-4 py-2 text-white"
-            href={website}
-          >
-            <Icon path={mdiWeb} size={1} />
-            Website
-          </a>
+          {website && (
+            <a
+              className="caption flex items-center gap-1 rounded-full  bg-tertiary90 px-4 py-2 text-white"
+              href={website}
+            >
+              <Icon path={mdiWeb} size={1} />
+              Website
+            </a>
+          )}
           <a
             className="caption flex items-center gap-1 rounded-full  bg-tertiary90 px-4 py-2 text-white"
             href={github}
