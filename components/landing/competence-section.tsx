@@ -19,7 +19,11 @@ const competences = [
   'Terraform',
   'Github Actions',
   'Figma',
-  'AWS'
+  'AWS',
+  'Angular',
+  'NestJS',
+  'Gitlab CI',
+  'CDK'
 ];
 
 export default function CompetenceSection() {

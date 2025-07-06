@@ -15,7 +15,7 @@ export const projects: ProjectInformation[] = [
     type: 'professionnel',
     description:
       'Application communautaire permettant de vendre et découvrir des repas faits maison. Conçue avec Next.js, FastAPI, PostgreSQL et AWS Lambda, elle facilite la connexion entre les passionnés de cuisine et les chefs locaux.',
-    duration: 'Août 2024 - En cours',
+    duration: 'Août 2024 - Octobre 2024',
     image: '/project/dine-dong.jpg',
     competences: [
       'Next.js',
@@ -71,13 +71,13 @@ export const projects: ProjectInformation[] = [
   {
     name: 'Acte 5',
     type: 'professionnel',
-    duration: 'Avril 2024 - En cours',
+    duration: 'Avril 2024 - Avril 2025',
     description:
       "Entreprise spécialisée dans la production d'événements d'entreprise et de spectacles comiques. Le site, conçu avec Next.js et Sanity CMS, permet une gestion optimisée des événements et une navigation agréable.",
     image: '/project/acte-5.jpg',
     competences: ['Next.js', 'TailwindCSS', 'Vercel', 'Framer Motion', 'Sanity', 'Figma'],
     github: 'https://github.com/dobzacode/acte-5',
-    website: 'https://acte-5.vercel.app'
+    website: 'https://acte5.fr'
   },
   {
     name: 'Abject Act',

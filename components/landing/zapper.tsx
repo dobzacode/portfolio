@@ -17,7 +17,7 @@ export default function Zapper({
   const [isEnter, setIsEnter] = useState<boolean>(false);
 
   const height = `h-[${14 * i}rem]`;
-  //h-[14rem] h-[28rem] h-[42rem]
+  //h-[14rem] h-[28rem] h-[42rem] h-[56rem] h-[70rem]
 
   const shadowVariants = {
     initial: { maxHeight: 0, opacity: 0 },
